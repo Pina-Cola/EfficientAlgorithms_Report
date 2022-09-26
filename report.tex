@@ -261,34 +261,74 @@ The technique of dynamic programming can be used to solve problems, which can be
 \section{System Design}
 \label{systemdesign}
 
+The implementation was done in Java and three different classes were implemented: \texttt{main.java} (described in section \ref{main}), \texttt{grammar.java} (described in section \ref{grammar}) and \texttt{parser.java} (described in section \ref{parser}). The \texttt{main}-class calls the methods and the \texttt{grammar}-class parses the input grammer ans string into a format that then can be processed in the \texttt{parser}-class.
+
 
 %---------------------------------------------------------------------%
 
 
 
 \subsection{Main}
+\label{main}
+
+The \texttt{main}-class takes the input grammar and word and parses them into \texttt{String[]} and \texttt{String}. The arguments have to follow the following rules:
+\begin{itemize}
+\item The Grammar needs to be in \textit{CNF}.
+\item The first rule begins with the start symbol of the grammar.
+\item The rules are put in wothout arrows, one rule body is represented by one string, beginning with the rule head.
+\item The last argument is the input word.
+\end{itemize}
+Input example (\textit{Well-Balanced-Parantheses}):\\
+  \texttt{java Main \dq SSS\dq \ \dq SLA\dq \ \dq SLR\dq \ \dq ASR\dq \ \dq L(\dq \ \dq R)\dq\  \dq (())\dq}
+\\ 
+for the grammar \texttt{S $\rightarrow$ SS | LA | LR, A $\rightarrow$ SR, L $\rightarrow$ (, R $\rightarrow$ )} and the input word \texttt{(())}. \\
+
 
 %---------------------------------------------------------------------%
 %---------------------------------------------------------------------%
 
 \subsection{Grammar}
+\label{grammar}
+
+
+
+\begin{minipage}{0.6\textwidth}
+\vspace*{-2em}
+
+The \texttt{grammar}-class assigns the nonterminal symbols to integers and builds arrays with them. The start symbol for example is then assigned with the integer zero and the bodies of that rule are at the index zero of an two-dimensional array. One array that only contains nonterminal symbols is build, one array that contains terminal and nonterminal symbold and one array that represents the integers that represent each nonterminal symbol is built.
+
+For the input \texttt{java Main \dq SSS\dq \ \dq SLA\dq \ \dq SLR\dq \ \dq ASR\dq \ \dq L(\dq \ \dq R)\dq\  \dq (())\dq} the two-dimensional arrays shown on the screenshot on the right side are built.
+
+(Right now the arrays still have the type \texttt{String[][]}, that will be changed later to \texttt{int[][][]} to minimize the access time in the parsing methods.)
+
+
+\end{minipage}\begin{minipage}{0.1\textwidth}
+\ 
+\end{minipage}\begin{minipage}{0.3\textwidth}
+\includegraphics[scale=0.6]{images/terminal_1.png}
+\end{minipage}
+
 
 %---------------------------------------------------------------------%
 %---------------------------------------------------------------------%
 
 \subsection{Parser}
+\label{parser}
 
 %---------------------------------------------------------------------%
 
 \subsubsection{Naive}
+\label{naive}
 
 %---------------------------------------------------------------------%
 
 \subsubsection{Bottom-Up}
+\label{bottomup}
 
 %---------------------------------------------------------------------%
 
 \subsubsection{Top-Down}
+\label{topdown}
 
 %---------------------------------------------------------------------%
 
