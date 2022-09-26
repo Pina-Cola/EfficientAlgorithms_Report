@@ -1,0 +1,251 @@
+% LaTeX Template for short student reports.
+% Citations should be in bibtex format and go in references.bib
+\documentclass[a4paper, 11pt]{article}
+\usepackage[top=3cm, bottom=3cm, left = 2.5cm, right = 2.5cm]{geometry}
+\usepackage[english]{babel} 
+\geometry{a4paper} 
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{graphicx} 
+\usepackage{amsmath,amssymb} 
+\usepackage{mathtools} 
+\usepackage{bm}  
+\usepackage[hidelinks]{hyperref}  
+
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=1.9}
+
+\setlength{\parindent}{0cm}
+%\hypersetup{linkcolor=black,citecolor=black,filecolor=black,urlcolor=black} % black links, for printed output
+\usepackage{memhfixc} 
+\usepackage{pdfsync}  
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\usepackage[backend=biber, maxbibnames=99]{biblatex}
+
+\addbibresource{references.bib}
+
+\title{Runtime analysis of the Java implementation of the CYK-algorithm}
+\author{Pina Kolling \\ piko0011@student.umu.se}
+%\date{}
+
+
+\newcommand{\dq}{"}
+
+
+
+
+
+
+%---------------------------------------------------------------------%
+
+%---------------------------------------------------------------------%
+
+
+
+
+
+
+\begin{document}
+\maketitle
+{
+  \hypersetup{linkcolor=black}
+  \tableofcontents
+}
+
+
+
+
+\newpage
+
+
+
+
+
+%---------------------------------------------------------------------%
+
+
+
+
+
+
+
+
+\section{Introduction}
+
+My project was about \ldots
+
+I developed a system to \ldots
+
+We did some experiments to find out \ldots
+
+The main results were \ldots
+
+\cite{JC}
+
+\pagebreak
+
+
+
+
+
+
+%---------------------------------------------------------------------%
+
+
+
+
+
+
+
+
+\section{Background}
+
+I did some background reading in the following areas \ldots
+
+\pagebreak
+
+
+
+
+
+%---------------------------------------------------------------------%
+
+
+
+
+
+
+
+
+\section{System Design}
+
+My system worked as follows \ldots
+
+\pagebreak
+
+
+
+
+
+
+%---------------------------------------------------------------------%
+
+
+
+
+
+
+
+\section{Evaluation}
+
+We did some experiments \ldots
+
+\pagebreak
+
+
+
+
+
+%---------------------------------------------------------------------%
+
+
+
+
+
+
+
+
+\section{Conclusions and Future Work}
+
+From our experiments we can conclude that \ldots
+
+\newpage
+
+
+
+
+
+%---------------------------------------------------------------------%
+
+
+
+
+
+
+
+
+\appendix
+
+\section{How to use the code?}
+
+The code can be run in the terminal and input is expected as Strings in quotation marks. The grammar needs to be in CNF. The first rule begins with the startsymbol of the grammar. \\ \\
+First: Rules without arrows (one rule as one String) \\
+Last: The last argument is the input word
+\\ 
+
+Input example (\textit{Well-Balanced-Parantheses}):\\
+  \texttt{java Main \dq SSS\dq \ \dq SLA\dq \ \dq SLR\dq \ \dq ASR\dq \ \dq L(\dq \ \dq R)\dq\  \dq (())\dq}
+\\ 
+for the grammar \texttt{S $\rightarrow$ SS | LA | LR, A $\rightarrow$ SR, L $\rightarrow$ (, R $\rightarrow$ )} and the input word \texttt{(())}.
+\\ \\
+Output example: \\
+The first part of the output shows the arrays, which get generated in the \texttt{Grammar.java} class.  \\ \\
+\begin{minipage}{0.6\textwidth}
+\vspace*{-2em}
+The first array contains all rules. \\ \\ \\
+
+The second array contains only the terminal rules. \\ \\
+
+The third array contains only the nonterminal rules. \\
+
+Then it is shown which nonterminal symbols are represented by which integers. Later the nonterminal symbols can be referred to with those integers. \\ 
+
+After this the mentioned arrays are shown again but the nonterminal symbols got replaced with the according integers.
+
+\end{minipage}\begin{minipage}{0.2\textwidth}
+\ 
+\end{minipage}\begin{minipage}{0.3\textwidth}
+\includegraphics[scale=0.7]{images/terminal_1.png}
+\end{minipage}
+
+\begin{minipage}{0.4\textwidth}
+\includegraphics[scale=0.6]{images/terminal_2.png}
+\end{minipage}\begin{minipage}{0.6\textwidth}
+Then the results, counter and runtime in $ms$ is shown for each parsing method. \\
+For the \texttt{BottomUp} method is the CYK algorithm table printed.
+\end{minipage}
+
+
+
+
+
+
+
+
+
+%---------------------------------------------------------------------%
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{\bibname}
+%\begin{spacing}{1.3}
+\printbibliography
+%\end{spacing}
+
+
+%\bibliographystyle{abbrv}
+
+\end{document}
