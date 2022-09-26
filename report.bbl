@@ -19,6 +19,78 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{CNF}{misc}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Website}
+      \field{note}{\url{https://www.javatpoint.com/automata-chomskys-normal-form}, opened on 26.09.2022}
+      \field{title}{Chomsky's Normal Form (CNF)}
+    \endentry
+    \entry{CYK_name}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e798cf86b6e156c917e60175d3343f4f}{%
+           family={Manacher},
+           familyi={M\bibinitperiod},
+           given={Glenn\bibnamedelima K.},
+           giveni={G\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{e798cf86b6e156c917e60175d3343f4f}
+      \strng{fullhash}{e798cf86b6e156c917e60175d3343f4f}
+      \strng{bibnamehash}{e798cf86b6e156c917e60175d3343f4f}
+      \strng{authorbibnamehash}{e798cf86b6e156c917e60175d3343f4f}
+      \strng{authornamehash}{e798cf86b6e156c917e60175d3343f4f}
+      \strng{authorfullhash}{e798cf86b6e156c917e60175d3343f4f}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Cocke-Younger-Kasami algorithm (CYK) always requires 0(n3) time and 0(n2) space to recognize a trial sentence ω = w1w2…wn, given an e-free context-free grammar in Chomsky Normal form. The same inductive rule that underlies the CYK algorithm may be used to produce a variant that computes the same information but requires (1) a maximum of 0(n3) time and 0(n2) space, and (2) only 0(s(n)) space and time for an unambiguous grammar, where s(n) is the number of triples (A,i,j) for which a nonterminal symbol A derives wiwi+1…wi+j−1. In this case, time and space consumed are at worst 0(n2). It is shown in addition, for any grammar, that a parse may be obtained from the table left from the recognition algorithm in time 0(s(n)) whether or not the grammar is ambiguous. The same procedure for the CYK algorithm requires time 0(n2). The performance of our variant is quite similar to that of the Earley algorithm except that the Earley algorithm substitutes for s(n), a function which is usually smaller. The model we use of a RAM is strictly identical to the model used in the CYK algorithm. CR categories: 4.20, 5.23, 5.25.}
+      \field{issn}{0096-0551}
+      \field{journaltitle}{Computer Languages}
+      \field{number}{2}
+      \field{title}{An improved version of the Cocke-Younger-Kasami algorithm}
+      \field{volume}{3}
+      \field{year}{1978}
+      \field{pages}{127\bibrangedash 133}
+      \range{pages}{7}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0096-0551(78)90029-2
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0096055178900292
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0096055178900292
+      \endverb
+      \keyw{Parsing,Cocke-Younger-Kasami algorithm,Younger algorithm,Earley parsing algorithm,List processing,Parsing table replacement}
+    \endentry
+    \entry{language}{book}{}
+      \name{author}{1}{}{%
+        {{hash=abf7d53b5e28666a13323708c37cb6e3}{%
+           family={Robert\bibnamedelimb N.\bibnamedelimi Moll},
+           familyi={R\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={A.J.\bibnamedelimi Kfoury},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+           suffix={Michael\bibnamedelimb A.\bibnamedelimi Arbib},
+           suffixi={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{abf7d53b5e28666a13323708c37cb6e3}
+      \strng{fullhash}{abf7d53b5e28666a13323708c37cb6e3}
+      \strng{bibnamehash}{abf7d53b5e28666a13323708c37cb6e3}
+      \strng{authorbibnamehash}{abf7d53b5e28666a13323708c37cb6e3}
+      \strng{authornamehash}{abf7d53b5e28666a13323708c37cb6e3}
+      \strng{authorfullhash}{abf7d53b5e28666a13323708c37cb6e3}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An Introduction to Formal Language Theory}
+      \field{year}{1988}
+    \endentry
     \entry{CYK1}{article}{}
       \name{author}{3}{}{%
         {{hash=182e8ceab65fbc208ab66e2601718b22}{%
@@ -59,6 +131,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{cnf}
 \endrefsection
 \endinput
 

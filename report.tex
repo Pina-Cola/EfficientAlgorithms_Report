@@ -1,7 +1,7 @@
 % LaTeX Template for short student reports.
 % Citations should be in bibtex format and go in references.bib
 \documentclass[a4paper, 11pt]{article}
-\usepackage[top=3cm, bottom=3cm, left = 2.5cm, right = 2.5cm]{geometry}
+\usepackage[top=3cm, bottom=3cm, left = 3cm, right = 3cm]{geometry}
 \usepackage[english]{babel} 
 \geometry{a4paper} 
 \usepackage[utf8]{inputenc}
@@ -29,6 +29,15 @@
 \titlespacing*{\section}{0pt}{10ex plus 1ex minus .2ex}{4.3ex plus .2ex}
 
 \usepackage[backend=biber, maxbibnames=99]{biblatex}
+
+
+\usepackage{amsthm}
+
+
+\newtheorem*{example*}{Example}
+
+
+
 
 \addbibresource{references.bib}
 
@@ -117,15 +126,17 @@
 
 \section{Introduction}
 
-Parsing in Computer Science is the process of analysing a string of characters to examine if the string is built according to the rules of a formal grammar. \cite{CYK1}
+Parsing in Computer Science is the process of analysing a string of characters to examine if the string is built according to the rules of a formal grammar. 
 
-A formal grammar describes how to form strings with correct syntax from a language's alphabet.
-To examine if such a string follows the rules of a grammar the CYK-algorithm can be used. Therefore the grammar needs to be in a specific format, called CNF (explained in section \ref{CNF}).
-\\ 
-\\
-The task for this assignment was to code three different parsing methods to execute the CYK-algorithm in \textit{Java}.
-For this three different classes were implemented: \texttt{main.java, grammar.java} and \texttt{parser.java}. The \texttt{main}-class calls the methods and the \texttt{grammar}-class parses the input grammer ans string into a format that then can be processed in the \texttt{parser}-class.
+A formal grammar describes how to form strings with correct syntax from a language's alphabet (section \ref{formalgrammar} and \ref{formallanguage}).
+To examine if such a string follows the rules of a grammar the \textit{Cocke-Younger-Kasami}-algorithm (short: \textit{CYK}) can be used. This algorithm is described in section \ref{cyk}. To use the \textit{CYK}-algorithm the grammar needs to be in a specific format, that is called \textit{Chomsky-Normal-Form} (\textit{CNF}), which is explained in section \ref{cnf}. \cite{CYK_name, CYK1}
+
+
+The task for this assignment was to code three different parsing methods to execute the \textit{CYK}-algorithm in \textit{Java}. The different parsing methods will be described and presented as pseudo code in section \ref{systemdesign}.
+For the implementation three different classes were implemented: \texttt{main.java, grammar.java} and \texttt{parser.java}. The \texttt{main}-class calls the methods and the \texttt{grammar}-class parses the input grammer ans string into a format that then can be processed in the \texttt{parser}-class.
 The function and implementation will be former described in section \ref{systemdesign}.
+
+
 
 
 \pagebreak
@@ -146,13 +157,76 @@ The function and implementation will be former described in section \ref{systemd
 
 \section{Background}
 
-\begin{itemize}
-\item grammar \\
-A formal grammar describes how to form strings with correct syntax from a language's alphabet. A grammar does not describe the meaning of the strings or any semantics — only their syntax is defined.
-\item CNF \label{CNF}
-\item CYK
-\item DP
-\end{itemize}
+In this section background information on formal languages (section \ref{formallanguage}), formal grammars (section \ref{formalgrammar}), Chomsky-Normal-Form (section \ref{cnf}), CYK-algorithm (section \ref{cyk}) and dynmaic programming (section \ref{dp}) will be presented. 
+
+%---------------------------------------------------------------------%
+
+\subsection{Formal language}
+\label{formallanguage}
+Formal languages are abstract languages which define the syntax of the words that get accepted by that language. It consits of a set of words that get accepted by the language and a set of symbols that is called alphabet and contains the characters of the words. Those characters are calles nonterminal symbols. \cite{cnf, language}
+
+\begin{example*}[Formal language]
+\footnote{The following examples show the \textit{Well-Balanced Parantheses} example from the assignment task sheet with the alphabet $\{a, b\}$ instead of $\{(, )\}$. }
+\\
+The language accepts words that contain the same number of $a$s and $b$s, while the a has to be left of the b. 
+The alphabet $\Sigma$ of this language looks like this:
+\begin{align*}
+\Sigma = \{ a, b\}
+\end{align*}
+The language definition $L$ is the following one:
+\begin{align*}
+L = \{ (a^{n}b^{n})^m \} \text{ with } n, m \in \mathbb{N}
+\end{align*}
+
+\end{example*}
+
+
+
+%---------------------------------------------------------------------%
+
+\subsection{Formal grammar}
+\label{formalgrammar}
+A formal grammar describes how to form strings with correct syntax from a language's alphabet. A grammar does not describe the meaning of the strings or any semantics — only their syntax is defined. The grammar is a set of rules which define which words are accepted by a formal language. Those rules consist of terminal and nonterminal symbols. The terminalsymbols are the characters of the alphabet of the language and the nonterminalsymbols are used to build the rules of the language -- they get replaced by terminalsymbols. \cite{CNF, language} 
+
+\begin{example*}[Formal grammar]
+The example grammar for the previous example language is the following:
+\begin{center}
+\texttt{S $\rightarrow$ SS $\mid$  aSb $\mid$ ab}
+\end{center}
+\end{example*}
+
+%---------------------------------------------------------------------%
+
+\subsection{Chomsky-Normal-Form}
+\label{cnf}
+The \textit{Chomsky-Normal-Form} (short: \textit{CNF}) is a grammar which is formated in a specific way. If the startsymbol (nonterminal symbol) is not generating the empty word (\textit{\texttt{S $\rightarrow \epsilon$}}) it either generates two nonterminal symbols or one terminal symbol for the grammar to be in \textit{CNF}.
+\cite{CNF}
+
+\begin{example*}[Chomsky-Normal-Form]
+To change the previous example into CNF the rules have to be split up:
+\begin{align*}
+\texttt{S} & \rightarrow \texttt{SS} \mid  \texttt{LA} \mid \texttt{LR} \\
+\texttt{A} & \rightarrow \texttt{SR} \\
+\texttt{L} & \rightarrow a \\
+\texttt{R} & \rightarrow b
+\end{align*}
+\end{example*}
+
+
+%---------------------------------------------------------------------%
+
+\subsection{CYK-algorithm}
+\label{cyk}
+
+%---------------------------------------------------------------------%
+
+\subsection{Dynamic programming}
+\label{dp}
+
+
+%---------------------------------------------------------------------%
+
+
 
 \pagebreak
 
