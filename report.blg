@@ -1,15 +1,15 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'report.blg'
-[187] biber-MSWIN64:340> INFO - === 
-[240] Biber.pm:415> INFO - Reading 'report.bcf'
-[427] Biber.pm:952> INFO - Found 1 citekeys in bib section 0
-[460] Biber.pm:4340> INFO - Processing section 0
-[482] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
-[547] bibtex.pm:1689> INFO - LaTeX decoding ...
-[556] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
-[573] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[573] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[573] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[573] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[576] bbl.pm:654> INFO - Writing 'report.bbl' with encoding 'UTF-8'
-[576] bbl.pm:757> INFO - Output to report.bbl
+[153] biber-MSWIN64:340> INFO - === 
+[201] Biber.pm:415> INFO - Reading 'report.bcf'
+[327] Biber.pm:952> INFO - Found 1 citekeys in bib section 0
+[351] Biber.pm:4340> INFO - Processing section 0
+[368] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
+[421] bibtex.pm:1689> INFO - LaTeX decoding ...
+[426] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
+[438] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[439] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[439] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[439] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[440] bbl.pm:654> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[441] bbl.pm:757> INFO - Output to report.bbl

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  26 SEP 2022 09:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  26 SEP 2022 09:38
 entering extended mode
 **./report.tex
 (report.tex
@@ -1380,7 +1380,7 @@ Package logreq Info: Writing requests to 'report.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  38927 strings out of 478927
- 878648 string characters out of 2852534
+ 878816 string characters out of 2852534
  1684083 words of memory out of 3000000
  56168 multiletter control sequences out of 15000+600000
  415084 words of font info for 69 fonts, out of 8000000 for 9000
@@ -1398,7 +1398,7 @@ ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/User
 s/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb
 ><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mtt10.pfb>
-Output written on report.pdf (8 pages, 195187 bytes).
+Output written on report.pdf (8 pages, 195178 bytes).
 PDF statistics:
  145 PDF objects out of 1000 (max. 8388607)
  19 named destinations out of 1000 (max. 500000)
