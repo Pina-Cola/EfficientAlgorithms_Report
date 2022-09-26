@@ -2346,11 +2346,12 @@
   <bcf:section number="0">
     <bcf:citekey order="1">CYK_name</bcf:citekey>
     <bcf:citekey order="1">CYK1</bcf:citekey>
-    <bcf:citekey order="2">cnf</bcf:citekey>
+    <bcf:citekey order="2">CNF</bcf:citekey>
     <bcf:citekey order="2">language</bcf:citekey>
     <bcf:citekey order="3">CNF</bcf:citekey>
     <bcf:citekey order="3">language</bcf:citekey>
     <bcf:citekey order="4">CNF</bcf:citekey>
+    <bcf:citekey order="5">CYK1</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
