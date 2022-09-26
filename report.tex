@@ -341,7 +341,7 @@ The naive algorithm is a recursive algorithm and has an initial method to start 
 \State $counter \gets +1$
 \If{$i == (j-1)$}
 \For{$l \gets 0$ to $ruleset[0].length$}
-\If{$ruleset[indexNT][1] == inpitWord[i]$}
+\If{$ruleset[indexNT][1] == inputWord[i]$}
 \State \Return true
 \EndIf
 \EndFor
@@ -362,6 +362,49 @@ The naive algorithm is a recursive algorithm and has an initial method to start 
 \State \Return false
 \end{algorithmic}
 \end{algorithm}
+
+In the following table the upper boundarie runtime of the second method (algorithm 2) is listed for each line. The variable $n$ represents the length of the input word and $k$ the dimension of the rule array.
+
+\begin{minipage}{0.5\textwidth}
+
+\begin{tabular}{|c|c|l|}
+\hline
+Line & Runtime & Type \\
+\hline
+\hline
+1 &  1 & Assignment \\
+2 &  1 & Comparison \\
+3 & k & Loop \\
+4 & 1 & Comparison \\
+5 & 1 & Return statement\\
+9 & k & Loop \\
+10 & 1 & comparison \\
+11 & 1 & Assignment \\
+12 & 1 & Assignment\\
+13 & n & Loop \\
+14 & n $\cdot$ n & Recusrsive call \\
+15 & 1 & Return statement\\
+21 & 1 & Return statement \\
+\hline
+\end{tabular}
+
+\end{minipage}\begin{minipage}{0.5\textwidth}
+Calculating the runtime without the recursive call:
+\vspace*{-1em}
+\begin{align*}
+& 1 + 1+ k + 1 +1 +k + 1 + 1 + 1 + n + 1 + 1 \\
+& =  9 + k + n  \\
+& \in O(n)
+\end{align*}
+Calculating the runtime with the recursive call:
+\vspace*{-1em}
+\begin{align*}
+& 1 + 1+ k + 1 +1 +k + 1 + 1 + 1 + n + n^2 + 1 + 1 \\
+& =  9 + k + n + n^2  \\
+& \in O(n^2)
+\end{align*}
+Because of the recursive call that can happen up to $n$ times the runtime is in $O(n^2)$.
+\end{minipage}
 
 %---------------------------------------------------------------------%
 

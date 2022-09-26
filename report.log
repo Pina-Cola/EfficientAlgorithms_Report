@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  26 SEP 2022 15:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  26 SEP 2022 16:19
 entering extended mode
 **./report.tex
 (report.tex
@@ -1375,6 +1375,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 330.
 
+Overfull \hbox (19.35127pt too wide) detected at line 405
+[][][]
+ []
+
+
+Overfull \hbox (19.35127pt too wide) in paragraph at lines 368--408
+[][][]$[][][]$$[][][]$ 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1402,78 +1411,87 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 435--439
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 478--482
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--439
+Underfull \hbox (badness 10000) in paragraph at lines 478--482
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--450
+Underfull \hbox (badness 10000) in paragraph at lines 492--493
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--450
+Underfull \hbox (badness 10000) in paragraph at lines 492--493
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--450
+Underfull \hbox (badness 10000) in paragraph at lines 492--493
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 451--452
+Underfull \hbox (badness 10000) in paragraph at lines 494--495
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 451--452
+Underfull \hbox (badness 10000) in paragraph at lines 494--495
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 453--454
+Underfull \hbox (badness 10000) in paragraph at lines 496--497
 
  []
 
 
-Underfull \hbox (badness 1558) in paragraph at lines 455--456
+Underfull \hbox (badness 1558) in paragraph at lines 498--499
 [][][]\OT1/cmr/m/n/10.95 Then it is shown which non-ter-mi-nal sym-bols are
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--456
+Underfull \hbox (badness 10000) in paragraph at lines 498--499
 
  []
 
 File: images/terminal_1.png Graphic file (type png)
 <use images/terminal_1.png>
-Package pdftex.def Info: images/terminal_1.png  used on input line 462.
+Package pdftex.def Info: images/terminal_1.png  used on input line 505.
 (pdftex.def)             Requested size: 95.90765pt x 308.27461pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--464
+Underfull \hbox (badness 10000) in paragraph at lines 483--507
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--464
+Underfull \hbox (badness 10000) in paragraph at lines 483--507
 
  []
 
 
-Overfull \hbox (44.10445pt too wide) in paragraph at lines 440--464
+Overfull \hbox (44.10445pt too wide) in paragraph at lines 483--507
 [][][]$$[][][]$$[][][]$ 
  []
 
-<images/terminal_2.png, id=194, 231.86626pt x 198.7425pt>
+<images/terminal_2.png, id=198, 231.86626pt x 198.7425pt>
 File: images/terminal_2.png Graphic file (type png)
 <use images/terminal_2.png>
-Package pdftex.def Info: images/terminal_2.png  used on input line 466.
+Package pdftex.def Info: images/terminal_2.png  used on input line 509.
 (pdftex.def)             Requested size: 139.12082pt x 119.24641pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1483,8 +1501,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[9 <./images/terminal_2.png>]
-Overfull \hbox (35.31543pt too wide) in paragraph at lines 499--499
+[10 <./images/terminal_2.png>]
+Overfull \hbox (35.31543pt too wide) in paragraph at lines 542--542
 [][][]\OT1/cmr/m/it/10.95 Dynamic Pro-gram-ming\OT1/cmr/m/n/10.95 . Web-site. u
 rl=https://www.programiz.com/dsa/dynamic-programming,
  []
@@ -1497,7 +1515,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[10] (report.aux)
+[11] (report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1508,9 +1526,9 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40009 strings out of 478927
- 894505 string characters out of 2852534
- 1707170 words of memory out of 3000000
+ 40010 strings out of 478927
+ 894512 string characters out of 2852534
+ 1714170 words of memory out of 3000000
  57188 multiletter control sequences out of 15000+600000
  420699 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1542,9 +1560,9 @@ s/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb>
 <C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
 tt10.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on report.pdf (11 pages, 475629 bytes).
+Output written on report.pdf (12 pages, 478014 bytes).
 PDF statistics:
- 312 PDF objects out of 1000 (max. 8388607)
- 39 named destinations out of 1000 (max. 500000)
+ 316 PDF objects out of 1000 (max. 8388607)
+ 40 named destinations out of 1000 (max. 500000)
  172 words of extra memory for PDF output out of 10000 (max. 10000000)
 
