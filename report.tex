@@ -326,7 +326,7 @@ The \texttt{parser}-class contains three different parsing methods. Each methods
 
 The naive algorithm is a recursive algorithm and has an initial method to start the recursion with the start values. Then the recursive method gets called.
 
-\begin{algorithm}
+\begin{algorithm}[H]
 \caption{Recursion call: Boolean parseNaive()}\label{alg:cap}
 \begin{algorithmic}[1]
 \State $counter \gets 0$
@@ -335,12 +335,12 @@ The naive algorithm is a recursive algorithm and has an initial method to start 
 \end{algorithm}
 
 
-\begin{algorithm}
+\begin{algorithm}[H]
 \caption{Boolean parseNaive(int indexNT, int i, int j)}\label{alg:cap}
 \begin{algorithmic}[1]
 \State $counter \gets +1$
 \If{$i == (j-1)$}
-\For{$l \gets 0$ to $ruleset[0].length$}
+\For{$l \gets 0$ \textbf{to} $ruleset[0].length$}
 \If{$ruleset[indexNT][1] == inputWord[i]$}
 \State \Return true
 \EndIf
@@ -371,50 +371,130 @@ In the following table the upper boundarie runtime of the second method (algorit
 \hline
 Line & Runtime & Type \\
 \hline
-\hline
 1 &  1 & Assignment \\
 2 &  1 & Comparison \\
-3 & k & Loop \\
-4 & 1 & Comparison \\
-5 & 1 & Return statement\\
+3 & k  & Loop \\
+4 & 1 $\cdot$ k & Comparison \\
+5 & 1 $\cdot$ k & Return statement\\
 9 & k & Loop \\
-10 & 1 & comparison \\
-11 & 1 & Assignment \\
-12 & 1 & Assignment\\
-13 & n & Loop \\
-14 & n $\cdot$ n & Recusrsive call \\
-15 & 1 & Return statement\\
+10 & 1 $\cdot$ k & comparison \\
+11 & 1 $\cdot$ k & Assignment \\
+12 & 1 $\cdot$ k & Assignment\\
+13 & n $\cdot$ k & Loop \\
+14 & n $\cdot$ n $\cdot$ k & Recusrsive call \\
+15 & 1 $\cdot$ n $\cdot$ k & Return statement\\
 21 & 1 & Return statement \\
 \hline
 \end{tabular}
 
 \end{minipage}\begin{minipage}{0.5\textwidth}
-Calculating the runtime without the recursive call:
+Calculating the runtime:
 \vspace*{-1em}
 \begin{align*}
-& 1 + 1+ k + 1 +1 +k + 1 + 1 + 1 + n + 1 + 1 \\
-& =  9 + k + n  \\
-& \in O(n)
-\end{align*}
-Calculating the runtime with the recursive call:
-\vspace*{-1em}
-\begin{align*}
-& 1 + 1+ k + 1 +1 +k + 1 + 1 + 1 + n + n^2 + 1 + 1 \\
-& =  9 + k + n + n^2  \\
+& 1 + 1+ k + k +k + k + k + k + k \\
+& + n \cdot k + n \cdot n \cdot k + n \cdot k \\
+& =  2 + 7k + 2(n \cdot k) + n \cdot n \cdot k \\
+& = 2 + 7k + 2n \cdot 2k + 2n^2 \cdot k \\
 & \in O(n^2)
 \end{align*}
-Because of the recursive call that can happen up to $n$ times the runtime is in $O(n^2)$.
+The runtime of the naive method is in $O(n^2)$.
 \end{minipage}
 
 %---------------------------------------------------------------------%
 
-\subsubsection{Bottom-Up}
-\label{bottomup}
-
-%---------------------------------------------------------------------%
 
 \subsubsection{Top-Down}
 \label{topdown}
+
+The top-down method is an improves version of the naive method (section \ref{naive}). This algorithm works recursive, too. In this algorithm another array is used, which contains the values \texttt{true}, \texttt{false} and \texttt{null}. If one of the values is not \texttt{null}, the next recursive call is not executed.
+
+\begin{algorithm}[H]
+\caption{Recursion call: Boolean parseTD()}\label{alg:cap}
+\begin{algorithmic}[1]
+\State $counter \gets 0$
+\For{$i \gets 0$ \textbf{to} $table.length$ }
+\For{$j \gets 0$ \textbf{to} $table[i].length$}
+\For{$k \gets 0$ \textbf{to} $table[i][j].length$}
+\State $table[i][j][k] \gets null$
+\EndFor
+\EndFor
+\EndFor
+\State \Return parseTD(0, 0, inputWord.length)
+\end{algorithmic}
+\end{algorithm}
+
+The variable $n$ represents the length of the input word and $k$ the dimension of the rule array.
+
+
+\begin{minipage}{0.5\textwidth}
+
+\begin{tabular}{|c|c|l|}
+\hline
+Line & Runtime & Type \\
+\hline
+1 &  1 & Assignment \\
+2 & k & Loop \\
+3 & k $\cdot$ n & Loop \\
+4 & k $\cdot$ n $\cdot$ n &  Loop\\
+5 & k $\cdot$ n $\cdot$ n $\cdot$ 1 & Assignment\\
+9 & ... & Function call\\
+\hline
+\end{tabular}
+
+
+\end{minipage}\begin{minipage}{0.5\textwidth}
+Calculating the runtime of the method call:
+\begin{align*}
+& 1 + k + k \cdot n + k \cdot n \cdot n + k \cdot n \cdot n \\
+& = 1 + k + k \cdot n + 2(n^2 \cdot k) \\
+& \in O(n^2)
+\end{align*}
+\end{minipage}
+
+
+\begin{algorithm}[H]
+\caption{Boolean parseTD(int indexNT, int i, int j)}\label{alg:cap}
+\begin{algorithmic}[1]
+\State $counter \gets +1$
+\State $rulesetLength \gets ruleset[0].length$
+\If{$table[indexNT][i][j] \  != null$}
+\State \Return $table[indexNT][i][j]$
+\EndIf
+\If{$i == (j-1)$}
+\For{$l \gets 0$ \textbf{to} $ruleset[0].length$}
+\If{$ruleset[indexNT][1] == inputWord[i]$}
+\State \Return true
+\EndIf
+\EndFor
+
+\Else
+\For{$bodyIndex \gets 0$ \textbf{to} $ruleset[indexNT].length$}
+\If{$ruleset[indexNT][bodyIndex].length >= 2$}
+\State $first \gets ruleset[indexNT][bodyIndex].charAt(0)$
+\State $second \gets ruleset[indexNT][bodyIndex].charAt(1)$
+\For{$k \gets i+1$ \textbf{to} $j$}
+\If{$parseNaive(first, i, k)$ \textbf{and} $parseNaive(second, k, j)$}
+\State \Return true
+\EndIf
+\EndFor
+\EndIf
+\EndFor
+\EndIf
+\State \Return false
+\end{algorithmic}
+\end{algorithm}
+
+The runtime analysis of the \texttt{parseTD} method is analog to the \texttt{parseNaive} runtime analysis. Both algorithms have a runtime in $O(n^2)$.
+
+
+
+
+%---------------------------------------------------------------------%
+
+
+\subsubsection{Bottom-Up}
+\label{bottomup}
+
 
 %---------------------------------------------------------------------%
 
@@ -435,7 +515,13 @@ Because of the recursive call that can happen up to $n$ times the runtime is in 
 
 \section{Evaluation}
 
-We did some experiments \ldots
+\subsection{Runtimes}
+\label{runtime}
+
+\subsection{Experiments}
+\label{experiments}
+
+
 
 \pagebreak
 
@@ -452,7 +538,7 @@ We did some experiments \ldots
 
 
 
-\section{Conclusions and Future Work}
+\section{Conclusion and Future Work}
 
 From our experiments we can conclude that \ldots
 

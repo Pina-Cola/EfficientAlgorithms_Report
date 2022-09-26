@@ -25,14 +25,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.3.1}Naive}{6}{subsubsection.3.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.2}Bottom-Up}{7}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2}Top-Down}{7}{subsubsection.3.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.3}Top-Down}{7}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3}Bottom-Up}{8}{subsubsection.3.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Evaluation}{8}{section.4}%
+\contentsline {section}{\numberline {4}Evaluation}{9}{section.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Conclusions and Future Work}{9}{section.5}%
+\contentsline {subsection}{\numberline {4.1}Runtimes}{9}{subsection.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}How to use the code?}{10}{appendix.A}%
+\contentsline {subsection}{\numberline {4.2}Experiments}{9}{subsection.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Bibliography}{11}{section*.1}%
+\contentsline {section}{\numberline {5}Conclusion and Future Work}{10}{section.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A}How to use the code?}{11}{appendix.A}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Bibliography}{12}{section*.1}%
