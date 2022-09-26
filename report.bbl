@@ -19,26 +19,44 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
-    \entry{JC}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=5595fc46ec4ea38c645aba54de1bf598}{%
-           family={Chen},
+    \entry{CYK1}{article}{}
+      \name{author}{3}{}{%
+        {{hash=182e8ceab65fbc208ab66e2601718b22}{%
+           family={Zanzotto},
+           familyi={Z\bibinitperiod},
+           given={Fabio\bibnamedelima Massimo},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=056a6f25ea45324b631c9ffae943067a}{%
+           family={Satta},
+           familyi={S\bibinitperiod},
+           given={Giorgio},
+           giveni={G\bibinitperiod}}}%
+        {{hash=77f5b723e9ed4fe1e8da35fa0f68ac78}{%
+           family={Cristini},
            familyi={C\bibinitperiod},
-           given={Janet},
-           giveni={J\bibinitperiod}}}%
+           given={Giordano},
+           giveni={G\bibinitperiod}}}%
       }
-      \strng{namehash}{5595fc46ec4ea38c645aba54de1bf598}
-      \strng{fullhash}{5595fc46ec4ea38c645aba54de1bf598}
-      \strng{bibnamehash}{5595fc46ec4ea38c645aba54de1bf598}
-      \strng{authorbibnamehash}{5595fc46ec4ea38c645aba54de1bf598}
-      \strng{authornamehash}{5595fc46ec4ea38c645aba54de1bf598}
-      \strng{authorfullhash}{5595fc46ec4ea38c645aba54de1bf598}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \strng{namehash}{d5fe22c0f4fb29609f939c3fcccde98c}
+      \strng{fullhash}{d5fe22c0f4fb29609f939c3fcccde98c}
+      \strng{bibnamehash}{d5fe22c0f4fb29609f939c3fcccde98c}
+      \strng{authorbibnamehash}{d5fe22c0f4fb29609f939c3fcccde98c}
+      \strng{authornamehash}{d5fe22c0f4fb29609f939c3fcccde98c}
+      \strng{authorfullhash}{d5fe22c0f4fb29609f939c3fcccde98c}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Online erhältlich unter \url{http://people.math.harvard.edu/~jjchen/docs/Group_Theory_and_the_Rubik's_Cube.pdf}; abgerufen am 05.01.2021.}
-      \field{title}{Group Theory and the Rubik's Cube}
+      \field{journaltitle}{Algorithms}
+      \field{month}{10}
+      \field{title}{CYK Parsing over Distributed Representations}
+      \field{volume}{13}
+      \field{year}{2020}
+      \field{pages}{262}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/a13100262
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

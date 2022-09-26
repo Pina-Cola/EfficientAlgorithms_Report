@@ -10,7 +10,10 @@
 \usepackage{amsmath,amssymb} 
 \usepackage{mathtools} 
 \usepackage{bm}  
-\usepackage[hidelinks]{hyperref}  
+\usepackage[hidelinks]{hyperref} 
+
+\usepackage{setspace}
+\onehalfspacing
 
 \usepackage{pgfplots}
 \pgfplotsset{width=10cm,compat=1.9}
@@ -21,6 +24,9 @@
 \usepackage{pdfsync}  
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+
+\usepackage[compact]{titlesec}  
+\titlespacing*{\section}{0pt}{10ex plus 1ex minus .2ex}{4.3ex plus .2ex}
 
 \usepackage[backend=biber, maxbibnames=99]{biblatex}
 
@@ -48,7 +54,44 @@
 
 
 \begin{document}
-\maketitle
+
+
+\begin{titlepage}
+	\centering
+	{\scshape\LARGE Ume\r{a} University \par}
+	Efficient Algorithms \par
+	\vspace{1cm}
+	{\scshape\Large Assignment Step 2 \par }
+	\vspace{1.5cm}
+	{\huge\bfseries  Runtime analysis of the Java implementation of the CYK-algorithm \par}
+	\vspace{2cm}
+	{\Large\itshape Pina Kolling\par}
+	\vfill
+
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+
+
+
+
+
+
+
+
+%---------------------------------------------------------------------%
+
+
+
+
+
+
+
+\setcounter{page}{1}
+
+
+\newpage
+\fancyhead[LO]{\empty}
 {
   \hypersetup{linkcolor=black}
   \tableofcontents
@@ -74,15 +117,16 @@
 
 \section{Introduction}
 
-My project was about \ldots
+Parsing in Computer Science is the process of analysing a string of characters to examine if the string is built according to the rules of a formal grammar. \cite{CYK1}
 
-I developed a system to \ldots
+A formal grammar describes how to form strings with correct syntax from a language's alphabet.
+To examine if such a string follows the rules of a grammar the CYK-algorithm can be used. Therefore the grammar needs to be in a specific format, called CNF (explained in section \ref{CNF}).
+\\ 
+\\
+The task for this assignment was to code three different parsing methods to execute the CYK-algorithm in \textit{Java}.
+For this three different classes were implemented: \texttt{main.java, grammar.java} and \texttt{parser.java}. The \texttt{main}-class calls the methods and the \texttt{grammar}-class parses the input grammer ans string into a format that then can be processed in the \texttt{parser}-class.
+The function and implementation will be former described in section \ref{systemdesign}.
 
-We did some experiments to find out \ldots
-
-The main results were \ldots
-
-\cite{JC}
 
 \pagebreak
 
@@ -102,7 +146,13 @@ The main results were \ldots
 
 \section{Background}
 
-I did some background reading in the following areas \ldots
+\begin{itemize}
+\item grammar \\
+A formal grammar describes how to form strings with correct syntax from a language's alphabet. A grammar does not describe the meaning of the strings or any semantics — only their syntax is defined.
+\item CNF \label{CNF}
+\item CYK
+\item DP
+\end{itemize}
 
 \pagebreak
 
@@ -120,6 +170,7 @@ I did some background reading in the following areas \ldots
 
 
 \section{System Design}
+\label{systemdesign}
 
 My system worked as follows \ldots
 
@@ -246,6 +297,5 @@ For the \texttt{BottomUp} method is the CYK algorithm table printed.
 %\end{spacing}
 
 
-%\bibliographystyle{abbrv}
 
 \end{document}
