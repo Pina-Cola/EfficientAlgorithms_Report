@@ -2354,6 +2354,7 @@
     <bcf:citekey order="5">CYK1</bcf:citekey>
     <bcf:citekey order="6">cyk_online_alg</bcf:citekey>
     <bcf:citekey order="7">DP</bcf:citekey>
+    <bcf:citekey order="8">FG</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

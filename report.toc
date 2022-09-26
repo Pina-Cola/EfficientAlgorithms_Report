@@ -27,16 +27,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.3.2}Top-Down}{7}{subsubsection.3.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.3}Bottom-Up}{8}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3}Bottom-Up}{9}{subsubsection.3.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Evaluation}{9}{section.4}%
+\contentsline {section}{\numberline {4}Evaluation}{11}{section.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Runtimes}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.1}Experiments}{11}{subsection.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Experiments}{9}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}Runtimes}{11}{subsection.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Conclusion and Future Work}{10}{section.5}%
+\contentsline {section}{\numberline {5}Conclusion and Future Work}{12}{section.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}How to use the code?}{11}{appendix.A}%
+\contentsline {section}{\numberline {A}How to use the code?}{13}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Bibliography}{12}{section*.1}%
+\contentsline {section}{\numberline {B}Graphs and results}{14}{appendix.B}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Bibliography}{16}{section*.1}%

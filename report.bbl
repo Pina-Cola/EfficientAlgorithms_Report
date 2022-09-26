@@ -32,7 +32,7 @@
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{labeltitlesource}{title}
       \field{howpublished}{Website}
-      \field{note}{url={https://www.programiz.com/dsa/dynamic-programming}, opened on 26.09.2022}
+      \field{note}{\url{https://www.programiz.com/dsa/dynamic-programming}, opened on 26.09.2022}
       \field{title}{Dynamic Programming}
     \endentry
     \entry{cyk_online_alg}{misc}{}
@@ -62,6 +62,34 @@
       \verb{url}
       \verb https://www.xarg.org/tools/cyk-algorithm/
       \endverb
+    \endentry
+    \entry{FG}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=aacdf675043db87fcddd949392e564f9}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Maggie},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a6beb3a76c353ab6a084e3fa24ba70e8}{%
+           family={Zelenski},
+           familyi={Z\bibinitperiod},
+           given={Julie},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{66327d604de2efe766418d3d9781e128}
+      \strng{fullhash}{66327d604de2efe766418d3d9781e128}
+      \strng{bibnamehash}{66327d604de2efe766418d3d9781e128}
+      \strng{authorbibnamehash}{66327d604de2efe766418d3d9781e128}
+      \strng{authornamehash}{66327d604de2efe766418d3d9781e128}
+      \strng{authorfullhash}{66327d604de2efe766418d3d9781e128}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Website}
+      \field{note}{\url{https://web.stanford.edu/class/archive/cs/cs143/cs143.1128/handouts}, opened on 26.09.2022}
+      \field{title}{Formal Grammars}
+      \field{year}{2012}
     \endentry
     \entry{CYK_name}{article}{}
       \name{author}{1}{}{%
