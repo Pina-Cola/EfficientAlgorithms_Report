@@ -27,6 +27,42 @@
       \field{note}{\url{https://www.javatpoint.com/automata-chomskys-normal-form}, opened on 26.09.2022}
       \field{title}{Chomsky's Normal Form (CNF)}
     \endentry
+    \entry{DP}{misc}{}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Website}
+      \field{note}{url={https://www.programiz.com/dsa/dynamic-programming}, opened on 26.09.2022}
+      \field{title}{Dynamic Programming}
+    \endentry
+    \entry{cyk_online_alg}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7bf268f7ac71b3e70cef6ff571ac5c21}{%
+           family={Eisele},
+           familyi={E\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{7bf268f7ac71b3e70cef6ff571ac5c21}
+      \strng{fullhash}{7bf268f7ac71b3e70cef6ff571ac5c21}
+      \strng{bibnamehash}{7bf268f7ac71b3e70cef6ff571ac5c21}
+      \strng{authorbibnamehash}{7bf268f7ac71b3e70cef6ff571ac5c21}
+      \strng{authornamehash}{7bf268f7ac71b3e70cef6ff571ac5c21}
+      \strng{authorfullhash}{7bf268f7ac71b3e70cef6ff571ac5c21}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{5}
+      \field{title}{A CYK Algorithm Visualization}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://www.xarg.org/tools/cyk-algorithm/
+      \endverb
+      \verb{url}
+      \verb https://www.xarg.org/tools/cyk-algorithm/
+      \endverb
+    \endentry
     \entry{CYK_name}{article}{}
       \name{author}{1}{}{%
         {{hash=e798cf86b6e156c917e60175d3343f4f}{%

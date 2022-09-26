@@ -1,7 +1,7 @@
 % LaTeX Template for short student reports.
 % Citations should be in bibtex format and go in references.bib
 \documentclass[a4paper, 11pt]{article}
-\usepackage[top=3cm, bottom=3cm, left = 3cm, right = 3cm]{geometry}
+\usepackage[top=3cm, bottom=3cm, left = 2.5cm, right = 3cm]{geometry}
 \usepackage[english]{babel} 
 \geometry{a4paper} 
 \usepackage[utf8]{inputenc}
@@ -11,6 +11,7 @@
 \usepackage{mathtools} 
 \usepackage{bm}  
 \usepackage[hidelinks]{hyperref} 
+\usepackage{float}
 
 \usepackage{setspace}
 \onehalfspacing
@@ -219,10 +220,23 @@ To change the previous example into CNF the rules have to be split up:
 \label{cyk}
 \textit{Cocke-Younger-Kasami}-algorithm (short: \textit{CYK}) takes a grammar in \textit{CNF} and a word as an input. It then examines if the word follows the rules of the grammar. \cite{CYK1}
 
+\begin{example*}[Chomsky-Normal-Form]
+The following table shows the CYK-algorithm with the previous grammar example and the input word $aaabbb$. \cite{cyk_online_alg}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.3]{images/cyk_table.png}
+\end{center}
+\caption{CYK-algorithm table for the word $aaabbb$}
+\end{figure}
+The word is accepted by the grammar rules, because the intiating nonterminal symbol \textit{\texttt{S}} can be filled into the lowest field.
+\end{example*}
+
 %---------------------------------------------------------------------%
 
 \subsection{Dynamic programming}
 \label{dp}
+
+The technique of dynamic programming can be used to solve problems, which can be devided into smaller subproblems. The solutions of the subproblems are saved (for example in a multi-dimensional array) and referenced later. \cite{DP}
 
 
 %---------------------------------------------------------------------%
@@ -247,7 +261,36 @@ To change the previous example into CNF the rules have to be split up:
 \section{System Design}
 \label{systemdesign}
 
-My system worked as follows \ldots
+
+%---------------------------------------------------------------------%
+
+
+
+\subsection{Main}
+
+%---------------------------------------------------------------------%
+%---------------------------------------------------------------------%
+
+\subsection{Grammar}
+
+%---------------------------------------------------------------------%
+%---------------------------------------------------------------------%
+
+\subsection{Parser}
+
+%---------------------------------------------------------------------%
+
+\subsubsection{Naive}
+
+%---------------------------------------------------------------------%
+
+\subsubsection{Bottom-Up}
+
+%---------------------------------------------------------------------%
+
+\subsubsection{Top-Down}
+
+%---------------------------------------------------------------------%
 
 \pagebreak
 
