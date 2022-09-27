@@ -653,10 +653,10 @@ The runtime analysis of the \texttt{parseTD} method is analog to the \texttt{par
 \label{bottomupdescription}
 
 The \texttt{parseBU} method works with dynamic programming.
+First a table $DP$ with the size $n \times n$ gets constructed (line 2) -- $n$ represents the input word length.
+In the first step the integers that represent the nonterminal symbols that are head of a terminal rule get assigned (line 3 - 12). For the character at index i of the input word the value of $DP[i][i]$ gets the nonterminal symbol that leads to the character of the word.
+The approach of dynamic programming calculates the smallest substrings first and saves them for the efficient processing of the next-bigger substrings.  The smallest substrings are the single characters.
 
-% TODO: describe idea of algorithm more detailed in text form!
-
-% Gemäß dem Prinzip der dynamischen Programmierung werden erst die {\displaystyle V_{i,j}}V_{{i,j}} für die kleinsten Teilwörter von {\displaystyle w}w berechnet, abgespeichert und dann zur somit effizienten Berechnung der nächstgrößeren Teilwörter weiterverwendet. Die kleinsten Teilwörter sind einzelne Buchstaben. Da die kontextfreie Grammatik in Chomsky-Normalform gegeben ist, kann jeder Buchstabe nur in genau einem Schritt von einem Nichtterminal abgeleitet werden.
 
 \begin{algorithm}[H]
 \caption{Boolean parseBU()}\label{alg:cap}
@@ -702,11 +702,17 @@ The \texttt{parseBU} method works with dynamic programming.
 \end{algorithmic}
 \end{algorithm}
 
-\newpage
+In line 13 to 32 the \textit{CYK}-algorithm gets excecuted. It is descreibed in section \ref{cyk}. For each field the two fields \textit{leading} to it get compared, to then fill in the head of a rule that concludes into the both compared nonterminal symbols.
+
+In the last lines (line 33-35) the last field of the $DP$-array gets checked. If it containes the start symbol of the grammar, the word is contained in the language and the algorithm returns true. Else false is returned.
+
+
+
 
 \subsubsection{Bottom-Up runtime}
 \label{bottomupruntime}
 
+In the following part the upper bound runtime of the bottom up algorithm gets analysed.
 The variable $n$ represents the length of the input word and $k$ the dimension of the rule array. \\
 
 \begin{minipage}{0.6\textwidth}
