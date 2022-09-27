@@ -562,7 +562,7 @@ The top-down method is an improves version of the naive method (section \ref{nai
 \end{algorithmic}
 \end{algorithm}
 
-Additional to the naive algorithm, the recursion in the topdown approach starts with another condition: If one of the values in the global table is not \texttt{null}, the next recursive call is not executed and this value gets returned. This if-condition can be seen in the following part of the pseudo code. The rest of the topdown approach is the same as the naive method.
+Additional to the naive algorithm, the recursion in the topdown approach starts with another condition: If one of the values in the global table is not \texttt{null}, the next recursive call is not executed and this value gets returned. This if-condition can be seen in the following part of the pseudo code. The rest of the topdown approach is a similar approach to the naive method that was already described in section \ref{naivedescription}.
 
 \begin{algorithm}[H]
 \caption{Additional condition in Boolean parseTD(int indexNT, int i, int j)}\label{alg:cap}
@@ -573,12 +573,48 @@ Additional to the naive algorithm, the recursion in the topdown approach starts 
 \end{algorithmic}
 \end{algorithm}
 
+The complete topdown algorithm is shown as pseudo code below. In the inner for-loop (line 18) the boolean value of the next method calls get assigned into the global table. If there is assigned a true (line 19) the value true gets returnes (lime 20). The general topdown approach is the same approach to the naive method that was already described in section \ref{naivedescription}.
+
+\begin{algorithm}[H]
+\caption{Boolean parseTD(int indexNT, int i, int j)}\label{alg:cap}
+\begin{algorithmic}[1]
+\State $counter \gets counter+1$
+\State $rulesetLength \gets ruleset[0].length$
+\If{$table[indexNT][i][j] \  != null$}
+\State \Return $table[indexNT][i][j]$
+\EndIf
+\If{$i == (j-1)$}
+\For{$l \gets 0$ \textbf{to} $ruleset[0].length$}
+\If{$ruleset[indexNT][1] == inputWord[i]$}
+\State \Return true
+\EndIf
+\EndFor
+
+\Else
+\For{$bodyIndex \gets 0$ \textbf{to} $ruleset[indexNT].length$}
+\If{$ruleset[indexNT][bodyIndex].length >= 2$}
+\State $first \gets ruleset[indexNT][bodyIndex].charAt(0)$
+\State $second \gets ruleset[indexNT][bodyIndex].charAt(1)$
+\For{$k \gets i+1$ \textbf{to} $j$}
+\State $table[indexNT][i][j] \gets (parseTD(first,i,k)$ \texttt{and} $parseTD(second,k,j))$
+\If{$table[indexNT][i][j] == true$}
+\State \Return true
+\EndIf
+\EndFor
+\EndIf
+\EndFor
+\EndIf
+\State \Return false
+\end{algorithmic}
+\end{algorithm}
+
 \subsubsection{Top-Down runtime}
 \label{topdownruntime}
 
-The variable $n$ represents the length of the input word and $k$ the dimension of the rule array.
+In this part the runtime of the topdown method is calculated.
+The variable $n$ represents the length of the input word and $k$ the dimension of the rule array. The first part of the calculation shows the recursion call method.
 
-
+\ \\ \\
 \begin{minipage}{0.5\textwidth}
 
 \begin{tabular}{|c|c|l|}
@@ -603,41 +639,9 @@ Calculating the runtime of the method call:
 & \in O(n^2)
 \end{align*}
 \end{minipage}
+\ \\
 
-
-\begin{algorithm}[H]
-\caption{Boolean parseTD(int indexNT, int i, int j)}\label{alg:cap}
-\begin{algorithmic}[1]
-\State $counter \gets counter+1$
-\State $rulesetLength \gets ruleset[0].length$
-\If{$table[indexNT][i][j] \  != null$}
-\State \Return $table[indexNT][i][j]$
-\EndIf
-\If{$i == (j-1)$}
-\For{$l \gets 0$ \textbf{to} $ruleset[0].length$}
-\If{$ruleset[indexNT][1] == inputWord[i]$}
-\State \Return true
-\EndIf
-\EndFor
-
-\Else
-\For{$bodyIndex \gets 0$ \textbf{to} $ruleset[indexNT].length$}
-\If{$ruleset[indexNT][bodyIndex].length >= 2$}
-\State $first \gets ruleset[indexNT][bodyIndex].charAt(0)$
-\State $second \gets ruleset[indexNT][bodyIndex].charAt(1)$
-\For{$k \gets i+1$ \textbf{to} $j$}
-\If{$parseNaive(first, i, k)$ \textbf{and} $parseNaive(second, k, j)$}
-\State \Return true
-\EndIf
-\EndFor
-\EndIf
-\EndFor
-\EndIf
-\State \Return false
-\end{algorithmic}
-\end{algorithm}
-
-The runtime analysis of the \texttt{parseTD} method is analog to the \texttt{parseNaive} runtime analysis. Both algorithms have a runtime in $O(n^2)$.
+The runtime analysis of the \texttt{parseTD} method is analog to the \texttt{parseNaive} runtime analysis. According to this the topdown algorithm has an upper bound runtime in $O(n^2)$, too.
 
 
 
