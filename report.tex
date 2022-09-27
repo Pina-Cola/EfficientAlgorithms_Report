@@ -432,7 +432,7 @@ For the input \texttt{java Main \dq SSS\dq \ \dq SLA\dq \ \dq SLR\dq \ \dq ASR\d
 \subsection{Parser}
 \label{parser}
 
-The \texttt{parser}-class contains three different parsing methods. Each methods has a counter as \texttt{long} which counts the number of interations and a timer as \texttt{long} in $ms$ which measures the runtime of the method.
+The \texttt{parser}-class contains three different parsing methods: \texttt{parseNaive} (described in section \ref{naivedescription}), \texttt{parseTopDown} (described in section \ref{topdowndescription}) and \texttt{parseBottomUp} (described in section \ref{bottomupdescription}). Each methods has a counter as \texttt{long} which counts the number of interations and a timer as \texttt{long} in $ms$ which measures the runtime of the method. In the following sections the algorithms are described, presented as pseudo code and the runtime is analysed.
 
 %---------------------------------------------------------------------%
 
@@ -813,6 +813,8 @@ The input word with a length of 40 did not terminate for the naive parsing in 60
 
 \subsection{Runtimes}
 \label{runtime}
+
+% TODO plot graph of runtimes
 
 The runtimes of the methods are calculated in section \ref{systemdesign}. The results are the following:
 \ \\ \\
