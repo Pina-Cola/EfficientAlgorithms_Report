@@ -25,7 +25,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.3.1}Naive}{8}{subsubsection.3.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.2}Top-Down}{9}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2}Top-Down}{10}{subsubsection.3.3.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.3.3}Bottom-Up}{12}{subsubsection.3.3.3}%
 \defcounter {refsection}{0}\relax 
