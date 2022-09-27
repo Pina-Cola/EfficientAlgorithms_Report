@@ -211,8 +211,19 @@ L = \{ (a^{n}b^{n})^m \} \text{ with } n, m \in \mathbb{N}
 
 A formal grammar describes how to form strings with correct syntax from a language's alphabet. A grammar does not describe the meaning of the strings or any semantics — only their syntax is defined. The grammar is a set of rules which define which words are accepted by a formal language. Those rules consist of terminal and nonterminal symbols. The terminalsymbols are the characters of the alphabet of the language and the nonterminalsymbols are used to build the rules of the language -- they get replaced by terminalsymbols. \cite{CNF, language} 
 
+\begin{definition*}[Formal grammar]
+A formal grammar $G$ is defined as a 4-tuple:
+\begin{align*}
+G = (V, T, P, S)
+\end{align*}
+The set $V$ contains the nonterminal symbols of the grammar and the set $T$ the terminal symbols, which is the alphabet of a language. This concludes to $V \cap T = \emptyset$. The set $P$ is the set of production rules: $P \subset (V^* \setminus T^* ) \times V^*$. The symbol $S \in V \setminus T$ represents the start symbol. 
+\end{definition*}
+
 \begin{example*}[Formal grammar]
 The example grammar for the previous example language is the following:
+\begin{align*}
+G = (\{S\}, \{ a, b \}, \{ S \rightarrow SS, S \rightarrow  aSb, S \rightarrow ab \},  \{ S \})
+\end{align*}
 \begin{center}
 \texttt{S $\rightarrow$ SS $\mid$  aSb $\mid$ ab}
 \end{center}
