@@ -266,7 +266,7 @@ The following table shows the CYK-algorithm with the previous grammar example an
 \end{center}
 \caption{CYK-algorithm table for the word $aaabbb$}
 \end{figure}
-The word is accepted by the grammar rules, because the intiating nonterminal symbol \textit{\texttt{S}} can be filled into the lowest field.
+The word is accepted by the grammar rules, because the intiating nonterminal symbol \textit{\texttt{S}} can be filled into the lowest field. In appendix \ref{cyksteps} the table is filled in step by step and the rules that are used in each step are marked.
 \end{example*}
 
 %---------------------------------------------------------------------%
@@ -298,7 +298,7 @@ $$
 
 If $0 \leq j \leq w$ then there are no objects which could be put into the bag. The second case acts when object $i$ does not fit into the bag and the optimal solution is found with the objects from index $1$ to $i-1$. Else the object $i$ is either part of the optimal solution or it consists out of the objects $1$ to $i-1$.
 
-\ \\ \\
+\ \\
 
 The table of the values and weight of each item with index $i$ is shown on the left and on the right is the table that gets filled in with a dynamic programming approach of the formula above. The maximum bag size is 7.
 \\ \\
@@ -1136,9 +1136,20 @@ This is the grammar in CNF:
 
 %---------------------------------------------------------------------%
 
+\newpage
+
+\subsection{CYK Algorithm on an example}
+\label{cyksteps}
+
+\includegraphics[scale=0.45]{images/cyk1.png}
+
+\includegraphics[scale=0.55]{images/cyk2.png}
 
 
 
+
+
+%---------------------------------------------------------------------%
 \fancyhead[LO]{\empty}
 
 

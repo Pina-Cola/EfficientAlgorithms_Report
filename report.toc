@@ -49,4 +49,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {C.1}CNF Algorithm on an example}{19}{subsection.C.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Bibliography}{20}{section*.1}%
+\contentsline {subsection}{\numberline {C.2}CYK Algorithm on an example}{20}{subsection.C.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Bibliography}{21}{section*.1}%

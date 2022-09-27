@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  27 SEP 2022 16:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  27 SEP 2022 16:44
 entering extended mode
 **./report.tex
 (report.tex
@@ -1337,7 +1337,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [3]
-<images/cyk_table.png, id=196, 767.86874pt x 456.95718pt>
+<images/cyk_table.png, id=201, 767.86874pt x 456.95718pt>
 File: images/cyk_table.png Graphic file (type png)
 <use images/cyk_table.png>
 Package pdftex.def Info: images/cyk_table.png  used on input line 265.
@@ -1373,11 +1373,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 288--289
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 296--298
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
 
  []
 
@@ -1424,7 +1419,7 @@ Overfull \hbox (4.19086pt too wide) in paragraph at lines 381--382
 r-ent classes were im-ple-mented: \OT1/cmtt/m/n/10.95 main.java
  []
 
-<images/terminal_1.png, id=222, 137.01187pt x 440.39531pt>
+<images/terminal_1.png, id=228, 137.01187pt x 440.39531pt>
 File: images/terminal_1.png Graphic file (type png)
 <use images/terminal_1.png>
 Package pdftex.def Info: images/terminal_1.png  used on input line 426.
@@ -1623,7 +1618,7 @@ Overfull \hbox (44.10445pt too wide) in paragraph at lines 875--899
 [][][]$$[][][]$$[][][]$ 
  []
 
-<images/terminal_2.png, id=273, 231.86626pt x 198.7425pt>
+<images/terminal_2.png, id=279, 231.86626pt x 198.7425pt>
 File: images/terminal_2.png Graphic file (type png)
 <use images/terminal_2.png>
 Package pdftex.def Info: images/terminal_2.png  used on input line 901.
@@ -1717,14 +1712,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [19]
-Overfull \hbox (24.61864pt too wide) in paragraph at lines 1153--1153
+<images/cyk1.png, id=304, 423.08063pt x 545.41266pt>
+File: images/cyk1.png Graphic file (type png)
+<use images/cyk1.png>
+Package pdftex.def Info: images/cyk1.png  used on input line 1144.
+(pdftex.def)             Requested size: 190.38452pt x 245.43343pt.
+<images/cyk2.png, id=305, 348.92859pt x 562.35094pt>
+File: images/cyk2.png Graphic file (type png)
+<use images/cyk2.png>
+Package pdftex.def Info: images/cyk2.png  used on input line 1146.
+(pdftex.def)             Requested size: 191.91132pt x 309.29398pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[20 <./images/cyk1.png> <./images/cyk2.png>]
+Overfull \hbox (24.61864pt too wide) in paragraph at lines 1164--1164
 [][][]\OT1/cmr/m/it/10.95 Dynamic Pro-gram-ming\OT1/cmr/m/n/10.95 . Web-site. [
 ]$[][]\OT1/cmtt/m/n/10.95 https : / / www . programiz . com / dsa / dynamic -[]
  programming$[]\OT1/cmr/m/n/10.95 ,
  []
 
 
-Overfull \hbox (6.07579pt too wide) in paragraph at lines 1153--1153
+Overfull \hbox (6.07579pt too wide) in paragraph at lines 1164--1164
 [][][]\OT1/cmr/m/n/10.95 Maggie John-son and Julie Ze-len-ski. \OT1/cmr/m/it/10
 .95 For-mal Gram-mars\OT1/cmr/m/n/10.95 . Web-site. []$[][]\OT1/cmtt/m/n/10.95 
 https : / / web . stanford .
@@ -1738,21 +1753,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[20] (report.aux)
+[21] (report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: BDEDBF0E63B9CA5CC06A5BB2808AD586;3057.
+(rerunfilecheck)             Checksum: 8B78E3E98FC02F3565F7908576943241;3263.
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40557 strings out of 478927
- 908860 string characters out of 2852534
- 1729661 words of memory out of 3000000
- 57708 multiletter control sequences out of 15000+600000
+ 40575 strings out of 478927
+ 909165 string characters out of 2852534
+ 1729719 words of memory out of 3000000
+ 57722 multiletter control sequences out of 15000+600000
  421035 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,47n,103p,1235b,2407s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1785,9 +1800,9 @@ ti12.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmti9.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmtt10.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (21 pages, 543789 bytes).
+Output written on report.pdf (22 pages, 863601 bytes).
 PDF statistics:
- 425 PDF objects out of 1000 (max. 8388607)
- 66 named destinations out of 1000 (max. 500000)
- 228 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 440 PDF objects out of 1000 (max. 8388607)
+ 68 named destinations out of 1000 (max. 500000)
+ 246 words of extra memory for PDF output out of 10000 (max. 10000000)
 
