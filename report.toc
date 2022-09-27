@@ -41,4 +41,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {B}Graphs and results}{16}{appendix.B}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Bibliography}{18}{section*.1}%
+\contentsline {section}{\numberline {C}CNF Algorithm on an example}{18}{appendix.C}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Bibliography}{19}{section*.1}%
