@@ -436,8 +436,8 @@ The \texttt{parser}-class contains three different parsing methods. Each methods
 
 %---------------------------------------------------------------------%
 
-\subsubsection{Naive}
-\label{naive}
+\subsubsection{Naive description}
+\label{naivedescription}
 
 % TODO: describe idea of algorithm more detailed in text form!
 
@@ -496,7 +496,10 @@ If i is not equal to j-1 it loops for the integer $k$ from i+1 to j-1 and checks
 \end{algorithmic}
 \end{algorithm}
 
-In the following table the upper boundary runtime of the second method (algorithm 2) is listed for each line. The variable $n$ represents the length of the input word and $k$ the dimension of the rule array.
+\subsubsection{Naive runtime}
+\label{naiveruntime}
+
+In the following table the upper bound runtime of the second method (algorithm 2) is listed for each line. The variable $n$ represents the length of the input word and $k$ the dimension of the rule array.
 \ \\ \ \\
 \begin{minipage}{0.5\textwidth}
 
@@ -537,12 +540,12 @@ The runtime of the naive method is in $O(n^2)$.
 
 
 \newpage
-\subsubsection{Top-Down}
-\label{topdown}
+\subsubsection{Top-Down description}
+\label{topdowndescription}
 
 % TODO: describe idea of algorithm more detailed in text form!
 
-The top-down method is an improves version of the naive method (section \ref{naive}). This algorithm works recursive, too. In this algorithm another global array is used, which contains the values \texttt{true}, \texttt{false} and \texttt{null}. The array gets intialized with \texttt{null} in each field. That happens in the recursion call method below.
+The top-down method is an improves version of the naive method (section \ref{naivedescription}). This algorithm works recursive, too. In this algorithm another global array is used, which contains the values \texttt{true}, \texttt{false} and \texttt{null}. The array gets intialized with \texttt{null} in each field. That happens in the recursion call method below.
 
 \begin{algorithm}[H]
 \caption{Recursion call: Boolean parseTD()}\label{alg:cap}
@@ -570,7 +573,8 @@ Additional to the naive algorithm, the recursion in the topdown approach starts 
 \end{algorithmic}
 \end{algorithm}
 
-
+\subsubsection{Top-Down runtime}
+\label{topdownruntime}
 
 The variable $n$ represents the length of the input word and $k$ the dimension of the rule array.
 
@@ -641,8 +645,8 @@ The runtime analysis of the \texttt{parseTD} method is analog to the \texttt{par
 %---------------------------------------------------------------------%
 
 \newpage
-\subsubsection{Bottom-Up}
-\label{bottomup}
+\subsubsection{Bottom-Up description}
+\label{bottomupdescription}
 
 The \texttt{parseBU} method works with dynamic programming.
 
@@ -695,6 +699,9 @@ The \texttt{parseBU} method works with dynamic programming.
 \end{algorithm}
 
 \newpage
+
+\subsubsection{Bottom-Up runtime}
+\label{bottomupruntime}
 
 The variable $n$ represents the length of the input word and $k$ the dimension of the rule array. \\
 
@@ -820,7 +827,7 @@ Method & Runtime \\
 \end{tabular}
 
 \ \\
-Seeing those runtimes one could think that the naive and the topdown approach are equally efficient. Considering the differences in the algorithms and the results of the experiments it gets shown that this is not the case. The O-notation runtimes are the upper boundary for the runtime. 
+Seeing those runtimes one could think that the naive and the topdown approach are equally efficient. Considering the differences in the algorithms and the results of the experiments it gets shown that this is not the case. The O-notation runtimes are the upper bounds for the runtime. 
 
 Regarding the experiments that were run on the code, the topdown method seems to be the most efficient, followed by the bottomup method. The least efficient method is in these cases the naive approach.
 
