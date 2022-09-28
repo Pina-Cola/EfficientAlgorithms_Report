@@ -166,7 +166,7 @@ In the final part (section \ref{conclusion}) the results and future possibilitie
 
 \section{Background}
 
-In this section background information on formal languages, alphabets and Kleene star (section \ref{formallanguage}), formal grammars (section \ref{formalgrammar}), Chomsky-Normal-Form (section \ref{cnf}), CYK-algorithm (section \ref{cyk}) and dynmaic programming (section \ref{dp}) will be presented. 
+In this section background information, definitions and examples on formal languages, alphabets and Kleene star (section \ref{formallanguage}), formal grammars (section \ref{formalgrammar}), Chomsky-Normal-Form (section \ref{cnf}), CYK-algorithm (section \ref{cyk}) and dynmaic programming (section \ref{dp}) will be presented. 
 
 %---------------------------------------------------------------------%
 
@@ -174,7 +174,7 @@ In this section background information on formal languages, alphabets and Kleene
 \label{formallanguage}
 
 
-Formal languages are abstract languages which define the syntax of the words that get accepted by that language. It is a set of words that get accepted by the language and has a set of symbols that is called alphabet and contains all the possible characters of the words. Those characters are calles nonterminal symbols. \cite{CNF, language}
+Formal languages are abstract languages, which define the syntax of the words that get accepted by that language. It is a set of words that get accepted by the language and has a set of symbols that is called alphabet, which contains all the possible characters of the words. Those characters are called nonterminal symbols. \cite{CNF, language}
 
 \begin{definition*}[Formal language]
 A formal language $L$ over an alphabet $\Sigma$ is a subset of the Kleene star of the alphabet: $L \subseteq \Sigma^*$
@@ -208,7 +208,7 @@ L = \{ (a^{n}b^{n})^m \} \text{ with } n, m \in \mathbb{N}
 \label{formalgrammar}
 
 
-A formal grammar describes how to form strings with correct syntax from a language's alphabet. A grammar does not describe the meaning of the strings or any semantics — only their syntax is defined. The grammar is a set of rules which define which words are accepted by a formal language. Those rules consist of terminal and nonterminal symbols. The terminalsymbols are the characters of the alphabet of the language and the nonterminalsymbols are used to build the rules of the language -- they get replaced by terminalsymbols. \cite{CNF, language} 
+A formal grammar describes how to form strings with correct syntax from a language's alphabet. A grammar does not describe the meaning of the strings or any semantics — only their syntax is defined. The grammar is a set of rules, which define which words are accepted by a formal language. Those rules consist of terminal and nonterminal symbols. The terminalsymbols are the characters of the alphabet of the language and the nonterminalsymbols are used to build the rules of the language -- they get replaced by terminalsymbols. \cite{CNF, language} 
 
 \begin{definition*}[Formal grammar]
 A formal grammar $G$ is defined as a 4-tuple:
@@ -234,11 +234,11 @@ The rules of the grammar $G$ over the alphabet $\{a, b\}$ with the start symbol 
 \subsection{Chomsky-Normal-Form}
 \label{cnf}
 
-The \textit{Chomsky-Normal-Form} (short: \textit{CNF}) is a grammar which is formated in a specific way. If the startsymbol (nonterminal symbol) is not generating the empty word (\textit{\texttt{S $\rightarrow \epsilon$}}) it either generates two nonterminal symbols or one terminal symbol for the grammar to be in \textit{CNF}.
+The \textit{Chomsky-Normal-Form} (short: \textit{CNF}) is a grammar which is formated in a specific way. If the head of a rule (nonterminal symbol) is not generating the empty word (\textit{\texttt{S $\rightarrow \epsilon$}}) it either generates two nonterminal symbols or one terminal symbol for the grammar to be in \textit{CNF}.
 \cite{CNF}
 
 \begin{example*}[Chomsky-Normal-Form]
-This is the previous example in CNF. How it was edited can be seen in appendix \ref{createcnf}.
+This is the previous example in CNF. How it was built can be seen in appendix \ref{createcnf}.
 \begin{align*}
 \texttt{S} & \rightarrow \texttt{SS} \mid  \texttt{LA} \mid \texttt{LR} \\
 \texttt{A} & \rightarrow \texttt{SR} \\
@@ -254,7 +254,7 @@ This is the previous example in CNF. How it was edited can be seen in appendix \
 \label{cyk}
 
 
-\textit{Cocke-Younger-Kasami}-algorithm (short: \textit{CYK}) takes a grammar $G = (V, T, P, S)$ in \textit{CNF} and a word $w= w_1, w_2, ..., w_n \in T^*$ as an input. It then examines if the word follows the rules of the grammar. Then for every substring $w_{i, j} = w_i, ..., w_{i+j-1}$ (begins at index $i$ and has the length $j$) of the word $w$  the set of nonterminal symbols that lead to $w_{i, j}$ gets calculated and saved as $V_{i, j}$ to access it in later steps. \cite{CYK1}
+\textit{Cocke-Younger-Kasami}-algorithm (short: \textit{CYK}-algorithm) takes a grammar $G = (V, T, P, S)$ in \textit{CNF} and a word $w= w_1, w_2, ..., w_n \in T^*$ as an input. It then examines if the word follows the rules of the grammar. Then for every substring $w_{i, j} = w_i, ..., w_{i+j-1}$ (begins at index $i$ and has the length $j$) of the word $w$  the set of nonterminal symbols that lead to $w_{i, j}$ gets calculated and saved as $V_{i, j}$ to access it in later steps. \cite{CYK1}
 
 
 \begin{example*}[Chomsky-Normal-Form]
@@ -265,7 +265,7 @@ The following table shows the CYK-algorithm with the previous grammar example an
 \end{center}
 \caption{CYK-algorithm table for the word $aaabbb$}
 \end{figure}
-The word is accepted by the grammar rules, because the intiating nonterminal symbol \textit{\texttt{S}} can be filled into the lowest field. In appendix \ref{cyksteps} the table is filled in step by step and the rules that are used in each step are marked.
+The word is accepted by the grammar rules, because the intiating nonterminal symbol \textit{\texttt{S}} can be filled into the lowest field. In appendix \ref{cyksteps} the table is filled in step by step and the rules that are used in each step are marked, for a better understanding on how the algorithm works.
 \end{example*}
 
 %---------------------------------------------------------------------%
@@ -871,7 +871,7 @@ Regarding the experiments that were run on the code, the topdown method seems to
 
 Regarding the experiments from section \ref{evaluation}, the topdown method seems to be the most efficient, followed by the bottomup method. The least efficient method is in these cases the naive approach.
 
-Depending on the input word and the grammar thenaive and the topdown approach have the same worst case runtime with $O(n^2)$. The bottomup method has the highest worst case runtime with $O(n^3)$.
+Depending on the input word and the grammar the naive and the topdown approach have the same worst case runtime with $O(n^2)$. The bottomup method has the highest worst case runtime with $O(n^3)$.
 
 These algorithms show differences in efficiency but also limits for the examination of words with the \textit{CYK}-algorithm. The amount of calls raised especially with the Well-Balanced-Parantheses language exponentially. This can also be seen in the graphs in appendix \ref{graph}.
 
