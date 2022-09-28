@@ -130,15 +130,15 @@
 
 \section{Introduction}
 
-Parsing in Computer Science is the process of analysing a string of characters to examine if the string is built according to the rules of a formal grammar. 
+Parsing in Computer Science is the process  of reading and processing an input. In this context it is used for analysing a string of characters to examine if the string is built according to the rules of a formal grammar. 
 
-A formal grammar describes how to form strings with correct syntax from a language's alphabet (explained in section \ref{formalgrammar} and \ref{formallanguage}).
-To examine if such a string follows the rules of a grammar the \textit{Cocke-Younger-Kasami}-algorithm (short: \textit{CYK}) can be used. This algorithm is described in section \ref{cyk}. To use the \textit{CYK}-algorithm the grammar needs to be in a specific format, that is called \textit{Chomsky-Normal-Form} (short: \textit{CNF}), which is explained in section \ref{cnf}. \cite{CYK_name, CYK1}
+A formal grammar describes how to form strings with correct syntax out of characters from a formal language's alphabet (explained in section \ref{formalgrammar} and \ref{formallanguage}).
+To examine if such a string follows the rules of a grammar, the \textit{Cocke-Younger-Kasami}-algorithm (short: \textit{CYK}) can be used. This algorithm is described in section \ref{cyk}. To use the \textit{CYK}-algorithm the grammar needs to be in a specific format, that is called \textit{Chomsky-Normal-Form} (short: \textit{CNF}), which is explained in section \ref{cnf}. \cite{CYK_name, CYK1}
 
 
-The task for this assignment was to code three different parsing methods to execute the \textit{CYK}-algorithm in \textit{Java}. The different parsing methods will be described and presented as pseudo code in section \ref{systemdesign}.
-For the implementation three different classes are implemented: \texttt{main.java, grammar.java} and \texttt{parser.java}. The \texttt{main}-class calls the methods and the \texttt{grammar}-class parses the input grammer ans string into a format that then can be processed in the \texttt{parser}-class. This \texttt{parser}-class has three different parsing methods, which will be tested and compared against each other.
-The function and implementation will be former described in section \ref{systemdesign}. Also in this section the runtimes in $O$-notation are calculated for each approach.
+The task for this assignment is to code three different parsing methods of which one executes the \textit{CYK}-algorithm with dynamic programming in \textit{Java}. The different parsing methods will be described and presented as pseudo code in section \ref{systemdesign}.
+For the implementation three different classes are implemented: \texttt{main.java, grammar.java} and \texttt{parser.java}. The \texttt{main}-class calls the methods and the \texttt{grammar}-class parses the input grammer as string into a format that then can be processed in the \texttt{parser}-class. This \texttt{parser}-class has three different parsing methods, which will be tested and compared against each other.
+The function and implementation will be former described in section \ref{systemdesign}. Also in section \ref{systemdesign} the runtimes in $O$-notation are calculated for each approach.
 
 
 In section \ref{evaluation} the runtimes and experiments of the different algorithms are compared and differences in efficiency are shown.
@@ -843,6 +843,8 @@ Seeing those runtimes one could think that the naive and the topdown approach ar
 
 Regarding the experiments that were run on the code, the topdown method seems to be the most efficient, followed by the bottomup method. The least efficient method is in these cases the naive approach.
 
+
+
 % TODO: n^2 und n^3 plotten!
 
 \pagebreak
@@ -876,6 +878,10 @@ These algorithms show differences in efficiency but also limits for the examinat
 \subsection{Future work}
 
 Formal languages and grammars can be used in different use cases. For exampel for AI learning methods. Real languages like English can be defined as a formal language, too. But it is important to consider that formal languages only define the syntax and not the semantics. In addition to this has english a lot of rules and many exceptions. \cite{FG}
+
+\
+\\
+The future work for this assignment is to change the types of the arrays from \texttt{String[][]} to \texttt{int[][][]}. In addition to this there still exists a problem in the bottomup method, which needs to be fixed. Some specific grammars and words do not return the right value. After these things work correctly, more experiments can be run and the pseudo code will be edited. Then the upper bound runtime can be calculated again and the plotted graphs can be compared to the according $O$-notation runtime.
 
 
 \newpage
