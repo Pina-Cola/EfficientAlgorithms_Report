@@ -136,18 +136,18 @@
 
 Parsing in Computer Science is the process  of reading and processing an input. In this context it is used for analysing a string of characters to examine if the string is built according to the rules of a formal grammar. 
 
-A formal grammar describes how to form strings with correct syntax out of characters from a formal language's alphabet (explained in section \ref{formalgrammar} and \ref{formallanguage}).
-To examine if such a string follows the rules of a grammar, the \textit{Cocke-Younger-Kasami}-algorithm (short: \textit{CYK}) can be used. This algorithm is described in section \ref{cyk}. To use the \textit{CYK}-algorithm the grammar needs to be in a specific format, that is called \textit{Chomsky-Normal-Form} (short: \textit{CNF}), which is explained in section \ref{cnf}. \cite{CYK_name, CYK1}
+A formal grammar describes how to form strings with correct syntax out of characters from a formal language's alphabet (explained in Section \ref{formalgrammar} and \ref{formallanguage}).
+To examine if such a string follows the rules of a grammar, the \textit{Cocke-Younger-Kasami}-algorithm (short: \textit{CYK}) can be used. This algorithm is described in Section \ref{cyk}. To use the \textit{CYK}-algorithm the grammar needs to be in a specific format, that is called \textit{Chomsky-Normal-Form} (short: \textit{CNF}), which is explained in Section \ref{cnf}. \cite{CYK_name, CYK1}
 
 
-The task for this assignment is to code three different parsing methods of which one executes the \textit{CYK}-algorithm with dynamic programming in \textit{Java}. The different parsing methods will be described and presented as pseudo code in section \ref{systemdesign}.
-For the implementation three different classes are implemented: \texttt{main.java, grammar.java} and \texttt{parser.java}. The \texttt{main}-class calls the methods and the \texttt{grammar}-class parses the input grammer as string into a format that then can be processed in the \texttt{parser}-class. This \texttt{parser}-class has three different parsing methods, which will be tested and compared against each other.
-The function and implementation will be former described in section \ref{systemdesign}. Also in section \ref{systemdesign} the runtimes in $O$-notation are calculated for each approach.
+The task for this assignment is to code three different parsing methods of which one executes the \textit{CYK}-algorithm with dynamic programming in \textit{Java}. The different parsing methods are described and presented as pseudo code in Section \ref{systemdesign}.
+For the implementation three different classes are implemented: \texttt{main.java, grammar.java} and \texttt{parser.java}. The \texttt{main}-class calls the methods and the \texttt{grammar}-class parses the input grammer as string into a format that then can be processed in the \texttt{parser}-class. This \texttt{parser}-class has three different parsing methods, which are tested and compared against each other.
+The function and implementation is former described in Section \ref{systemdesign}. Also in Section \ref{systemdesign} the runtimes in $O$-notation are calculated for each approach.
 
 
-In section \ref{evaluation} the runtimes and experiments of the different algorithms are compared and differences in efficiency are shown.
+In Section \ref{evaluation} the runtimes and experiments of the different algorithms are compared and differences in efficiency are shown.
 
-In the final part (section \ref{conclusion}) the results and future possibilities are discussed.
+In the final part (Section \ref{conclusion}) the results and future possibilities are discussed.
 
 
 
@@ -170,7 +170,7 @@ In the final part (section \ref{conclusion}) the results and future possibilitie
 
 \section{Background}
 
-In this section background information, definitions and examples on formal languages, alphabets and Kleene star (section \ref{formallanguage}), formal grammars (section \ref{formalgrammar}), Chomsky-Normal-Form (section \ref{cnf}), CYK-algorithm (section \ref{cyk}) and dynmaic programming (section \ref{dp}) will be presented. 
+In this section background information, definitions and examples on formal languages, alphabets and Kleene star (Section \ref{formallanguage}), formal grammars (Section \ref{formalgrammar}), Chomsky-Normal-Form (Section \ref{cnf}), CYK-algorithm (Section \ref{cyk}), dynmaic programming (Section \ref{dp}) and recursion (Section \ref{recursion}) are presented. 
 
 %---------------------------------------------------------------------%
 
@@ -249,7 +249,7 @@ The \textit{Chomsky-Normal-Form} (short: \textit{CNF}) is a grammar which is for
 \cite{CNF}
 
 \begin{example*}[Chomsky-Normal-Form]
-This is the previous example in CNF. How it was built can be seen in appendix \ref{createcnf}.
+This is the previous example in CNF. How it was built can be seen in Appendix \ref{createcnf}.
 \begin{align*}
 \texttt{S} & \rightarrow \texttt{SS} \mid  \texttt{LA} \mid \texttt{LR} \\
 \texttt{A} & \rightarrow \texttt{SR} \\
@@ -380,7 +380,7 @@ A function that calls itself is called recursive function. In computer science r
 
 \begin{example*}[Recursion]
 
-For definition and examples for recursion read section \ref{recursion}.
+For definition and examples for recursion read Section \ref{recursion}.
 
 \end{example*}
 
@@ -431,7 +431,7 @@ f(n) = n + f(n-1) & \ \ \ \text{if } n > 1
 \section{Three variants of CYK algorithm}
 \label{systemdesign}
 
-The implementation was done in Java and three different classes were implemented: \texttt{main.java} (described in section \ref{main}), \texttt{grammar.java} (described in section \ref{grammar}) and \texttt{parser.java} (described in section \ref{parser}). The \texttt{main}-class calls the methods and the \texttt{grammar}-class parses the input grammer ans string into a format that then can be processed in the \texttt{parser}-class.
+The implementation was done in Java and three different classes were implemented: \texttt{main.java} (described in Section \ref{main}), \texttt{grammar.java} (described in Section \ref{grammar}) and \texttt{parser.java} (described in Section \ref{parser}). The \texttt{main}-class calls the methods and the \texttt{grammar}-class parses the input grammer ans string into a format that then can be processed in the \texttt{parser}-class.
 
 
 %---------------------------------------------------------------------%
@@ -452,7 +452,7 @@ Input example (\textit{Well-Balanced-Parantheses}):\\
   \texttt{java Main \dq SSS\dq \ \dq SLA\dq \ \dq SLR\dq \ \dq ASR\dq \ \dq L(\dq \ \dq R)\dq\  \dq (())\dq}
 \\ 
 for the grammar \texttt{S $\rightarrow$ SS | LA | LR, A $\rightarrow$ SR, L $\rightarrow$ (, R $\rightarrow$ )} and the input word \texttt{(())}. \\
-A more detailed description on how to run the code can be found in appendix \ref{howtousethecode}.
+A more detailed description on how to run the code can be found in Appendix \ref{howtousethecode}.
 
 
 %---------------------------------------------------------------------%
@@ -486,7 +486,7 @@ For the input \texttt{java Main \dq SSS\dq \ \dq SLA\dq \ \dq SLR\dq \ \dq ASR\d
 \subsection{Parser}
 \label{parser}
 
-The \texttt{parser}-class contains three different parsing methods: \texttt{parseNaive} (described in section \ref{naivedescription}), \texttt{parseTopDown} (described in section \ref{topdowndescription}) and \texttt{parseBottomUp} (described in section \ref{bottomupdescription}). Each methods has a counter as \texttt{long} which counts the number of interations and a timer as \texttt{long} in $ms$ which measures the runtime of the method. In the following sections the algorithms are described, presented as pseudo code and the runtime is analysed.
+The \texttt{parser}-class contains three different parsing methods: \texttt{parseNaive} (described in Section \ref{naivedescription}), \texttt{parseTopDown} (described in Section \ref{topdowndescription}) and \texttt{parseBottomUp} (described in Section \ref{bottomupdescription}). Each methods has a counter as \texttt{long} which counts the number of interations and a timer as \texttt{long} in $ms$ which measures the runtime of the method. In the following sections the algorithms are described, presented as pseudo code and the runtime is analysed.
 
 %---------------------------------------------------------------------%
 
@@ -599,7 +599,7 @@ The runtime of the naive method is in $O(n^3)$.
 
 % TODO: describe idea of algorithm more detailed in text form!
 
-The top-down method is an improves version of the naive method (section \ref{naivedescription}). This algorithm works recursive, too. In this algorithm another global array is used, which contains the values \texttt{true}, \texttt{false} and \texttt{null}. The array gets intialized with \texttt{null} in each field. That happens in the recursion call method below.
+The top-down method is an improves version of the naive method (Section \ref{naivedescription}). This algorithm works recursive, too. In this algorithm another global array is used, which contains the values \texttt{true}, \texttt{false} and \texttt{null}. The array gets intialized with \texttt{null} in each field. That happens in the recursion call method below.
 
 \begin{algorithm}[H]
 \caption{Recursion call: Boolean parseTD()}\label{alg:cap}
@@ -616,7 +616,7 @@ The top-down method is an improves version of the naive method (section \ref{nai
 \end{algorithmic}
 \end{algorithm}
 
-Additional to the naive algorithm, the recursion in the topdown approach starts with another condition: If one of the values in the global table is not \texttt{null}, the next recursive call is not executed and this value gets returned. This if-condition can be seen in the following part of the pseudo code. The rest of the topdown approach is a similar approach to the naive method that was already described in section \ref{naivedescription}.
+Additional to the naive algorithm, the recursion in the topdown approach starts with another condition: If one of the values in the global table is not \texttt{null}, the next recursive call is not executed and this value gets returned. This if-condition can be seen in the following part of the pseudo code. The rest of the topdown approach is a similar approach to the naive method that was already described in Section \ref{naivedescription}.
 
 \begin{algorithm}[H]
 \caption{Additional condition in Boolean parseTD(int indexNT, int i, int j)}\label{alg:cap}
@@ -627,7 +627,7 @@ Additional to the naive algorithm, the recursion in the topdown approach starts 
 \end{algorithmic}
 \end{algorithm}
 
-The complete topdown algorithm is shown as pseudo code below. In the inner for-loop (line 18) the boolean value of the next method calls get assigned into the global table. If there is assigned a true (line 19) the value true gets returnes (lime 20). The general topdown approach is the same approach as the naive method that is described in section \ref{naivedescription}.
+The complete topdown algorithm is shown as pseudo code below. In the inner for-loop (line 18) the boolean value of the next method calls get assigned into the global table. If there is assigned a true (line 19) the value true gets returnes (lime 20). The general topdown approach is the same approach as the naive method that is described in Section \ref{naivedescription}.
 
 \begin{algorithm}[H]
 \caption{Boolean parseTD(int indexNT, int i, int j)}\label{alg:cap}
@@ -836,7 +836,7 @@ The runtime of the \texttt{parseBU} method is in $O(n^3)$.
 \section{Evaluation}
 \label{evaluation}
 
-In this section the runtimes and experiments will be compared.
+In this section the runtimes and experiments are compared.
 
 
 \subsection{Experiments}
@@ -930,7 +930,7 @@ Regarding the experiments from section \ref{evaluation}, the topdown method seem
 
 NOOO ! %Depending on the input word and the grammar the naive and the topdown approach have the same worst case runtime with $O(n^2)$. The bottomup method has the highest worst case runtime with $O(n^3)$.
 
-These algorithms show differences in efficiency but also limits for the examination of words with the \textit{CYK}-algorithm. The amount of calls raised especially with the Well-Balanced-Parantheses language exponentially. This can also be seen in the graphs in appendix \ref{graph}.
+These algorithms show differences in efficiency but also limits for the examination of words with the \textit{CYK}-algorithm. The amount of calls raised especially with the Well-Balanced-Parantheses language exponentially. This can also be seen in the graphs in Appendix \ref{graph}.
 
 \subsection{Future work}
 
@@ -1187,7 +1187,7 @@ aaaaaaaaaaaaaaaa & 16 & F & 3.524.577 & 89ms & F & 2.660 & 15ms & F & 1.481 & 1m
 \subsection{CNF Algorithm on an example}
 \label{createcnf}
 
-In this part, the following ruleset of a grammar will be translated into \textit{CNF}.
+In this part, the following ruleset of a grammar is translated into \textit{CNF}.
 
 \begin{align*}
 \texttt{S} & \rightarrow \texttt{SS} \mid  \texttt{aSb} \mid \texttt{ab} 
