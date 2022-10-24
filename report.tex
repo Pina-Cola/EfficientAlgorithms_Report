@@ -368,15 +368,26 @@ The word is accepted by the grammar rules, because the intiating nonterminal sym
 A function that calls itself is called recursive function. In computer science recursive function use base cases to terminate the programm and stopping it from going on forever. Base cases are problems that can be solved without any more recursive calls.
 \cite{recursion}
 
-\begin{example*}[Recursion example 1]
+\begin{example*}[Recursion]
 
 For definition and examples for recursion read section \ref{recursion}.
 
 \end{example*}
 
-\begin{example*}[Recursion example 2]
+\begin{example*}[Recursion]
 
-Beispiel
+Buidling a sum for the numbers $1+2+...+n$.
+
+Nonrecursive approach:
+\begin{align*}
+f(n) = 1+2+...+n
+\end{align*}
+
+Recursive approach:
+\begin{align*}
+f(n) = 1 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  & \ \ \ \text{if } n=1 \\
+f(n) = n + f(n-1) & \ \ \ \text{if } n > 1
+\end{align*}
 
 \end{example*}
 
@@ -407,7 +418,7 @@ Beispiel
 
 
 
-\section{System Design}
+\section{Three variants of CYK algorithm}
 \label{systemdesign}
 
 The implementation was done in Java and three different classes were implemented: \texttt{main.java} (described in section \ref{main}), \texttt{grammar.java} (described in section \ref{grammar}) and \texttt{parser.java} (described in section \ref{parser}). The \texttt{main}-class calls the methods and the \texttt{grammar}-class parses the input grammer ans string into a format that then can be processed in the \texttt{parser}-class.
@@ -491,10 +502,10 @@ The start values get assignened in the recursion call which can be seen in the f
 \end{algorithmic}
 \end{algorithm}
 
-The naive approach does not use dynamic programming. Instead it checks for each call \texttt{parseNaive(indexNT, i, j)} first if i = j-1 and checks if the nonterminal symbol head of \texttt{indexNT} leads to a body of a rule with \texttt{s[i]}. This is the base case of the recursion which then returns true or false depending if the rule \texttt{indexNT $\rightarrow$  s[i]} exists. This base case can be seen in line 2-7 in the pseudo code below.
+The naive approach does not use dynamic programming. Instead it checks for each call \texttt{parseNaive(indexNT, i, j)} first if $i = j-1$ and checks if the nonterminal symbol head of \texttt{indexNT} leads to a body of a rule with \texttt{s[i]}. This is the base case of the recursion which then returns true or false depending if the rule \texttt{indexNT $\rightarrow$  s[i]} exists. This base case can be seen in line 2-7 in the pseudo code below.
 \\ 
 \\
-If i is not equal to j-1 it loops for the integer $k$ from i+1 to j-1 and checks for all rules \texttt{A $\rightarrow$ BC} if both calls \texttt{parseNaive(B, i, k)} and \texttt{parseNaive(C, k, j)} return true. This recursive call applies the function on the substrings of the input word. If such a pair of substrings is found, the function returns true, because the recursive call in combination with the \grqq \texttt{and}\grqq \ leads to the result of the complete word. If such a pair cannot be found the function returns false after looping through all rule bodies and values for $k$. This part of the recursion can be seen in the pseudo code below in line 9-21.
+If $i$ is not equal to $j-1$ it loops for the integer $k$ from $i+1$ to $j-1$ and checks for all rules \texttt{A $\rightarrow$ BC} if both calls \texttt{parseNaive(B, i, k)} and \texttt{parseNaive(C, k, j)} return true. This recursive call applies the function on the substrings of the input word. If such a pair of substrings is found, the function returns true, because the recursive call in combination with the \grqq \texttt{and}\grqq \ leads to the result of the complete word. If such a pair cannot be found the function returns false after looping through all rule bodies and values for $k$. This part of the recursion can be seen in the pseudo code below in line 9-21.
 
 
 
@@ -550,7 +561,7 @@ Line & Runtime & Type \\
 11 & 1 $\cdot$ k & Assignment \\
 12 & 1 $\cdot$ k & Assignment\\
 13 & n $\cdot$ k & Loop \\
-14 & n $\cdot$ n $\cdot$ k & Recusrsive call \\
+14 & n $\cdot$ n $\cdot$ n $\cdot$ k & Recusrsive call \\
 15 & 1 $\cdot$ n $\cdot$ k & Return statement\\
 21 & 1 & Return statement \\
 \hline
@@ -561,12 +572,12 @@ Calculating the runtime:
 \vspace*{-1em}
 \begin{align*}
 & 1 + 1+ k + k +k + k + k + k + k \\
-& + n \cdot k + n \cdot n \cdot k + n \cdot k \\
-& =  2 + 7k + 2(n \cdot k) + n \cdot n \cdot k \\
-& = 2 + 7k + 2n \cdot 2k + 2n^2 \cdot k \\
-& \in O(n^2)
+& + n \cdot k + n \cdot n \cdot n \cdot k + n \cdot k \\
+& =  2 + 7k + 2(n \cdot k) + n \cdot n \cdot n \cdot k \\
+& = 2 + 7k + 2n \cdot 2k + 2n^3 \cdot k \\
+& \in O(n^3)
 \end{align*}
-The runtime of the naive method is in $O(n^2)$.
+The runtime of the naive method is in $O(n^3)$.
 \end{minipage}
 
 %---------------------------------------------------------------------%
@@ -606,7 +617,7 @@ Additional to the naive algorithm, the recursion in the topdown approach starts 
 \end{algorithmic}
 \end{algorithm}
 
-The complete topdown algorithm is shown as pseudo code below. In the inner for-loop (line 18) the boolean value of the next method calls get assigned into the global table. If there is assigned a true (line 19) the value true gets returnes (lime 20). The general topdown approach is the same approach to the naive method that was already described in section \ref{naivedescription}.
+The complete topdown algorithm is shown as pseudo code below. In the inner for-loop (line 18) the boolean value of the next method calls get assigned into the global table. If there is assigned a true (line 19) the value true gets returnes (lime 20). The general topdown approach is the same approach as the naive method that is described in section \ref{naivedescription}.
 
 \begin{algorithm}[H]
 \caption{Boolean parseTD(int indexNT, int i, int j)}\label{alg:cap}
@@ -674,7 +685,7 @@ Calculating the runtime of the method call:
 \end{minipage}
 \ \\
 
-The runtime analysis of the \texttt{parseTD} method is analog to the \texttt{parseNaive} runtime analysis. According to this the topdown algorithm has an upper bound runtime in $O(n^2)$, too.
+The runtime analysis of the \texttt{parseTD} method is analog to the \texttt{parseNaive} runtime analysis. According to this the topdown algorithm has an upper bound runtime in $O(n^3)$, too.
 
 
 
@@ -735,7 +746,7 @@ The approach of dynamic programming calculates the smallest substrings first and
 \end{algorithmic}
 \end{algorithm}
 
-In line 13 to 32 the \textit{CYK}-algorithm gets excecuted. It is descreibed in section \ref{cyk}. For each field the two fields \textit{leading} to it get compared, to then fill in the head of a rule that concludes into the both compared nonterminal symbols.
+In line 13 to 32 the \textit{CYK}-algorithm gets excecuted. It is described in section \ref{cyk}. For each field the two fields \textit{leading} to it get compared, to then fill in the head of a rule that concludes into the both compared nonterminal symbols.
 
 In the last lines (line 33-35) the last field of the $DP$-array gets checked. If it containes the start symbol of the grammar, the word is contained in the language and the algorithm returns true. Else false is returned.
 
@@ -865,8 +876,8 @@ The runtimes of the methods are calculated in section \ref{systemdesign}. The re
 \hline
 Method & Runtime \\
 \hline
-\texttt{parseNaive} & $O(n^2)$\\
-\texttt{ParseTD} & $O(n^2)$ \\
+\texttt{parseNaive} & $O(n^3)$\\
+\texttt{ParseTD} & $O(n^3)$ \\
 \texttt{ParseBU} & $O(n^3)$\\
 \hline
 \end{tabular}
@@ -904,7 +915,7 @@ Regarding the experiments that were run on the code, the topdown method seems to
 
 Regarding the experiments from section \ref{evaluation}, the topdown method seems to be the most efficient, followed by the bottomup method. The least efficient method is in these cases the naive approach.
 
-Depending on the input word and the grammar the naive and the topdown approach have the same worst case runtime with $O(n^2)$. The bottomup method has the highest worst case runtime with $O(n^3)$.
+NOOO ! %Depending on the input word and the grammar the naive and the topdown approach have the same worst case runtime with $O(n^2)$. The bottomup method has the highest worst case runtime with $O(n^3)$.
 
 These algorithms show differences in efficiency but also limits for the examination of words with the \textit{CYK}-algorithm. The amount of calls raised especially with the Well-Balanced-Parantheses language exponentially. This can also be seen in the graphs in appendix \ref{graph}.
 
