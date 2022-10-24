@@ -219,8 +219,10 @@ G = (V, T, P, S)
 \end{align*}
 The set $V$ contains the nonterminal symbols of the grammar and the set $T$ the terminal symbols, which is the alphabet of a language. This assumes that $V \cap T = \emptyset$. The set $P$ is the set of production rules, where an element of $V$ points to an element of $V^* \times T^*$. The symbol $S \in V$ represents the start symbol. 
 
-The production rules in the set $P$ have the format $head \rightarrow body$. The head is always a nonterminal symbol and the body can be a combination of terminal and nonterminal symbols. A nonterminal symbol $A$ in the body of a rule can be replaced by the body of a rule with the form $A \rightarrow body$.
+The production rules in the set $P$ have the format \texttt{head $\rightarrow$ body}. The head is always a nonterminal symbol and the body can be a combination of terminal and nonterminal symbols. A nonterminal symbol \texttt{A} in the body of a rule can be replaced by the body of a rule with the form \texttt{A $\rightarrow$ body}.
 \cite{LS_Ulm}
+
+A formal grammar defines which words over the alphabet $T$/$Sigma$ are contained in the associated laguage.
 \end{definition*}
 
 \begin{example*}[Formal grammar]
@@ -232,6 +234,7 @@ The rules of the grammar $G$ over the alphabet $\{a, b\}$ with the start symbol 
 \begin{center}
 \texttt{S $\rightarrow$ SS $\mid$  aSb $\mid$ ab}
 \end{center}
+The start symbol \texttt{S} can for example be replaced with its body \texttt{SS}. If then both symbols \texttt{S} are replaced with the body \texttt{ab} the resulting word is \texttt{abab}. It is part of the language, because it was build with the grammar $G$.
 \end{example*}
 
 %---------------------------------------------------------------------%
