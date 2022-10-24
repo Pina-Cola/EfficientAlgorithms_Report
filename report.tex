@@ -847,29 +847,32 @@ The following tables show some tests that were run with the different parsing me
 \\
 Well-Balanced-Parantheses: \\
 \\
+\begin{small}
 \begin{tabular}{|c|c||c|c|c||c|c|c||c|c|c|}
 \hline
 Word & Length & N & NC & NT & B & BC & BT & T & TC & TT \\
 \hline
 \hline
-() & 2 & T & 6 & 5ms & F & 0 & 2ms & T & 6 & 1ms \\
+() & 2 & T & 6 & 5ms & T & 0 & 2ms & T & 6 & 1ms \\
 \hline
-(()) & 4 & T & 33 & 4ms & F & 84 & 3ms & T & 28 & 1ms \\
+(()) & 4 & T & 33 & 4ms & T & 84 & 3ms & T & 28 & 1ms \\
 \hline
-((())) & 6 & T & 212 & 6ms & F & 360 & 6ms & T & 84 & 1ms \\
+((())) & 6 & T & 212 & 6ms & T & 360 & 6ms & T & 84 & 1ms \\
 \hline
-(((()))) & 8 & T & 1295 & 6ms & F & 924 & 9ms & T & 190 & 1ms \\
+(((()))) & 8 & T & 1295 & 6ms & T & 924 & 9ms & T & 190 & 1ms \\
 \hline
-((((())))) & 10 & T & 7666 & 9ms & F & 1872 & 11ms & T & 362 & 1ms \\
+((((())))) & 10 & T & 7666 & 9ms & T & 1872 & 11ms & T & 362 & 1ms \\
 \hline
-(((((((((()))))))))) & 20 & T & 51.863.993 & 1049ms & F & 15.732 & 23ms & T & 2.772 & 3ms \\
+((...)) & 20 & T & 51.863.993 & 1.049ms & T & 15.732 & 23ms & T & 2.772 & 3ms \\
 \hline
-((...)) & 40 & & & & F & 127.452 & 50ms & T & 21.743 & 4ms \\
+((...)) & 30 & T & 348.838.486.712 & 3.699.571ms & T & 102.660 & 32ms & T & 9.232 & 5ms \\
+\hline
+((...)) & 40 & & & & T & 127.452 & 50ms & T & 21.743 & 4ms \\
 \hline
 \end{tabular}
+\end{small}
 
-\ \\
-The input word with a length of 40 did not terminate for the naive parsing in 60 minutes.
+The input word with a length of 40 did not terminate over night for the naive approach.
 
 %---------------------------------------------------------------------%
 
