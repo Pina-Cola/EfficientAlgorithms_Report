@@ -965,43 +965,66 @@ The code can be run in the terminal and input is expected as Strings in quotatio
 First: Rules without arrows (one rule as one String) \\
 Last: The last argument is the input word
 \\ 
-
 Input example (\textit{Well-Balanced-Parantheses}):\\
-  \texttt{java Main \dq SSS\dq \ \dq SLA\dq \ \dq SLR\dq \ \dq ASR\dq \ \dq L(\dq \ \dq R)\dq\  \dq (())\dq}
+  \texttt{java Main \dq SSS\dq \ \dq SLA\dq \ \dq SLR\dq \ \dq ASR\dq \ \dq L(\dq \ \dq R)\dq\  \dq (())\dq} \\
+  for the grammar \texttt{S $\rightarrow$ SS | LA | LR, A $\rightarrow$ SR, L $\rightarrow$ (, R $\rightarrow$ )} and the input word \texttt{(())}. \\
+Other example: \\
+ \texttt{java Main \dq SAc\dq \ \dq Sb\dq \ \dq AaS\dq \ \dq AaB\dq \ \dq BbS\dq \ \dq abc\dq } 
 \\ 
-for the grammar \texttt{S $\rightarrow$ SS | LA | LR, A $\rightarrow$ SR, L $\rightarrow$ (, R $\rightarrow$ )} and the input word \texttt{(())}.
-\\ \\
+\\
 Output example: \\
 The first part of the output shows the arrays, which get generated in the \texttt{Grammar.java} class.  \\ \\
 \begin{minipage}{0.6\textwidth}
 \vspace*{-2em}
-The first array contains all rules. \\ \\ \\
+\ \\
+The first array contains all rules. \\ \\
 
 The second array contains only the terminal rules. \\ \\
 
 The third array contains only the nonterminal rules. \\
 
-Then it is shown which nonterminal symbols are represented by which integers. Later the nonterminal symbols can be referred to with those integers. \\ 
+Then it is shown which symbols are represented by which integers. Later the symbols can be referred to with those integers. \\ 
 
-After this the mentioned arrays are shown again but the nonterminal symbols got replaced with the according integers.
+After this the mentioned arrays are shown again but the nonterminal symbols got replaced with the according integers. \\ \\
 
-\end{minipage}\begin{minipage}{0.2\textwidth}
+Then the input word is shown with the symbols replaced by their integers.
+
+\end{minipage}\begin{minipage}{0.1\textwidth}
 \ 
 \end{minipage}\begin{minipage}{0.3\textwidth}
 \includegraphics[scale=0.7]{images/terminal_1.png}
 \end{minipage}
 
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.6\textwidth}
 \includegraphics[scale=0.6]{images/terminal_2.png}
-\end{minipage}\begin{minipage}{0.6\textwidth}
+\end{minipage}\begin{minipage}{0.1\textwidth}
+\ 
+\end{minipage}\begin{minipage}{0.3\textwidth}
 Then the results, counter and runtime in $ms$ is shown for each parsing method. \\
 For the \texttt{BottomUp} method is the CYK algorithm table printed.
+The error counter is printed, too.
 \end{minipage}
 
+\begin{minipage}{0.35\textwidth}
+In this case the error correction shows that no errors where found and this leads to no symbols being exchanged or deleted.
 
+\end{minipage}\begin{minipage}{0.1\textwidth}
+\ 
+\end{minipage}\begin{minipage}{0.55\textwidth}
+\includegraphics[scale=0.7]{images/terminal_3.png}
+\end{minipage}
 
+\ \\
+The following example will show the error correction output for the input \texttt{java Main \dq SSS\dq \ \dq SLA\dq \ \dq SLR\dq \ \dq ASR\dq \ \dq L(\dq \ \dq R)\dq\  \dq ((()\dq}. \\
 
+\begin{minipage}{0.35\textwidth}
+In this case the error correction shows the solution with exchange (one symbol is exchanged) and for deletion (two symbols are deleted).
 
+\end{minipage}\begin{minipage}{0.1\textwidth}
+\ 
+\end{minipage}\begin{minipage}{0.55\textwidth}
+\includegraphics[scale=0.7]{images/terminal_4.png}
+\end{minipage}
 
 
 
@@ -1014,7 +1037,7 @@ For the \texttt{BottomUp} method is the CYK algorithm table printed.
 
 
 
-
+\newpage
 \section{Graphs and additional results}
 \label{previousresults}
 
