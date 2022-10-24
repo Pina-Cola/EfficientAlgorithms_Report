@@ -15,6 +15,9 @@
 \usepackage{algpseudocode}
 \usepackage{algorithm}
 \usepackage{parskip}
+\usepackage{float}
+\usepackage{subfig}
+
 
 \usepackage{setspace}
 \onehalfspacing
@@ -348,14 +351,21 @@ The first column in the table represent the objects and the last row the weight.
 
 
 \begin{example*}[Chomsky-Normal-Form]
-The following table shows the CYK-algorithm with the previous grammar example and the input word $aaabbb$. \cite{cyk_online_alg}
-\begin{figure}[H]
+The following table shows the CYK-algorithm with the previous grammar example and the input word $aaabbb$. 
+The word is accepted by the grammar rules, because the intiating nonterminal symbol \textit{\texttt{S}} can be filled into the lowest field. The table is filled in step by step and the rules that are used in each step are marked, for a better understanding on how the algorithm works. \cite{cyk_online_alg}
+\ \\
+
 \begin{center}
-\includegraphics[scale=0.3]{images/cyk_table.png}
+\includegraphics[scale=0.9]{images/7.png} \\
+\includegraphics[scale=0.9]{images/6.png} \\
+\includegraphics[scale=0.9]{images/5.png} \\
+\includegraphics[scale=0.9]{images/4.png} \\
+\includegraphics[scale=0.9]{images/3.png} \\
+\includegraphics[scale=0.9]{images/2.png} \\
+\includegraphics[scale=0.9]{images/1.png} \\
 \end{center}
-\caption{CYK-algorithm table for the word $aaabbb$}
-\end{figure}
-The word is accepted by the grammar rules, because the intiating nonterminal symbol \textit{\texttt{S}} can be filled into the lowest field. In appendix \ref{cyksteps} the table is filled in step by step and the rules that are used in each step are marked, for a better understanding on how the algorithm works.
+% \caption{CYK-algorithm step by step table for the word $aaabbb$}
+
 \end{example*}
 
 
@@ -1213,18 +1223,6 @@ This is the grammar in CNF:
 \texttt{L} & \rightarrow \texttt{a} \\
 \texttt{R} & \rightarrow \texttt{b} 
 \end{align*}
-
-
-%---------------------------------------------------------------------%
-
-\newpage
-
-\subsection{CYK Algorithm on an example}
-\label{cyksteps}
-
-\includegraphics[scale=0.45]{images/cyk1.png}
-
-\includegraphics[scale=0.55]{images/cyk2.png}
 
 
 
