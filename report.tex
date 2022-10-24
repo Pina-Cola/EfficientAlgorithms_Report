@@ -14,6 +14,7 @@
 \usepackage{float}
 \usepackage{algpseudocode}
 \usepackage{algorithm}
+\usepackage{parskip}
 
 \usepackage{setspace}
 \onehalfspacing
@@ -21,7 +22,7 @@
 \usepackage{pgfplots}
 \pgfplotsset{width=10cm,compat=1.9}
 
-\setlength{\parindent}{0cm}
+% \setlength{\parindent}{0cm}
 %\hypersetup{linkcolor=black,citecolor=black,filecolor=black,urlcolor=black} % black links, for printed output
 \usepackage{memhfixc} 
 \usepackage{pdfsync}  
@@ -176,13 +177,14 @@ In this section background information, definitions and examples on formal langu
 
 Formal languages are abstract languages, which define the syntax of the words that get accepted by that language. It is a set of words that get accepted by the language and has a set of symbols that is called alphabet, which contains all the possible characters of the words. Those characters are called nonterminal symbols. \cite{CNF, language}
 
+\begin{definition*}[Kleene star]
+The Kleene star $\Sigma^*$ of an alphabet $\Sigma$ is the set of all words that can be created through concatenation of the symbols of the alphabet $\Sigma$. The empty word $\epsilon$ is included. 
+\end{definition*}
+
 \begin{definition*}[Formal language]
 A formal language $L$ over an alphabet $\Sigma$ is a subset of the Kleene star of the alphabet: $L \subseteq \Sigma^*$
 \end{definition*}
 
-\begin{definition*}[Kleene star]
-The Kleene star $\Sigma^*$ of an alphabet $\Sigma$ is the set of all words that can be created through concatenation of the symbols of the alphabet $\Sigma$. The empty word $\epsilon$ is included. 
-\end{definition*}
 
 \begin{example*}[Formal language]\footnote{The following examples show the \textit{Well-Balanced Parantheses} example from the assignment task sheet with the alphabet $\{a, b\}$ instead of $\{(, )\}$. } The language accepts words that contain the same number of $a$s and $b$s, while the a has to be left of the b. 
 The alphabet $\Sigma$ of this language looks like this:
@@ -215,7 +217,10 @@ A formal grammar $G$ is defined as a 4-tuple:
 \begin{align*}
 G = (V, T, P, S)
 \end{align*}
-The set $V$ contains the nonterminal symbols of the grammar and the set $T$ the terminal symbols, which is the alphabet of a language. This concludes to $V \cap T = \emptyset$. The set $P$ is the set of production rules, where an element of $V$ points to an element of $V^* \times T^*$. The symbol $S \in V \setminus T$ represents the start symbol. 
+The set $V$ contains the nonterminal symbols of the grammar and the set $T$ the terminal symbols, which is the alphabet of a language. This assumes that $V \cap T = \emptyset$. The set $P$ is the set of production rules, where an element of $V$ points to an element of $V^* \times T^*$. The symbol $S \in V$ represents the start symbol. 
+
+The production rules in the set $P$ have the format $head \rightarrow body$. The head is always a nonterminal symbol and the body can be a combination of terminal and nonterminal symbols. A nonterminal symbol $A$ in the body of a rule can be replaced by the body of a rule with the form $A \rightarrow body$.
+\cite{LS_Ulm}
 \end{definition*}
 
 \begin{example*}[Formal grammar]

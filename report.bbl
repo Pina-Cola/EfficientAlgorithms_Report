@@ -155,6 +155,28 @@
       \field{title}{An Introduction to Formal Language Theory}
       \field{year}{1988}
     \endentry
+    \entry{LS_Ulm}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=cb256318dc0e57d7fd8ad3f1dfb2e2e3}{%
+           family={Ulm},
+           familyi={U\bibinitperiod},
+           given={University},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{cb256318dc0e57d7fd8ad3f1dfb2e2e3}
+      \strng{fullhash}{cb256318dc0e57d7fd8ad3f1dfb2e2e3}
+      \strng{bibnamehash}{cb256318dc0e57d7fd8ad3f1dfb2e2e3}
+      \strng{authorbibnamehash}{cb256318dc0e57d7fd8ad3f1dfb2e2e3}
+      \strng{authornamehash}{cb256318dc0e57d7fd8ad3f1dfb2e2e3}
+      \strng{authorfullhash}{cb256318dc0e57d7fd8ad3f1dfb2e2e3}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://www.uni-ulm.de/fileadmin/website_uni_ulm/iui.inst.040/Formale_Methoden_der_Informatik/Vorlesungsskripte/FMdI-06--2010-01-10--FormaleSprachen_Vorlesung.pdf}, opened on 24.10.2022}
+      \field{title}{Lecture slides in Formale Methoden der Informatik}
+      \field{year}{2011}
+    \endentry
     \entry{CYK1}{article}{}
       \name{author}{3}{}{%
         {{hash=182e8ceab65fbc208ab66e2601718b22}{%

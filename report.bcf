@@ -2350,11 +2350,12 @@
     <bcf:citekey order="2">language</bcf:citekey>
     <bcf:citekey order="3">CNF</bcf:citekey>
     <bcf:citekey order="3">language</bcf:citekey>
-    <bcf:citekey order="4">CNF</bcf:citekey>
-    <bcf:citekey order="5">CYK1</bcf:citekey>
-    <bcf:citekey order="6">cyk_online_alg</bcf:citekey>
-    <bcf:citekey order="7">DP</bcf:citekey>
-    <bcf:citekey order="8">FG</bcf:citekey>
+    <bcf:citekey order="4">LS_Ulm</bcf:citekey>
+    <bcf:citekey order="5">CNF</bcf:citekey>
+    <bcf:citekey order="6">CYK1</bcf:citekey>
+    <bcf:citekey order="7">cyk_online_alg</bcf:citekey>
+    <bcf:citekey order="8">DP</bcf:citekey>
+    <bcf:citekey order="9">FG</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
