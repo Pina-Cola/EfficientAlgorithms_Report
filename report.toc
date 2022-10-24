@@ -11,9 +11,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3}Chomsky-Normal-Form}{4}{subsection.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}CYK-algorithm}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.4}Dynamic programming}{5}{subsection.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5}Dynamic programming}{5}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.5}CYK-algorithm}{6}{subsection.2.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6}Recursion}{6}{subsection.2.6}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}System Design}{7}{section.3}%
 \defcounter {refsection}{0}\relax 

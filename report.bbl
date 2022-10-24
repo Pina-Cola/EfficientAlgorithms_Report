@@ -63,6 +63,33 @@
       \verb https://www.xarg.org/tools/cyk-algorithm/
       \endverb
     \endentry
+    \entry{recursion}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=97e5cf400c5b6b453326f15b57a8df9c}{%
+           family={Herrmann},
+           familyi={H\bibinitperiod},
+           given={Dietmar},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{97e5cf400c5b6b453326f15b57a8df9c}
+      \strng{fullhash}{97e5cf400c5b6b453326f15b57a8df9c}
+      \strng{bibnamehash}{97e5cf400c5b6b453326f15b57a8df9c}
+      \strng{authorbibnamehash}{97e5cf400c5b6b453326f15b57a8df9c}
+      \strng{authornamehash}{97e5cf400c5b6b453326f15b57a8df9c}
+      \strng{authorfullhash}{97e5cf400c5b6b453326f15b57a8df9c}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Effektiv Programmieren in C}
+      \field{title}{Rekursion}
+      \field{year}{1991}
+      \field{pages}{114\bibrangedash 125}
+      \range{pages}{12}
+    \endentry
     \entry{FG}{misc}{}
       \name{author}{2}{}{%
         {{hash=aacdf675043db87fcddd949392e564f9}{%

@@ -258,26 +258,6 @@ This is the previous example in CNF. How it was built can be seen in appendix \r
 
 %---------------------------------------------------------------------%
 
-\subsection{CYK-algorithm}
-\label{cyk}
-
-
-\textit{Cocke-Younger-Kasami}-algorithm (short: \textit{CYK}-algorithm) takes a grammar $G = (V, T, P, S)$ in \textit{CNF} and a word $w= w_1, w_2, ..., w_n \in T^*$ as an input. It then examines if the word follows the rules of the grammar. Then for every substring $w_{i, j} = w_i, ..., w_{i+j-1}$ (begins at index $i$ and has the length $j$) of the word $w$  the set of nonterminal symbols that lead to $w_{i, j}$ gets calculated and saved as $V_{i, j}$ to access it in later steps. \cite{CYK1}
-
-
-\begin{example*}[Chomsky-Normal-Form]
-The following table shows the CYK-algorithm with the previous grammar example and the input word $aaabbb$. \cite{cyk_online_alg}
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.3]{images/cyk_table.png}
-\end{center}
-\caption{CYK-algorithm table for the word $aaabbb$}
-\end{figure}
-The word is accepted by the grammar rules, because the intiating nonterminal symbol \textit{\texttt{S}} can be filled into the lowest field. In appendix \ref{cyksteps} the table is filled in step by step and the rules that are used in each step are marked, for a better understanding on how the algorithm works.
-\end{example*}
-
-%---------------------------------------------------------------------%
-
 \subsection{Dynamic programming}
 \label{dp}
 
@@ -356,6 +336,51 @@ The first column in the table represent the objects and the last row the weight.
 
 
 \end{example*}
+
+
+%---------------------------------------------------------------------%
+
+\subsection{CYK-algorithm}
+\label{cyk}
+
+
+\textit{Cocke-Younger-Kasami}-algorithm (short: \textit{CYK}-algorithm) takes a grammar $G = (V, T, P, S)$ in \textit{CNF} and a word $w= w_1, w_2, ..., w_n \in T^*$ as an input. It then examines if the word follows the rules of the grammar. Then for every substring $w_{i, j} = w_i, ..., w_{i+j-1}$ (begins at index $i$ and has the length $j$) of the word $w$  the set of nonterminal symbols that lead to $w_{i, j}$ gets calculated and saved as $V_{i, j}$ to access it in later steps. \cite{CYK1}
+
+
+\begin{example*}[Chomsky-Normal-Form]
+The following table shows the CYK-algorithm with the previous grammar example and the input word $aaabbb$. \cite{cyk_online_alg}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.3]{images/cyk_table.png}
+\end{center}
+\caption{CYK-algorithm table for the word $aaabbb$}
+\end{figure}
+The word is accepted by the grammar rules, because the intiating nonterminal symbol \textit{\texttt{S}} can be filled into the lowest field. In appendix \ref{cyksteps} the table is filled in step by step and the rules that are used in each step are marked, for a better understanding on how the algorithm works.
+\end{example*}
+
+
+
+%---------------------------------------------------------------------%
+
+\subsection{Recursion}
+\label{recursion}
+
+A function that calls itself is called recursive function. In computer science recursive function use base cases to terminate the programm and stopping it from going on forever. Base cases are problems that can be solved without any more recursive calls.
+\cite{recursion}
+
+\begin{example*}[Recursion example 1]
+
+For definition and examples for recursion read section \ref{recursion}.
+
+\end{example*}
+
+\begin{example*}[Recursion example 2]
+
+Beispiel
+
+\end{example*}
+
+
 
 
 
