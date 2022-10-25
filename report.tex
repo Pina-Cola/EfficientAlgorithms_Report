@@ -1049,9 +1049,33 @@ The results of the experiments confirm the runtime calculation of $O(n!)$ in Sec
 \section{Errorcorrection}
 \label{errorcorrection}
 
+There are two options for the error correction. A symbol can be exchanged or symbols can be deleted. 
 
 
 
+
+
+%---------------------------------------------------------------------%
+\subsection{Deletion}
+\label{deletion}
+
+For the deletion the table of the CYK-algorithm is used. This is described in Section \ref{cyk} and the parsing method for it is explained in Section \ref{bottomupdescription}.
+The CYK-table has to contain the start symbol in the entry on the right top corner to conclude that the word is part of the language. To find an accepted word with deletion, the entry with the start symbol which is closest to the right top is searched. With those indeces the part of the word that is accepted and the part that needs to be deleted can be calculated. This concludes in the longest accepted word with deletion.
+
+It can happen that no accepted word is found with deletion, if no subword concluded into the start symbol in the CYK-table.
+
+
+
+
+
+
+
+
+%---------------------------------------------------------------------%
+\subsection{Exchange}
+\label{exchange}
+
+The exchange method works iterative and iterates over every symbol of the input word and tries ever terminal symbol on each index. The method exchanges only one symbol, then the corresponding entries in the CYK-table get deleted and calculated with the new entry. If a success is found, the accepted word is returned. 
 
 
 
@@ -1078,9 +1102,9 @@ The results of the experiments confirm the runtime calculation of $O(n!)$ in Sec
 \subsection{Conclusion}
 
 
-Regarding the experiments from section \ref{evaluation}, the topdown method seems to be the most efficient, followed by the bottomup method. The least efficient method is in these cases the naive approach.
+% Regarding the experiments from section \ref{evaluation}, the topdown method seems to be the most efficient, followed by the bottomup method. The least efficient method is in these cases the naive approach.
 
-NOOO ! %Depending on the input word and the grammar the naive and the topdown approach have the same worst case runtime with $O(n^2)$. The bottomup method has the highest worst case runtime with $O(n^3)$.
+% NOOO ! %Depending on the input word and the grammar the naive and the topdown approach have the same worst case runtime with $O(n^2)$. The bottomup method has the highest worst case runtime with $O(n^3)$.
 
 These algorithms show differences in efficiency but also limits for the examination of words with the \textit{CYK}-algorithm. The amount of calls raised especially with the Well-Balanced-Parantheses language exponentially. This can also be seen in the graphs in Appendix \ref{graph}.
 
@@ -1088,9 +1112,10 @@ These algorithms show differences in efficiency but also limits for the examinat
 
 Formal languages and grammars can be used in different use cases. For exampel for AI learning methods. Real languages like English can be defined as a formal language, too. But it is important to consider that formal languages only define the syntax and not the semantics. In addition to this has english a lot of rules and many exceptions. \cite{FG}
 
-\
-\\
-The future work for this assignment is to change the types of the arrays from \texttt{String[][]} to \texttt{int[][][]}. In addition to this there still exists a problem in the bottomup method, which needs to be fixed. Some specific grammars and words do not return the right value. After these things work correctly, more experiments can be run and the pseudo code will be edited. Then the upper bound runtime can be calculated again and the plotted graphs can be compared to the according $O$-notation runtime.
+The future work for this code is to optimize the error correction. The combination of deletion and exchange is not implemented yet. It would be interesting to find a more efficient way to calculate the exchange of symbols, which would enable the exchange of more than one symbol.
+
+
+% The future work for this assignment is to change the types of the arrays from \texttt{String[][]} to \texttt{int[][][]}. In addition to this there still exists a problem in the bottomup method, which needs to be fixed. Some specific grammars and words do not return the right value. After these things work correctly, more experiments can be run and the pseudo code will be edited. Then the upper bound runtime can be calculated again and the plotted graphs can be compared to the according $O$-notation runtime.
 
 
 \newpage
