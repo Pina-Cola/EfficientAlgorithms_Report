@@ -431,7 +431,7 @@ f(n) = n + f(n-1) & \ \ \ \text{if } n > 1
 \section{Three variants of CYK algorithm}
 \label{systemdesign}
 
-The implementation was done in Java and three different classes were implemented: \texttt{main.java} (described in Section \ref{main}), \texttt{grammar.java} (described in Section \ref{grammar}) and \texttt{parser.java} (described in Section \ref{parser}). The \texttt{main}-class calls the methods and the \texttt{grammar}-class parses the input grammer ans string into a format that then can be processed in the \texttt{parser}-class.
+The implementation was done in Java and three different classes were implemented: \texttt{main.java} (described in Section \ref{main}), \texttt{grammar.java} (described in Section \ref{grammar}) and \texttt{parser.java} (described in Section \ref{parser}). The \texttt{main}-class calls the methods and the \texttt{grammar}-class parses the input grammar and string into a format that then can be processed in the \texttt{parser}-class.
 
 
 %---------------------------------------------------------------------%
@@ -441,18 +441,8 @@ The implementation was done in Java and three different classes were implemented
 \subsection{Main}
 \label{main}
 
-The \texttt{main}-class takes the input grammar and word and parses them into \texttt{String[]} and \texttt{String}. The arguments have to follow the following rules:
-\begin{itemize}
-\item The Grammar needs to be in \textit{CNF}.
-\item The first rule begins with the start symbol of the grammar.
-\item The rules are put in wothout arrows, one rule body is represented by one string, beginning with the rule head.
-\item The last argument is the input word.
-\end{itemize}
-Input example (\textit{Well-Balanced-Parantheses}):\\
-  \texttt{java Main \dq SSS\dq \ \dq SLA\dq \ \dq SLR\dq \ \dq ASR\dq \ \dq L(\dq \ \dq R)\dq\  \dq (())\dq}
-\\ 
-for the grammar \texttt{S $\rightarrow$ SS | LA | LR, A $\rightarrow$ SR, L $\rightarrow$ (, R $\rightarrow$ )} and the input word \texttt{(())}. \\
-A more detailed description on how to run the code can be found in Appendix \ref{howtousethecode}.
+The \texttt{main}-class takes the input grammar and word and parses them into \texttt{String[]} and \texttt{String}. 
+A detailed description on how to run the code can be found in Appendix \ref{howtousethecode}.
 
 
 %---------------------------------------------------------------------%
@@ -462,22 +452,16 @@ A more detailed description on how to run the code can be found in Appendix \ref
 \label{grammar}
 
 
-
-\begin{minipage}{0.6\textwidth}
-\vspace*{-2em}
-
-The \texttt{grammar}-class assigns the nonterminal symbols to integers and builds arrays with them. The start symbol for example is then assigned with the integer zero and the bodies of that rule are at the index zero of an two-dimensional array. One array that only contains nonterminal symbols is build, one array that contains terminal and nonterminal symbold and one array that represents the integers that represent each nonterminal symbol is built.
-
-For the input \texttt{java Main \dq SSS\dq \ \dq SLA\dq \ \dq SLR\dq \ \dq ASR\dq \ \dq L(\dq \ \dq R)\dq\  \dq (())\dq} the two-dimensional arrays shown on the screenshot on the right side are built.
-
-(Right now the arrays still have the type \texttt{String[][]}, that will be changed later to \texttt{int[][][]} to minimize the access time in the parsing methods.)
+The \texttt{grammar}-class assigns the nonterminal symbols to integers and builds arrays with them. The arrays have the type \texttt{Integer[][][]}. The start symbol for example is then assigned with the integer zero and the bodies of that rule are at the index zero of the three-dimensional array. The first dimension represents the head of a rule, the second dimension represents the body which is divided into to array -- for each symbol of the body one array.
 
 
-\end{minipage}\begin{minipage}{0.1\textwidth}
-\ 
-\end{minipage}\begin{minipage}{0.3\textwidth}
-\includegraphics[scale=0.6]{images/terminal_1.png}
-\end{minipage}
+For faster and easier access, three arrays are built: One array that only contains only nonterminal symbols and rules, one array that contains only terminal rules and one array that contains both.
+
+
+
+
+
+
 
 
 %---------------------------------------------------------------------%
@@ -961,7 +945,7 @@ The future work for this assignment is to change the types of the arrays from \t
 \section{How to use the code?}
 \label{howtousethecode}
 
-The code can be run in the terminal and input is expected as Strings in quotation marks. The grammar needs to be in CNF. The first rule begins with the startsymbol of the grammar. \\ \\
+The code can be run in the terminal and input is expected as Strings in quotation marks. The first rule begins with the startsymbol of the grammar. \\ \\
 First: Rules without arrows (one rule as one String) \\
 Last: The last argument is the input word
 \\ 
@@ -1025,6 +1009,15 @@ In this case the error correction shows the solution with exchange (one symbol i
 \end{minipage}\begin{minipage}{0.55\textwidth}
 \includegraphics[scale=0.7]{images/terminal_4.png}
 \end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+\includegraphics[scale=0.55]{images/terminal_5.png}
+\end{minipage}\begin{minipage}{0.1\textwidth}
+\ 
+\end{minipage}\begin{minipage}{0.4\textwidth}
+If the input grammar is a linear grammar, the programm checks if it is in CNF, build CNF out of the linear grammar and runs the optimized version of the TopDown parser for linear grammars.
+\end{minipage}
+
 
 
 
