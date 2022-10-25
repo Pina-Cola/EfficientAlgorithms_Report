@@ -17,6 +17,9 @@
 \usepackage{parskip}
 \usepackage{float}
 \usepackage{subfig}
+\usepackage{setspace}
+
+
 
 
 \usepackage{setspace}
@@ -105,10 +108,15 @@
 
 
 
-
+% \singlespacing
 
 
 \setcounter{page}{1}
+
+%\renewcommand{\baselinestretch}{0.9}\normalsize
+%\tableofcontents
+
+\begin{spacing}{1}
 
 
 \newpage
@@ -118,10 +126,12 @@
   \tableofcontents
 }
 
-
-
+\end{spacing}
+% \doublespacing
 
 \newpage
+
+%\renewcommand{\baselinestretch}{1.3}\normalsize
 
 
 
@@ -385,7 +395,6 @@ For definition and examples for recursion read Section \ref{recursion}.
 
 \end{example*}
 
-\newpage
 
 \begin{example*}[Recursion]
 Buidling a sum for the numbers $1+2+...+n$.
