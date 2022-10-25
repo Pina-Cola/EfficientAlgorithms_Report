@@ -710,7 +710,7 @@ Calculating the runtime of the method call:
 \end{minipage}
 \ \\
 
-The runtime analysis for the upper bound of the \texttt{parseTD} method is analog to the \texttt{parseNaive} runtime analysis. According to this the topdown algorithm has an upper bound runtime in $O(2^n)$, too.
+The runtime analysis for the upper bound of the \texttt{parseTD} method is analog to the \texttt{parseNaive} runtime analysis. According to this the topdown algorithm has an upper bound runtime in $O(n!)$, too.
 
 
 
@@ -741,7 +741,7 @@ For each rule it is checked if the first or the second element of the body is th
 \subsubsection{Top-Down modified for linear grammars runtime}
 \label{lineartopdown_runtime}
 
-The runtime of the modified version is $O(n^3)$, because the recursion is not in $O(2^n)$ anymore like in Section \ref{naiveruntime}. Instead the method is in $O(n^3)$.
+The runtime of the modified version is $O(n^3)$, because the recursive call is not in $O(n!)$ anymore like in Section \ref{naiveruntime}. Instead the method is in $O(n^3)$.
 
 
 %---------------------------------------------------------------------%
@@ -1004,8 +1004,9 @@ The runtimes of the methods are calculated in section \ref{systemdesign}. The re
 Method & Runtime \\
 \hline
 \texttt{parseNaive} & $O(n!)$\\
-\texttt{ParseTD} & $O(2^n)$ \\
+\texttt{ParseTD} & $O(n!)$ \\
 \texttt{ParseBU} & $O(n^3)$\\
+\texttt{ParseLinearTD} & $O(n^3)$\\
 \hline
 \end{tabular}
 
@@ -1014,9 +1015,13 @@ Seeing those runtimes one could think that the naive and the topdown approach ar
 
 Regarding the experiments that were run on the code, the topdown method seems to be the most efficient, followed by the bottomup method. The least efficient method is in these cases the naive approach.
 
-To confirm the calculated runtimes from Section \ref{systemdesign}, the results of the experiments will be calculated considering the $O$-notation runtime.
+The linear version of the topdown is more efficient than the original paring method, because it is restricted to linear grammars and with this restriction the recursive calls can be reduced from tweo to one in each call.
 
+It is to consider that the $O$-notation represents the upper bound of the runtime. Algorithms can run faster than the runtime in $O$-notation predicts.
 
+To confirm the calculated runtimes from Section \ref{systemdesign}, the results of the experiments will be calculated considering the $O$-notation runtime. Forhe input length ($n$) the actual results and $O$-notation results as upper bound are compared.
+
+\newpage
 \textbf{Naive approach ($O(n!)$):} \\
 Well-Balanced-Parantheses: 
 
@@ -1034,7 +1039,6 @@ $n$ & $n!$ & counter \\
 \hline
 \end{tabular}
 
-\pagebreak
 Abc-grammar: 
 
 \begin{tabular}{|c|c|c|}
@@ -1048,9 +1052,41 @@ $n$ & $n!$ & counter \\
 \hline
 \end{tabular}
 
-The results of the experiments confirm the runtime calculation of $O(n!)$ in Section \ref{naiveruntime}. Small deviation for smaller input numbers can happen, because the constants are not considered.
+The results of the experiments confirm the runtime calculation of $O(n!)$ in Section \ref{naiveruntime}. Small deviations for smaller input numbers can happen, because the constants are not considered.
 
-% TODO: n^2 und n^3 plotten!
+
+
+\textbf{Topdown approach ($O(n!)$):} \\
+Well-Balanced-Parantheses: 
+
+\begin{tabular}{|c|c|c|}
+\hline
+$n$ & $n!$ & counter \\
+\hline
+2& 2 & 6\\
+4& 24 & 28\\
+6& 720 & 84\\
+8& 40.320 & 190\\
+10& 3.628.800 & 362 \\
+20& 2.432.902.008.176.640.000 & 2.772\\
+30& 265.252.859.812.191.058.636.308.480.000.000 & 9.232\\
+\hline
+\end{tabular}
+
+Abc-grammar: 
+
+\begin{tabular}{|c|c|c|}
+\hline
+$n$ & $n!$ & counter \\
+\hline
+3& 6 & 6\\
+4& 24 & 49\\
+12& 479.001.600 & 518\\
+24& 620.448.401.733.239.439.360.000 & 6.732\\
+\hline
+\end{tabular}
+
+The results of the experiments confirm the runtime calculation of $O(n!)$ in Section \ref{topdownruntime}.
 
 
 %---------------------------------------------------------------------%
