@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  25 OCT 2022 22:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  25 OCT 2022 23:10
 entering extended mode
 **./report.tex
 (report.tex
@@ -1648,7 +1648,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 999--1010
+Underfull \hbox (badness 10000) in paragraph at lines 1000--1011
 
  []
 
@@ -1688,74 +1688,74 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1188--1190
+Underfull \hbox (badness 10000) in paragraph at lines 1189--1191
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1188--1190
+Underfull \hbox (badness 10000) in paragraph at lines 1189--1191
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1191--1192
+Underfull \hbox (badness 10000) in paragraph at lines 1192--1193
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1191--1192
+Underfull \hbox (badness 10000) in paragraph at lines 1192--1193
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1193--1194
+Underfull \hbox (badness 10000) in paragraph at lines 1194--1195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1195--1196
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1197--1198
+Underfull \hbox (badness 10000) in paragraph at lines 1198--1199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1197--1198
+Underfull \hbox (badness 10000) in paragraph at lines 1198--1199
 
  []
 
 <images/terminal_1.png, id=369, 233.37187pt x 448.67625pt>
 File: images/terminal_1.png Graphic file (type png)
 <use images/terminal_1.png>
-Package pdftex.def Info: images/terminal_1.png  used on input line 1204.
+Package pdftex.def Info: images/terminal_1.png  used on input line 1205.
 (pdftex.def)             Requested size: 163.35919pt x 314.07123pt.
 
-Overfull \hbox (31.05254pt too wide) in paragraph at lines 1204--1205
+Overfull \hbox (31.05254pt too wide) in paragraph at lines 1205--1206
 [][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1173--1206
+Underfull \hbox (badness 10000) in paragraph at lines 1174--1207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1173--1206
+Underfull \hbox (badness 10000) in paragraph at lines 1174--1207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1173--1206
+Underfull \hbox (badness 10000) in paragraph at lines 1174--1207
 
  []
 
 <images/terminal_2.png, id=370, 441.14813pt x 190.46156pt>
 File: images/terminal_2.png Graphic file (type png)
 <use images/terminal_2.png>
-Package pdftex.def Info: images/terminal_2.png  used on input line 1208.
+Package pdftex.def Info: images/terminal_2.png  used on input line 1209.
 (pdftex.def)             Requested size: 264.69092pt x 114.2778pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1769,40 +1769,40 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <images/terminal_3.png, id=376, 353.82187pt x 164.11313pt>
 File: images/terminal_3.png Graphic file (type png)
 <use images/terminal_3.png>
-Package pdftex.def Info: images/terminal_3.png  used on input line 1223.
+Package pdftex.def Info: images/terminal_3.png  used on input line 1224.
 (pdftex.def)             Requested size: 247.67361pt x 114.87839pt.
 
-Overfull \hbox (5.11252pt too wide) in paragraph at lines 1223--1224
+Overfull \hbox (5.11252pt too wide) in paragraph at lines 1224--1225
 [][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1226--1228
+Underfull \hbox (badness 10000) in paragraph at lines 1227--1229
 
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 1230--1231
+Underfull \hbox (badness 1708) in paragraph at lines 1231--1232
 \OT1/cmr/m/n/10.95 tion shows the so-lu-tion with
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 1230--1231
+Underfull \hbox (badness 2181) in paragraph at lines 1231--1232
 \OT1/cmr/m/n/10.95 ex-change (one sym-bol is ex-
  []
 
 <images/terminal_4.png, id=377, 243.91125pt x 150.5625pt>
 File: images/terminal_4.png Graphic file (type png)
 <use images/terminal_4.png>
-Package pdftex.def Info: images/terminal_4.png  used on input line 1235.
+Package pdftex.def Info: images/terminal_4.png  used on input line 1236.
 (pdftex.def)             Requested size: 170.7367pt x 105.39302pt.
 <images/terminal_5.png, id=378, 434.37282pt x 170.13562pt>
 File: images/terminal_5.png Graphic file (type png)
 <use images/terminal_5.png>
-Package pdftex.def Info: images/terminal_5.png  used on input line 1239.
+Package pdftex.def Info: images/terminal_5.png  used on input line 1240.
 (pdftex.def)             Requested size: 238.90578pt x 93.57487pt.
 
-Overfull \hbox (18.39691pt too wide) in paragraph at lines 1239--1240
+Overfull \hbox (18.39691pt too wide) in paragraph at lines 1240--1241
 [][][][] 
  []
 
@@ -1816,58 +1816,48 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [23 <./images/terminal_2.png> <./images/terminal_3.png> <./images/terminal_4.pn
 g> <./images/terminal_5.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1263--1294
+Underfull \hbox (badness 10000) in paragraph at lines 1264--1293
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1263--1294
+Underfull \hbox (badness 10000) in paragraph at lines 1264--1293
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1263--1294
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1263--1294
-
- []
-
-
-Overfull \hbox (9.78885pt too wide) in paragraph at lines 1263--1294
+Overfull \hbox (9.78885pt too wide) in paragraph at lines 1264--1293
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1263--1294
+Underfull \hbox (badness 10000) in paragraph at lines 1264--1293
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1295--1314
+Underfull \hbox (badness 10000) in paragraph at lines 1298--1335
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1295--1314
+Overfull \hbox (4.06949pt too wide) in paragraph at lines 1298--1335
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1298--1335
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1295--1314
+Underfull \hbox (badness 10000) in paragraph at lines 1298--1335
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1295--1314
+Underfull \hbox (badness 10000) in paragraph at lines 1298--1335
 
- []
-
-
-Overfull \hbox (4.06949pt too wide) in paragraph at lines 1295--1314
-[] 
  []
 
 
@@ -1879,7 +1869,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 1362--1363
+Underfull \hbox (badness 10000) in paragraph at lines 1383--1384
 
  []
 
@@ -1901,21 +1891,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [26]
-Overfull \hbox (24.61864pt too wide) in paragraph at lines 1490--1490
+Overfull \hbox (24.61864pt too wide) in paragraph at lines 1511--1511
 [][][]\OT1/cmr/m/it/10.95 Dynamic Pro-gram-ming\OT1/cmr/m/n/10.95 . Web-site. [
 ]$[][]\OT1/cmtt/m/n/10.95 https : / / www . programiz . com / dsa / dynamic -[]
  programming$[]\OT1/cmr/m/n/10.95 ,
  []
 
 
-Overfull \hbox (10.05585pt too wide) in paragraph at lines 1490--1490
+Overfull \hbox (10.05585pt too wide) in paragraph at lines 1511--1511
 [][][]\OT1/cmr/m/n/10.95 Dietmar Her-rmann. ``Rekur-sion''. In: \OT1/cmr/m/it/1
 0.95 Ef-fek-tiv Pro-gram-mieren in C\OT1/cmr/m/n/10.95 . Springer, 1991, pp. 11
 4{
  []
 
 
-Overfull \hbox (6.07579pt too wide) in paragraph at lines 1490--1490
+Overfull \hbox (6.07579pt too wide) in paragraph at lines 1511--1511
 [][][]\OT1/cmr/m/n/10.95 Maggie John-son and Julie Ze-len-ski. \OT1/cmr/m/it/10
 .95 For-mal Gram-mars\OT1/cmr/m/n/10.95 . Web-site. []$[][]\OT1/cmtt/m/n/10.95 
 https : / / web . stanford .
@@ -1942,7 +1932,7 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 Here is how much of TeX's memory you used:
  42062 strings out of 478927
  937774 string characters out of 2852534
- 1754960 words of memory out of 3000000
+ 1760960 words of memory out of 3000000
  59170 multiletter control sequences out of 15000+600000
  423930 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1979,7 +1969,7 @@ ti12.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmti9.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmtt10.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (28 pages, 840088 bytes).
+Output written on report.pdf (28 pages, 841281 bytes).
 PDF statistics:
  541 PDF objects out of 1000 (max. 8388607)
  84 named destinations out of 1000 (max. 500000)

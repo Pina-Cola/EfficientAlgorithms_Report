@@ -980,6 +980,7 @@ a...b...c... & 24 & 481.557 & 9ms & 51.888 & 20ms & 4.312 & 4ms & 6.732 & 3ms \\
 \end{tabular}
 \end{small}
 
+The incrementations of the input word length was chosen, to show the difference in the performance of the parsing methods for similar structured input but different input length.
 
 
 
@@ -1263,8 +1264,6 @@ If the input grammar is a linear grammar, the programm checks if it is in \texti
 The following tables show some tests that were run with the different parsing methods and grammars. The first of each column for the method shows the truth value that is returned (as T for true and F for false), C represents the counter and T the time in ms. Those tests were run before the BottomUp method was working correctly.
 \\
 \\
-\\
-\\
 Well-Balanced-Parantheses: \\
 \\
 \begin{small}
@@ -1293,11 +1292,10 @@ Word & Length & N & NC & NT & B & BC & BT & T & TC & TT \\
 \end{small}
 
 The input word with a length of 40 did not terminate over night for the naive approach.
-\\
-\\
-\\
-\\
-Stupid Grammar:\\
+
+
+
+Stupid grammar: \\
 \\
 \begin{tabular}{|c|c||c|c|c||c|c|c||c|c|c|}
 \hline
@@ -1311,6 +1309,29 @@ aaaaaaaa & 8 & F & 1.596 & 8ms & F & 308 & 5ms & F & 197 & 1ms \\
 aaaaaaaaaaaaaaaa & 16 & F & 3.524.577 & 89ms & F & 2.660 & 15ms & F & 1.481 & 1ms \\
 \hline
 \end{tabular}
+\ \\
+\\
+Simple grammar:\\
+\texttt{S $\rightarrow$ aA  \hspace*{1em} A $\rightarrow$ Sb \hspace*{1em} A $\rightarrow$ b} \ \\
+\\
+\begin{small}
+\begin{tabular}{|c|c||c|c||c|c||c|c||c|c|c|}
+\hline
+Word & Length & NC & NT & BC & BT & TC & TT & LC & LT \\
+\hline
+\hline
+ab & 2 & 3 & 0ms  & 8 & 7ms & 3 & 3ms & 2 & 0ms \\
+\hline
+aabb & 4 & 8 & 1ms & 112 & 7ms & 8 & 3ms & 8 & 0ms \\ 
+\hline
+aaaabbbb & 8 & 58 & 0ms & 1.120 & 7ms & 50 & 2ms & 84 & 1ms \\
+\hline
+a...b & 16 & 3.144 & 1ms & 9.920 & 11ms & 486 & 3ms & 940 & 1ms \\
+\hline
+a...b & 32 & 7.048.930 & 69ms & 83.328 & 26ms & 4.558 & 6ms & 9.052 & 2ms \\
+\hline
+\end{tabular}
+\end{small}
 
 
 \subsection*{Graphs:}
