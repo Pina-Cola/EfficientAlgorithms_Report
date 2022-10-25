@@ -146,8 +146,9 @@ To examine if such a string follows the rules of a grammar, the \textit{Cocke-Yo
 
 The task for this assignment is to code three different parsing methods of which one executes the \textit{CYK}-algorithm with dynamic programming in \textit{Java}. The different parsing methods are described and presented as pseudo code in Section \ref{systemdesign}.
 For the implementation three different classes are implemented: \texttt{main.java, grammar.java} and \texttt{parser.java}. The \texttt{main}-class calls the methods and the \texttt{grammar}-class parses the input grammer as string into a format that then can be processed in the \texttt{parser}-class. This \texttt{parser}-class has three different parsing methods, which are tested and compared against each other.
-The function and implementation is former described in Section \ref{systemdesign}. Also in Section \ref{systemdesign} the runtimes in $O$-notation are calculated for each approach.
+The function and implementation is former described in Section \ref{systemdesign}. Also in Section \ref{systemdesign} the runtimes in $O$-notation are calculated for each approach and modifications for the parsing of linear grammars are described.
 
+Concepts, ideas and first steps for the error correction of input words with deletion and exchange are presented in Section \ref{errorcorrection}.
 
 In Section \ref{evaluation} the runtimes and experiments of the different algorithms are compared and differences in efficiency are shown.
 
@@ -1064,6 +1065,8 @@ The CYK-table has to contain the start symbol in the entry on the right top corn
 
 It can happen that no accepted word is found with deletion, if no subword concluded into the start symbol in the CYK-table.
 
+The distance of the entry in the CYK-table that contains the start symbol and the top right corner can also be returned as the amount of symbols that need to be deleted to receive an accepted word. This error counter works only for the deletion method.
+
 
 
 
@@ -1113,6 +1116,7 @@ These algorithms show differences in efficiency but also limits for the examinat
 Formal languages and grammars can be used in different use cases. For exampel for AI learning methods. Real languages like English can be defined as a formal language, too. But it is important to consider that formal languages only define the syntax and not the semantics. In addition to this has english a lot of rules and many exceptions. \cite{FG}
 
 The future work for this code is to optimize the error correction. The combination of deletion and exchange is not implemented yet. It would be interesting to find a more efficient way to calculate the exchange of symbols, which would enable the exchange of more than one symbol.
+In addition to this a accurat error counter for the symbols that need to be exchanged can be implemented.
 
 
 % The future work for this assignment is to change the types of the arrays from \texttt{String[][]} to \texttt{int[][][]}. In addition to this there still exists a problem in the bottomup method, which needs to be fixed. Some specific grammars and words do not return the right value. After these things work correctly, more experiments can be run and the pseudo code will be edited. Then the upper bound runtime can be calculated again and the plotted graphs can be compared to the according $O$-notation runtime.
