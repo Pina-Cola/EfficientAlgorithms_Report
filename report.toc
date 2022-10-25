@@ -47,20 +47,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2}Runtimes}{17}{subsection.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Linear grammars}{17}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Errorcorrection}{19}{section.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Errorcorrection}{18}{section.5}%
+\contentsline {section}{\numberline {6}Conclusion and Future Work}{20}{section.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Conclusion and Future Work}{19}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Conclusion}{20}{subsection.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Conclusion}{19}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Future work}{20}{subsection.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Future work}{19}{subsection.6.2}%
+\contentsline {section}{\numberline {A}How to use the code?}{21}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}How to use the code?}{20}{appendix.A}%
+\contentsline {section}{\numberline {B}Graphs and additional results}{23}{appendix.B}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}Graphs and additional results}{22}{appendix.B}%
+\contentsline {section}{\numberline {C}CNF Algorithm on an example}{25}{appendix.C}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}CNF Algorithm on an example}{24}{appendix.C}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Bibliography}{25}{section*.1}%
+\contentsline {section}{Bibliography}{26}{section*.1}%

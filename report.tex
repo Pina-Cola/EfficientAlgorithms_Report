@@ -931,7 +931,7 @@ The input word with a length of 40 did not terminate over night for the naive ap
 \end{tikzpicture}
 
 
-Linear grammar example: \\
+Linear grammar example (abc-grammar): \\
 \texttt{"SAc" "Sb" "AaS" "AaB" "BbS" "a$^*$b$^*$c$^*$"}
 \ \\ \\
 \begin{small}
@@ -986,9 +986,9 @@ Regarding the experiments that were run on the code, the topdown method seems to
 
 To confirm the calculated runtimes from Section \ref{systemdesign}, the results of the experiments will be calculated considering the $O$-notation runtime.
 
-Well-Balanced-Parantheses:
 
-Naive approach ($O(n!)$):
+\textbf{Naive approach ($O(n!)$):} \\
+Well-Balanced-Parantheses: 
 
 \begin{tabular}{|c|c|c|}
 \hline
@@ -1004,7 +1004,21 @@ $n$ & $n!$ & counter \\
 \hline
 \end{tabular}
 
+\pagebreak
+Abc-grammar: 
 
+\begin{tabular}{|c|c|c|}
+\hline
+$n$ & $n!$ & counter \\
+\hline
+3& 6 & 6\\
+4& 24 & 51\\
+12& 479.001.600 & 1.457\\
+24& 620.448.401.733.239.439.360.000 & 481.557\\
+\hline
+\end{tabular}
+
+The results of the experiments confirm the runtime calculation of $O(n!)$ in Section \ref{naiveruntime}. Small deviation for smaller input numbers can happen, because the constants are not considered.
 
 % TODO: n^2 und n^3 plotten!
 
@@ -1013,8 +1027,8 @@ $n$ & $n!$ & counter \\
 
 
 
-\subsection{Linear grammars}
-\label{evaluation_lineargrammars}
+%\subsection{Linear grammars}
+%\label{evaluation_lineargrammars}
 
 
 
