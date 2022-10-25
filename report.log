@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  25 OCT 2022 16:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  25 OCT 2022 19:38
 entering extended mode
 **./report.tex
 (report.tex
@@ -1174,24 +1174,24 @@ LaTeX Warning: Label `alg:cap' multiply defined.
 )
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1253,7 +1253,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 73.
+Package hyperref Info: Link coloring OFF on input line 77.
 
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1267,9 +1267,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count468
 )
-LaTeX Info: Redefining \ref on input line 73.
-LaTeX Info: Redefining \pageref on input line 73.
-LaTeX Info: Redefining \nameref on input line 73.
+LaTeX Info: Redefining \ref on input line 77.
+LaTeX Info: Redefining \pageref on input line 77.
+LaTeX Info: Redefining \nameref on input line 77.
  (report.out) (report.out)
 \@outlinefile=\write5
 \openout5 = `report.out'.
@@ -1328,8 +1328,8 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'report.bbl' found.
  (report.bbl)
-Package biblatex Info: Reference section=0 on input line 73.
-Package biblatex Info: Reference segment=0 on input line 73.
+Package biblatex Info: Reference section=0 on input line 77.
+Package biblatex Info: Reference segment=0 on input line 77.
  [1
 
 {C:/Users/pinak/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (report.toc
@@ -1359,7 +1359,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.120 \newpage
+l.124 \newpage
                [1]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1379,7 +1379,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 267--269
+Underfull \hbox (badness 10000) in paragraph at lines 271--273
 
  []
 
@@ -1392,37 +1392,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 271--276
+Underfull \hbox (badness 10000) in paragraph at lines 275--280
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--276
+Underfull \hbox (badness 10000) in paragraph at lines 275--280
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--279
+Underfull \hbox (badness 10000) in paragraph at lines 294--337
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--288
+Underfull \hbox (badness 10000) in paragraph at lines 294--337
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--292
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 293--335
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 336--337
+Underfull \hbox (badness 10000) in paragraph at lines 294--337
 
  []
 
@@ -1439,22 +1429,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 354--357
 
  []
 
-<images/7.png, id=227, 348.92859pt x 139.64671pt>
+<images/7.png, id=247, 348.92859pt x 139.64671pt>
 File: images/7.png Graphic file (type png)
 <use images/7.png>
 Package pdftex.def Info: images/7.png  used on input line 359.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
-<images/6.png, id=229, 348.92859pt x 139.64671pt>
+<images/6.png, id=249, 348.92859pt x 139.64671pt>
 File: images/6.png Graphic file (type png)
 <use images/6.png>
 Package pdftex.def Info: images/6.png  used on input line 360.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
-<images/5.png, id=230, 348.92859pt x 139.64671pt>
+<images/5.png, id=250, 348.92859pt x 139.64671pt>
 File: images/5.png Graphic file (type png)
 <use images/5.png>
 Package pdftex.def Info: images/5.png  used on input line 361.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
-<images/4.png, id=231, 348.92859pt x 139.64671pt>
+<images/4.png, id=251, 348.92859pt x 139.64671pt>
 File: images/4.png Graphic file (type png)
 <use images/4.png>
 Package pdftex.def Info: images/4.png  used on input line 362.
@@ -1468,17 +1458,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [6 <./images/7.png> <./images/6.png> <./images/5.png>]
-<images/3.png, id=241, 348.92859pt x 139.64671pt>
+<images/3.png, id=261, 348.92859pt x 139.64671pt>
 File: images/3.png Graphic file (type png)
 <use images/3.png>
 Package pdftex.def Info: images/3.png  used on input line 363.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
-<images/2.png, id=242, 348.92859pt x 139.64671pt>
+<images/2.png, id=262, 348.92859pt x 139.64671pt>
 File: images/2.png Graphic file (type png)
 <use images/2.png>
 Package pdftex.def Info: images/2.png  used on input line 364.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
-<images/1.png, id=243, 348.92859pt x 139.64671pt>
+<images/1.png, id=263, 348.92859pt x 139.64671pt>
 File: images/1.png Graphic file (type png)
 <use images/1.png>
 Package pdftex.def Info: images/1.png  used on input line 365.
@@ -1502,13 +1492,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [8]
-Overfull \hbox (4.19086pt too wide) in paragraph at lines 434--435
+Overfull \hbox (4.19086pt too wide) in paragraph at lines 435--436
 [][]\OT1/cmr/m/n/10.95 The im-ple-men-ta-tion was done in Java and three dif-fe
 r-ent classes were im-ple-mented: \OT1/cmtt/m/n/10.95 main.java
  []
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 492.
+put line 495.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1518,12 +1508,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 499--503
+Underfull \hbox (badness 10000) in paragraph at lines 502--506
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 540--576
+Underfull \hbox (badness 10000) in paragraph at lines 543--579
 
  []
 
@@ -1545,6 +1535,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [11]
+Underfull \hbox (badness 10000) in paragraph at lines 657--683
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 657--683
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 657--683
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1554,20 +1558,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 655--681
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 655--681
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 655--681
-
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1586,22 +1576,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 753--755
+Underfull \hbox (badness 10000) in paragraph at lines 780--782
 
  []
 
 
-Overfull \hbox (4.84053pt too wide) detected at line 796
+Overfull \hbox (4.84053pt too wide) detected at line 823
 [][][]
  []
 
 
-Overfull \hbox (4.84052pt too wide) in paragraph at lines 756--801
+Overfull \hbox (4.84052pt too wide) in paragraph at lines 783--828
 [][][]$[][][]$$[][][]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 756--801
+Underfull \hbox (badness 10000) in paragraph at lines 783--828
 
  []
 
@@ -1614,27 +1604,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 829--858
+Underfull \hbox (badness 10000) in paragraph at lines 856--886
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 829--858
+Underfull \hbox (badness 10000) in paragraph at lines 856--886
 
  []
 
 
-Overfull \hbox (9.78885pt too wide) in paragraph at lines 829--858
+Overfull \hbox (9.78885pt too wide) in paragraph at lines 856--886
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 829--858
+Underfull \hbox (badness 10000) in paragraph at lines 856--886
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 870--881
+Underfull \hbox (badness 10000) in paragraph at lines 890--909
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 926--937
 
  []
 
@@ -1656,74 +1651,92 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 963--965
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[18]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 1053--1055
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 963--965
+Underfull \hbox (badness 10000) in paragraph at lines 1053--1055
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 966--967
+Underfull \hbox (badness 10000) in paragraph at lines 1056--1057
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 966--967
+Underfull \hbox (badness 10000) in paragraph at lines 1056--1057
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 968--969
+Underfull \hbox (badness 10000) in paragraph at lines 1058--1059
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 970--971
+Underfull \hbox (badness 10000) in paragraph at lines 1060--1061
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 972--973
+Underfull \hbox (badness 10000) in paragraph at lines 1062--1063
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 972--973
+Underfull \hbox (badness 10000) in paragraph at lines 1062--1063
 
  []
 
-<images/terminal_1.png, id=319, 233.37187pt x 448.67625pt>
+<images/terminal_1.png, id=352, 233.37187pt x 448.67625pt>
 File: images/terminal_1.png Graphic file (type png)
 <use images/terminal_1.png>
-Package pdftex.def Info: images/terminal_1.png  used on input line 979.
+Package pdftex.def Info: images/terminal_1.png  used on input line 1069.
 (pdftex.def)             Requested size: 163.35919pt x 314.07123pt.
 
-Overfull \hbox (31.05254pt too wide) in paragraph at lines 979--980
+Overfull \hbox (31.05254pt too wide) in paragraph at lines 1069--1070
 [][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 948--981
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1071
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 948--981
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1071
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 948--981
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1071
 
  []
 
-<images/terminal_2.png, id=320, 441.14813pt x 190.46156pt>
+<images/terminal_2.png, id=353, 441.14813pt x 190.46156pt>
 File: images/terminal_2.png Graphic file (type png)
 <use images/terminal_2.png>
-Package pdftex.def Info: images/terminal_2.png  used on input line 983.
+Package pdftex.def Info: images/terminal_2.png  used on input line 1073.
 (pdftex.def)             Requested size: 264.69092pt x 114.2778pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1733,44 +1746,44 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[18 <./images/terminal_1.png>]
-<images/terminal_3.png, id=327, 353.82187pt x 164.11313pt>
+[20 <./images/terminal_1.png>]
+<images/terminal_3.png, id=359, 353.82187pt x 164.11313pt>
 File: images/terminal_3.png Graphic file (type png)
 <use images/terminal_3.png>
-Package pdftex.def Info: images/terminal_3.png  used on input line 998.
+Package pdftex.def Info: images/terminal_3.png  used on input line 1088.
 (pdftex.def)             Requested size: 247.67361pt x 114.87839pt.
 
-Overfull \hbox (5.11252pt too wide) in paragraph at lines 998--999
+Overfull \hbox (5.11252pt too wide) in paragraph at lines 1088--1089
 [][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1001--1003
+Underfull \hbox (badness 10000) in paragraph at lines 1091--1093
 
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 1005--1006
+Underfull \hbox (badness 1708) in paragraph at lines 1095--1096
 \OT1/cmr/m/n/10.95 tion shows the so-lu-tion with
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 1005--1006
+Underfull \hbox (badness 2181) in paragraph at lines 1095--1096
 \OT1/cmr/m/n/10.95 ex-change (one sym-bol is ex-
  []
 
-<images/terminal_4.png, id=328, 243.91125pt x 150.5625pt>
+<images/terminal_4.png, id=360, 243.91125pt x 150.5625pt>
 File: images/terminal_4.png Graphic file (type png)
 <use images/terminal_4.png>
-Package pdftex.def Info: images/terminal_4.png  used on input line 1010.
+Package pdftex.def Info: images/terminal_4.png  used on input line 1100.
 (pdftex.def)             Requested size: 170.7367pt x 105.39302pt.
-<images/terminal_5.png, id=329, 434.37282pt x 170.13562pt>
+<images/terminal_5.png, id=361, 434.37282pt x 170.13562pt>
 File: images/terminal_5.png Graphic file (type png)
 <use images/terminal_5.png>
-Package pdftex.def Info: images/terminal_5.png  used on input line 1014.
+Package pdftex.def Info: images/terminal_5.png  used on input line 1104.
 (pdftex.def)             Requested size: 238.90578pt x 93.57487pt.
 
-Overfull \hbox (18.39691pt too wide) in paragraph at lines 1014--1015
+Overfull \hbox (18.39691pt too wide) in paragraph at lines 1104--1105
 [][][][] 
  []
 
@@ -1782,59 +1795,59 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[19 <./images/terminal_2.png> <./images/terminal_3.png> <./images/terminal_4.pn
+[21 <./images/terminal_2.png> <./images/terminal_3.png> <./images/terminal_4.pn
 g> <./images/terminal_5.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1038--1069
+Underfull \hbox (badness 10000) in paragraph at lines 1128--1159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1038--1069
+Underfull \hbox (badness 10000) in paragraph at lines 1128--1159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1038--1069
+Underfull \hbox (badness 10000) in paragraph at lines 1128--1159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1038--1069
+Underfull \hbox (badness 10000) in paragraph at lines 1128--1159
 
  []
 
 
-Overfull \hbox (9.78885pt too wide) in paragraph at lines 1038--1069
+Overfull \hbox (9.78885pt too wide) in paragraph at lines 1128--1159
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1038--1069
+Underfull \hbox (badness 10000) in paragraph at lines 1128--1159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1070--1089
+Underfull \hbox (badness 10000) in paragraph at lines 1160--1179
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1070--1089
+Underfull \hbox (badness 10000) in paragraph at lines 1160--1179
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1070--1089
+Underfull \hbox (badness 10000) in paragraph at lines 1160--1179
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1070--1089
+Underfull \hbox (badness 10000) in paragraph at lines 1160--1179
 
  []
 
 
-Overfull \hbox (4.06949pt too wide) in paragraph at lines 1070--1089
+Overfull \hbox (4.06949pt too wide) in paragraph at lines 1160--1179
 [] 
  []
 
@@ -1846,8 +1859,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 1137--1138
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 1227--1228
 
  []
 
@@ -1859,7 +1872,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[21]
+[23]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1868,22 +1881,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[22]
-Overfull \hbox (24.61864pt too wide) in paragraph at lines 1265--1265
+[24]
+Overfull \hbox (24.61864pt too wide) in paragraph at lines 1355--1355
 [][][]\OT1/cmr/m/it/10.95 Dynamic Pro-gram-ming\OT1/cmr/m/n/10.95 . Web-site. [
 ]$[][]\OT1/cmtt/m/n/10.95 https : / / www . programiz . com / dsa / dynamic -[]
  programming$[]\OT1/cmr/m/n/10.95 ,
  []
 
 
-Overfull \hbox (10.05585pt too wide) in paragraph at lines 1265--1265
+Overfull \hbox (10.05585pt too wide) in paragraph at lines 1355--1355
 [][][]\OT1/cmr/m/n/10.95 Dietmar Her-rmann. ``Rekur-sion''. In: \OT1/cmr/m/it/1
 0.95 Ef-fek-tiv Pro-gram-mieren in C\OT1/cmr/m/n/10.95 . Springer, 1991, pp. 11
 4{
  []
 
 
-Overfull \hbox (6.07579pt too wide) in paragraph at lines 1265--1265
+Overfull \hbox (6.07579pt too wide) in paragraph at lines 1355--1355
 [][][]\OT1/cmr/m/n/10.95 Maggie John-son and Julie Ze-len-ski. \OT1/cmr/m/it/10
 .95 For-mal Gram-mars\OT1/cmr/m/n/10.95 . Web-site. []$[][]\OT1/cmtt/m/n/10.95 
 https : / / web . stanford .
@@ -1897,26 +1910,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[23] (report.aux)
+[25] (report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 214A508ECDFF94620EE6779BBE859AF6;3772.
+(rerunfilecheck)             Checksum: DD0C7A30A2AF3CB7E3D04627C9B95FD9;4600.
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42032 strings out of 478927
- 937313 string characters out of 2852534
- 1751676 words of memory out of 3000000
- 59150 multiletter control sequences out of 15000+600000
+ 42045 strings out of 478927
+ 937521 string characters out of 2852534
+ 1751920 words of memory out of 3000000
+ 59156 multiletter control sequences out of 15000+600000
  423930 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,47n,103p,1235b,2399s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
 
  <C:\Users\pinak\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm10
 95.pk><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
@@ -1944,9 +1960,9 @@ ti12.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmti9.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmtt10.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (24 pages, 817472 bytes).
+Output written on report.pdf (26 pages, 828139 bytes).
 PDF statistics:
- 490 PDF objects out of 1000 (max. 8388607)
- 74 named destinations out of 1000 (max. 500000)
- 297 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 524 PDF objects out of 1000 (max. 8388607)
+ 81 named destinations out of 1000 (max. 500000)
+ 329 words of extra memory for PDF output out of 10000 (max. 10000000)
 

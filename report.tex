@@ -44,6 +44,10 @@
 \newtheorem*{example*}{Example}
 \newtheorem*{definition*}{Definition}
 
+\clubpenalty = 10000
+\widowpenalty = 10000
+\displaywidowpenalty = 10000
+
 
 
 
@@ -274,8 +278,7 @@ Given is a set of items with a weight and a value. The task is to choose which i
 \\ \\
 The formula with which the dynamic programming works is the follwing:
 
-  
-  \ \\
+
   $$
 Opt(i,j)=
 \begin{cases}
@@ -284,11 +287,9 @@ Opt(i,j)=
         max\{ Opt(i-1, j), v[i]+Opt(i-1, j-w[i]) \}, & \text{else } 
 \end{cases}
 $$
-\ \\
 
 If $0 \leq j \leq w$ then there are no objects which could be put into the bag. The second case acts when object $i$ does not fit into the bag and the optimal solution is found with the objects from index $1$ to $i-1$. Else the object $i$ is either part of the optimal solution or it consists out of the objects $1$ to $i-1$.
 
-\ \\
 
 The table of the values and weight of each item with index $i$ is shown on the left and on the right is the table that gets filled in with a dynamic programming approach of the formula above. The maximum bag size is 7.
 \\ \\
@@ -332,7 +333,6 @@ $i$ & $w[i]$ & $v[i]$ \\
 \end{tabular}
 
 \end{minipage}
-
 \ \\
 
 The first column in the table represent the objects and the last row the weight. The entries in the table show the maximum value. In this example the maximum value for the size 7 is 10.
@@ -384,8 +384,9 @@ For definition and examples for recursion read Section \ref{recursion}.
 
 \end{example*}
 
-\begin{example*}[Recursion]
+\newpage
 
+\begin{example*}[Recursion]
 Buidling a sum for the numbers $1+2+...+n$.
 
 Nonrecursive approach:
@@ -470,7 +471,9 @@ For faster and easier access, three arrays are built: One array that only contai
 \subsection{Parser}
 \label{parser}
 
-The \texttt{parser}-class contains three different parsing methods: \texttt{parseNaive} (described in Section \ref{naivedescription}), \texttt{parseTopDown} (described in Section \ref{topdowndescription}) and \texttt{parseBottomUp} (described in Section \ref{bottomupdescription}). Each methods has a counter as \texttt{long} which counts the number of interations and a timer as \texttt{long} in $ms$ which measures the runtime of the method. In the following sections the algorithms are described, presented as pseudo code and the runtime is analysed.
+The \texttt{parser}-class contains three different parsing methods: \texttt{parseNaive} (described in Section \ref{naivedescription}), \texttt{parseTopDown} (described in Section \ref{topdowndescription}) and \texttt{parseBottomUp} (described in Section \ref{bottomupdescription}). Also there exists a modified method of the \texttt{parseTopDown}, which takes linear grammars (which are translated into \textit{CNF}) and parses them faster (described in Section \ref{lineartopdown}).
+
+Each methods has a counter as \texttt{long} which counts the number of interations and a timer as \texttt{long} in $ms$ which measures the runtime of the method. In the following sections the algorithms are described, presented as pseudo code and the runtime is analysed.
 
 %---------------------------------------------------------------------%
 
@@ -512,16 +515,16 @@ If $i$ is not equal to $j-1$ it loops for the integer $k$ from $i+1$ to $j-1$ an
 \State $counter \gets counter+1$
 \If{$i == (j-1)$}
 \For{$l \gets 0$ \textbf{to} $ruleset[0].length$}
-\If{$ruleset[indexNT][1] == inputWord[i]$}
+\If{$ruleset[indexNT][l][0] == inputWord[i]$ \newline \hspace*{5em} \textbf{or}  $ruleset[indexNT][l][1] == inputWord[i]$}
 \State \Return true
 \EndIf
 \EndFor
 
 \Else
 \For{$bodyIndex \gets 0$ \textbf{to} $ruleset[indexNT].length$}
-\If{$ruleset[indexNT][bodyIndex].length >= 2$}
-\State $first \gets ruleset[indexNT][bodyIndex].charAt(0)$
-\State $second \gets ruleset[indexNT][bodyIndex].charAt(1)$
+\If{$ruleset[indexNT][bodyIndex][0] \  != null$ \newline \hspace*{5em} \textbf{and} $ruleset[indexNT][bodyIndex][1] \  != null$}
+\State $first \gets ruleset[indexNT][bodyIndex][0]$
+\State $second \gets ruleset[indexNT][bodyIndex][1]$
 \For{$k \gets i+1$ \textbf{to} $j$}
 \If{$parseNaive(first, i, k)$ \textbf{and} $parseNaive(second, k, j)$}
 \State \Return true
@@ -545,19 +548,19 @@ In the following table the upper bound runtime of the second method (algorithm 2
 \hline
 Line & Runtime & Type \\
 \hline
-1 &  1 & Assignment \\
-2 &  1 & Comparison \\
-3 & k  & Loop \\
-4 & 1 $\cdot$ k & Comparison \\
-5 & 1 $\cdot$ k & Return statement\\
-9 & k & Loop \\
-10 & 1 $\cdot$ k & comparison \\
-11 & 1 $\cdot$ k & Assignment \\
-12 & 1 $\cdot$ k & Assignment\\
-13 & n $\cdot$ k & Loop \\
-14 & n $\cdot$ n $\cdot$ n $\cdot$ k & Recusrsive call \\
-15 & 1 $\cdot$ n $\cdot$ k & Return statement\\
-21 & 1 & Return statement \\
+1 &  $1$ & Assignment \\
+2 &  $1$ & Comparison \\
+3 & $k$  & Loop \\
+4 & $1$ $\cdot$ $k$ & Comparison \\
+5 & $1$ $\cdot$ $k$ & Return statement\\
+9 & $k$ & Loop \\
+10 & $1$ $\cdot$ $k$ & comparison \\
+11 & 1 $\cdot$ $k$ & Assignment \\
+12 & 1 $\cdot$ $k$ & Assignment\\
+13 & n $\cdot$ $k$ & Loop \\
+14 & $2^n$ $\cdot$ $n$ $\cdot$ $k$ & Recusrsive call \\
+15 & $1$ $\cdot$ $n$ $\cdot$ $k$ & Return statement\\
+21 & $1$ & Return statement \\
 \hline
 \end{tabular}
 
@@ -566,24 +569,23 @@ Calculating the runtime:
 \vspace*{-1em}
 \begin{align*}
 & 1 + 1+ k + k +k + k + k + k + k \\
-& + n \cdot k + n \cdot n \cdot n \cdot k + n \cdot k \\
-& =  2 + 7k + 2(n \cdot k) + n \cdot n \cdot n \cdot k \\
-& = 2 + 7k + 2n \cdot 2k + 2n^3 \cdot k \\
-& \in O(n^3)
+& + n \cdot k + 2^n \cdot n \cdot k + n \cdot k \\
+& =  2 + 7k + 2(n \cdot k) + 2^n \cdot n \cdot k \\
+& = 2 + 7k + 2n \cdot 2k + 2^n \cdot n \cdot k \\
+& \in O(2^n)
 \end{align*}
-The runtime of the naive method is in $O(n^3)$.
+The runtime of the naive method is in $O(2^n)$.
 \end{minipage}
 
 %---------------------------------------------------------------------%
 
 
-\newpage
 \subsubsection{Top-Down description}
 \label{topdowndescription}
 
 % TODO: describe idea of algorithm more detailed in text form!
 
-The top-down method is an improves version of the naive method (Section \ref{naivedescription}). This algorithm works recursive, too. In this algorithm another global array is used, which contains the values \texttt{true}, \texttt{false} and \texttt{null}. The array gets intialized with \texttt{null} in each field. That happens in the recursion call method below.
+The top-down method is an improved version of the naive method (Section \ref{naivedescription}). This algorithm works recursive, too. In this algorithm another global array is used, which contains the values \texttt{true}, \texttt{false} and \texttt{null}. The array gets intialized with \texttt{null} in each field. That happens in the recursion call method below.
 
 \begin{algorithm}[H]
 \caption{Recursion call: Boolean parseTD()}\label{alg:cap}
@@ -623,16 +625,16 @@ The complete topdown algorithm is shown as pseudo code below. In the inner for-l
 \EndIf
 \If{$i == (j-1)$}
 \For{$l \gets 0$ \textbf{to} $ruleset[0].length$}
-\If{$ruleset[indexNT][1] == inputWord[i]$}
+\If{$ruleset[indexNT][l][0] == inputWord[i]$ \newline \hspace*{5em} \textbf{or}  $ruleset[indexNT][l][1] == inputWord[i]$}
 \State \Return true
 \EndIf
 \EndFor
 
 \Else
 \For{$bodyIndex \gets 0$ \textbf{to} $ruleset[indexNT].length$}
-\If{$ruleset[indexNT][bodyIndex].length >= 2$}
-\State $first \gets ruleset[indexNT][bodyIndex].charAt(0)$
-\State $second \gets ruleset[indexNT][bodyIndex].charAt(1)$
+\If{$ruleset[indexNT][bodyIndex][0] \  != null$ \newline \hspace*{5em} \textbf{and} $ruleset[indexNT][bodyIndex][1] \  != null$}
+\State $first \gets ruleset[indexNT][bodyIndex][0]$
+\State $second \gets ruleset[indexNT][bodyIndex][1]$
 \For{$k \gets i+1$ \textbf{to} $j$}
 \State $table[indexNT][i][j] \gets (parseTD(first,i,k)$ \texttt{and} $parseTD(second,k,j))$
 \If{$table[indexNT][i][j] == true$}
@@ -679,14 +681,43 @@ Calculating the runtime of the method call:
 \end{minipage}
 \ \\
 
-The runtime analysis of the \texttt{parseTD} method is analog to the \texttt{parseNaive} runtime analysis. According to this the topdown algorithm has an upper bound runtime in $O(n^3)$, too.
+The runtime analysis for the upper bound of the \texttt{parseTD} method is analog to the \texttt{parseNaive} runtime analysis. According to this the topdown algorithm has an upper bound runtime in $O(2^n)$, too.
 
 
+
+\subsubsection{Top-Down modified for linear grammars}
+\label{lineartopdown}
+
+In the modified version for linear grammars, the grammar gets changed into CNF first. The modified algorithm can now work more efficient, because for each rule is only one recursive call of the method instead of two neccessary.
+
+For each rule it is checked if the first or the second element of the body is the head of a terminal rule. Then it is checked if the head of the terminal rule is the head of the current position on the input word. For the other symbol the methos gets called recursively. This part is shown in the pseudo code below:
+
+
+\begin{algorithm}[H]
+\begin{algorithmic}[1]
+\State $first \gets ruleset[indexNT][bodyIndex][0]$
+\State $second \gets ruleset[indexNT][bodyIndex][1]$
+\For{$k \gets i+1$ \textbf{to} $j$}
+\If{\textit{second} is head of a terminal rule}
+\State{$table[indexNT][i][j] = parseLinearTD(first, i, k)$ \textbf{and} \textit{second} is head of terminal rule with body $inputAsInt[k]$}
+\EndIf
+\If{\textit{first} is head of a terminal rule}
+\State{$table[indexNT][i][j] = parseLinearTD(second, k, j)$ \textbf{and} \textit{first} is head of terminal rule with body $inputAsInt[i]$}
+\EndIf
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+
+\subsubsection{Top-Down modified for linear grammars runtime}
+\label{lineartopdown_runtime}
+
+The runtime of the modified version is $O(n^3)$, because the recursion is not in $O(2^n)$ anymore like in Section \ref{naiveruntime}. Instead the method is in $O(n^3)$.
 
 
 %---------------------------------------------------------------------%
 
-\newpage
+
 \subsubsection{Bottom-Up description}
 \label{bottomupdescription}
 
@@ -700,15 +731,10 @@ The approach of dynamic programming calculates the smallest substrings first and
 \caption{Boolean parseBU()}\label{alg:cap}
 \begin{algorithmic}[1]
 \State $wordlength \gets word.length$ 
-\State $String[][] DP \gets new String[wordLength][wordLength]$
+\State $Integer[][][] DP \gets new Integer[wordLength][wordLength][wordlength]$
 \For{$i \gets 0$ \textbf{to} $wordlength$}
 \If{$ruleset \ contains \ word[i]$}
-\State $temp \gets index of word[i] \ in \ ruleset$
-\If{$DP[i][i] \ != null$}
-\State $DP[i][i] \gets DP[i][i] + temp$
-\Else
-\State $DP[i][i] \gets + temp$
-\EndIf
+\State assign nonterminal symbols of $inputword[i]$ to $DP[i][i]$
 \EndIf
 \EndFor
 
@@ -720,12 +746,11 @@ The approach of dynamic programming calculates the smallest substrings first and
 \For{$head \gets 0$ \textbf{to} $ruleset.length$}
 \For{$body \gets 0$ \textbf{to} $ruleset[head].length$}
 \State $conter \gets counter + 1$
-\If{$ruleset[head][body].length >= 2$}
-\State $first \gets ruleset[head][body].charAt(0)$
-\State $second \gets ruleset[head][body].charAt(1)$
+\If{$ruleset[indexNT][bodyIndex][0] \  != null$ \newline \hspace*{5em} \textbf{and} $ruleset[indexNT][bodyIndex][1] \  != null$}
+\State $first \gets ruleset[head][body].charAt[0]$
+\State $second \gets ruleset[head][body][1]$
 \If{$DP[i][k] \ contains \ first$ \textbf{and} $DP[k+1][j] \ contains \ second$}
-\State $temp \gets head$
-\State $DP[i][j] \gets DP[i][j] + temp$
+\State assign head to $DP[i][j][c]$\footnotemark
 \EndIf
 \EndIf
 \EndFor
@@ -739,8 +764,10 @@ The approach of dynamic programming calculates the smallest substrings first and
 \State \Return false
 \end{algorithmic}
 \end{algorithm}
+\footnotetext{$c$ is the first empty position in $DP[i][j]$}
 
 In line 13 to 32 the \textit{CYK}-algorithm gets excecuted. It is described in section \ref{cyk}. For each field the two fields \textit{leading} to it get compared, to then fill in the head of a rule that concludes into the both compared nonterminal symbols.
+
 
 In the last lines (line 33-35) the last field of the $DP$-array gets checked. If it containes the start symbol of the grammar, the word is contained in the language and the algorithm returns true. Else false is returned.
 
@@ -830,7 +857,8 @@ The following tables show some tests that were run with the different parsing me
 \\
 \\
 Well-Balanced-Parantheses: \\
-\\
+\texttt{"SSS" "SLA" "SLR" "ASR" "L(" "R)" "($^*$)$^*$"}
+\ \\ \\
 \begin{small}
 \begin{tabular}{|c|c||c|c|c||c|c|c||c|c|c|}
 \hline
@@ -857,6 +885,34 @@ Word & Length & N & NC & NT & B & BC & BT & T & TC & TT \\
 \end{small}
 
 The input word with a length of 40 did not terminate over night for the naive approach.
+
+
+Linear grammar example: \\
+\texttt{"SAc" "Sb" "AaS" "AaB" "BbS" "a$^*$b$^*$c$^*$"}
+\ \\ \\
+\begin{small}
+\begin{tabular}{|c|c||c|c||c|c||c|c||c|c|c|}
+\hline
+Word & Length & NC & NT & BC & BT & TC & TT & LC & LT \\
+\hline
+\hline
+abc & 3 & 6 & 1ms & 60 & 5ms & 6 & 3ms & 5 & 0ms \\
+\hline
+aabbcc & 6 & 51 & 1ms & 660 & 5ms & 49 & 3ms & 51 & 1ms \\
+\hline
+aaaabbbbcccc & 12 & 1.457 & 1ms & 6.072 & 9ms & 518 & 3ms & 650 & 1ms \\
+\hline
+a...b...c... & 24 & 481.557 & 9ms & 51.888 & 20ms & 4.312 & 4ms & 6.732 & 3ms \\
+\hline
+\end{tabular}
+\end{small}
+
+
+
+
+
+
+
 
 %---------------------------------------------------------------------%
 
@@ -888,7 +944,41 @@ Regarding the experiments that were run on the code, the topdown method seems to
 
 % TODO: n^2 und n^3 plotten!
 
+
+%---------------------------------------------------------------------%
+
+
+
+\subsection{Linear grammars}
+\label{evaluation_lineargrammars}
+
+
+
+
+
 \pagebreak
+
+
+%---------------------------------------------------------------------%
+
+
+
+
+
+
+
+
+\section{Errorcorrection}
+\label{errorcorrection}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -901,7 +991,7 @@ Regarding the experiments that were run on the code, the topdown method seems to
 
 
 
-
+\newpage
 
 \section{Conclusion and Future Work}
 \label{conclusion}
@@ -1015,7 +1105,7 @@ In this case the error correction shows the solution with exchange (one symbol i
 \end{minipage}\begin{minipage}{0.1\textwidth}
 \ 
 \end{minipage}\begin{minipage}{0.4\textwidth}
-If the input grammar is a linear grammar, the programm checks if it is in CNF, build CNF out of the linear grammar and runs the optimized version of the TopDown parser for linear grammars.
+If the input grammar is a linear grammar, the programm checks if it is in \textit{CNF}, build \textit{CNF} out of the linear grammar and runs the optimized version of the TopDown parser for linear grammars.
 \end{minipage}
 
 
