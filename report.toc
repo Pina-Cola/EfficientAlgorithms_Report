@@ -45,7 +45,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1}Experiments}{16}{subsection.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Runtimes}{16}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}Runtimes}{17}{subsection.4.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3}Linear grammars}{17}{subsection.4.3}%
 \defcounter {refsection}{0}\relax 

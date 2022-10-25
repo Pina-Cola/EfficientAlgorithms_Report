@@ -558,7 +558,7 @@ Line & Runtime & Type \\
 11 & 1 $\cdot$ $k$ & Assignment \\
 12 & 1 $\cdot$ $k$ & Assignment\\
 13 & n $\cdot$ $k$ & Loop \\
-14 & $2^n$ $\cdot$ $n$ $\cdot$ $k$ & Recusrsive call \\
+14 & $n!$ & Recusrsive call \\
 15 & $1$ $\cdot$ $n$ $\cdot$ $k$ & Return statement\\
 21 & $1$ & Return statement \\
 \hline
@@ -569,12 +569,12 @@ Calculating the runtime:
 \vspace*{-1em}
 \begin{align*}
 & 1 + 1+ k + k +k + k + k + k + k \\
-& + n \cdot k + 2^n \cdot n \cdot k + n \cdot k \\
-& =  2 + 7k + 2(n \cdot k) + 2^n \cdot n \cdot k \\
-& = 2 + 7k + 2n \cdot 2k + 2^n \cdot n \cdot k \\
-& \in O(2^n)
+& + n \cdot k + n^n + n \cdot k \\
+& =  2 + 7k + 2(n \cdot k) + n! \\
+& = 2 + 7k + 2n \cdot 2k + n! \\
+& \in O(n!)
 \end{align*}
-The runtime of the naive method is in $O(2^n)$.
+The runtime of the naive method is in $O(n!)$.
 \end{minipage}
 
 %---------------------------------------------------------------------%
@@ -884,7 +884,51 @@ Word & Length & N & NC & NT & B & BC & BT & T & TC & TT \\
 \end{tabular}
 \end{small}
 
-The input word with a length of 40 did not terminate over night for the naive approach.
+The input word with a length of 40 did not terminate over night for the naive approach. The corresponding graph to the data in the table is shown here:
+
+\begin{tikzpicture}
+\begin{axis}[
+    title={Well-Balanced-Parantheses:},
+    xlabel={Wordlength},
+    ylabel={Counter},
+    xmin=0, xmax=30,
+    ymin=0, ymax=8000,
+    xtick={0,5,10,15,20,25,30},
+    ytick={0, 1000,2000,3000,4000,5000, 6000, 7000},
+    legend pos=north west,
+    ymajorgrids=true,
+    grid style=dashed,
+]
+
+\addplot[
+    color=blue,
+    mark=square,
+    ]
+    coordinates {
+    (2,6)(4, 33)(6, 212)(8, 1295)(10, 7666)
+    };
+
+    
+\addplot[
+    color=red,
+    mark=square,
+    ]
+    coordinates {
+    (2,0)(4, 84)(6, 360)(8, 924)(10, 1872)(20,15000)
+    };
+
+    
+\addplot[
+    color=green,
+    mark=square,
+    ]
+    coordinates {
+    (2,6)(4, 28)(6, 84)(8, 190)(10, 362)(20,2772)(40, 21742)
+    };
+    \legend{Naive, BottomUp, TopDown}
+    
+\end{axis}
+\end{tikzpicture}
 
 
 Linear grammar example: \\
@@ -929,8 +973,8 @@ The runtimes of the methods are calculated in section \ref{systemdesign}. The re
 \hline
 Method & Runtime \\
 \hline
-\texttt{parseNaive} & $O(n^3)$\\
-\texttt{ParseTD} & $O(n^3)$ \\
+\texttt{parseNaive} & $O(n!)$\\
+\texttt{ParseTD} & $O(2^n)$ \\
 \texttt{ParseBU} & $O(n^3)$\\
 \hline
 \end{tabular}
@@ -939,6 +983,26 @@ Method & Runtime \\
 Seeing those runtimes one could think that the naive and the topdown approach are equally efficient. Considering the differences in the algorithms and the results of the experiments it gets shown that this is not the case. The O-notation runtimes are the upper bounds for the runtime. 
 
 Regarding the experiments that were run on the code, the topdown method seems to be the most efficient, followed by the bottomup method. The least efficient method is in these cases the naive approach.
+
+To confirm the calculated runtimes from Section \ref{systemdesign}, the results of the experiments will be calculated considering the $O$-notation runtime.
+
+Well-Balanced-Parantheses:
+
+Naive approach ($O(n!)$):
+
+\begin{tabular}{|c|c|c|}
+\hline
+$n$ & $n!$ & counter \\
+\hline
+2& 2 & 6\\
+4& 24 & 33\\
+6& 720 & 212\\
+8& 40.320 & 1295\\
+10& 3.628.800 &7666 \\
+20& 2.432.902.008.176.640.000 & 51.863.993\\
+30& 265.252.859.812.191.058.636.308.480.000.000 & 348.838.486.712\\
+\hline
+\end{tabular}
 
 
 
