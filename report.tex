@@ -1089,6 +1089,70 @@ $n$ & $n!$ & counter \\
 The results of the experiments confirm the runtime calculation of $O(n!)$ in Section \ref{topdownruntime}.
 
 
+
+\newpage
+\textbf{Bottomup approach ($O(n^3)$):} \\
+
+\begin{minipage}{0.5\textwidth}
+
+Well-Balanced-Parantheses: \\
+
+\begin{tabular}{|c|c|c|}
+\hline
+$n$ & $n^3$ & counter \\
+\hline
+2& 8 & 6\\
+4& 64 & 28\\
+6& 216 & 84\\
+8& 512 & 190 \\
+10& 1.000 & 362 \\
+20& 8.000 & 2.772 \\
+30& 27.000 & 21.743\\
+\hline
+\end{tabular}
+
+\end{minipage}\begin{minipage}{0.5\textwidth}
+    
+Abc-grammar: \\
+
+\begin{tabular}{|c|c|c|}
+\hline
+$n$ & $n^3$ & counter \\
+\hline
+3& 27 & 6\\
+4& 64 & 49 \\
+12& 1.728 & 518\\
+24& 13.824 & 4.312\\
+\hline
+\end{tabular}   
+\ \\ \ \\ \ \\  
+\end{minipage}
+
+
+The results of the experiments confirm the runtime calculation of $O(n^3)$ in Section \ref{bottomupruntime}.
+
+
+\ \\
+
+\textbf{Linear topdown approach ($O(n^3)$):} 
+    
+Abc-grammar: 
+
+\begin{tabular}{|c|c|c|}
+\hline
+$n$ & $n^3$ & counter \\
+\hline
+3& 27 & 5\\
+4& 64 & 51 \\
+12& 1.728 & 650\\
+24& 13.824 & 6.732\\
+\hline
+\end{tabular}   
+
+
+The results of the experiments confirm the runtime calculation of $O(n^3)$ in Section \ref{lineartopdown}.
+
+
 %---------------------------------------------------------------------%
 
 

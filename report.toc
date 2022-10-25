@@ -47,22 +47,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2}Runtimes}{18}{subsection.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Errorcorrection}{20}{section.5}%
+\contentsline {section}{\numberline {5}Errorcorrection}{21}{section.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Deletion}{20}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.1}Deletion}{21}{subsection.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Exchange}{20}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.2}Exchange}{21}{subsection.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Conclusion and Future Work}{21}{section.6}%
+\contentsline {section}{\numberline {6}Conclusion and Future Work}{22}{section.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Conclusion}{21}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.1}Conclusion}{22}{subsection.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Future work}{21}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.2}Future work}{22}{subsection.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}How to use the code?}{22}{appendix.A}%
+\contentsline {section}{\numberline {A}How to use the code?}{23}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}Graphs and additional results}{24}{appendix.B}%
+\contentsline {section}{\numberline {B}Graphs and additional results}{25}{appendix.B}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}CNF Algorithm on an example}{26}{appendix.C}%
+\contentsline {section}{\numberline {C}CNF Algorithm on an example}{27}{appendix.C}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Bibliography}{27}{section*.1}%
+\contentsline {section}{Bibliography}{28}{section*.1}%
