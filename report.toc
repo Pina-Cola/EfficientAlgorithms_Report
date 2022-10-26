@@ -63,10 +63,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.2}Future work}{23}{subsection.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}How to use the code?}{24}{appendix.A}%
+\contentsline {section}{Bibliography}{24}{section*.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}Graphs and additional results}{26}{appendix.B}%
+\contentsline {section}{\numberline {A}How to use the code?}{25}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}CNF Algorithm on an example}{28}{appendix.C}%
+\contentsline {section}{\numberline {B}Graphs and additional results}{27}{appendix.B}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Bibliography}{29}{section*.1}%
+\contentsline {section}{\numberline {C}CNF Algorithm on an example}{29}{appendix.C}%
