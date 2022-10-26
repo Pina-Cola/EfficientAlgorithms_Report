@@ -436,9 +436,50 @@ f(n) = n + f(n-1) & \ \ \ \text{if } n > 1
 \subsection{Divide and conquer}
 \label{divide_and_conquer}
 
-The divide and conquer method is used to design efficient algorithms. In this method, the problem is divided recursively into smaller and simpler subproblems, until those subproblems can be solved. Then those subproblems are combined again to gibe the solution of the original problem.
+The divide and conquer method is used to design efficient algorithms. In this method, the problem is divided recursively into smaller and simpler subproblems, until those subproblems can be solved. Then those subproblems are combined again to give the solution of the original problem.
+
+\begin{example*}[Divide and conquer]
+
+A problem that can be solved with divide and conquer is the sorting of an array. The array is then divided in smaller arrays, until the array size is one. Then the subarrays are merged together in the right order.
+
+The unsorted array for the example is the following:
+\begin{center}
+\includegraphics[scale=0.125]{images/merge1.png}
+\end{center}
+
+The array gets divided into two smaller subarray, which are sorted with the same technique individually and later merged together again:
+\begin{center}
+\includegraphics[scale=0.125]{images/merge2.png}
+\end{center}
+
+Those subarrays get divided into even smaller arrays again:
+\begin{center}
+\includegraphics[scale=0.125]{images/merge3.png}
+\end{center}
+
+The array size of the subproblems is now 1:
+\begin{center}
+\includegraphics[scale=0.125]{images/merge4.png}
+\end{center}
+
+The subarrays get merged together in the right order:
+\begin{center}
+\includegraphics[scale=0.125]{images/merge5.png}
+\end{center}
+
+\newpage
+For each merge of the subarrays only the smallest symbols of each array need to be compared. The smaller one is then sorted into the merged array and again the smallest symbols are compared:
+\begin{center}
+\includegraphics[scale=0.125]{images/merge6.png}
+\end{center}
+
+The array is complete and sorted:
+\begin{center}
+\includegraphics[scale=0.125]{images/merge7.png}
+\end{center}
 
 
+\end{example*}
 
 
 
@@ -748,7 +789,7 @@ For each rule it is checked if the first or the second element of the body is th
 \subsubsection{Top-Down modified for linear grammars runtime}
 \label{lineartopdown_runtime}
 
-The runtime of the modified version is $O(n^3)$, because the recursive call is not in $O(n!)$ anymore like in Section \ref{naiveruntime}. Instead the method is in $O(n^3)$.
+The runtime of the modified version is $O(n^2)$, because the recursive call is not in $O(n!)$ anymore like in Section \ref{naiveruntime} but $O(n)$. Instead the method is in $O(n^2)$.
 
 
 %---------------------------------------------------------------------%
@@ -1013,7 +1054,7 @@ Method & Runtime \\
 \texttt{parseNaive} & $O(n!)$\\
 \texttt{ParseTD} & $O(n!)$ \\
 \texttt{ParseBU} & $O(n^3)$\\
-\texttt{ParseLinearTD} & $O(n^3)$\\
+\texttt{ParseLinearTD} & $O(n^2)$\\
 \hline
 \end{tabular}
 
@@ -1140,23 +1181,22 @@ The results of the experiments confirm the runtime calculation of $O(n^3)$ in Se
 
 
 
-\textbf{Linear topdown approach ($O(n^3)$):} 
+\textbf{Linear topdown approach ($O(n^2)$):} 
     
 Abc-grammar: 
 
 \begin{tabular}{|c|c|c|}
 \hline
-$n$ & $n^3$ & counter \\
+$n$ & $n^2$ & counter \\
 \hline
-3& 27 & 5\\
-4& 64 & 51 \\
-12& 1.728 & 650\\
-24& 13.824 & 6.732\\
+3& 9 & 5\\
+4& 16 & 51 \\
+12& 144 & 650\\
+24& 576 & 6.732\\
 \hline
 \end{tabular}   
 
-
-The results of the experiments confirm the runtime calculation of $O(n^3)$ in Section \ref{lineartopdown}.
+The results of the experiments do not confirm the runtime calculation of $O(n^2)$ in Section \ref{lineartopdown}. This is further discussed in Section \ref{results_linear}.
 
 
 
@@ -1196,8 +1236,8 @@ For these results it needs to be considered, that the $O$-notation stes the boun
 \subsection{Results for linear grammars}
 \label{results_linear}
 
-The upper bound runtime of the modified topdown parser for linear grammars is faster than the runtime of the parser for grammars in CNF. In the linear approach are two instead of one recursive call per execution made, because the linear grammars have at most one nonterminal symbol in the body of each rule. The recursive call needs only to be made for the nonterminal symbols. 
-This is why the upper bound runtime if the topdown approach for linear grammars is in $O(n^3)$, while the topdown approach for grammars in CNF is in $O(n!)$.
+The upper bound runtime of the modified topdown parser for linear grammars is faster than the runtimes of the parser for grammars in CNF. The topdown runtime is in $O(n!)$ and the modified topdown approach should be in $O(n^2)$. In the linear approach are one instead of two recursive call per execution made, because the linear grammars have at most one nonterminal symbol in the body of each rule. The recursive call needs only to be made for the nonterminal symbols. 
+This is why the upper bound runtime if the topdown approach for linear grammars is in $O(n^2)$, while the topdown approach for grammars in CNF is in $O(n!)$.
 
 
 Surprisingly, the experiments with linear grammars as input do not show the expected results. The linear topdown approach seems to perform faster than the not modified approach, but with more function calls. This seems unlikely, because the recursive calls of the function are reduced from two to one in the modified approach. The faster performance can be due to hidden background processes on the computer. The amount of calls on the other hand should be lower than the amount of calls in the not modified topdown parser. This leads to the assumption, that the modified topdown parser is not working correctly.
