@@ -843,7 +843,7 @@ The approach of dynamic programming calculates the smallest substrings first and
 \end{algorithm}
 \footnotetext{$c$ is the first empty position in $DP[i][j]$}
 
-In line 13 to 32 the \textit{CYK}-algorithm gets excecuted. It is described in section \ref{cyk}. For each field the two fields \textit{leading} to it get compared, to then fill in the head of a rule that concludes into the both compared nonterminal symbols.
+In line 13 to 32 the \textit{CYK}-algorithm gets executed. It is described in section \ref{cyk}. For each field the two fields \textit{leading} to it get compared, to then fill in the head of a rule that concludes into the both compared nonterminal symbols.
 
 
 In the last lines (line 33-35) the last field of the $DP$-array gets checked. If it containes the start symbol of the grammar, the word is contained in the language and the algorithm returns true. Else false is returned.
@@ -1063,11 +1063,11 @@ Seeing those runtimes one could think that the naive and the topdown approach ar
 
 Regarding the experiments that were run on the code, the topdown method seems to be the most efficient, followed by the bottomup method. The least efficient method is in these cases the naive approach.
 
-The linear version of the topdown is more efficient than the original paring method, because it is restricted to linear grammars and with this restriction the recursive calls can be reduced from tweo to one in each call.
+The linear version of the topdown is more efficient than the original paring method, because it is restricted to linear grammars and with this restriction the recursive calls can be reduced from two to one in each call.
 
 It is to consider that the $O$-notation represents the upper bound of the runtime. Algorithms can run faster than the runtime in $O$-notation predicts.
 
-To confirm the calculated runtimes from Section \ref{systemdesign}, the results of the experiments are calculated, considering the $O$-notation runtime. Forhe input length ($n$) the actual results and $O$-notation results as upper bound are compared.
+To confirm the calculated runtimes from Section \ref{systemdesign}, the results of the experiments are calculated, considering the $O$-notation runtime. For the input length ($n$) the actual results and $O$-notation results as upper bound are compared.
 
 \newpage
 \textbf{Naive approach ($O(n!)$):} \\
@@ -1228,7 +1228,7 @@ The parser for linear grammars has different restrictions for the input and its 
 
 The reason for the faster results of the topdown parser is the global boolean table, which saves results from previous function calls and can cause less recursive calls of the function to compare the values while the naive approach calls the recursion for every single possibility. The actual runtime of the naive approach is often a lot closer to the upper bound than the actual runtime of the topdown approach, which seems to perform more efficient in the experiments.
 
-In the experiments, the topdown performed even better than the bottomup approach, even though the bottomup parser is in $O(n^3)$. Because the bottomup fills in the CYK-table itertively, the upper bound runtime is similar to the actual runtime.
+In the experiments, the topdown performed even better than the bottomup approach, even though the bottomup parser is in $O(n^3)$. Because the bottomup fills in the CYK-table iteratively, the upper bound runtime is similar to the actual runtime.
 
 For these results it needs to be considered, that the $O$-notation stes the bound from above. An algorithm does not run worse than the depending $O$-notation runtime, but it can be better. It grows at most as much as the $O$-notation function. \cite{bigO}
 
@@ -1242,14 +1242,14 @@ This is why the upper bound runtime if the topdown approach for linear grammars 
 
 Surprisingly, the experiments with the modified parsing method do not show the expected results. The linear topdown approach seems to perform faster than the not modified approach, but with more function calls. This seems unlikely, because the recursive calls of the function are reduced from two to one in the modified approach. The faster performance can be due to hidden background processes on the computer. The amount of calls on the other hand should be lower than the amount of calls in the not modified topdown parser. This leads to the assumption, that the modified topdown parser is not working correctly.
 
-The parsing from a linear grammar into CNF works correctly. As seen in the experiments, the input of linear grammars or grammars in CNF have no significantly influence on the runtime of the parsing methods. The naive parser is in both cases called for every option recursively. The bottomup parser ietrates in both cases over the whole CYK-table and the topdown parser makes two recursive calls per call.  
+The parsing from a linear grammar into CNF works correctly. As seen in the experiments, the input of linear grammars or grammars in CNF have no significantly influence on the runtime of the parsing methods. The naive parser is in both cases called for every option recursively. The bottomup parser iterates in both cases over the whole CYK-table and the topdown parser makes two recursive calls per call.  
 
 %---------------------------------------------------------------------%
 
 
 
 %\subsection{Linear grammars}
-%\label{evaluation_lineargrammars}
+%\label{_lineargrammars}
 
 
 
@@ -1267,7 +1267,7 @@ The parsing from a linear grammar into CNF works correctly. As seen in the exper
 
 
 
-\section{Errorcorrection}
+\section{Error correction}
 \label{errorcorrection}
 
 Apart from checking if an input word is part of a language, the amount of errors and the correction of those can be interesting.
@@ -1294,7 +1294,7 @@ Two values are stored for later comparisons: $x = A_i - B_i$ and $y = B_j-A_j$. 
 
 
 
-With those indeces the part of the word that is accepted and the part that needs to be deleted can be calculated. This concludes in the longest accepted word with deletion.
+With those indices the part of the word that is accepted and the part that needs to be deleted can be calculated. This concludes in the longest accepted word with deletion.
 
 It can happen that no accepted word is found with deletion, if no subword concluded into the start symbol in the CYK-table.
 
@@ -1352,7 +1352,7 @@ The linear parsing method on the other hand worked with a different restriction 
 Formal languages and grammars can be used in different use cases. For exampel for AI learning methods. Real languages like English can be defined as a formal language, too. But it is important to consider that formal languages only define the syntax and not the semantics. In addition to this has english a lot of rules and many exceptions. \cite{FG}
 
 The future work for this code is to optimize the error correction. The combination of deletion and exchange is not implemented yet. It would be interesting to find a more efficient way to calculate the exchange of symbols, which would enable the exchange of more than one symbol.
-In addition to this an accurat error counter for the symbols that need to be exchanged could be implemented.
+In addition to this an accurate error counter for the symbols that need to be exchanged could be implemented.
 
 Another extension to the code would be a method, that translated every kind of grammar into \textit{CNF}, if possible. Then input words for every grammar could be parsed with the different parsing approaches and possibilities to modify the parsing methods for different input grammars appear, similar to the modifications that were done for the parsing of linear grammars.
 
