@@ -27,6 +27,28 @@
       \field{note}{\url{https://www.javatpoint.com/automata-chomskys-normal-form}, opened on 26.09.2022}
       \field{title}{Chomsky's Normal Form (CNF)}
     \endentry
+    \entry{bigO}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6b7394197d0acc2b2daa56655d07404b}{%
+           family={Danziger},
+           familyi={D\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{6b7394197d0acc2b2daa56655d07404b}
+      \strng{fullhash}{6b7394197d0acc2b2daa56655d07404b}
+      \strng{bibnamehash}{6b7394197d0acc2b2daa56655d07404b}
+      \strng{authorbibnamehash}{6b7394197d0acc2b2daa56655d07404b}
+      \strng{authornamehash}{6b7394197d0acc2b2daa56655d07404b}
+      \strng{authorfullhash}{6b7394197d0acc2b2daa56655d07404b}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Source internet: http://www. scs. ryerson. ca/\~{} mth110/Handouts/PD/bigO. pdf, Retrieve: April}
+      \field{title}{Big o notation}
+      \field{year}{2010}
+    \endentry
     \entry{DP}{misc}{}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}

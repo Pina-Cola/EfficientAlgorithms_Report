@@ -2356,7 +2356,9 @@
     <bcf:citekey order="7">CYK1</bcf:citekey>
     <bcf:citekey order="8">cyk_online_alg</bcf:citekey>
     <bcf:citekey order="9">recursion</bcf:citekey>
-    <bcf:citekey order="10">FG</bcf:citekey>
+    <bcf:citekey order="10">bigO</bcf:citekey>
+    <bcf:citekey order="11">bigO</bcf:citekey>
+    <bcf:citekey order="12">FG</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

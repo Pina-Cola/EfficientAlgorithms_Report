@@ -878,7 +878,7 @@ The runtime of the \texttt{parseBU} method is in $O(n^3)$.
 \section{Evaluation}
 \label{evaluation}
 
-In this section the runtimes and experiments are compared.
+In this section the calculated runtimes in $O$-notation from Section \ref{systemdesign} and experiments are compared. More information and definitions on the $O$-notation can be read in \textit{Big O Notation} from P. Danziger \cite{bigO}.
 
 
 \subsection{Experiments}
@@ -1185,7 +1185,7 @@ The reason for the faster results of the topdown parser is the global boolean ta
 
 In the experiments, the topdown performed even better than the bottomup approach, even though the bottomup parser is in $O(n^3)$. Because the bottomup fills in the CYK-table itertively, the upper bound runtime is similar to the actual runtime.
 
-
+For these results it needs to be considered, that the $O$-notation stes the bound from above. An algorithm does not run worse than the depending $O$-notation runtime, but it can be better. It grows at most as much as the $O$-notation function. \cite{bigO}
 
 %---------------------------------------------------------------------%
 \subsection{Results for linear grammars}
@@ -1276,18 +1276,22 @@ The exchange method works iterative and iterates over every symbol of the input 
 \subsection{Conclusion}
 
 
-% Regarding the experiments from section \ref{evaluation}, the topdown method seems to be the most efficient, followed by the bottomup method. The least efficient method is in these cases the naive approach.
+Regarding the experiments from section \ref{evaluation}, the topdown method seems to be the most efficient, followed by the bottomup method. The least efficient method is in these cases the naive approach. The $O$-notation showed different results considering the upper bounds of the methods. This shows, that the $O$-notation bound is an upper bound and an algorithm can perform faster in experiments, depending on the input stream.
 
-% NOOO ! %Depending on the input word and the grammar the naive and the topdown approach have the same worst case runtime with $O(n^2)$. The bottomup method has the highest worst case runtime with $O(n^3)$.
 
 These algorithms show differences in efficiency but also limits for the examination of words with the \textit{CYK}-algorithm. The amount of calls raised especially with the Well-Balanced-Parantheses language exponentially. This can also be seen in the graphs in Appendix \ref{graph}.
+
+The linear parsing method on the other hand worked with a different restriction on the input stream, which can lead into even higher performances.
+
 
 \subsection{Future work}
 
 Formal languages and grammars can be used in different use cases. For exampel for AI learning methods. Real languages like English can be defined as a formal language, too. But it is important to consider that formal languages only define the syntax and not the semantics. In addition to this has english a lot of rules and many exceptions. \cite{FG}
 
 The future work for this code is to optimize the error correction. The combination of deletion and exchange is not implemented yet. It would be interesting to find a more efficient way to calculate the exchange of symbols, which would enable the exchange of more than one symbol.
-In addition to this a accurat error counter for the symbols that need to be exchanged can be implemented.
+In addition to this an accurat error counter for the symbols that need to be exchanged could be implemented.
+
+Another extension to the code would be a method, that translated every kind of grammar into \textit{CNF}, if possible. Then input words for every grammar could be parsed with the different parsing approaches and possibilities to modify the parsing methods for different input grammars appear, similar to the modifications that were done for the parsing of linear grammars.
 
 
 % The future work for this assignment is to change the types of the arrays from \texttt{String[][]} to \texttt{int[][][]}. In addition to this there still exists a problem in the bottomup method, which needs to be fixed. Some specific grammars and words do not return the right value. After these things work correctly, more experiments can be run and the pseudo code will be edited. Then the upper bound runtime can be calculated again and the plotted graphs can be compared to the according $O$-notation runtime.
