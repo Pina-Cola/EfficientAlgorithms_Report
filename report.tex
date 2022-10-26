@@ -1226,7 +1226,7 @@ This is why the upper bound runtime if the topdown approach for linear grammars 
 \section{Errorcorrection}
 \label{errorcorrection}
 
-There are two options for the error correction. A symbol can be exchanged or symbols can be deleted. The output for some examples for the error correction can be seen in Appendix \ref{howtousethecode}.
+Two options for the error correction are considered in this section: A symbol can be exchanged or symbols can be deleted. The output for some examples for the error correction can be seen in Appendix \ref{howtousethecode}.
 
 
 
@@ -1237,7 +1237,17 @@ There are two options for the error correction. A symbol can be exchanged or sym
 \label{deletion}
 
 For the deletion the table of the CYK-algorithm is used. This is described in Section \ref{cyk} and the parsing method for it is explained in Section \ref{bottomupdescription}.
-The CYK-table has to contain the start symbol in the entry on the right top corner to conclude that the word is part of the language. To find an accepted word with deletion, the entry with the start symbol which is closest to the right top is searched. With those indeces the part of the word that is accepted and the part that needs to be deleted can be calculated. This concludes in the longest accepted word with deletion.
+The CYK-table has to contain the start symbol in the entry on the right top corner to conclude that the word is part of the language. To find an accepted word with deletion, the entry with the start symbol which is closest to the right top is searched. 
+
+The concept on how to find the entry in the array that is further on the top right is described here. The function takes two array positions as $(i,j)$ as input and returns the better position in an int array of the length 2.
+
+The parameters for the functions are the $i$ and $j$ values for the two positions $A$ and $B$ in the array as $A_i$, $A_j$, $B_i$, $B_j$. The searched position in the array is a small $i$ with a large $j$.
+
+Two values are stored for later comparisons: $x = A_i - B_i$ and $y = B_j-A_j$. If $x$ and $y$ are equal, the positions are equally far away from the top right array entry. If $x+y$ is positive, $B$ is the preferred position, else it is $A$.
+
+
+
+With those indeces the part of the word that is accepted and the part that needs to be deleted can be calculated. This concludes in the longest accepted word with deletion.
 
 It can happen that no accepted word is found with deletion, if no subword concluded into the start symbol in the CYK-table.
 
@@ -1254,7 +1264,8 @@ The distance of the entry in the CYK-table that contains the start symbol and th
 \subsection{Exchange}
 \label{exchange}
 
-The exchange method works iterative and iterates over every symbol of the input word and tries ever terminal symbol on each index. The method exchanges only one symbol, then the corresponding entries in the CYK-table get deleted and calculated with the new entry. If a success is found, the accepted word is returned. 
+The exchange method works iterative and iterates over every symbol of the input word and tries ever terminal symbol on each index. The method can only exchange one symbol. First, the symbol and each entry in the CYK-table that concluded from this symbol in the input word are deleted. For this, the corresponding entries are replaced with $-1$. Then the fields that are assigned with $-1$ in the CYK-table get calculated with a new input symbol, which replaces the original one. 
+If a success is found, the accepted word is returned. 
 
 
 
