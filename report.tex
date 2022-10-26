@@ -660,7 +660,7 @@ The runtime of the naive method is in $O(n!)$.
 
 % TODO: describe idea of algorithm more detailed in text form!
 
-The top-down method is an improved version of the naive method (Section \ref{naivedescription}). This algorithm works recursive, too. In this algorithm another global array is used, which contains the values \texttt{true}, \texttt{false} and \texttt{null}. The array gets intialized with \texttt{null} in each field. That happens in the recursion call method below.
+The top-down method is an improved version of the naive method (Section \ref{naivedescription}). This algorithm works recursive and with the concept of divide and conquer, too. In this algorithm another global array is used, which contains the values \texttt{true}, \texttt{false} and \texttt{null}. The array gets intialized with \texttt{null} in each field. That happens in the recursion call method below.
 
 \begin{algorithm}[H]
 \caption{Recursion call: Boolean parseTD()}\label{alg:cap}
@@ -1240,7 +1240,9 @@ The upper bound runtime of the modified topdown parser for linear grammars is fa
 This is why the upper bound runtime if the topdown approach for linear grammars is in $O(n^2)$, while the topdown approach for grammars in CNF is in $O(n!)$.
 
 
-Surprisingly, the experiments with linear grammars as input do not show the expected results. The linear topdown approach seems to perform faster than the not modified approach, but with more function calls. This seems unlikely, because the recursive calls of the function are reduced from two to one in the modified approach. The faster performance can be due to hidden background processes on the computer. The amount of calls on the other hand should be lower than the amount of calls in the not modified topdown parser. This leads to the assumption, that the modified topdown parser is not working correctly.
+Surprisingly, the experiments with the modified parsing method do not show the expected results. The linear topdown approach seems to perform faster than the not modified approach, but with more function calls. This seems unlikely, because the recursive calls of the function are reduced from two to one in the modified approach. The faster performance can be due to hidden background processes on the computer. The amount of calls on the other hand should be lower than the amount of calls in the not modified topdown parser. This leads to the assumption, that the modified topdown parser is not working correctly.
+
+The parsing from a linear grammar into CNF works correctly. As seen in the experiments, the input of linear grammars or grammars in CNF have no significantly influence on the runtime of the parsing methods. The naive parser is in both cases called for every option recursively. The bottomup parser ietrates in both cases over the whole CYK-table and the topdown parser makes two recursive calls per call.  
 
 %---------------------------------------------------------------------%
 
@@ -1268,7 +1270,10 @@ Surprisingly, the experiments with linear grammars as input do not show the expe
 \section{Errorcorrection}
 \label{errorcorrection}
 
-Two options for the error correction are considered in this section: A symbol can be exchanged or symbols can be deleted. The output for some examples for the error correction can be seen in Appendix \ref{howtousethecode}.
+Apart from checking if an input word is part of a language, the amount of errors and the correction of those can be interesting.
+Two options for the error correction are considered in this section: A symbol can be exchanged or symbols can be deleted. The output for some examples of the error correction can be seen in Appendix \ref{howtousethecode}.
+
+For the error correction the bottomup parser modified, because the CYK-table shows, which substrings lead to which nonterminal symbols, for example the start symbol.
 
 
 
