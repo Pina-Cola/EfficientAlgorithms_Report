@@ -717,6 +717,8 @@ The runtime analysis for the upper bound of the \texttt{parseTD} method is analo
 \subsubsection{Top-Down modified for linear grammars}
 \label{lineartopdown}
 
+For the parsing of linear grammars, the topdown approach (Section \ref{topdowndescription}) was modified to reduce the amounts of recursive calls. The topdown approach was chosen, because it seems to have the best perfomance of the different parsing methods, considering the experiments.
+
 In the modified version for linear grammars, the grammar gets changed into CNF first. The modified algorithm can now work more efficient, because for each rule is only one recursive call of the method instead of two neccessary.
 
 For each rule it is checked if the first or the second element of the body is the head of a terminal rule. Then it is checked if the head of the terminal rule is the head of the current position on the input word. For the other symbol the methos gets called recursively. This part is shown in the pseudo code below:
@@ -1179,7 +1181,9 @@ Method & Runtime \\
 faster than the naive parser. Considering the experiments, the topdown parser seems to be the fastest, followed by the bottomup approach and the naive is by far the slowest.
 The parser for linear grammars has different restrictions for the input and its results are discussed in Section \ref{results_linear}.
 
-The reason for the faster results of the topdown parser is the global boolean table, which saves results from previous function calls and can cause less recursive calls of the function to compare the values while the naive approach calls the recursion for every single possibility. The actual runtime of the naive approach is often a lot closer to the upper bound than the actual runtim of the topdown approach, which seems to perform more efficient in the experiments.
+The reason for the faster results of the topdown parser is the global boolean table, which saves results from previous function calls and can cause less recursive calls of the function to compare the values while the naive approach calls the recursion for every single possibility. The actual runtime of the naive approach is often a lot closer to the upper bound than the actual runtime of the topdown approach, which seems to perform more efficient in the experiments.
+
+In the experiments, the topdown performed even better than the bottomup approach, even though the bottomup parser is in $O(n^3)$. Because the bottomup fills in the CYK-table itertively, the upper bound runtime is similar to the actual runtime.
 
 
 
@@ -1187,6 +1191,8 @@ The reason for the faster results of the topdown parser is the global boolean ta
 \subsection{Results for linear grammars}
 \label{results_linear}
 
+The upper bound runtime of the modified topdown parser for linear grammars is faster than the runtime of the parser for grammars in CNF. In the linear approach are two instead of one recursive call per execution made, because the linear grammars have at most one nonterminal symbol in the body of each rule. The recursive call needs only to be made for the nonterminal symbols. 
+This is why the upper bound runtime if the topdown approach for linear grammars is in $O(n^3)$, while the topdown approach for grammars in CNF is in $O(n!)$.
 
 
 %---------------------------------------------------------------------%
