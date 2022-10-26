@@ -177,9 +177,10 @@ The task for this assignment is to code three different parsing methods of which
 For the implementation three different classes are implemented: \texttt{main.java, grammar.java} and \texttt{parser.java}. The \texttt{main}-class calls the methods and the \texttt{grammar}-class parses the input grammer as string into a format that then can be processed in the \texttt{parser}-class. This \texttt{parser}-class has three different parsing methods, which are tested and compared against each other.
 The function and implementation is former described in Section \ref{systemdesign}. Also in Section \ref{systemdesign} the runtimes in $O$-notation are calculated for each approach and modifications for the parsing of linear grammars are described.
 
+In Section \ref{evaluation} the runtimes and experiments of the different algorithms are compared and differences in efficiency are shown. The results from the experiments are compared to the calculated runtimes in $O$-notation from Section \ref{systemdesign} and those differences are explained.
+
 Concepts, ideas and first steps for the error correction of input words with deletion and exchange are presented in Section \ref{errorcorrection}.
 
-In Section \ref{evaluation} the runtimes and experiments of the different algorithms are compared and differences in efficiency are shown.
 
 In the final part (Section \ref{conclusion}) the results and future possibilities are discussed.
 
@@ -513,12 +514,14 @@ Each methods has a counter as \texttt{long} which counts the number of interatio
 
 % TODO: describe idea of algorithm more detailed in text form!
 
-The naive algorithm is a recursive algorithm which returns a boolean and has an initial method to start the recursion with the start values:
+The naive algorithm is a recursive divide-and-conquer algorithm. The problem gets divided into smaller subproblems and then the method is called again for each subproblem. It returns a boolean and has an initial method to start the recursion with the start values:
 \begin{itemize}
 \item The start symbol of the grammar is first parameter. It is an integer called \texttt{indexNT} and initialized with 0, because the start symbol is assigned to the index 0.
 \item The second parameter is the integer 0 as a start index of the input word.
 \item The third parameter is the integer $n$, which is the length of the input word.
 \end{itemize} 
+
+
 The start values get assignened in the recursion call which can be seen in the following pseudo code:
  
 \begin{algorithm}[H]
@@ -1023,7 +1026,7 @@ The linear version of the topdown is more efficient than the original paring met
 
 It is to consider that the $O$-notation represents the upper bound of the runtime. Algorithms can run faster than the runtime in $O$-notation predicts.
 
-To confirm the calculated runtimes from Section \ref{systemdesign}, the results of the experiments will be calculated considering the $O$-notation runtime. Forhe input length ($n$) the actual results and $O$-notation results as upper bound are compared.
+To confirm the calculated runtimes from Section \ref{systemdesign}, the results of the experiments are calculated, considering the $O$-notation runtime. Forhe input length ($n$) the actual results and $O$-notation results as upper bound are compared.
 
 \newpage
 \textbf{Naive approach ($O(n!)$):} \\
@@ -1392,7 +1395,7 @@ In this case the error correction shows that no errors where found and this lead
 \end{minipage}
 
 \ \\
-The following example will show the error correction output for the input \texttt{java Main \dq SSS\dq \ \dq SLA\dq \ \dq SLR\dq \ \dq ASR\dq \ \dq L(\dq \ \dq R)\dq\  \dq ((()\dq}. \\
+The following example shows the error correction output for the input \texttt{java Main \dq SSS\dq \ \dq SLA\dq \ \dq SLR\dq \ \dq ASR\dq \ \dq L(\dq \ \dq R)\dq\  \dq ((()\dq}. \\
 
 \begin{minipage}{0.35\textwidth}
 In this case the error correction shows the solution with exchange (one symbol is exchanged) and for deletion (two symbols are deleted).
