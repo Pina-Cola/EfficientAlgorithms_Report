@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  26 OCT 2022 17:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  26 OCT 2022 17:45
 entering extended mode
 **./report.tex
 (report.tex
@@ -1440,22 +1440,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 384--387
 
  []
 
-<images/7.png, id=263, 348.92859pt x 139.64671pt>
+<images/7.png, id=268, 348.92859pt x 139.64671pt>
 File: images/7.png Graphic file (type png)
 <use images/7.png>
 Package pdftex.def Info: images/7.png  used on input line 389.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
-<images/6.png, id=265, 348.92859pt x 139.64671pt>
+<images/6.png, id=270, 348.92859pt x 139.64671pt>
 File: images/6.png Graphic file (type png)
 <use images/6.png>
 Package pdftex.def Info: images/6.png  used on input line 390.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
-<images/5.png, id=266, 348.92859pt x 139.64671pt>
+<images/5.png, id=271, 348.92859pt x 139.64671pt>
 File: images/5.png Graphic file (type png)
 <use images/5.png>
 Package pdftex.def Info: images/5.png  used on input line 391.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
-<images/4.png, id=267, 348.92859pt x 139.64671pt>
+<images/4.png, id=272, 348.92859pt x 139.64671pt>
 File: images/4.png Graphic file (type png)
 <use images/4.png>
 Package pdftex.def Info: images/4.png  used on input line 392.
@@ -1469,17 +1469,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [7 <./images/7.png> <./images/6.png> <./images/5.png>]
-<images/3.png, id=276, 348.92859pt x 139.64671pt>
+<images/3.png, id=281, 348.92859pt x 139.64671pt>
 File: images/3.png Graphic file (type png)
 <use images/3.png>
 Package pdftex.def Info: images/3.png  used on input line 393.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
-<images/2.png, id=277, 348.92859pt x 139.64671pt>
+<images/2.png, id=282, 348.92859pt x 139.64671pt>
 File: images/2.png Graphic file (type png)
 <use images/2.png>
 Package pdftex.def Info: images/2.png  used on input line 394.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
-<images/1.png, id=278, 348.92859pt x 139.64671pt>
+<images/1.png, id=283, 348.92859pt x 139.64671pt>
 File: images/1.png Graphic file (type png)
 <use images/1.png>
 Package pdftex.def Info: images/1.png  used on input line 395.
@@ -1709,8 +1709,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 1118--1129
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1135--1136
-
+Overfull \hbox (7.64095pt too wide) in paragraph at lines 1166--1176
+[][][][] 
  []
 
 
@@ -1740,74 +1740,83 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 1299--1301
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 1325--1327
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1299--1301
+Underfull \hbox (badness 10000) in paragraph at lines 1325--1327
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1302--1303
+Underfull \hbox (badness 10000) in paragraph at lines 1328--1329
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1302--1303
+Underfull \hbox (badness 10000) in paragraph at lines 1328--1329
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1304--1305
+Underfull \hbox (badness 10000) in paragraph at lines 1330--1331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1306--1307
+Underfull \hbox (badness 10000) in paragraph at lines 1332--1333
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1309
+Underfull \hbox (badness 10000) in paragraph at lines 1334--1335
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1309
+Underfull \hbox (badness 10000) in paragraph at lines 1334--1335
 
  []
 
-<images/terminal_1.png, id=382, 233.37187pt x 448.67625pt>
+<images/terminal_1.png, id=393, 233.37187pt x 448.67625pt>
 File: images/terminal_1.png Graphic file (type png)
 <use images/terminal_1.png>
-Package pdftex.def Info: images/terminal_1.png  used on input line 1315.
+Package pdftex.def Info: images/terminal_1.png  used on input line 1341.
 (pdftex.def)             Requested size: 163.35919pt x 314.07123pt.
 
-Overfull \hbox (31.05254pt too wide) in paragraph at lines 1315--1316
+Overfull \hbox (31.05254pt too wide) in paragraph at lines 1341--1342
 [][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1284--1317
+Underfull \hbox (badness 10000) in paragraph at lines 1310--1343
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1284--1317
+Underfull \hbox (badness 10000) in paragraph at lines 1310--1343
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1284--1317
+Underfull \hbox (badness 10000) in paragraph at lines 1310--1343
 
  []
 
-<images/terminal_2.png, id=383, 441.14813pt x 190.46156pt>
+<images/terminal_2.png, id=394, 441.14813pt x 190.46156pt>
 File: images/terminal_2.png Graphic file (type png)
 <use images/terminal_2.png>
-Package pdftex.def Info: images/terminal_2.png  used on input line 1319.
+Package pdftex.def Info: images/terminal_2.png  used on input line 1345.
 (pdftex.def)             Requested size: 264.69092pt x 114.2778pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1817,44 +1826,44 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[23 <./images/terminal_1.png>]
-<images/terminal_3.png, id=389, 353.82187pt x 164.11313pt>
+[24 <./images/terminal_1.png>]
+<images/terminal_3.png, id=401, 353.82187pt x 164.11313pt>
 File: images/terminal_3.png Graphic file (type png)
 <use images/terminal_3.png>
-Package pdftex.def Info: images/terminal_3.png  used on input line 1334.
+Package pdftex.def Info: images/terminal_3.png  used on input line 1360.
 (pdftex.def)             Requested size: 247.67361pt x 114.87839pt.
 
-Overfull \hbox (5.11252pt too wide) in paragraph at lines 1334--1335
+Overfull \hbox (5.11252pt too wide) in paragraph at lines 1360--1361
 [][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1337--1339
+Underfull \hbox (badness 10000) in paragraph at lines 1363--1365
 
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 1341--1342
+Underfull \hbox (badness 1708) in paragraph at lines 1367--1368
 \OT1/cmr/m/n/10.95 tion shows the so-lu-tion with
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 1341--1342
+Underfull \hbox (badness 2181) in paragraph at lines 1367--1368
 \OT1/cmr/m/n/10.95 ex-change (one sym-bol is ex-
  []
 
-<images/terminal_4.png, id=390, 243.91125pt x 150.5625pt>
+<images/terminal_4.png, id=402, 243.91125pt x 150.5625pt>
 File: images/terminal_4.png Graphic file (type png)
 <use images/terminal_4.png>
-Package pdftex.def Info: images/terminal_4.png  used on input line 1346.
+Package pdftex.def Info: images/terminal_4.png  used on input line 1372.
 (pdftex.def)             Requested size: 170.7367pt x 105.39302pt.
-<images/terminal_5.png, id=391, 434.37282pt x 170.13562pt>
+<images/terminal_5.png, id=403, 434.37282pt x 170.13562pt>
 File: images/terminal_5.png Graphic file (type png)
 <use images/terminal_5.png>
-Package pdftex.def Info: images/terminal_5.png  used on input line 1350.
+Package pdftex.def Info: images/terminal_5.png  used on input line 1376.
 (pdftex.def)             Requested size: 238.90578pt x 93.57487pt.
 
-Overfull \hbox (18.39691pt too wide) in paragraph at lines 1350--1351
+Overfull \hbox (18.39691pt too wide) in paragraph at lines 1376--1377
 [][][][] 
  []
 
@@ -1866,62 +1875,49 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[24 <./images/terminal_2.png> <./images/terminal_3.png> <./images/terminal_4.pn
+[25 <./images/terminal_2.png> <./images/terminal_3.png> <./images/terminal_4.pn
 g> <./images/terminal_5.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1374--1403
+Underfull \hbox (badness 10000) in paragraph at lines 1400--1429
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1374--1403
+Underfull \hbox (badness 10000) in paragraph at lines 1400--1429
 
  []
 
 
-Overfull \hbox (9.78885pt too wide) in paragraph at lines 1374--1403
+Overfull \hbox (9.78885pt too wide) in paragraph at lines 1400--1429
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1374--1403
+Underfull \hbox (badness 10000) in paragraph at lines 1400--1429
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1408--1445
+Underfull \hbox (badness 10000) in paragraph at lines 1434--1471
 
  []
 
 
-Overfull \hbox (4.06949pt too wide) in paragraph at lines 1408--1445
+Overfull \hbox (4.06949pt too wide) in paragraph at lines 1434--1471
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1408--1445
+Underfull \hbox (badness 10000) in paragraph at lines 1434--1471
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1408--1445
+Underfull \hbox (badness 10000) in paragraph at lines 1434--1471
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1408--1445
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 1493--1494
+Underfull \hbox (badness 10000) in paragraph at lines 1434--1471
 
  []
 
@@ -1934,6 +1930,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [26]
+Underfull \hbox (badness 10000) in paragraph at lines 1519--1520
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1943,21 +1943,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [27]
-Overfull \hbox (24.61864pt too wide) in paragraph at lines 1621--1621
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[28]
+Overfull \hbox (24.61864pt too wide) in paragraph at lines 1647--1647
 [][][]\OT1/cmr/m/it/10.95 Dynamic Pro-gram-ming\OT1/cmr/m/n/10.95 . Web-site. [
 ]$[][]\OT1/cmtt/m/n/10.95 https : / / www . programiz . com / dsa / dynamic -[]
  programming$[]\OT1/cmr/m/n/10.95 ,
  []
 
 
-Overfull \hbox (10.05585pt too wide) in paragraph at lines 1621--1621
+Overfull \hbox (10.05585pt too wide) in paragraph at lines 1647--1647
 [][][]\OT1/cmr/m/n/10.95 Dietmar Her-rmann. ``Rekur-sion''. In: \OT1/cmr/m/it/1
 0.95 Ef-fek-tiv Pro-gram-mieren in C\OT1/cmr/m/n/10.95 . Springer, 1991, pp. 11
 4{
  []
 
 
-Overfull \hbox (6.07579pt too wide) in paragraph at lines 1621--1621
+Overfull \hbox (6.07579pt too wide) in paragraph at lines 1647--1647
 [][][]\OT1/cmr/m/n/10.95 Maggie John-son and Julie Ze-len-ski. \OT1/cmr/m/it/10
 .95 For-mal Gram-mars\OT1/cmr/m/n/10.95 . Web-site. []$[][]\OT1/cmtt/m/n/10.95 
 https : / / web . stanford .
@@ -1971,21 +1980,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[28] (report.aux)
+[29] (report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 486875C35D525D54019A04B2311C8FF7;4887.
+(rerunfilecheck)             Checksum: 9ACBF9D4B2E0F142299386CE10217B02;5089.
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42074 strings out of 478927
- 937925 string characters out of 2852534
- 1762025 words of memory out of 3000000
- 59179 multiletter control sequences out of 15000+600000
+ 42078 strings out of 478927
+ 937978 string characters out of 2852534
+ 1761083 words of memory out of 3000000
+ 59181 multiletter control sequences out of 15000+600000
  425790 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,47n,103p,1235b,2397s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2022,9 +2031,9 @@ nts/cm/cmti12.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmti9.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmtt10.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (29 pages, 855581 bytes).
+Output written on report.pdf (30 pages, 859010 bytes).
 PDF statistics:
- 559 PDF objects out of 1000 (max. 8388607)
- 86 named destinations out of 1000 (max. 500000)
- 345 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 570 PDF objects out of 1000 (max. 8388607)
+ 88 named destinations out of 1000 (max. 500000)
+ 353 words of extra memory for PDF output out of 10000 (max. 10000000)
 

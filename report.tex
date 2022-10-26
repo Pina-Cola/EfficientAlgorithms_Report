@@ -1132,7 +1132,6 @@ $n$ & $n^3$ & counter \\
 The results of the experiments confirm the runtime calculation of $O(n^3)$ in Section \ref{bottomupruntime}.
 
 
-\ \\
 
 \textbf{Linear topdown approach ($O(n^3)$):} 
     
@@ -1158,8 +1157,35 @@ The results of the experiments confirm the runtime calculation of $O(n^3)$ in Se
 \subsection{Results}
 \label{results}
 
+\begin{minipage}{0.5\textwidth}
+The $O$-notation results from Section \ref{systemdesign} show, that the naive and the topdown approach have the same upper bound runtime of $O(n!)$ and the bottomup parser has an upper bound runtime in $O(n^3)$.
+The experiments on the other hand show, that the topdown approach is a lot 
+\end{minipage}
+\begin{minipage}{0.1\textwidth} \ \end{minipage}
+\begin{minipage}{0.3\textwidth}
+\begin{tabular}{|l|c|}
+\hline
+Method & Runtime \\
+\hline
+\texttt{parseNaive} & $O(n!)$\\
+\texttt{ParseTD} & $O(n!)$ \\
+\texttt{ParseBU} & $O(n^3)$\\
+\texttt{ParseLinearTD} & $O(n^3)$\\
+\hline
+\end{tabular}
+\end{minipage}
 
 
+faster than the naive parser. Considering the experiments, the topdown parser seems to be the fastest, followed by the bottomup approach and the naive is by far the slowest.
+The parser for linear grammars has different restrictions for the input and its results are discussed in Section \ref{results_linear}.
+
+The reason for the faster results of the topdown parser is the global boolean table, which saves results from previous function calls and can cause less recursive calls of the function to compare the values while the naive approach calls the recursion for every single possibility. The actual runtime of the naive approach is often a lot closer to the upper bound than the actual runtim of the topdown approach, which seems to perform more efficient in the experiments.
+
+
+
+%---------------------------------------------------------------------%
+\subsection{Results for linear grammars}
+\label{results_linear}
 
 
 
