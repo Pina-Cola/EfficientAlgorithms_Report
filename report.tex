@@ -1200,6 +1200,8 @@ The upper bound runtime of the modified topdown parser for linear grammars is fa
 This is why the upper bound runtime if the topdown approach for linear grammars is in $O(n^3)$, while the topdown approach for grammars in CNF is in $O(n!)$.
 
 
+Surprisingly, the experiments with linear grammars as input do not show the expected results. The linear topdown approach seems to perform faster than the not modified approach, but with more function calls. This seems unlikely, because the recursive calls of the function are reduced from two to one in the modified approach. The faster performance can be due to hidden background processes on the computer. The amount of calls on the other hand should be lower than the amount of calls in the not modified topdown parser. This leads to the assumption, that the modified topdown parser is not working correctly.
+
 %---------------------------------------------------------------------%
 
 
