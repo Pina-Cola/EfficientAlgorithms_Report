@@ -1,17 +1,17 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'report.blg'
-[180] biber-MSWIN64:340> INFO - === 
-[240] Biber.pm:415> INFO - Reading 'report.bcf'
-[426] Biber.pm:952> INFO - Found 10 citekeys in bib section 0
-[447] Biber.pm:4340> INFO - Processing section 0
-[467] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
-[543] bibtex.pm:1689> INFO - LaTeX decoding ...
-[566] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
-[617] Utils.pm:395> WARN - legacy month field 'May' in entry 'cyk_online_alg' is not an integer - this will probably not sort properly.
-[647] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[647] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[647] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[647] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[664] bbl.pm:654> INFO - Writing 'report.bbl' with encoding 'UTF-8'
-[671] bbl.pm:757> INFO - Output to report.bbl
-[671] Biber.pm:128> INFO - WARNINGS: 1
+[140] biber-MSWIN64:340> INFO - === 
+[183] Biber.pm:415> INFO - Reading 'report.bcf'
+[311] Biber.pm:952> INFO - Found 10 citekeys in bib section 0
+[329] Biber.pm:4340> INFO - Processing section 0
+[344] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
+[405] bibtex.pm:1689> INFO - LaTeX decoding ...
+[421] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
+[465] Utils.pm:395> WARN - legacy month field 'May' in entry 'cyk_online_alg' is not an integer - this will probably not sort properly.
+[492] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[492] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[492] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[492] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[507] bbl.pm:654> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[512] bbl.pm:757> INFO - Output to report.bbl
+[512] Biber.pm:128> INFO - WARNINGS: 1
