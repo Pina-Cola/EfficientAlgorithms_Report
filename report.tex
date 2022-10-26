@@ -111,7 +111,7 @@
 
 Formal languages and grammars can be used in different fields, for example for AI learning methods. The CYK-algorithm is a method to examine if an input word is part of a formal language. 
 In this report, the implementation of different parsing methods for the CYK-algorithm is described. The runtimes of those methods are analysed and compared. For each method experiments with different inputs are documented and evaluated. The results of the experiments and the theoretical runtime analysis in $O$-notation are compared to show the differences and similarities. The results are also shown in graphs.
-In addition to this, one methods is modified to work with linear grammars and concepts of error correction are described and presented.
+In addition to this, one method is modified to work with linear grammars and concepts of error correction are described and presented.
 
 
 
@@ -174,7 +174,7 @@ To examine if such a string follows the rules of a grammar, the \textit{Cocke-Yo
 
 
 Three different parsing methods are implemented and described of which one executes the \textit{CYK}-algorithm with dynamic programming in \textit{Java}. The different parsing methods are described and presented as pseudo code in Section \ref{systemdesign}.
-For the implementation three different classes are implemented: \texttt{main.java, grammar.java} and \texttt{parser.java}. The \texttt{main}-class calls the methods and the \texttt{grammar}-class parses the input grammer as string into a format that then can be processed in the \texttt{parser}-class. This \texttt{parser}-class has three different parsing methods, which are tested and compared against each other.
+For the implementation three different classes are implemented: \texttt{main.java, grammar.java} and \texttt{parser.java}. The \texttt{main}-class calls the methods and the \texttt{grammar}-class parses the input grammar as string into a format that then can be processed in the \texttt{parser}-class. This \texttt{parser}-class has three different parsing methods, which are tested and compared against each other.
 The function and implementation is former described in Section \ref{systemdesign}. Also in Section \ref{systemdesign} the runtimes in $O$-notation are calculated for each approach and modifications for the parsing of linear grammars are described.
 
 In Section \ref{evaluation} the runtimes and experiments of the different algorithms are compared and differences in efficiency are shown. The results from the experiments are compared to the calculated runtimes in $O$-notation from Section \ref{systemdesign} and those differences are explained.
@@ -224,7 +224,7 @@ A formal language $L$ over an alphabet $\Sigma$ is a subset of the Kleene star o
 \end{definition*}
 
 
-\begin{example*}[Formal language]\footnote{The following examples show the \textit{Well-Balanced Parantheses} example from the assignment task sheet with the alphabet $\{a, b\}$ instead of $\{(, )\}$. } The language accepts words that contain the same number of $a$s and $b$s, while the a has to be left of the b. 
+\begin{example*}[Formal language]\footnote{The following examples show the \textit{Well-Balanced Parantheses} example from the assignment task sheet with the alphabet $\{a, b\}$ instead of $\{(, )\}$. } The language accepts words that contain the same amount of $a$s and $b$s, while the a has to be left of the b. 
 The alphabet $\Sigma$ of this language looks like this:
 \begin{align*}
 \Sigma & = \{ a, b\}
@@ -248,7 +248,7 @@ L = \{ (a^{n}b^{n})^m \} \text{ with } n, m \in \mathbb{N}
 \label{formalgrammar}
 
 
-A formal grammar describes how to form strings with correct syntax from a language's alphabet. A grammar does not describe the meaning of the strings or any semantics — only their syntax is defined. The grammar is a set of rules, which define which words are accepted by a formal language. Those rules consist of terminal and nonterminal symbols. The terminalsymbols are the characters of the alphabet of the language and the nonterminalsymbols are used to build the rules of the language -- they get replaced by terminalsymbols. \cite{CNF, language} 
+A formal grammar describes how to form strings with correct syntax from a language's alphabet. A grammar does not describe the meaning of the strings or any semantics — only their syntax is defined. The grammar is a set of rules, which define which words are accepted by a formal language. Those rules consist of terminal and nonterminal symbols. The terminal symbols are the characters of the alphabet of the language and the nonterminal symbols are used to build the rules of the language -- they get replaced by terminal symbols. \cite{CNF, language} 
 
 \begin{definition*}[Formal grammar]
 A formal grammar $G$ is defined as a 4-tuple:
@@ -280,7 +280,7 @@ The start symbol \texttt{S} can for example be replaced with its body \texttt{SS
 \subsection{Chomsky-Normal-Form}
 \label{cnf}
 
-The \textit{Chomsky-Normal-Form} (short: \textit{CNF}) is a grammar which is formated in a specific way. If the head of a rule (nonterminal symbol) is not generating the empty word (\textit{\texttt{S $\rightarrow \epsilon$}}) it either generates two nonterminal symbols or one terminal symbol for the grammar to be in \textit{CNF}.
+The \textit{Chomsky-Normal-Form} (short: \textit{CNF}) is a grammar which is formatted in a specific way. If the head of a rule (nonterminal symbol) is not generating the empty word (\textit{\texttt{S $\rightarrow \epsilon$}}) it either generates two nonterminal symbols or one terminal symbol for the grammar to be in \textit{CNF}.
 \cite{CNF}
 
 \begin{example*}[Chomsky-Normal-Form]
@@ -299,7 +299,7 @@ This is the previous example in CNF. How it was built can be seen in Appendix \r
 \subsection{Dynamic programming}
 \label{dp}
 
-The technique of dynamic programming can be used to solve problems, which can be devided into smaller subproblems. The solutions of the subproblems are saved (for example in a multi-dimensional array) and referenced later. \cite{DP}
+The technique of dynamic programming can be used to solve problems, which can be divided into smaller subproblems. The solutions of the subproblems are saved (for example in a multi-dimensional array) and referenced later. \cite{DP}
 \\
 \begin{example*}[Knapsack problem]
 
@@ -307,7 +307,7 @@ As an example the table for the knapsack problem is filled out, because it is a 
 \\ \\
 Given is a set of items with a weight and a value. The task is to choose which items to include so that the total weight is less than the given limit of the knapsack and the total value is as large as possible.
 \\ \\
-The formula with which the dynamic programming works is the follwing:
+The formula with which the dynamic programming works is the following:
 
 
   $$
@@ -383,7 +383,7 @@ The first column in the table represent the objects and the last row the weight.
 
 \begin{example*}[Chomsky-Normal-Form]
 The following table shows the CYK-algorithm with the previous grammar example and the input word $aaabbb$. 
-The word is accepted by the grammar rules, because the intiating nonterminal symbol \textit{\texttt{S}} can be filled into the lowest field. The table is filled in step by step and the rules that are used in each step are marked, for a better understanding on how the algorithm works. \cite{cyk_online_alg}
+The word is accepted by the grammar rules, because the initiating nonterminal symbol \textit{\texttt{S}} can be filled into the lowest field. The table is filled in step by step and the rules that are used in each step are marked, for a better understanding on how the algorithm works. \cite{cyk_online_alg}
 \ \\
 
 \begin{center}
@@ -406,7 +406,7 @@ The word is accepted by the grammar rules, because the intiating nonterminal sym
 \subsection{Recursion}
 \label{recursion}
 
-A function that calls itself is called recursive function. In computer science recursive functions use base cases to terminate the programm and stopping it from going on forever. Base cases are problems that can be solved without any more recursive calls.
+A function that calls itself is called recursive function. In computer science recursive functions use base cases to terminate the program and stopping it from going on forever. Base cases are problems that can be solved without any more recursive calls.
 \cite{recursion}
 
 \begin{example*}[Recursion]
@@ -417,7 +417,7 @@ For definition and examples for recursion read Section \ref{recursion}.
 
 
 \begin{example*}[Recursion]
-Buidling a sum for the numbers $1+2+...+n$.
+Building a sum for the numbers $1+2+...+n$.
 
 Nonrecursive approach:
 \begin{align*}
@@ -526,10 +526,10 @@ A detailed description on how to run the code can be found in Appendix \ref{howt
 \label{grammar}
 
 
-The \texttt{grammar}-class assigns the nonterminal symbols to integers and builds arrays with them. The arrays have the type \texttt{Integer[][][]}. The start symbol for example is then assigned with the integer zero and the bodies of that rule are at the index zero of the three-dimensional array. The first dimension represents the head of a rule, the second dimension represents the body which is divided into to array -- for each symbol of the body one array.
+The \texttt{grammar}-class assigns the nonterminal symbols to integers and builds arrays with them. The arrays have the type \texttt{Integer[][][]}. The start symbol for example is then assigned with the integer zero and the bodies of that rule are at the index zero of the three-dimensional array. The first dimension represents the head of a rule, the second dimension represents the body which is divided into two arrays -- for each symbol of the body one array.
 
 
-For faster and easier access, three arrays are built: One array that only contains only nonterminal symbols and rules, one array that contains only terminal rules and one array that contains both.
+For faster and easier access, three arrays are built: One array that only contains nonterminal symbols and rules, one array that contains only terminal rules and one array that contains both.
 
 
 
@@ -546,7 +546,7 @@ For faster and easier access, three arrays are built: One array that only contai
 
 The \texttt{parser}-class contains three different parsing methods: \texttt{parseNaive} (described in Section \ref{naivedescription}), \texttt{parseTopDown} (described in Section \ref{topdowndescription}) and \texttt{parseBottomUp} (described in Section \ref{bottomupdescription}). Also there exists a modified method of the \texttt{parseTopDown}, which takes linear grammars (which are translated into \textit{CNF}) and parses them faster (described in Section \ref{lineartopdown}).
 
-Each methods has a counter as \texttt{long} which counts the number of interations and a timer as \texttt{long} in $ms$ which measures the runtime of the method. In the following sections the algorithms are described, presented as pseudo code and the runtime is analysed.
+Each method has a counter as \texttt{long} which counts the number of iterations and a timer as \texttt{long} in $ms$ which measures the runtime of the method. In the following sections the algorithms are described, presented as pseudo code and the runtime is analysed.
 
 %---------------------------------------------------------------------%
 
@@ -563,7 +563,7 @@ The naive algorithm is a recursive divide-and-conquer algorithm. The problem get
 \end{itemize} 
 
 
-The start values get assignened in the recursion call which can be seen in the following pseudo code:
+The start values get assigned in the recursion call which can be seen in the following pseudo code:
  
 \begin{algorithm}[H]
 \label{alg_naive_rec_call}
@@ -660,7 +660,7 @@ The runtime of the naive method is in $O(n!)$.
 
 % TODO: describe idea of algorithm more detailed in text form!
 
-The top-down method is an improved version of the naive method (Section \ref{naivedescription}). This algorithm works recursive and with the concept of divide and conquer, too. In this algorithm another global array is used, which contains the values \texttt{true}, \texttt{false} and \texttt{null}. The array gets intialized with \texttt{null} in each field. That happens in the recursion call method below.
+The top-down method is an improved version of the naive method (Section \ref{naivedescription}). This algorithm works recursive and with the concept of divide and conquer, too. In this algorithm another global array is used, which contains the values \texttt{true}, \texttt{false} and \texttt{null}. The array gets initialized with \texttt{null} in each field. That happens in the recursion call method below.
 
 \begin{algorithm}[H]
 \caption{Recursion call: Boolean parseTD()}\label{alg:cap}
@@ -688,7 +688,7 @@ Additional to the naive algorithm, the recursion in the topdown approach starts 
 \end{algorithmic}
 \end{algorithm}
 
-The complete topdown algorithm is shown as pseudo code below. In the inner for-loop (line 18) the boolean value of the next method calls get assigned into the global table. If there is assigned a true (line 19) the value true gets returnes (lime 20). The general topdown approach is the same approach as the naive method that is described in Section \ref{naivedescription}.
+The complete topdown algorithm is shown as pseudo code below. In the inner for-loop (line 18) the boolean value of the next method calls get assigned into the global table. If there is assigned a true (line 19) the value true gets returns (lime 20). The general topdown approach is the same approach as the naive method that is described in Section \ref{naivedescription}.
 
 \begin{algorithm}[H]
 \caption{Boolean parseTD(int indexNT, int i, int j)}\label{alg:cap}
@@ -756,16 +756,16 @@ Calculating the runtime of the method call:
 \end{minipage}
 \ \\
 
-The runtime analysis for the upper bound of the \texttt{parseTD} method is analog to the \texttt{parseNaive} runtime analysis. According to this the topdown algorithm has an upper bound runtime in $O(n!)$, too.
+The runtime analysis for the upper bound of the \texttt{parseTD} method is analogue to the \texttt{parseNaive} runtime analysis. According to this the topdown algorithm has an upper bound runtime in $O(n!)$, too.
 
 
 
 \subsubsection{Top-Down modified for linear grammars}
 \label{lineartopdown}
 
-For the parsing of linear grammars, the topdown approach (Section \ref{topdowndescription}) was modified to reduce the amounts of recursive calls. The topdown approach was chosen, because it seems to have the best perfomance of the different parsing methods, considering the experiments.
+For the parsing of linear grammars, the topdown approach (Section \ref{topdowndescription}) was modified to reduce the amounts of recursive calls. The topdown approach was chosen, because it seems to have the best performance of the different parsing methods, considering the experiments.
 
-In the modified version for linear grammars, the grammar gets changed into CNF first. The modified algorithm can now work more efficient, because for each rule is only one recursive call of the method instead of two neccessary.
+In the modified version for linear grammars, the grammar gets changed into CNF first. The modified algorithm can now work more efficient, because for each rule is only one recursive call of the method instead of two necessary.
 
 For each rule it is checked if the first or the second element of the body is the head of a terminal rule. Then it is checked if the head of the terminal rule is the head of the current position on the input word. For the other symbol the methos gets called recursively. This part is shown in the pseudo code below:
 
@@ -801,7 +801,7 @@ The runtime of the modified version is $O(n^2)$, because the recursive call is n
 The \texttt{parseBU} method works with dynamic programming.
 First a table $DP$ with the size $n \times n$ gets constructed (line 2) -- $n$ represents the input word length.
 In the first step the integers that represent the nonterminal symbols that are head of a terminal rule get assigned (line 3 - 12). For the character at index i of the input word the value of $DP[i][i]$ gets the nonterminal symbol that leads to the character of the word.
-The approach of dynamic programming calculates the smallest substrings first and saves them for the efficient processing of the next-bigger substrings.  The smallest substrings are the single characters.
+The approach of dynamic programming calculates the smallest substrings first and saves them for the efficient processing of the next bigger substrings.  The smallest substrings are the single characters.
 
 
 \begin{algorithm}[H]
@@ -1469,7 +1469,7 @@ In this case the error correction shows the solution with exchange (one symbol i
 \end{minipage}\begin{minipage}{0.1\textwidth}
 \ 
 \end{minipage}\begin{minipage}{0.4\textwidth}
-If the input grammar is a linear grammar, the programm checks if it is in \textit{CNF}, build \textit{CNF} out of the linear grammar and runs the optimized version of the TopDown parser for linear grammars.
+If the input grammar is a linear grammar, the program checks if it is in \textit{CNF}, build \textit{CNF} out of the linear grammar and runs the optimized version of the TopDown parser for linear grammars.
 \end{minipage}
 
 

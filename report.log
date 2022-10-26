@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  27 OCT 2022 00:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  27 OCT 2022 01:19
 entering extended mode
 **./report.tex
 (report.tex
@@ -1616,6 +1616,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [14]
+Overfull \hbox (7.68715pt too wide) in paragraph at lines 759--760
+[][][]\OT1/cmr/m/n/10.95 The run-time anal-y-sis for the up-per bound of the \O
+T1/cmtt/m/n/10.95 parseTD \OT1/cmr/m/n/10.95 method is ana-logue to the \OT1/cm
+tt/m/n/10.95 parseNaive
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2026,7 +2032,7 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 Here is how much of TeX's memory you used:
  42134 strings out of 478927
  939120 string characters out of 2852534
- 1762166 words of memory out of 3000000
+ 1763167 words of memory out of 3000000
  59227 multiletter control sequences out of 15000+600000
  425790 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2064,7 +2070,7 @@ nts/cm/cmti12.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmti9.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmtt10.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (31 pages, 924602 bytes).
+Output written on report.pdf (31 pages, 924587 bytes).
 PDF statistics:
  606 PDF objects out of 1000 (max. 8388607)
  91 named destinations out of 1000 (max. 500000)
