@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.17)  17 JAN 2023 23:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.17)  18 JAN 2023 00:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -450,8 +450,27 @@ Package caption Info: hyperref package is loaded.
 \sf@bottom=\skip65
 ) (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
-) (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty
+) (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty
+(C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
+eys2e.sty
+(C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2022-12-17 L3 programming layer (loader) 
 
+(C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count310
+\l__pdf_internal_box=\box56
+))
+Package: l3keys2e 2022-12-17 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count311
+\l__lipsum_a_int=\count312
+\l__lipsum_b_int=\count313
+
+(C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
+(C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.rev
 ision.tex)
 Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
@@ -471,7 +490,7 @@ y
 -common-lists.tex))
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -latex.def
-\pgfutil@abb=\box56
+\pgfutil@abb=\box57
 )
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
 code.tex
@@ -509,14 +528,14 @@ filtered.code.tex
 \pgf@yd=\dimen195
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count310
-\c@pgf@countb=\count311
-\c@pgf@countc=\count312
-\c@pgf@countd=\count313
+\c@pgf@counta=\count314
+\c@pgf@countb=\count315
+\c@pgf@countc=\count316
+\c@pgf@countd=\count317
 \t@pgf@toka=\toks32
 \t@pgf@tokb=\toks33
 \t@pgf@tokc=\toks34
-\pgf@sys@id@count=\count314
+\pgf@sys@id@count=\count318
 
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
 fg
@@ -535,8 +554,8 @@ File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 ssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count315
-\pgfsyssoftpath@bigbuffer@items=\count316
+\pgfsyssoftpath@smallbuffer@items=\count319
+\pgfsyssoftpath@bigbuffer@items=\count320
 )
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 sprotocol.code.tex
@@ -573,8 +592,8 @@ code.tex)
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
 r.code.tex
 \pgfmath@dimen=\dimen196
-\pgfmath@count=\count317
-\pgfmath@box=\box57
+\pgfmath@count=\count321
+\pgfmath@box=\box58
 \pgfmath@toks=\toks35
 \pgfmath@stack@operand=\toks36
 \pgfmath@stack@operation=\toks37
@@ -599,7 +618,7 @@ ions.misc.code.tex)
 ions.integerarithmetics.code.tex)))
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
 .code.tex
-\c@pgfmathroundto@lastzeros=\count318
+\c@pgfmathroundto@lastzeros=\count322
 ))
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
 tex)
@@ -636,10 +655,10 @@ File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 escopes.code.tex
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfpic=\box58
-\pgf@hbox=\box59
-\pgf@layerbox@main=\box60
-\pgf@picture@serial@count=\count319
+\pgfpic=\box59
+\pgf@hbox=\box60
+\pgf@layerbox@main=\box61
+\pgf@picture@serial@count=\count323
 )
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 egraphicstate.code.tex
@@ -674,8 +693,8 @@ File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 eshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@max=\dimen276
-\pgf@sys@shading@range@num=\count320
-\pgf@shadingcount=\count321
+\pgf@sys@shading@range@num=\count324
+\pgf@shadingcount=\count325
 )
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eimage.code.tex
@@ -684,7 +703,7 @@ File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eexternal.code.tex
 File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfexternal@startupbox=\box61
+\pgfexternal@startupbox=\box62
 ))
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 elayers.code.tex
@@ -705,7 +724,7 @@ File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 shapes.code.tex
 File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfnodeparttextbox=\box62
+\pgfnodeparttextbox=\box63
 )
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 plot.code.tex
@@ -748,7 +767,7 @@ Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count322
+\pgf@plot@mark@count=\count326
 \pgfplotmarksize=\dimen281
 )
 \tikz@lastx=\dimen282
@@ -759,23 +778,23 @@ File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \tikz@lastmovetoy=\dimen287
 \tikzleveldistance=\dimen288
 \tikzsiblingdistance=\dimen289
-\tikz@figbox=\box63
-\tikz@figbox@bg=\box64
-\tikz@tempbox=\box65
-\tikz@tempbox@bg=\box66
-\tikztreelevel=\count323
-\tikznumberofchildren=\count324
-\tikznumberofcurrentchild=\count325
-\tikz@fig@count=\count326
+\tikz@figbox=\box64
+\tikz@figbox@bg=\box65
+\tikz@tempbox=\box66
+\tikz@tempbox@bg=\box67
+\tikztreelevel=\count327
+\tikznumberofchildren=\count328
+\tikznumberofcurrentchild=\count329
+\tikz@fig@count=\count330
 
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 matrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count327
-\pgfmatrixcurrentcolumn=\count328
-\pgf@matrix@numberofcolumns=\count329
+\pgfmatrixcurrentrow=\count331
+\pgfmatrixcurrentcolumn=\count332
+\pgf@matrix@numberofcolumns=\count333
 )
-\tikz@expandcount=\count330
+\tikz@expandcount=\count334
 
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarytopaths.code.tex
@@ -789,8 +808,8 @@ e.tex
 \t@pgfplots@tokb=\toks41
 \t@pgfplots@tokc=\toks42
 \pgfplots@tmpa=\dimen290
-\c@pgfplots@coordindex=\count331
-\c@pgfplots@scanlineindex=\count332
+\c@pgfplots@coordindex=\count335
+\c@pgfplots@scanlineindex=\count336
 
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplots
 sysgeneric.code.tex))
@@ -808,13 +827,13 @@ e\pgfplotsliststructure.code.tex)
 e\pgfplotsliststructureext.code.tex)
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
 e\pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count333
+\c@pgfplotsarray@tmp=\count337
 )
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
 e\pgfplotsmatrix.code.tex)
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgf
 plotstableshared.code.tex
-\c@pgfplotstable@counta=\count334
+\c@pgfplotstable@counta=\count338
 \t@pgfplotstable@a=\toks43
 )
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
@@ -827,7 +846,7 @@ sbinary.data.code.tex))
 sutil.verb.code.tex)
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibr
 arypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count335
+\c@pgfplotslibrarysurf@no=\count339
 
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibra
 rypgfplots.surfshading.pgfsys-pdftex.def)))
@@ -864,11 +883,11 @@ decorations.code.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen293
 \pgfdecoratedinputsegmentremainingdistance=\dimen294
 \pgf@decorate@distancetomove=\dimen295
-\pgf@decorate@repeatstate=\count336
+\pgf@decorate@repeatstate=\count340
 \pgfdecorationsegmentamplitude=\dimen296
 \pgfdecorationsegmentlength=\dimen297
 )
-\tikz@lib@dec@box=\box67
+\tikz@lib@dec@box=\box68
 )
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarydecorations.pathmorphing.code.tex
@@ -880,7 +899,7 @@ z/libraries\tikzlibrarydecorations.pathreplacing.code.tex
 ions\pgflibrarydecorations.pathreplacing.code.tex))
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlib
 rarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count337
+\pgfplots@numplots=\count341
 \pgfplots@xmin@reg=\dimen298
 \pgfplots@xmax@reg=\dimen299
 \pgfplots@ymin@reg=\dimen300
@@ -919,7 +938,7 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 )
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2021/07/05 v2.14 Sectioning titles
-\ttl@box=\box68
+\ttl@box=\box69
 \beforetitleunit=\skip75
 \aftertitleunit=\skip76
 \ttl@plus=\dimen304
@@ -934,54 +953,54 @@ Package: biblatex 2022/07/12 v3.18b programmable bibliographies (PK/MW)
 
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count338
+\lrq@indent=\count342
 
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count339
-\c@listtotal=\count340
-\c@listcount=\count341
-\c@liststart=\count342
-\c@liststop=\count343
-\c@citecount=\count344
-\c@citetotal=\count345
-\c@multicitecount=\count346
-\c@multicitetotal=\count347
-\c@instcount=\count348
-\c@maxnames=\count349
-\c@minnames=\count350
-\c@maxitems=\count351
-\c@minitems=\count352
-\c@citecounter=\count353
-\c@maxcitecounter=\count354
-\c@savedcitecounter=\count355
-\c@uniquelist=\count356
-\c@uniquename=\count357
-\c@refsection=\count358
-\c@refsegment=\count359
-\c@maxextratitle=\count360
-\c@maxextratitleyear=\count361
-\c@maxextraname=\count362
-\c@maxextradate=\count363
-\c@maxextraalpha=\count364
-\c@abbrvpenalty=\count365
-\c@highnamepenalty=\count366
-\c@lownamepenalty=\count367
-\c@maxparens=\count368
-\c@parenlevel=\count369
-\blx@tempcnta=\count370
-\blx@tempcntb=\count371
-\blx@tempcntc=\count372
-\c@blx@maxsection=\count373
-\blx@maxsegment@0=\count374
-\blx@notetype=\count375
-\blx@parenlevel@text=\count376
-\blx@parenlevel@foot=\count377
-\blx@sectionciteorder@0=\count378
-\blx@sectionciteorderinternal@0=\count379
-\blx@entrysetcounter=\count380
-\blx@biblioinstance=\count381
+\c@tabx@nest=\count343
+\c@listtotal=\count344
+\c@listcount=\count345
+\c@liststart=\count346
+\c@liststop=\count347
+\c@citecount=\count348
+\c@citetotal=\count349
+\c@multicitecount=\count350
+\c@multicitetotal=\count351
+\c@instcount=\count352
+\c@maxnames=\count353
+\c@minnames=\count354
+\c@maxitems=\count355
+\c@minitems=\count356
+\c@citecounter=\count357
+\c@maxcitecounter=\count358
+\c@savedcitecounter=\count359
+\c@uniquelist=\count360
+\c@uniquename=\count361
+\c@refsection=\count362
+\c@refsegment=\count363
+\c@maxextratitle=\count364
+\c@maxextratitleyear=\count365
+\c@maxextraname=\count366
+\c@maxextradate=\count367
+\c@maxextraalpha=\count368
+\c@abbrvpenalty=\count369
+\c@highnamepenalty=\count370
+\c@lownamepenalty=\count371
+\c@maxparens=\count372
+\c@parenlevel=\count373
+\blx@tempcnta=\count374
+\blx@tempcntb=\count375
+\blx@tempcntc=\count376
+\c@blx@maxsection=\count377
+\blx@maxsegment@0=\count378
+\blx@notetype=\count379
+\blx@parenlevel@text=\count380
+\blx@parenlevel@foot=\count381
+\blx@sectionciteorder@0=\count382
+\blx@sectionciteorderinternal@0=\count383
+\blx@entrysetcounter=\count384
+\blx@biblioinstance=\count385
 \labelnumberwidth=\skip77
 \labelalphawidth=\skip78
 \biblabelsep=\skip79
@@ -993,9 +1012,9 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \blx@bcfin=\read4
 \blx@bcfout=\write4
 \blx@langwohyphens=\language80
-\c@mincomprange=\count382
-\c@maxcomprange=\count383
-\c@mincompwidth=\count384
+\c@mincomprange=\count386
+\c@maxcomprange=\count387
+\c@mincompwidth=\count388
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1004,74 +1023,74 @@ File: blx-dm.def 2022/07/12 v3.18b biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count385
-\c@savedafterword=\count386
-\c@annotator=\count387
-\c@savedannotator=\count388
-\c@author=\count389
-\c@savedauthor=\count390
-\c@bookauthor=\count391
-\c@savedbookauthor=\count392
-\c@commentator=\count393
-\c@savedcommentator=\count394
-\c@editor=\count395
-\c@savededitor=\count396
-\c@editora=\count397
-\c@savededitora=\count398
-\c@editorb=\count399
-\c@savededitorb=\count400
-\c@editorc=\count401
-\c@savededitorc=\count402
-\c@foreword=\count403
-\c@savedforeword=\count404
-\c@holder=\count405
-\c@savedholder=\count406
-\c@introduction=\count407
-\c@savedintroduction=\count408
-\c@namea=\count409
-\c@savednamea=\count410
-\c@nameb=\count411
-\c@savednameb=\count412
-\c@namec=\count413
-\c@savednamec=\count414
-\c@translator=\count415
-\c@savedtranslator=\count416
-\c@shortauthor=\count417
-\c@savedshortauthor=\count418
-\c@shorteditor=\count419
-\c@savedshorteditor=\count420
-\c@labelname=\count421
-\c@savedlabelname=\count422
-\c@institution=\count423
-\c@savedinstitution=\count424
-\c@lista=\count425
-\c@savedlista=\count426
-\c@listb=\count427
-\c@savedlistb=\count428
-\c@listc=\count429
-\c@savedlistc=\count430
-\c@listd=\count431
-\c@savedlistd=\count432
-\c@liste=\count433
-\c@savedliste=\count434
-\c@listf=\count435
-\c@savedlistf=\count436
-\c@location=\count437
-\c@savedlocation=\count438
-\c@organization=\count439
-\c@savedorganization=\count440
-\c@origlocation=\count441
-\c@savedoriglocation=\count442
-\c@origpublisher=\count443
-\c@savedorigpublisher=\count444
-\c@publisher=\count445
-\c@savedpublisher=\count446
-\c@language=\count447
-\c@savedlanguage=\count448
-\c@origlanguage=\count449
-\c@savedoriglanguage=\count450
-\c@pageref=\count451
-\c@savedpageref=\count452
+\c@afterword=\count389
+\c@savedafterword=\count390
+\c@annotator=\count391
+\c@savedannotator=\count392
+\c@author=\count393
+\c@savedauthor=\count394
+\c@bookauthor=\count395
+\c@savedbookauthor=\count396
+\c@commentator=\count397
+\c@savedcommentator=\count398
+\c@editor=\count399
+\c@savededitor=\count400
+\c@editora=\count401
+\c@savededitora=\count402
+\c@editorb=\count403
+\c@savededitorb=\count404
+\c@editorc=\count405
+\c@savededitorc=\count406
+\c@foreword=\count407
+\c@savedforeword=\count408
+\c@holder=\count409
+\c@savedholder=\count410
+\c@introduction=\count411
+\c@savedintroduction=\count412
+\c@namea=\count413
+\c@savednamea=\count414
+\c@nameb=\count415
+\c@savednameb=\count416
+\c@namec=\count417
+\c@savednamec=\count418
+\c@translator=\count419
+\c@savedtranslator=\count420
+\c@shortauthor=\count421
+\c@savedshortauthor=\count422
+\c@shorteditor=\count423
+\c@savedshorteditor=\count424
+\c@labelname=\count425
+\c@savedlabelname=\count426
+\c@institution=\count427
+\c@savedinstitution=\count428
+\c@lista=\count429
+\c@savedlista=\count430
+\c@listb=\count431
+\c@savedlistb=\count432
+\c@listc=\count433
+\c@savedlistc=\count434
+\c@listd=\count435
+\c@savedlistd=\count436
+\c@liste=\count437
+\c@savedliste=\count438
+\c@listf=\count439
+\c@savedlistf=\count440
+\c@location=\count441
+\c@savedlocation=\count442
+\c@organization=\count443
+\c@savedorganization=\count444
+\c@origlocation=\count445
+\c@savedoriglocation=\count446
+\c@origpublisher=\count447
+\c@savedorigpublisher=\count448
+\c@publisher=\count449
+\c@savedpublisher=\count450
+\c@language=\count451
+\c@savedlanguage=\count452
+\c@origlanguage=\count453
+\c@savedoriglanguage=\count454
+\c@pageref=\count455
+\c@savedpageref=\count456
 \shorthandwidth=\skip85
 \shortjournalwidth=\skip86
 \shortserieswidth=\skip87
@@ -1096,19 +1115,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2022/07/12 v3.18b biblatex compatibility (PK/MW)
-\c@textcitecount=\count453
-\c@textcitetotal=\count454
-\c@textcitemaxnames=\count455
-\c@biburlbigbreakpenalty=\count456
-\c@biburlbreakpenalty=\count457
-\c@biburlnumpenalty=\count458
-\c@biburlucpenalty=\count459
-\c@biburllcpenalty=\count460
+\c@textcitecount=\count457
+\c@textcitetotal=\count458
+\c@textcitemaxnames=\count459
+\c@biburlbigbreakpenalty=\count460
+\c@biburlbreakpenalty=\count461
+\c@biburlnumpenalty=\count462
+\c@biburlucpenalty=\count463
+\c@biburllcpenalty=\count464
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count461
+\c@smartand=\count465
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1122,8 +1141,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.b
 bx
 File: standard.bbx 2022/07/12 v3.18b biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count462
-\c@bbx:relatedtotal=\count463
+\c@bbx:relatedcount=\count466
+\c@bbx:relatedtotal=\count467
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1151,16 +1170,6 @@ File: biblatex.cfg
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
-
-(C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2022-12-17 L3 programming layer (loader) 
-
-(C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count464
-\l__pdf_internal_box=\box69
-))
 Package biblatex Info: ... and expl3
 (biblatex)             2022-12-17 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
@@ -1191,8 +1200,8 @@ Package: amsthm 2020/05/29 v2.20.6
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count465
-\@quotereset=\count466
+\@quotelevel=\count468
+\@quotereset=\count469
 (report.aux
 
 LaTeX Warning: Label `alg:cap' multiply defined.
@@ -1212,24 +1221,24 @@ LaTeX Warning: Label `alg:cap' multiply defined.
 )
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1269,16 +1278,16 @@ LaTeX Font Info:    ... okay on input line 80.
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count467
+\scratchcounter=\count470
 \scratchdimen=\dimen309
 \scratchbox=\box70
-\nofMPsegments=\count468
-\nofMParguments=\count469
+\nofMPsegments=\count471
+\nofMParguments=\count472
 \everyMPshowfont=\toks51
-\MPscratchCnt=\count470
+\MPscratchCnt=\count473
 \MPscratchDim=\dimen310
-\MPnumerator=\count471
-\makeMPintoPDFobject=\count472
+\MPnumerator=\count474
+\makeMPintoPDFobject=\count475
 \everyMPtoPDFconversion=\toks52
 )
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -1291,7 +1300,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 80.
+Package hyperref Info: Link coloring OFF on input line 89.
  (report.out) (report.out)
 \@outlinefile=\write5
 \openout5 = `report.out'.
@@ -1307,8 +1316,8 @@ Configuring pdfsync
 \PDFSYNC@ut=\write6
 \openout6 = `report.pdfsync'.
 
-\PDFSYNCf@li@=\count473
-\PDFSYNC@rder=\count474
+\PDFSYNCf@li@=\count476
+\PDFSYNC@rder=\count477
 **** pdfsync.sty: Synchronizing at \everypar
 \PDFSYNCeveryp@r=\toks53
 **** pdfsync.sty: Synchronizing at \everymath
@@ -1333,17 +1342,17 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'report.bbl' found.
  (report.bbl)
-Package biblatex Info: Reference section=0 on input line 80.
-Package biblatex Info: Reference segment=0 on input line 80.
+Package biblatex Info: Reference section=0 on input line 89.
+Package biblatex Info: Reference segment=0 on input line 89.
  [1
 
 {C:/Users/pinak/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 113
+LaTeX Font Info:    Trying to load font information for U+msa on input line 122
 .
  (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 113
+LaTeX Font Info:    Trying to load font information for U+msb on input line 122
 .
 (C:\Users\pinak\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1361,7 +1370,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.140 \newpage
+l.149 \newpage
                [1] (report.toc)
 \tf@toc=\write7
 \openout7 = `report.toc'.
@@ -1394,7 +1403,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 302--304
+Underfull \hbox (badness 10000) in paragraph at lines 311--313
 
  []
 
@@ -1407,27 +1416,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 306--311
+Underfull \hbox (badness 10000) in paragraph at lines 315--320
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--311
+Underfull \hbox (badness 10000) in paragraph at lines 315--320
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--368
+Underfull \hbox (badness 10000) in paragraph at lines 334--377
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--368
+Underfull \hbox (badness 10000) in paragraph at lines 334--377
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--368
+Underfull \hbox (badness 10000) in paragraph at lines 334--377
 
  []
 
@@ -1440,29 +1449,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 385--388
+Underfull \hbox (badness 10000) in paragraph at lines 394--397
 
  []
 
 <images/7.png, id=275, 348.92859pt x 139.64671pt>
 File: images/7.png Graphic file (type png)
 <use images/7.png>
-Package pdftex.def Info: images/7.png  used on input line 390.
+Package pdftex.def Info: images/7.png  used on input line 399.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
 <images/6.png, id=277, 348.92859pt x 139.64671pt>
 File: images/6.png Graphic file (type png)
 <use images/6.png>
-Package pdftex.def Info: images/6.png  used on input line 391.
+Package pdftex.def Info: images/6.png  used on input line 400.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
 <images/5.png, id=278, 348.92859pt x 139.64671pt>
 File: images/5.png Graphic file (type png)
 <use images/5.png>
-Package pdftex.def Info: images/5.png  used on input line 392.
+Package pdftex.def Info: images/5.png  used on input line 401.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
 <images/4.png, id=279, 348.92859pt x 139.64671pt>
 File: images/4.png Graphic file (type png)
 <use images/4.png>
-Package pdftex.def Info: images/4.png  used on input line 393.
+Package pdftex.def Info: images/4.png  used on input line 402.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1476,17 +1485,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <images/3.png, id=288, 348.92859pt x 139.64671pt>
 File: images/3.png Graphic file (type png)
 <use images/3.png>
-Package pdftex.def Info: images/3.png  used on input line 394.
+Package pdftex.def Info: images/3.png  used on input line 403.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
 <images/2.png, id=289, 348.92859pt x 139.64671pt>
 File: images/2.png Graphic file (type png)
 <use images/2.png>
-Package pdftex.def Info: images/2.png  used on input line 395.
+Package pdftex.def Info: images/2.png  used on input line 404.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
 <images/1.png, id=290, 348.92859pt x 139.64671pt>
 File: images/1.png Graphic file (type png)
 <use images/1.png>
-Package pdftex.def Info: images/1.png  used on input line 396.
+Package pdftex.def Info: images/1.png  used on input line 405.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
 
 
@@ -1501,27 +1510,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <images/merge1.png, id=302, 1082.0425pt x 215.80624pt>
 File: images/merge1.png Graphic file (type png)
 <use images/merge1.png>
-Package pdftex.def Info: images/merge1.png  used on input line 447.
+Package pdftex.def Info: images/merge1.png  used on input line 456.
 (pdftex.def)             Requested size: 135.25497pt x 26.97571pt.
 <images/merge2.png, id=303, 1142.2675pt x 215.80624pt>
 File: images/merge2.png Graphic file (type png)
 <use images/merge2.png>
-Package pdftex.def Info: images/merge2.png  used on input line 452.
+Package pdftex.def Info: images/merge2.png  used on input line 461.
 (pdftex.def)             Requested size: 142.78308pt x 26.97571pt.
 <images/merge3.png, id=304, 1364.09625pt x 215.80624pt>
 File: images/merge3.png Graphic file (type png)
 <use images/merge3.png>
-Package pdftex.def Info: images/merge3.png  used on input line 457.
+Package pdftex.def Info: images/merge3.png  used on input line 466.
 (pdftex.def)             Requested size: 170.51161pt x 26.97571pt.
 <images/merge4.png, id=305, 1727.45375pt x 215.80624pt>
 File: images/merge4.png Graphic file (type png)
 <use images/merge4.png>
-Package pdftex.def Info: images/merge4.png  used on input line 462.
+Package pdftex.def Info: images/merge4.png  used on input line 471.
 (pdftex.def)             Requested size: 215.93118pt x 26.97571pt.
 <images/merge5.png, id=306, 1502.61375pt x 215.80624pt>
 File: images/merge5.png Graphic file (type png)
 <use images/merge5.png>
-Package pdftex.def Info: images/merge5.png  used on input line 467.
+Package pdftex.def Info: images/merge5.png  used on input line 476.
 (pdftex.def)             Requested size: 187.82625pt x 26.97571pt.
 
 
@@ -1537,12 +1546,12 @@ merge4.png> <./images/merge5.png>]
 <images/merge6.png, id=316, 1222.5675pt x 215.80624pt>
 File: images/merge6.png Graphic file (type png)
 <use images/merge6.png>
-Package pdftex.def Info: images/merge6.png  used on input line 473.
+Package pdftex.def Info: images/merge6.png  used on input line 482.
 (pdftex.def)             Requested size: 152.82056pt x 26.97571pt.
 <images/merge7.png, id=317, 1069.9975pt x 215.80624pt>
 File: images/merge7.png Graphic file (type png)
 <use images/merge7.png>
-Package pdftex.def Info: images/merge7.png  used on input line 478.
+Package pdftex.def Info: images/merge7.png  used on input line 487.
 (pdftex.def)             Requested size: 133.74936pt x 26.97571pt.
 
 
@@ -1554,13 +1563,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [10 <./images/merge6.png> <./images/merge7.png>]
-Overfull \hbox (4.19086pt too wide) in paragraph at lines 508--509
+Overfull \hbox (4.19086pt too wide) in paragraph at lines 517--518
 [][]\OT1/cmr/m/n/10.95 The im-ple-men-ta-tion was done in Java and three dif-fe
 r-ent classes were im-ple-mented: \OT1/cmtt/m/n/10.95 main.java
  []
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 570.
+put line 579.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1570,12 +1579,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 577--581
+Underfull \hbox (badness 10000) in paragraph at lines 586--590
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 618--654
+Underfull \hbox (badness 10000) in paragraph at lines 627--663
 
  []
 
@@ -1597,17 +1606,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 732--758
+Underfull \hbox (badness 10000) in paragraph at lines 741--767
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 732--758
+Underfull \hbox (badness 10000) in paragraph at lines 741--767
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 732--758
+Underfull \hbox (badness 10000) in paragraph at lines 741--767
 
  []
 
@@ -1620,7 +1629,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [14]
-Overfull \hbox (7.68715pt too wide) in paragraph at lines 759--760
+Overfull \hbox (7.68715pt too wide) in paragraph at lines 768--769
 [][][]\OT1/cmr/m/n/10.95 The run-time anal-y-sis for the up-per bound of the \O
 T1/cmtt/m/n/10.95 parseTD \OT1/cmr/m/n/10.95 method is ana-logue to the \OT1/cm
 tt/m/n/10.95 parseNaive
@@ -1644,22 +1653,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 857--859
+Underfull \hbox (badness 10000) in paragraph at lines 866--868
 
  []
 
 
-Overfull \hbox (4.84053pt too wide) detected at line 900
+Overfull \hbox (4.84053pt too wide) detected at line 909
 [][][]
  []
 
 
-Overfull \hbox (4.84052pt too wide) in paragraph at lines 860--905
+Overfull \hbox (4.84052pt too wide) in paragraph at lines 869--914
 [][][]$[][][]$$[][][]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 860--905
+Underfull \hbox (badness 10000) in paragraph at lines 869--914
 
  []
 
@@ -1672,27 +1681,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 933--963
+Underfull \hbox (badness 10000) in paragraph at lines 942--972
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 933--963
+Underfull \hbox (badness 10000) in paragraph at lines 942--972
 
  []
 
 
-Overfull \hbox (9.78885pt too wide) in paragraph at lines 933--963
+Overfull \hbox (9.78885pt too wide) in paragraph at lines 942--972
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 933--963
+Underfull \hbox (badness 10000) in paragraph at lines 942--972
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1011--1030
+Underfull \hbox (badness 10000) in paragraph at lines 1020--1039
 
  []
 
@@ -1707,14 +1716,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [18]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1043.
+(hyperref)                removing `math shift' on input line 1052.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1043.
+(hyperref)                removing `math shift' on input line 1052.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1048--1060
+Underfull \hbox (badness 10000) in paragraph at lines 1057--1069
 
  []
 
@@ -1736,37 +1745,37 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 1142--1143
+Underfull \hbox (badness 10000) in paragraph at lines 1151--1152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1146--1147
+Underfull \hbox (badness 10000) in paragraph at lines 1155--1156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1164--1165
+Underfull \hbox (badness 10000) in paragraph at lines 1173--1174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1166--1177
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1166--1177
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1166--1177
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1186
 
  []
 
 
-Overfull \hbox (7.64095pt too wide) in paragraph at lines 1213--1223
+Overfull \hbox (7.64095pt too wide) in paragraph at lines 1222--1232
 [][][][] 
  []
 
@@ -1789,6 +1798,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [22]
 
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1303.
+See the caption package documentation for explanation.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.59999pt}.
@@ -1797,6 +1811,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [23]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1340.
+See the caption package documentation for explanation.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1824,7 +1843,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [26]
-Overfull \hbox (11.5508pt too wide) in paragraph at lines 1443--1443
+Overfull \hbox (11.5508pt too wide) in paragraph at lines 1480--1480
 [][][]\OT1/cmr/m/n/10.95 Maggie John-son and Julie Ze-len-ski. \OT1/cmr/m/it/10
 .95 For-mal Gram-mars\OT1/cmr/m/n/10.95 . Web-site. []$[][]\OT1/cmtt/m/n/10.95 
 https : / / web . stanford .
@@ -1839,74 +1858,74 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 1470--1472
+Underfull \hbox (badness 10000) in paragraph at lines 1507--1509
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1470--1472
+Underfull \hbox (badness 10000) in paragraph at lines 1507--1509
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1474
+Underfull \hbox (badness 10000) in paragraph at lines 1510--1511
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1474
+Underfull \hbox (badness 10000) in paragraph at lines 1510--1511
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1475--1476
+Underfull \hbox (badness 10000) in paragraph at lines 1512--1513
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1477--1478
+Underfull \hbox (badness 10000) in paragraph at lines 1514--1515
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1480
+Underfull \hbox (badness 10000) in paragraph at lines 1516--1517
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1480
+Underfull \hbox (badness 10000) in paragraph at lines 1516--1517
 
  []
 
-<images/terminal_1.png, id=459, 233.37187pt x 448.67625pt>
+<images/terminal_1.png, id=462, 233.37187pt x 448.67625pt>
 File: images/terminal_1.png Graphic file (type png)
 <use images/terminal_1.png>
-Package pdftex.def Info: images/terminal_1.png  used on input line 1486.
+Package pdftex.def Info: images/terminal_1.png  used on input line 1523.
 (pdftex.def)             Requested size: 163.35919pt x 314.07123pt.
 
-Overfull \hbox (31.05254pt too wide) in paragraph at lines 1486--1487
+Overfull \hbox (31.05254pt too wide) in paragraph at lines 1523--1524
 [][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1455--1488
+Underfull \hbox (badness 10000) in paragraph at lines 1492--1525
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1455--1488
+Underfull \hbox (badness 10000) in paragraph at lines 1492--1525
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1455--1488
+Underfull \hbox (badness 10000) in paragraph at lines 1492--1525
 
  []
 
-<images/terminal_2.png, id=460, 441.14813pt x 190.46156pt>
+<images/terminal_2.png, id=463, 441.14813pt x 190.46156pt>
 File: images/terminal_2.png Graphic file (type png)
 <use images/terminal_2.png>
-Package pdftex.def Info: images/terminal_2.png  used on input line 1490.
+Package pdftex.def Info: images/terminal_2.png  used on input line 1527.
 (pdftex.def)             Requested size: 264.69092pt x 114.2778pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1917,43 +1936,43 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [28 <./images/terminal_1.png>]
-<images/terminal_3.png, id=466, 353.82187pt x 164.11313pt>
+<images/terminal_3.png, id=469, 353.82187pt x 164.11313pt>
 File: images/terminal_3.png Graphic file (type png)
 <use images/terminal_3.png>
-Package pdftex.def Info: images/terminal_3.png  used on input line 1505.
+Package pdftex.def Info: images/terminal_3.png  used on input line 1542.
 (pdftex.def)             Requested size: 247.67361pt x 114.87839pt.
 
-Overfull \hbox (5.11252pt too wide) in paragraph at lines 1505--1506
+Overfull \hbox (5.11252pt too wide) in paragraph at lines 1542--1543
 [][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1508--1510
+Underfull \hbox (badness 10000) in paragraph at lines 1545--1547
 
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 1512--1513
+Underfull \hbox (badness 1708) in paragraph at lines 1549--1550
 \OT1/cmr/m/n/10.95 tion shows the so-lu-tion with
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 1512--1513
+Underfull \hbox (badness 2181) in paragraph at lines 1549--1550
 \OT1/cmr/m/n/10.95 ex-change (one sym-bol is ex-
  []
 
-<images/terminal_4.png, id=467, 243.91125pt x 150.5625pt>
+<images/terminal_4.png, id=470, 243.91125pt x 150.5625pt>
 File: images/terminal_4.png Graphic file (type png)
 <use images/terminal_4.png>
-Package pdftex.def Info: images/terminal_4.png  used on input line 1517.
+Package pdftex.def Info: images/terminal_4.png  used on input line 1554.
 (pdftex.def)             Requested size: 170.7367pt x 105.39302pt.
-<images/terminal_5.png, id=468, 434.37282pt x 170.13562pt>
+<images/terminal_5.png, id=471, 434.37282pt x 170.13562pt>
 File: images/terminal_5.png Graphic file (type png)
 <use images/terminal_5.png>
-Package pdftex.def Info: images/terminal_5.png  used on input line 1521.
+Package pdftex.def Info: images/terminal_5.png  used on input line 1558.
 (pdftex.def)             Requested size: 238.90578pt x 93.57487pt.
 
-Overfull \hbox (18.39691pt too wide) in paragraph at lines 1521--1522
+Overfull \hbox (18.39691pt too wide) in paragraph at lines 1558--1559
 [][][][] 
  []
 
@@ -1967,47 +1986,47 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [29 <./images/terminal_2.png> <./images/terminal_3.png> <./images/terminal_4.pn
 g> <./images/terminal_5.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1545--1574
+Underfull \hbox (badness 10000) in paragraph at lines 1582--1611
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1545--1574
+Underfull \hbox (badness 10000) in paragraph at lines 1582--1611
 
  []
 
 
-Overfull \hbox (9.78885pt too wide) in paragraph at lines 1545--1574
+Overfull \hbox (9.78885pt too wide) in paragraph at lines 1582--1611
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1545--1574
+Underfull \hbox (badness 10000) in paragraph at lines 1582--1611
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1579--1616
+Underfull \hbox (badness 10000) in paragraph at lines 1616--1653
 
  []
 
 
-Overfull \hbox (4.06949pt too wide) in paragraph at lines 1579--1616
+Overfull \hbox (4.06949pt too wide) in paragraph at lines 1616--1653
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1579--1616
+Underfull \hbox (badness 10000) in paragraph at lines 1616--1653
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1579--1616
+Underfull \hbox (badness 10000) in paragraph at lines 1616--1653
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1579--1616
+Underfull \hbox (badness 10000) in paragraph at lines 1616--1653
 
  []
 
@@ -2020,7 +2039,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 1664--1665
+Underfull \hbox (badness 10000) in paragraph at lines 1701--1702
 
  []
 
@@ -2052,10 +2071,10 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43316 strings out of 476406
- 976993 string characters out of 2789567
- 1896787 words of memory out of 3000000
- 62904 multiletter control sequences out of 15000+600000
+ 43744 strings out of 476406
+ 987456 string characters out of 2789567
+ 1925299 words of memory out of 3000000
+ 63319 multiletter control sequences out of 15000+600000
  534647 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,47n,103p,1235b,2394s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -2094,9 +2113,9 @@ nts/cm/cmti12.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmti9.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmtt10.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (33 pages, 930809 bytes).
+Output written on report.pdf (33 pages, 933785 bytes).
 PDF statistics:
- 616 PDF objects out of 1000 (max. 8388607)
- 94 named destinations out of 1000 (max. 500000)
+ 619 PDF objects out of 1000 (max. 8388607)
+ 95 named destinations out of 1000 (max. 500000)
  396 words of extra memory for PDF output out of 10000 (max. 10000000)
 

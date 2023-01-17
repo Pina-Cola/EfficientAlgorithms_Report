@@ -19,6 +19,15 @@
 \usepackage{subfig}
 \usepackage{setspace}
 
+\usepackage{caption}
+\usepackage{lipsum}
+
+\DeclareCaptionFormat{algor}{%
+  \hrulefill\par\offinterlineskip\vskip1pt%
+    \textbf{#1#2}#3\offinterlineskip\hrulefill}
+\DeclareCaptionStyle{algori}{singlelinecheck=off,format=algor,labelsep=space}
+\captionsetup[algorithm]{style=algori}
+
 
 
 
@@ -1286,23 +1295,49 @@ For the error correction the bottomup parser modified, because the CYK-table sho
 For the deletion the table of the CYK-algorithm is used. This is described in Section \ref{cyk} and the parsing method for it is explained in Section \ref{bottomupdescription}.
 The CYK-table has to contain the start symbol in the entry on the right top corner to conclude that the word is part of the language. To find an accepted word with deletion, the entry with the start symbol which is closest to the right top is searched. 
 
-The concept on how to find the entry in the array that is further on the top right is described here. The function takes two array positions as $(i,j)$ as input and returns the better position in an int array of the length 2.
+The concept on how to find the entry in the array that is further on the top right is described here and shown in the pseudo code of the function \texttt{findBestIndeces} in algorithm \ref{alg:fbi}. The function takes two array positions as $(i,j)$ as input and returns the better position in an int array of the length 2.
+
+
+
+\begin{center}
+\captionof{algorithm}{int[] findBestIndeces(int $i_a$, int $j_a$, int $i_b$, int $j_b$)}\label{alg:fbi}
+\begin{algorithmic}[1]
+\State $int[] \ betterIndeces \gets new \ int[2]$
+\State $int \  indicator_i \gets i_a - i_b$
+\State $int \ indicator_j \gets j_b - j_a$
+\If{$indicator_i + indicator_j) == 0$}
+\State \Comment{both are equal far away}
+\State $betterIndeces[0] \gets i_a$
+\State $betterIndeces[1] \gets j_a$
+\EndIf
+\If{$indicator_i + indicator_j) > 0$}
+\State \Comment{b is closer}
+\State $betterIndeces[0] \gets i_b$
+\State $betterIndeces[1] \gets j_b$
+\Else
+\State \Comment{a is closer}
+\State $betterIndeces[0] \gets i_a$
+\State $betterIndeces[1] \gets j_a$
+\EndIf
+\State \Return $betterIndeces$
+\end{algorithmic}
+\hrulefill
+\end{center}
+
 
 The parameters for the functions are the $i$ and $j$ values for the two positions $A$ and $B$ in the array as $A_i$, $A_j$, $B_i$, $B_j$. The searched position in the array is a small $i$ with a large $j$.
 
 Two values are stored for later comparisons: $x = A_i - B_i$ and $y = B_j-A_j$. If $x$ and $y$ are equal, the positions are equally far away from the top right array entry. If $x+y$ is positive, $B$ is the preferred position, else it is $A$.
 
 
-
-With those indices the part of the word that is accepted and the part that needs to be deleted can be calculated. This concludes in the longest accepted word with deletion.
+With those indices the part of the word that is accepted and the part that needs to be deleted can be calculated. This is done in the method \texttt{solveErrorWithDeletion} which is shown as pseudo code in algorithm \ref{alg:deletion}. This concludes in the longest accepted word with deletion, which is then returned.
 
 It can happen that no accepted word is found with deletion, if no subword concluded into the start symbol in the CYK-table.
 
 The distance of the entry in the CYK-table that contains the start symbol and the top right corner can also be returned as the amount of symbols that need to be deleted to receive an accepted word. This error counter works only for the deletion method.
 
-
-\begin{algorithm}[H]
-\caption{Integer[] solveErrorWithDeletion(Integer[][][] CYK, int amountOfErrors)}\label{alg:deletion}
+\begin{center}
+\captionof{algorithm}{Integer[] solveErrorWithDeletion(Integer[][][] CYK, int amountOfErrors)}\label{alg:deletion}
 \begin{algorithmic}[1]
 \State $int \ i \gets -1$
 \State $int \ j \gets -1$
@@ -1328,11 +1363,11 @@ The distance of the entry in the CYK-table that contains the start symbol and th
 \State \Return $noAcceptedWord$
 \EndIf
 
-\State $int from \gets Math.min(i, j)$
-\State $int to \gets Math.max(i, j)$
+\State $int \ from \gets Math.min(i, j)$
+\State $int \ to \gets Math.max(i, j)$
 \State $Integer[] acceptedWord \gets new \ Integer[to - from + 1]$
 \If{$from == to$}
-\For{$k \gets 1 \textbf{to} inputAsInt.length$}
+\For{$k \gets 1 \textbf{ to } inputAsInt.length$}
 \If{$inputAsInt[k] != null \textbf{ and } inputAsInt[k] == 0$}
 \State $acceptedWord[k] \gets inputAsInt[k]$
 \State $break$
@@ -1341,15 +1376,17 @@ The distance of the entry in the CYK-table that contains the start symbol and th
 \State \Return $acceptedWord$
 \EndIf
 
-\For{$k \gets 1 \textbf{to} to - from$}
+\For{$k \gets 1 \textbf{ to } to - from$}
 \If{$inputAsInt[k + from] != null$}
 \State $acceptedWord[k] \gets inputAsInt[k + from]$
 \EndIf
 \EndFor
 \State \Return $acceptedWord$
-
 \end{algorithmic}
-\end{algorithm}
+\hrulefill
+\end{center}
+
+
 
 
 
