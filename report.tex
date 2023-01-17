@@ -111,7 +111,7 @@
 
 Formal languages and grammars can be used in different fields, for example for AI learning methods. The CYK-algorithm is a method to examine if an input word is part of a formal language. 
 In this report, the implementation of different parsing methods for the CYK-algorithm is described. The runtimes of those methods are analysed and compared. For each method experiments with different inputs are documented and evaluated. The results of the experiments and the theoretical runtime analysis in $O$-notation are compared to show the differences and similarities. The results are also shown in graphs.
-In addition to this, one method is modified to work with linear grammars and concepts of error correction are described and presented.
+In addition to this, one method is modified to work with linear grammars and concepts of error correction are described and presented. 
 
 
 
@@ -1299,6 +1299,59 @@ With those indices the part of the word that is accepted and the part that needs
 It can happen that no accepted word is found with deletion, if no subword concluded into the start symbol in the CYK-table.
 
 The distance of the entry in the CYK-table that contains the start symbol and the top right corner can also be returned as the amount of symbols that need to be deleted to receive an accepted word. This error counter works only for the deletion method.
+
+
+\begin{algorithm}[H]
+\caption{Integer[] solveErrorWithDeletion(Integer[][][] CYK, int amountOfErrors)}\label{alg:deletion}
+\begin{algorithmic}[1]
+\State $int \ i \gets -1$
+\State $int \ j \gets -1$
+\State $int[] \ betterIndeces \gets new \ int[2]$
+\For{$index \gets 0$ \textbf{to} $CYK.length$} 
+\For{$entries \gets 0$ \textbf{to} $CYK[amountOfErrors][index].length$} 
+\If{ $CYK[amountOfErrors][index][entries] == 0$}
+\State $betterIndeces \gets findBestIndeces(i, j, amountOfErrors, index)$
+\State $i \gets betterIndeces[0]$
+\State $j \gets betterIndeces[1]$
+\EndIf
+\State $temp \gets CYK.length - 1 - amountOfErrors$
+\If{$CYK[index][temp][entries] == 0}$
+\State $betterIndeces \gets findBestIndeces(i, j, index, temp)$
+\State $i \gets betterIndeces[0]$
+\State $j \gets betterIndeces[1]$
+\EndIf
+\EndFor          
+\EndFor
+\If{$i == -1$}
+\State $Integer[] \ noAcceptedWord \gets new \ Integer[1]$
+\State $noAcceptedWord[0] \gets -1$
+\State \Return $noAcceptedWord$
+\EndIf
+
+\State $int from \gets Math.min(i, j)$
+\State $int to \gets Math.max(i, j)$
+\State $Integer[] acceptedWord \gets new \ Integer[to - from + 1]$
+\If{$from == to$}
+\For{$k \gets 1 \textbf{to} inputAsInt.length$}
+\If{$inputAsInt[k] != null \textbf{ and } inputAsInt[k] == 0$}
+\State $acceptedWord[k] \gets inputAsInt[k]$
+\State $break$
+\EndIf
+\EndFor
+\State \Return $acceptedWord$
+\EndIf
+
+\For{$k \gets 1 \textbf{to} to - from$}
+\If{$inputAsInt[k + from] != null$}
+\State $acceptedWord[k] \gets inputAsInt[k + from]$
+\EndIf
+\EndFor
+\State \Return $acceptedWord$
+
+\end{algorithmic}
+\end{algorithm}
+
+
 
 
 
