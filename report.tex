@@ -1404,7 +1404,48 @@ The distance of the entry in the CYK-table that contains the start symbol and th
 The exchange method works iterative and iterates over every symbol of the input word and tries ever terminal symbol on each index. The method can only exchange one symbol. First, the symbol and each entry in the CYK-table that concluded from this symbol in the input word are deleted. For this, the corresponding entries are replaced with $-1$. Then the fields that are assigned with $-1$ in the CYK-table get calculated with a new input symbol, which replaces the original one. 
 If a success is found, the accepted word is returned. 
 
+In algorithm \ref{alg:buns} the adapted version of the bottomUp parser can be seen as pseudo code. In this methos, a symbol from the input word got replaced by a new symbol (which is the parameter \texttt{newSymbol}). All the entries, that relied on this symbol were replaced by $-1$ before and this version of the bottomUp parser examines the new entries of these field to produce a full CYK-table for the new input word without calculating the already known parts again.
 
+
+\begin{center}
+\captionof{algorithm}{parseBUnewSymbol(Integer[][][] DP, int newSymbol)}\label{alg:buns}
+\begin{algorithmic}[1]
+\State $wordlength \gets word.length$ 
+\For{$i \gets 0$ \textbf{to} $wordlength$}
+\If{$DP[i][i][0] != null \textbf{ and } DP[i][i][0] == -1$}
+\State $DP[i][i][0] \gets newSymbol$
+\EndIf
+\EndFor
+
+\For{$l \gets 0$ \textbf{to} $wordlength$}
+\For{$i \gets 0$ \textbf{to} $wordlength - l$}
+\State $j \gets i + l$
+\If{$DP[i][j][0] != null \textbf{ and } DP[i][j][0] == -1$}
+\For{$k \gets 0$ \textbf{to} $j$}
+
+\For{$head \gets 0$ \textbf{to} $ruleset.length$}
+\For{$body \gets 0$ \textbf{to} $ruleset[head].length$}
+\State $conter \gets counter + 1$
+\If{$ruleset[indexNT][bodyIndex][0] \  != null$ \newline \hspace*{5em} \textbf{and} $ruleset[indexNT][bodyIndex][1] \  != null$}
+\State $first \gets ruleset[head][body].charAt[0]$
+\State $second \gets ruleset[head][body][1]$
+\If{$DP[i][k] \ contains \ first$ \textbf{and} $DP[k+1][j] \ contains \ second$}
+\State assign head to $DP[i][j][c]$
+\EndIf
+\EndIf
+\EndFor
+\EndFor
+\EndFor
+\EndIf
+\EndFor
+\EndFor
+\If{$DP[0][wordlength-1] \  contains \ 0$}
+\State \Return true
+\EndIf
+\State \Return false
+\end{algorithmic}
+\hrulefill
+\end{center}
 
 
 
