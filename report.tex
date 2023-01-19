@@ -942,7 +942,7 @@ In this section the calculated runtimes in $O$-notation from Section \ref{system
 The following tables show some tests that were run with the different parsing methods and grammars. The first of each column for the method shows the truth value that is returned (as T for true and F for false), C represents the counter and T the time in ms.
 \\
 \\
-Well-Balanced-Parantheses: \\
+\textbf{Well-Balanced-Parantheses:} \\
 \texttt{"SSS" "SLA" "SLR" "ASR" "L(" "R)" "($^*$)$^*$"}
 \ \\ \\
 \begin{small}
@@ -970,7 +970,39 @@ Word & Length & N & NC & NT & B & BC & BT & T & TC & TT \\
 \end{tabular}
 \end{small}
 
-The input word with a length of 40 did not terminate over night for the naive approach. The corresponding graph to the data in the table is shown here:
+The input word with a length of $40$ did not terminate over night for the naive approach. The corresponding graphs to the data in the table are shown here:
+\\
+\begin{figure}[H]
+\includegraphics[scale=0.5]{diagrams/WBP_1.png}
+\caption{Well-Balanced-Parantheses with input \texttt{()}, \texttt{(())}, \texttt{((()))} and \texttt{(((())))}}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{diagrams/WBP_2.png}
+\caption{Well-Balanced-Parantheses with input of length $20$, $30$ and $40$}
+\end{figure}
+
+\begin{small}
+\begin{tabular}{|c|c||c|c|c||c|c|c||c|c|c|}
+\hline
+Word & Length & N & NC & NT & B & BC & BT & T & TC & TT \\
+\hline
+\hline
+(()) & 4 & T & 33 & 0ms & T & 168 & 7ms & T & 28 & 5ms \\
+\hline
+(())(()) & 8 & T & 89 & 1ms & T & 1680 & 7ms & T & 60 & 2ms \\
+\hline
+(())(())(()) & 12 & T & 145 & 1ms & T & 6072 & 14ms & T & 92 & 3ms \\
+\hline
+(())(())(())(()) & 16 & T & 201 & 15ms & T & 14.880 & 13ms & T & 124 & 3ms \\
+\hline
+(())(())(())(())(()) & 20 & T & 257 & 15ms & T & 29.640 & 21ms & T & 156 & 4ms \\
+\hline
+(())(())(())(())(())(()) & 24 & T & 313 & 16ms & T & 51.888 & 22ms & T & 188 & 5ms \\
+\hline
+
+\end{tabular}
+\end{small}
 
 \begin{figure}[H]
 \includegraphics[scale=0.5]{diagrams/BP_1.png}
@@ -979,24 +1011,58 @@ The input word with a length of 40 did not terminate over night for the naive ap
 
 \begin{figure}[H]
 \includegraphics[scale=0.5]{diagrams/BP_2.png}
+\caption{Well-Balanced-Parantheses with input of length $16$, $20$ and $24$}
 \end{figure}
 
 \begin{figure}[H]
 \includegraphics[scale=0.5]{diagrams/BP_C.png}
+\caption{Well-Balanced-Parantheses with input of length $4$, $8$, $12$, $16$, $20$ and $24$}
 \end{figure}
 
-other stuff
+
+\textbf{Stupid grammar:} \\
+\texttt{"SST" "STS" "Ta"}
+\ \\ \\
+\begin{tabular}{|c|c||c|c|c||c|c|c||c|c|c|}
+\hline
+Word & Length & N & NC & NT & B & BC & BT & T & TC & TT \\
+\hline
+\hline
+a & 1 & F & 1 & 1ms & F & 0 & 6ms & F & 1 & 5ms \\
+\hline
+aa & 2 & F & 4 & 1ms & F & 4 & 8ms & F & 4 & 2ms \\
+\hline
+aaaa & 4 & F & 33 & 5ms & F & 28 & 6ms & F &27 & 1ms \\
+\hline
+aaaaaaaa & 8 & F & 1.596 & 8ms & F & 308 & 5ms & F & 197 & 1ms \\
+\hline
+aaaaaaaaaaaaaaaa & 16 & F & 3.524.577 & 89ms & F & 2.660 & 15ms & F & 1.481 & 1ms \\
+\hline
+aaaaaaa...aaaaaaaaa & 32 &  & & & F & 41.664 & 25ms & F & 11.409 & 4ms \\
+\hline
+\end{tabular}
+
+The input word with a length of $32$ did not terminate for the naive approach. The corresponding graphs to the data in the table are shown below.
+
 
 \begin{figure}[H]
-\includegraphics[scale=0.5]{diagrams/WBP_1.png}
+\includegraphics[scale=0.5]{diagrams/SG_1.png}
+\caption{Stupid grammar with input \texttt{a}, \texttt{aa} and \texttt{aaaa}}
 \end{figure}
 
 \begin{figure}[H]
-\includegraphics[scale=0.5]{diagrams/WBP_2.png}
+\includegraphics[scale=0.5]{diagrams/SG_2.png}
+\caption{Stupid grammar with input of length $8$, $16$ and $32$}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{diagrams/SG_C.png}
+\caption{Stupid grammar with input of length $1$, $2$, $4$, $8$, $16$,  and $32$}
 \end{figure}
 
 
-Linear grammar example (abc-grammar): \\
+
+\textbf{Linear grammar example (abc-grammar):} \\
 \texttt{"SAc" "Sb" "AaS" "AaB" "BbS" "a$^*$b$^*$c$^*$"}
 \ \\ \\
 \begin{small}

@@ -22,16 +22,16 @@
 \contentsline {subsubsection}{\numberline {3.3.8}Bottom-Up runtime}{17}{subsubsection.3.3.8}%
 \contentsline {section}{\numberline {4}Evaluation}{18}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Experiments}{18}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}$O$-notation and runtime comparison}{21}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Results}{23}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Results for linear grammars}{24}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Error correction}{25}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Deletion}{25}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Exchange}{27}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Conclusion and Future Work}{29}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Conclusion}{29}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Future work}{29}{subsection.6.2}%
-\contentsline {section}{Bibliography}{30}{section*.6}%
-\contentsline {section}{\numberline {A}How to use the code?}{31}{appendix.A}%
-\contentsline {section}{\numberline {B}Graphs and additional results}{33}{appendix.B}%
-\contentsline {section}{\numberline {C}CNF Algorithm on an example}{35}{appendix.C}%
+\contentsline {subsection}{\numberline {4.2}$O$-notation and runtime comparison}{22}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Results}{25}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Results for linear grammars}{26}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Error correction}{27}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Deletion}{27}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Exchange}{29}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Conclusion and Future Work}{31}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Conclusion}{31}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Future work}{31}{subsection.6.2}%
+\contentsline {section}{Bibliography}{32}{section*.9}%
+\contentsline {section}{\numberline {A}How to use the code?}{33}{appendix.A}%
+\contentsline {section}{\numberline {B}Graphs and additional results}{35}{appendix.B}%
+\contentsline {section}{\numberline {C}CNF Algorithm on an example}{37}{appendix.C}%
