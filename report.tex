@@ -1436,13 +1436,14 @@ For these results it needs to be considered, that the $O$-notation states the bo
 \subsection{Results for linear grammars}
 \label{results_linear}
 
-The upper bound runtime of the modified topdown parser for linear grammars is faster than the runtimes of the parser for grammars in CNF. The topdown runtime is in $O(n^3)$ and the modified topdown approach should be in $O(n^3)$. In the linear approach are one instead of two recursive call per execution made, because the linear grammars have at most one nonterminal symbol in the body of each rule. The recursive call needs only to be made for the nonterminal symbols. 
-This is why the upper bound runtime if the topdown approach for linear grammars is in $O(n^3)$, while the topdown approach for grammars in CNF is in $O(n!)$.
+The upper bound runtime of the modified topdown parser for linear grammars is the same as the runtime in $O$-notation of the parser for grammars in CNF: $O(n^3)$. In the linear approach are one instead of two recursive call per execution made, because the linear grammars have at most one nonterminal symbol in the body of each rule. The recursive call needs only to be made for the nonterminal symbols. 
 
+The experiments in section \ref{experiments} show, that the linear topdown approach seems to perform faster than the not modified approach. This was also shown and compared in section \ref{runtime}.
 
-Surprisingly, the experiments with the modified parsing method do not show the expected results. The linear topdown approach seems to perform faster than the not modified approach, but with more function calls. This seems unlikely, because the recursive calls of the function are reduced from two to one in the modified approach. The faster performance can be due to hidden background processes on the computer. The amount of calls on the other hand should be lower than the amount of calls in the not modified topdown parser. This leads to the assumption, that the modified topdown parser is not working correctly.
+For this comparison, both parsers took a linear grammar as input. For the topdown parser, the grammar was translated into CNF while the linear topdown parser is restricted to linear grammars as input. With the restriction to linear grammars, the recursive calls in the linear parser can be reduced from two to one in each call.
 
-The parsing from a linear grammar into CNF works correctly. As seen in the experiments, the input of linear grammars or grammars in CNF have no significantly influence on the runtime of the parsing methods. The naive parser is in both cases called for every option recursively. The bottomup parser iterates in both cases over the whole CYK-table and the topdown parser makes two recursive calls per call.  
+It is to consider that the $O$-notation represents the upper bound of the runtime. Algorithms can run faster than the runtime in $O$-notation predicts. This is why the linear topdown parser performs better than the topdown parser, even though both are in $O(n^3)$.
+
 
 %---------------------------------------------------------------------%
 
