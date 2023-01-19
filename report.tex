@@ -1090,27 +1090,59 @@ The input word with a length of $32$ did not terminate for the naive approach. T
 
 
 
-\textbf{Linear grammar example (abc-grammar):} \\
-\texttt{"SAc" "Sb" "AaS" "AaB" "BbS" "a$^*$b$^*$c$^*$"}
-\ \\ \\
+%\textbf{Linear grammar example (abc-grammar):} \\
+%\texttt{"SAc" "Sb" "AaS" "AaB" "BbS" "a$^*$b$^*$c$^*$"}
+%\ \\ \\
+%\begin{small}
+%\begin{tabular}{|c|c||c|c||c|c||c|c||c|c|c|}
+%\hline
+%Word & Length & NC & NT & BC & BT & TC & TT & LC & LT \\
+%\hline
+%\hline
+%abc & 3 & 6 & 1ms & 60 & 5ms & 6 & 3ms & 5 & 0ms \\
+%\hline
+%aabbcc & 6 & 51 & 1ms & 660 & 5ms & 49 & 3ms & 51 & 1ms \\
+%\hline
+%aaaabbbbcccc & 12 & 1.457 & 1ms & 6.072 & 9ms & 518 & 3ms & 650 & 1ms \\
+%\hline
+%a...b...c... & 24 & 481.557 & 9ms & 51.888 & 20ms & 4.312 & 4ms & 6.732 & 3ms \\
+%\hline
+%\end{tabular}
+%\end{small}
+
+%The incrementations of the input word length was chosen, to show the difference in the performance of the parsing methods for similar structured input but different input length.
+
+\textbf{Linear grammar example (aaa-grammar):}
+\texttt{"SAa" "ABa" "Ba"}
+
+This grammar accepts only the input word \texttt{aaa}. Every other input gets rejected.
+
 \begin{small}
 \begin{tabular}{|c|c||c|c||c|c||c|c||c|c|c|}
 \hline
 Word & Length & NC & NT & BC & BT & TC & TT & LC & LT \\
 \hline
 \hline
-abc & 3 & 6 & 1ms & 60 & 5ms & 6 & 3ms & 5 & 0ms \\
+a & 1 & 1 & 1ms & 0 & 5ms & 1 & 2ms & 1 & 1ms \\
 \hline
-aabbcc & 6 & 51 & 1ms & 660 & 5ms & 49 & 3ms & 51 & 1ms \\
+aa & 2 & 2 & 0ms & 4 & 4ms & 2 & 2ms & 2 & 1ms \\
 \hline
-aaaabbbbcccc & 12 & 1.457 & 1ms & 6.072 & 9ms & 518 & 3ms & 650 & 1ms \\
+aaa & 3 & 6 & 2ms & 20 & 5ms & 6 & 3ms & 4 & 1ms \\
 \hline
-a...b...c... & 24 & 481.557 & 9ms & 51.888 & 20ms & 4.312 & 4ms & 6.732 & 3ms \\
+aaaa & 4 & 10 & 0ms & 56 & 5ms & 10 & 2ms & 7 & 1ms \\
 \hline
-\end{tabular}
-\end{small}
+aaaaaaaa & 8 & 36 & 0ms & 560 & 6ms & 36 & 4ms & 29 & 2ms \\
+\hline
+aaaaaaaaaaaa & 12 & 78 & 1ms & 2.024 & 15ms & 78 & 3ms &  67 & 1ms \\
+\hline
+aaaaa...aaaaa & 16 & 136 & 1ms & 4.960 & 13ms & 136 & 3ms & 121 & 2ms \\
+\hline
+aaaaa...aaaaa & 20 & 210 & 2ms & 9.880 & 13ms & 210 & 3ms & 191 & 2ms \\
+\hline
+%\hline
+%\end{tabular}
+%\end{small}
 
-The incrementations of the input word length was chosen, to show the difference in the performance of the parsing methods for similar structured input but different input length.
 
 
 
@@ -1688,175 +1720,9 @@ If the input grammar is a linear grammar, the program checks if it is in \textit
 
 
 
-\newpage
-\section{Graphs and additional results}
-\label{previousresults}
-
-
-The following tables show some tests that were run with the different parsing methods and grammars. The first of each column for the method shows the truth value that is returned (as T for true and F for false), C represents the counter and T the time in ms. Those tests were run before the BottomUp method was working correctly.
-\\
-\\
-Well-Balanced-Parantheses: \\
-\\
-\begin{small}
-\begin{tabular}{|c|c||c|c|c||c|c|c||c|c|c|}
-\hline
-Word & Length & N & NC & NT & B & BC & BT & T & TC & TT \\
-\hline
-\hline
-() & 2 & T & 6 & 5ms & T & 0 & 2ms & T & 6 & 1ms \\
-\hline
-(()) & 4 & T & 33 & 4ms & T & 84 & 3ms & T & 28 & 1ms \\
-\hline
-((())) & 6 & T & 212 & 6ms & T & 360 & 6ms & T & 84 & 1ms \\
-\hline
-(((()))) & 8 & T & 1295 & 6ms & T & 924 & 9ms & T & 190 & 1ms \\
-\hline
-((((())))) & 10 & T & 7666 & 9ms & T & 1872 & 11ms & T & 362 & 1ms \\
-\hline
-((...)) & 20 & T & 51.863.993 & 1.049ms & T & 15.732 & 23ms & T & 2.772 & 3ms \\
-\hline
-((...)) & 30 & T & 348.838.486.712 & 3.699.571ms & T & 102.660 & 32ms & T & 9.232 & 5ms \\
-\hline
-((...)) & 40 & & & & T & 127.452 & 50ms & T & 21.743 & 4ms \\
-\hline
-\end{tabular}
-\end{small}
-
-The input word with a length of 40 did not terminate over night for the naive approach.
-
-
-
-Stupid grammar: \\
-\\
-\begin{tabular}{|c|c||c|c|c||c|c|c||c|c|c|}
-\hline
-Word & Length & N & NC & NT & B & BC & BT & T & TC & TT \\
-\hline
-\hline
-aaaa & 4 & F & 33 & 5ms & F & 28 & 6ms & F &27 & 1ms \\
-\hline
-aaaaaaaa & 8 & F & 1.596 & 8ms & F & 308 & 5ms & F & 197 & 1ms \\
-\hline
-aaaaaaaaaaaaaaaa & 16 & F & 3.524.577 & 89ms & F & 2.660 & 15ms & F & 1.481 & 1ms \\
-\hline
-\end{tabular}
-\ \\
-\\
-Simple grammar:\\
-\texttt{S $\rightarrow$ aA  \hspace*{1em} A $\rightarrow$ Sb \hspace*{1em} A $\rightarrow$ b} \ \\
-\\
-\begin{small}
-\begin{tabular}{|c|c||c|c||c|c||c|c||c|c|c|}
-\hline
-Word & Length & NC & NT & BC & BT & TC & TT & LC & LT \\
-\hline
-\hline
-ab & 2 & 3 & 0ms  & 8 & 7ms & 3 & 3ms & 2 & 0ms \\
-\hline
-aabb & 4 & 8 & 1ms & 112 & 7ms & 8 & 3ms & 8 & 0ms \\ 
-\hline
-aaaabbbb & 8 & 58 & 0ms & 1.120 & 7ms & 50 & 2ms & 84 & 1ms \\
-\hline
-a...b & 16 & 3.144 & 1ms & 9.920 & 11ms & 486 & 3ms & 940 & 1ms \\
-\hline
-a...b & 32 & 7.048.930 & 69ms & 83.328 & 26ms & 4.558 & 6ms & 9.052 & 2ms \\
-\hline
-\end{tabular}
-\end{small}
-
-
-\subsection*{Graphs:}
-\label{graph}
-\begin{tikzpicture}
-\begin{axis}[
-    title={Well-Balanced-Parantheses:},
-    xlabel={Wordlength},
-    ylabel={Counter},
-    xmin=0, xmax=30,
-    ymin=0, ymax=8000,
-    xtick={0,5,10,15,20,25,30},
-    ytick={0, 1000,2000,3000,4000,5000, 6000, 7000},
-    legend pos=north west,
-    ymajorgrids=true,
-    grid style=dashed,
-]
-
-\addplot[
-    color=blue,
-    mark=square,
-    ]
-    coordinates {
-    (2,6)(4, 33)(6, 212)(8, 1295)(10, 7666)
-    };
-
-    
-\addplot[
-    color=red,
-    mark=square,
-    ]
-    coordinates {
-    (2,0)(4, 84)(6, 360)(8, 924)(10, 1872)(20,15000)
-    };
-
-    
-\addplot[
-    color=green,
-    mark=square,
-    ]
-    coordinates {
-    (2,6)(4, 28)(6, 84)(8, 190)(10, 362)(20,2772)(40, 21742)
-    };
-    \legend{Naive, BottomUp, TopDown}
-    
-\end{axis}
-\end{tikzpicture}
-
-\ \\
-
-\begin{tikzpicture}
-\begin{axis}[
-    title={Stupid Grammar:},
-    xlabel={Wordlength},
-    ylabel={Counter},
-    xmin=0, xmax=15,
-    ymin=0, ymax=25000,
-    xtick={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
-    ytick={0, 5000,10000,15000,20000,25000},
-    legend pos=north west,
-    ymajorgrids=true,
-    grid style=dashed,
-]
-
-\addplot[
-    color=blue,
-    mark=square,
-    ]
-    coordinates {
-    (4,33)(8, 1596)(16, 524577)
-    };
-
-    
-\addplot[
-    color=red,
-    mark=square,
-    ]
-    coordinates {
-    (4,28)(8, 308)(16, 2660)
-    };
-
-    
-\addplot[
-    color=green,
-    mark=square,
-    ]
-    coordinates {
-    (4,27)(8, 197)(16, 1481)
-    };
-    \legend{Naive, BottomUp, TopDown}
-    
-\end{axis}
-\end{tikzpicture}
+% \newpage
+% \section{Graphs and additional results}
+% \label{previousresults}
 
 
 
