@@ -661,11 +661,22 @@ Calculating the runtime:
 & \in O(2^n)
 \end{align*}
 
+The runtime of the naive method is in $O(2^n)$ in worst case scenario.
+
+
 \end{minipage}
 
-The runtime of the naive method is in $O(2^n)$ in worst case scenario.
-The parser has a recursive call with a for loop with $n \cdot k$ iterations. At each recursive call of the parsing method the for loop is halved and the recursive call is doubled. 
- This results in a total of $2^n$ recursive calls and each recursive call takes $O(n)$ time so the total runtime will be $O(n*2^n)$ which is in $O(2^n)$.
+The parser has a recursive call with a for loop with $n \cdot k$ iterations. At each recursive call of the parsing method the for loop is halved and the recursive call is doubled. This can be visualized as a recursion tree in which each node has two children.
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{images/rt.png}
+\caption{Recursion tree}
+\end{center}
+\end{figure}
+
+This results in a total of $2^n$ recursive calls and each recursive call takes $O(n)$ time so the total runtime will be $O(n*2^n)$ which is in $O(2^n)$.
 
 %---------------------------------------------------------------------%
 
