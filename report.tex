@@ -760,36 +760,9 @@ The complete topdown algorithm is shown as pseudo code below. In the inner for-l
 \label{topdownruntime}
 
 In this part the runtime of the topdown method is calculated.
-The variable $n$ represents the length of the input word and $k$ the dimension of the rule array. The first part of the calculation shows the recursion call method.
-
-\ \\ \\
-\begin{minipage}{0.5\textwidth}
-
-\begin{tabular}{|c|c|l|}
-\hline
-Line & Runtime & Type \\
-\hline
-1 &  1 & Assignment \\
-2 & k & Loop \\
-3 & k $\cdot$ n & Loop \\
-4 & k $\cdot$ n $\cdot$ n &  Loop\\
-5 & k $\cdot$ n $\cdot$ n $\cdot$ 1 & Assignment\\
-9 & ... & Function call\\
-\hline
-\end{tabular}
-
-
-\end{minipage}\begin{minipage}{0.5\textwidth}
-Calculating the runtime of the method call:
-\begin{align*}
-& 1 + k + k \cdot n + k \cdot n \cdot n + k \cdot n \cdot n \\
-& = 1 + k + k \cdot n + 2(n^2 \cdot k) \\
-& \in O(n^2)
-\end{align*}
-\end{minipage}
-\ \\
-
-The runtime analysis for the upper bound of the \texttt{parseTD} method is analogue to the \texttt{parseNaive} runtime analysis. According to this the topdown algorithm has an upper bound runtime in $O(n!)$, too.
+The variable $n$ represents the length of the input word. 
+The runtime of the topdown parser is in $O(n^3)$, because the function is using a memoization table of the size $n \times n \times n$. The table stores the results of already computed subproblems.
+The parser iterates over all elements of the table. For each entry, it calls itself recursively and looks up the value in the memoization table, which takes constant time $O(1)$. Because the table is of size $n \times n \times n =n^3$, the time complexity of the function is in $O(n^3)$.
 
 
 
