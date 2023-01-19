@@ -961,7 +961,11 @@ The runtime of the \texttt{parseBU} method is in $O(n^3)$.
 \section{Evaluation}
 \label{evaluation}
 
-In this section the calculated runtimes in $O$-notation from Section \ref{systemdesign} and experiments are compared. More information and definitions on the $O$-notation can be read in \textit{Big O Notation} from P. Danziger \cite{bigO}.
+In this section the calculated runtimes in $O$-notation from Section \ref{systemdesign} and experiments are compared. 
+First, in section \ref{experiments}, the results of different grammars and input words are presented in tables and as graphs.
+In section \ref{runtime} the results of section \ref{experiments} and the calculated runtimes in $O$-notation from Section \ref{systemdesign} are compared.
+
+More information and definitions on the $O$-notation can be read in \textit{Big O Notation} from P. Danziger \cite{bigO}.
 
 
 \subsection{Experiments}
@@ -972,7 +976,16 @@ The following tables show some tests that were run with the different parsing me
 \\
 \textbf{Well-Balanced-Parantheses:} \\
 \texttt{"SSS" "SLA" "SLR" "ASR" "L(" "R)" "($^*$)$^*$"}
-\ \\ \\
+
+The Well-Balanced-Parantheses grammar accepts words, that contain a closed bracket \texttt{)} for each opened bracket \texttt{(}. The closed bracket has to appear after the accorsing opened bracket.
+
+Different length and combinations of accepted input words were evaluated by the different parsing methods and the tables and graphs are shown below.
+
+In the following table and graphs, variations of the input word \texttt{($^*$)$^*$} were evaluated.
+
+
+
+
 \begin{small}
 \begin{tabular}{|c|c||c|c|c||c|c|c||c|c|c|}
 \hline
@@ -1001,14 +1014,20 @@ Word & Length & N & NC & NT & B & BC & BT & T & TC & TT \\
 The input word with a length of $40$ did not terminate over night for the naive approach. The corresponding graphs to the data in the table are shown here:
 \\
 \begin{figure}[H]
-\includegraphics[scale=0.5]{diagrams/WBP_1.png}
+\begin{center}
+\includegraphics[scale=0.4]{diagrams/WBP_1.png}
+\end{center}
 \caption{Well-Balanced-Parantheses with input \texttt{()}, \texttt{(())}, \texttt{((()))} and \texttt{(((())))}}
 \end{figure}
 
 \begin{figure}[H]
-\includegraphics[scale=0.5]{diagrams/WBP_2.png}
+\begin{center}
+\includegraphics[scale=0.4]{diagrams/WBP_2.png}
+\end{center}
 \caption{Well-Balanced-Parantheses with input of length $20$, $30$ and $40$}
 \end{figure}
+
+In the following table and graphs, variations of the input word \texttt{(())$^*$} were evaluated.
 
 \begin{small}
 \begin{tabular}{|c|c||c|c|c||c|c|c||c|c|c|}
@@ -1032,25 +1051,47 @@ Word & Length & N & NC & NT & B & BC & BT & T & TC & TT \\
 \end{tabular}
 \end{small}
 
+\begin{minipage}{0.45\textwidth}
+
 \begin{figure}[H]
-\includegraphics[scale=0.5]{diagrams/BP_1.png}
+\begin{center}
+\includegraphics[scale=0.28]{diagrams/BP_1.png} 
 \caption{Well-Balanced-Parantheses with input \texttt{(())}, \texttt{(())(())} and \texttt{(())(())(())}}
+\end{center}
+
 \end{figure}
 
-\begin{figure}[H]
-\includegraphics[scale=0.5]{diagrams/BP_2.png}
-\caption{Well-Balanced-Parantheses with input of length $16$, $20$ and $24$}
-\end{figure}
+\end{minipage}\begin{minipage}{0.1\textwidth}
+\ 
+\end{minipage}\begin{minipage}{0.45\textwidth}
 
 \begin{figure}[H]
-\includegraphics[scale=0.5]{diagrams/BP_C.png}
-\caption{Well-Balanced-Parantheses with input of length $4$, $8$, $12$, $16$, $20$ and $24$}
+\begin{center}
+\includegraphics[scale=0.28]{diagrams/BP_2.png}
+\caption{Well-Balanced-Parantheses with input words of length $16$, $20$ and $24$ \\ \ }
+\end{center}
+
 \end{figure}
+
+\end{minipage}
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.4]{diagrams/BP_C.png}
+\end{center}
+\caption{Well-Balanced-Parantheses with input of length $4$, $8$, $12$, $16$, $20$ and $24$ }
+\end{figure}
+
 
 
 \textbf{Stupid grammar:} \\
 \texttt{"SST" "STS" "Ta"}
-\ \\ \\
+
+The stupid grammar accepts no input word, because the nonterminal symbol \texttt{S} cannot be resolved into a terminal symbol. The only terminal symbol of this grammar is the symbol \texttt{a}.
+
+The input word with a length of $32$ did not terminate for the naive approach. The corresponding graphs to the data in the table are shown below.
+
 \begin{tabular}{|c|c||c|c|c||c|c|c||c|c|c|}
 \hline
 Word & Length & N & NC & NT & B & BC & BT & T & TC & TT \\
@@ -1070,21 +1111,34 @@ aaaaaaa...aaaaaaaaa & 32 &  & & & F & 41.664 & 25ms & F & 11.409 & 4ms \\
 \hline
 \end{tabular}
 
-The input word with a length of $32$ did not terminate for the naive approach. The corresponding graphs to the data in the table are shown below.
 
+\begin{minipage}{0.45\textwidth}
 
 \begin{figure}[H]
-\includegraphics[scale=0.5]{diagrams/SG_1.png}
+\begin{center}
+\includegraphics[scale=0.28]{diagrams/SG_1.png}
+\end{center}
 \caption{Stupid grammar with input \texttt{a}, \texttt{aa} and \texttt{aaaa}}
 \end{figure}
 
+\end{minipage}\begin{minipage}{0.1\textwidth}
+\ 
+\end{minipage}\begin{minipage}{0.45\textwidth}
+
 \begin{figure}[H]
-\includegraphics[scale=0.5]{diagrams/SG_2.png}
+\begin{center}
+\includegraphics[scale=0.28]{diagrams/SG_2.png}
+\end{center}
 \caption{Stupid grammar with input of length $8$, $16$ and $32$}
 \end{figure}
 
+\end{minipage}
+
+
 \begin{figure}[H]
-\includegraphics[scale=0.5]{diagrams/SG_C.png}
+\begin{center}
+\includegraphics[scale=0.4]{diagrams/SG_C.png}
+\end{center}
 \caption{Stupid grammar with input of length $1$, $2$, $4$, $8$, $16$,  and $32$}
 \end{figure}
 
@@ -1117,7 +1171,7 @@ The input word with a length of $32$ did not terminate for the naive approach. T
 
 This grammar accepts only the input word \texttt{aaa}. Every other input gets rejected.
 
-\begin{small}
+\begin{center}
 \begin{tabular}{|c|c||c|c||c|c||c|c||c|c|c|}
 \hline
 Word & Length & NC & NT & BC & BT & TC & TT & LC & LT \\
@@ -1139,11 +1193,15 @@ aaaaa...aaaaa & 16 & 136 & 1ms & 4.960 & 13ms & 136 & 3ms & 121 & 2ms \\
 \hline
 aaaaa...aaaaa & 20 & 210 & 2ms & 9.880 & 13ms & 210 & 3ms & 191 & 2ms \\
 \hline
-%\hline
-%\end{tabular}
-%\end{small}
+\end{tabular}
+\end{center}
 
-
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.4]{diagrams/LGBTQ.png}
+\end{center}
+\caption{Linear grammar example (aaa-grammar) on TopDown and linear TopDown parser}
+\end{figure}
 
 
 
