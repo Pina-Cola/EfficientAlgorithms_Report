@@ -771,9 +771,9 @@ The parser iterates over all elements of the table. For each entry, it calls its
 
 For the parsing of linear grammars, the topdown approach (Section \ref{topdowndescription}) was modified to reduce the amounts of recursive calls. The topdown approach was chosen, because it seems to have the best performance of the different parsing methods, considering the experiments.
 
-In the modified version for linear grammars, the grammar gets changed into CNF first. The modified algorithm can now work more efficient, because for each rule is only one recursive call of the method instead of two necessary.
+The modified algorithm can work more efficient, because for each rule only one recursive call is made instead of two necessary.
 
-For each rule it is checked if the first or the second element of the body is the head of a terminal rule. Then it is checked if the head of the terminal rule is the head of the current position on the input word. For the other symbol the methos gets called recursively. This part is shown in the pseudo code below:
+For each rule it is checked if the first or the second element of the body is  a terminal symbol. If it is a terminal symbol, the current position on the input word gets compared to this symbol and gets set to true if they are equal. This means, that the other symbol has to be a nonterminal symbol. For this nonterminal symbol, the method gets called recursively. Both statement get connected with an \texttt{and}, to fill in the memoization table.
 
 
 \begin{center}
