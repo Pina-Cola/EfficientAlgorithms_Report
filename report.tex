@@ -892,13 +892,11 @@ In the last lines (line 33-35) the last field of the $DP$-array gets checked. If
 \label{bottomupruntime}
 
 In the following part the upper bound runtime of the bottom up algorithm gets analysed.
-The variable $n$ represents the length of the input word and $k$ the dimension of the rule array. \\
-
-This algorithm has a runtime in $O(n^3)$ because it contains three nested loops. The outer loop and the middle loop iterate $n$ times and the inner loop iterates $j$ times, which depends on $n$, too. Because of this, the number of iterations is $n \cdot n \cdot n$ which is $O(n^3)$.
+The variable $n$ represents the length of the input word and $k$ the dimension of the rule array.
 
 \begin{minipage}{0.6\textwidth}
 
-\begin{small}
+\begin{tiny}
 \begin{tabular}{|c|c|l|}
 \hline
 Line & Runtime & Type \\
@@ -929,7 +927,7 @@ Line & Runtime & Type \\
 36  & 1 &  Return statement\\
 \hline
 \end{tabular}
-\end{small}
+\end{tiny}
 
 
 \end{minipage}\begin{minipage}{0.4\textwidth}
@@ -941,8 +939,8 @@ Calculating the runtime:
 \end{align*}
 
 \end{minipage}
-\ \\
-The runtime of the \texttt{parseBU} method is in $O(n^3)$.
+\ \\ \ \\
+The runtime of the \texttt{parseBU} method is in $O(n^3)$, because it contains three nested loops. The outer loop and the middle loop iterate $n$ times and the inner loop iterates $j$ times, which depends on $n$, too. Because of this, the number of iterations is $n \cdot n \cdot n$ which is $O(n^3)$.
 
 
 
