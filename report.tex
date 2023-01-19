@@ -972,49 +972,28 @@ Word & Length & N & NC & NT & B & BC & BT & T & TC & TT \\
 
 The input word with a length of 40 did not terminate over night for the naive approach. The corresponding graph to the data in the table is shown here:
 
-\begin{tikzpicture}
-\begin{axis}[
-    title={Well-Balanced-Parantheses:},
-    xlabel={Wordlength},
-    ylabel={Counter},
-    xmin=0, xmax=30,
-    ymin=0, ymax=8000,
-    xtick={0,5,10,15,20,25,30},
-    ytick={0, 1000,2000,3000,4000,5000, 6000, 7000},
-    legend pos=north west,
-    ymajorgrids=true,
-    grid style=dashed,
-]
+\begin{figure}[H]
+\includegraphics[scale=0.5]{diagrams/BP_1.png}
+\caption{Well-Balanced-Parantheses with input \texttt{(())}, \texttt{(())(())} and \texttt{(())(())(())}}
+\end{figure}
 
-\addplot[
-    color=blue,
-    mark=square,
-    ]
-    coordinates {
-    (2,6)(4, 33)(6, 212)(8, 1295)(10, 7666)
-    };
+\begin{figure}[H]
+\includegraphics[scale=0.5]{diagrams/BP_2.png}
+\end{figure}
 
-    
-\addplot[
-    color=red,
-    mark=square,
-    ]
-    coordinates {
-    (2,0)(4, 84)(6, 360)(8, 924)(10, 1872)(20,15000)
-    };
+\begin{figure}[H]
+\includegraphics[scale=0.5]{diagrams/BP_C.png}
+\end{figure}
 
-    
-\addplot[
-    color=green,
-    mark=square,
-    ]
-    coordinates {
-    (2,6)(4, 28)(6, 84)(8, 190)(10, 362)(20,2772)(40, 21742)
-    };
-    \legend{Naive, BottomUp, TopDown}
-    
-\end{axis}
-\end{tikzpicture}
+other stuff
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{diagrams/WBP_1.png}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{diagrams/WBP_2.png}
+\end{figure}
 
 
 Linear grammar example (abc-grammar): \\
