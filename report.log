@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.17)  19 JAN 2023 20:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.17)  19 JAN 2023 20:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2152,7 +2152,7 @@ Here is how much of TeX's memory you used:
  62888 multiletter control sequences out of 15000+600000
  534647 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,32n,103p,1235b,1954s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 99i,33n,103p,1235b,1954s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 , replaced by a fixed one
@@ -2189,7 +2189,7 @@ ic/amsfonts/cm/cmti12.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmti9.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/pinak/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (37 pages, 1288771 bytes).
+Output written on report.pdf (37 pages, 1288832 bytes).
 PDF statistics:
  684 PDF objects out of 1000 (max. 8388607)
  111 named destinations out of 1000 (max. 500000)

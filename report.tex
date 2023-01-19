@@ -1256,27 +1256,29 @@ To confirm the calculated runtimes from Section \ref{systemdesign}, the results 
 \textbf{Naive approach ($O(2^n)$):} \\
 Well-Balanced-Parantheses: 
 
-\begin{tabular}{|c|c|c|}
+There can be several several reasons why the actual runtime of a function may be larger than the $O$-notation.
+Constant factors are ignored: $O$-notation only gives an upper bound on the time complexity of a function and the runtime of a function depends on the input data. 
+$O$-notation is a tool to approximate the time complexity of a function, but it is not always accurate in predicting the actual runtime.
+
+The initial estimate in section \ref{naiveruntime} of the naive parser was $O(2^n \cdot n)$, which is in $O(2^n)$. 
+
+\begin{tabular}{|c|c|c|c|}
 \hline
-$n$ & $2^n$ & counter \\
+$n$ & $2^n$ & $2^n \cdot n$ counter \\
 \hline
-2& 4 & 6\\
-4& 16 & 33\\
-6& 64 & 212\\
-8& 256 & 1295\\
-10& 1.024 &7666 \\
-20& 1.048.576 & 51.863.993\\
-30& 1.073.741.824 & 348.838.486.712\\
+2& 4 & 8 & 6\\
+4& 16 & 64 & 33\\
+6& 64 & 384 & 212\\
+8& 256 & 2048 & 1295\\
+10& 1.024 & 10240 & 7666 \\
+20& 1.048.576 & 20.971.520 & 51.863.993\\
+30& 1.073.741.824 & 32.212.254.720 & 348.838.486.712\\
 \hline
 \end{tabular}
 
 
 The results of the experiments confirm the runtime calculation of $O(2^n)$ in Section \ref{naiveruntime}. 
-There can be several several reasons why the actual runtime of a function may be larger than the $O$-notation.
-Constant factors are ignored: $O$-notation only gives an upper bound on the time complexity of a function and the runtime of a function depends on the input data. 
-$O$-notation is a tool to approximate the time complexity of a function, but it is not always accurate in predicting the actual runtime.
 
-The initial estimate in section \ref{naiveruntime} of the naive parser was $O(2^n * n)$, which is in $O(2^n)$. 
 
 
 
@@ -1290,22 +1292,20 @@ Well-Balanced-Parantheses:
 \hline
 $n$ & $n^3$ & counter \\
 \hline
-2& 2 & 6\\
-4& 24 & 28\\
-6& 720 & 84\\
-8& 40.320 & 190\\
-10& 3.628.800 & 362 \\
-20& 2.432.902.008.176.640.000 & 2.772\\
-30& 265.252.859.812.191.058.636.308.480.000.000 & 9.232\\
+2& 8 & 6\\
+4& 64 & 28\\
+6& 216 & 84\\
+8& 512 & 190\\
+10& 1.000 & 362 \\
+20& 8.000 & 2.772\\
+30& 27.000 & 9.232\\
 \hline
 \end{tabular}
-
 
 The results of the experiments confirm the runtime calculation of $O(n^3)$ in Section \ref{topdownruntime}.
 
 
 
-\newpage
 \textbf{Bottomup approach ($O(n^3)$):} \\
 
 
