@@ -640,10 +640,10 @@ Line & Runtime & Type \\
 5 & $1$ $\cdot$ $k$ & Return statement\\
 9 & $k$ & Loop \\
 10 & $1$ $\cdot$ $k$ & comparison \\
-11 & 1 $\cdot$ $k$ & Assignment \\
-12 & 1 $\cdot$ $k$ & Assignment\\
-13 & n $\cdot$ $k$ & Loop \\
-14 & $n!$ & Recusrsive call \\
+11 & $1 \cdot$ $k$ & Assignment \\
+12 & $1 \cdot$ $k$ & Assignment\\
+13 & $n \cdot$ $k$ & Loop \\
+14 & $n!$ & Recursive call \\
 15 & $1$ $\cdot$ $n$ $\cdot$ $k$ & Return statement\\
 21 & $1$ & Return statement \\
 \hline
@@ -1058,7 +1058,7 @@ Word & Length & N & NC & NT & B & BC & BT & T & TC & TT \\
 \ \\
 
 
-In the graphs below it can be seen, that the naive and topdown parser perform quicker than the bottomUp parser.
+In the graphs below it can be seen, that the naive and topdown parser perform quicker than the bottomup parser for the tested input words.
 
 \begin{minipage}{0.45\textwidth}
 
@@ -1402,7 +1402,7 @@ Method & Runtime \\
 \texttt{parseNaive} & $O(n!)$\\
 \texttt{ParseTD} & $O(n!)$ \\
 \texttt{ParseBU} & $O(n^3)$\\
-\texttt{ParseLinearTD} & $O(n^3)$\\
+\texttt{ParseLinearTD} & $O(n^2)$\\
 \hline
 \end{tabular}
 \end{minipage}
