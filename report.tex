@@ -666,17 +666,21 @@ The runtime of the naive method is in $O(2^n)$ in worst case scenario.
 
 \end{minipage}
 
-The parser has a recursive call with a for loop with $n \cdot k$ iterations. At each recursive call of the parsing method the for loop is halved and the recursive call is doubled. This can be visualized as a recursion tree in which each node has two children.
+The parser has a recursive call with a for loop with $n \cdot k$ iterations. At each recursive call of the parsing method the for loop is halved and the recursive call is doubled. This can be visualized as a recursion tree in which each node has two children,which can be seen in figure \ref{rt}.
+This results in a total of $2^n$ recursive calls and each recursive call takes $O(n)$ time so the total runtime will be $O(n*2^n)$ which is in $O(2^n)$.
 
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{images/rt.png}
-\caption{Recursion tree}
+\caption{Recursion tree \cite{picrt}}
+\label{rt}
 \end{center}
 \end{figure}
 
-This results in a total of $2^n$ recursive calls and each recursive call takes $O(n)$ time so the total runtime will be $O(n*2^n)$ which is in $O(2^n)$.
+Yes, the recursion tree for this function can be visualized as a tree where the root node represents the initial call to the function with the entire input string as its parameters. Each level of the tree represents a recursive call to the function, where the number of child nodes at each level is determined by the number of possible splits of the input string being considered at that level. The number of children of each node is equal to the number of possible splits of the input string. This means that each node has 2 children, as the function checks all possible splits of the input string at each level of recursion, so the number of nodes in the tree will be 2^n which makes the time complexity of the function O(2^n).
+
+
 
 %---------------------------------------------------------------------%
 

@@ -226,6 +226,27 @@
       \field{title}{Lecture slides in Formale Methoden der Informatik}
       \field{year}{2011}
     \endentry
+    \entry{picrt}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8005eeb4605f9a40bcdb45de45948c24}{%
+           family={Vidyalay},
+           familyi={V\bibinitperiod},
+           given={Gate},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8005eeb4605f9a40bcdb45de45948c24}
+      \strng{fullhash}{8005eeb4605f9a40bcdb45de45948c24}
+      \strng{bibnamehash}{8005eeb4605f9a40bcdb45de45948c24}
+      \strng{authorbibnamehash}{8005eeb4605f9a40bcdb45de45948c24}
+      \strng{authornamehash}{8005eeb4605f9a40bcdb45de45948c24}
+      \strng{authorfullhash}{8005eeb4605f9a40bcdb45de45948c24}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://www.gatevidyalay.com/recursion-tree-solving-recurrence-relations/}, opened on 17.01.2023}
+      \field{title}{Image Source: Recursion tree}
+    \endentry
     \entry{CYK1}{article}{}
       \name{author}{3}{}{%
         {{hash=182e8ceab65fbc208ab66e2601718b22}{%

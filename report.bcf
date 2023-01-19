@@ -2361,9 +2361,11 @@
     <bcf:citekey order="7" intorder="1">CYK1</bcf:citekey>
     <bcf:citekey order="8" intorder="1">cyk_online_alg</bcf:citekey>
     <bcf:citekey order="9" intorder="1">recursion</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">bigO</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">bigO</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">FG</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">picrt</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">picrt</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">bigO</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">bigO</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">FG</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
