@@ -823,7 +823,9 @@ For each rule it is checked if the first or the second element of the body is th
 \subsubsection{Top-Down modified for linear grammars runtime}
 \label{lineartopdown_runtime}
 
-The runtime of the modified version is $O(n^2)$, because the recursive call is not in $O(n!)$ anymore like in Section \ref{naiveruntime} but $O(n)$. Instead the method is in $O(n^2)$.
+The runtime of the modified version is in $O(n^3)$, where $n$ is the length of the input string. This is because the linear parser is also using a memoization of size $n^3$. This is analog to the runtime analysis of the topdown parser in section \ref{topdownruntime}.
+The parser iterates over all elements of the table and for each entry, it makes a recursive call. Because the table is of size $n^3$, the overall time complexity of the function is $O(n^3)$.
+
 
 
 %---------------------------------------------------------------------%
