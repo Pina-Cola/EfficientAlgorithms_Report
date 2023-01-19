@@ -1230,7 +1230,7 @@ The runtimes of the methods are calculated in section \ref{systemdesign}. The re
 Method & Runtime \\
 \hline
 \texttt{parseNaive} & $O(2^n)$\\
-\texttt{ParseTD} & $O(n!)$ \\
+\texttt{ParseTD} & $O(n^3)$ \\
 \texttt{ParseBU} & $O(n^3)$\\
 \texttt{ParseLinearTD} & $O(n^2)$\\
 \hline
@@ -1282,12 +1282,12 @@ The results of the experiments confirm the runtime calculation of $O(2^n)$ in Se
 
 
 
-\textbf{Topdown approach ($O(n!)$):} \\
+\textbf{Topdown approach ($O(n^3)$):} \\
 Well-Balanced-Parantheses: 
 
 \begin{tabular}{|c|c|c|}
 \hline
-$n$ & $n!$ & counter \\
+$n$ & $n^3$ & counter \\
 \hline
 2& 2 & 6\\
 4& 24 & 28\\
@@ -1303,7 +1303,7 @@ Abc-grammar:
 
 \begin{tabular}{|c|c|c|}
 \hline
-$n$ & $n!$ & counter \\
+$n$ & $n^3$ & counter \\
 \hline
 3& 6 & 6\\
 4& 24 & 49\\
@@ -1312,7 +1312,7 @@ $n$ & $n!$ & counter \\
 \hline
 \end{tabular}
 
-The results of the experiments confirm the runtime calculation of $O(n!)$ in Section \ref{topdownruntime}.
+The results of the experiments confirm the runtime calculation of $O(n^3)$ in Section \ref{topdownruntime}.
 
 
 
@@ -1383,7 +1383,7 @@ The results of the experiments do not confirm the runtime calculation of $O(n^2)
 \label{results}
 
 \begin{minipage}{0.5\textwidth}
-The $O$-notation results from Section \ref{systemdesign} show, that the naive approach has a runtime of $O(2^n)$ and the topdown approach has a upper bound runtime of $O(n!)$ and the bottomup parser has an upper bound runtime in $O(n^3)$.
+The $O$-notation results from Section \ref{systemdesign} show, that the naive approach has a runtime of $O(2^n)$ and the topdown approach has a upper bound runtime of $O(n^3)$ and the bottomup parser has an upper bound runtime in $O(n^3)$.
 The experiments on the other hand show, that the topdown approach is a lot 
 \end{minipage}
 \begin{minipage}{0.1\textwidth} \ \end{minipage}
@@ -1393,7 +1393,7 @@ The experiments on the other hand show, that the topdown approach is a lot
 Method & Runtime \\
 \hline
 \texttt{parseNaive} & $O(2^n)$\\
-\texttt{ParseTD} & $O(n!)$ \\
+\texttt{ParseTD} & $O(n^3)$ \\
 \texttt{ParseBU} & $O(n^3)$\\
 \texttt{ParseLinearTD} & $O(n^2)$\\
 \hline
@@ -1414,7 +1414,7 @@ For these results it needs to be considered, that the $O$-notation stes the boun
 \subsection{Results for linear grammars}
 \label{results_linear}
 
-The upper bound runtime of the modified topdown parser for linear grammars is faster than the runtimes of the parser for grammars in CNF. The topdown runtime is in $O(n!)$ and the modified topdown approach should be in $O(n^2)$. In the linear approach are one instead of two recursive call per execution made, because the linear grammars have at most one nonterminal symbol in the body of each rule. The recursive call needs only to be made for the nonterminal symbols. 
+The upper bound runtime of the modified topdown parser for linear grammars is faster than the runtimes of the parser for grammars in CNF. The topdown runtime is in $O(n^3)$ and the modified topdown approach should be in $O(n^2)$. In the linear approach are one instead of two recursive call per execution made, because the linear grammars have at most one nonterminal symbol in the body of each rule. The recursive call needs only to be made for the nonterminal symbols. 
 This is why the upper bound runtime if the topdown approach for linear grammars is in $O(n^2)$, while the topdown approach for grammars in CNF is in $O(n!)$.
 
 
