@@ -670,7 +670,7 @@ The runtime of the naive method is in $O(n!)$.
 
 % TODO: describe idea of algorithm more detailed in text form!
 
-The top-down method is an improved version of the naive method (Section \ref{naivedescription}). This algorithm works recursive and with the concept of divide and conquer, too. In this algorithm another global array is used, which contains the values \texttt{true}, \texttt{false} and \texttt{null}. The array gets initialized with \texttt{null} in each field. That happens in the recursion call method below.
+The topdown method is an improved version of the naive method (Section \ref{naivedescription}). This algorithm works recursive and with the concept of divide and conquer, too. In this algorithm another global array is used, which contains the values \texttt{true}, \texttt{false} and \texttt{null}. The array gets initialized with \texttt{null} in each field. That happens in the recursion call method below.
 
 \begin{center}
 \captionof{algorithm}{Recursion call: Boolean parseTD()}\label{alg:cap}
@@ -1058,7 +1058,7 @@ Word & Length & N & NC & NT & B & BC & BT & T & TC & TT \\
 \ \\
 
 
-In the graphs below it can be seen, that the naive and topDown parser perform quicker than the bottomUp parser.
+In the graphs below it can be seen, that the naive and topdown parser perform quicker than the bottomUp parser.
 
 \begin{minipage}{0.45\textwidth}
 
@@ -1182,6 +1182,8 @@ The corresponding graphs to the data in the table are shown below. In the experi
 
 This grammar accepts only the input word \texttt{aaa}. Every other input gets rejected.
 
+In the graphs below it can be seen, that the linear topdown parser uses less recursive calls than the topdown parser. For the (not linear) topdown approach, the grammar has been translated into CNF before the function is applied.
+
 \begin{center}
 \begin{tabular}{|c|c||c|c||c|c||c|c||c|c|c|}
 \hline
@@ -1211,7 +1213,7 @@ aaaaa...aaaaa & 20 & 210 & 2ms & 9.880 & 13ms & 210 & 3ms & 191 & 2ms \\
 \begin{center}
 \includegraphics[scale=0.4]{diagrams/LGBTQ.png}
 \end{center}
-\caption{Linear grammar example (aaa-grammar) on TopDown and linear TopDown parser}
+\caption{Linear grammar example (aaa-grammar) on topdown and linear topdown parser}
 \end{figure}
 
 
@@ -1774,7 +1776,7 @@ In this case the error correction shows the solution with exchange (one symbol i
 \end{minipage}\begin{minipage}{0.1\textwidth}
 \ 
 \end{minipage}\begin{minipage}{0.4\textwidth}
-If the input grammar is a linear grammar, the program checks if it is in \textit{CNF}, build \textit{CNF} out of the linear grammar and runs the optimized version of the TopDown parser for linear grammars.
+If the input grammar is a linear grammar, the program checks if it is in \textit{CNF}, build \textit{CNF} out of the linear grammar and runs the optimized version of the topdown parser for linear grammars.
 \end{minipage}
 
 
