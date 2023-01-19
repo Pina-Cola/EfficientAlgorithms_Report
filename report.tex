@@ -1271,7 +1271,15 @@ $n$ & $2^n$ & counter \\
 \end{tabular}
 
 
-The results of the experiments confirm the runtime calculation of $O(2^n)$ in Section \ref{naiveruntime}. Small deviations for smaller input numbers can happen, because the constants are not considered.
+The results of the experiments confirm the runtime calculation of $O(2^n)$ in Section \ref{naiveruntime}. 
+There can be several several reasons why the actual runtime of a function may be larger than the $O$-notation.
+Constant factors are ignored: $O$-notation only gives an upper bound on the time complexity of a function and the runtime of a function depends on the input data. 
+$O$-notation is a tool to approximate the time complexity of a function, but it is not always accurate in predicting the actual runtime.
+
+The initial estimate in section \ref{naiveruntime} of the naive parser was $O(2^n * n)$, which is in $O(2^n)$. 
+
+
+
 
 
 
