@@ -1242,17 +1242,17 @@ Method & Runtime \\
 \end{tabular}
 
 \ \\
-Seeing those runtimes one could think that the naive and the topdown approach are equally efficient. Considering the differences in the algorithms and the results of the experiments it gets shown that this is not the case. The O-notation runtimes are the upper bounds for the runtime. 
+Seeing those runtimes one could think that the bottomup and the topdown approach are equally efficient. Considering the differences in the algorithms and the measurements of the experiments in section \ref{experiments} it gets shown that this is not the case. The $O$-notation runtimes are the upper bounds for the runtime. 
 
-Regarding the experiments that were run on the code, the topdown method seems to be the most efficient, followed by the bottomup method. The least efficient method is in these cases the naive approach.
+Regarding the experiments that were run on the code, different approaches perform better for different grammars and input words. The topdown method seems to be the most efficient, followed by the bottomup method. The least efficient method is in these cases the naive approach.
 
-The linear version of the topdown is more efficient than the original paring method, because it is restricted to linear grammars and with this restriction the recursive calls can be reduced from two to one in each call.
+The linear version of the topdown seems to perform more efficient than the original parsing method, even though the runtime in $O$-notation is $O(n^3)$ for both algorithms. The linear topdown parser is restricted to linear grammars and for the comparison of the linear parsing method to the other parsing methods the linear grammar get translates into CNF. With the restriction to linear grammars, the recursive calls in the linear parser can be reduced from two to one in each call.
 
-It is to consider that the $O$-notation represents the upper bound of the runtime. Algorithms can run faster than the runtime in $O$-notation predicts.
+It is to consider that the $O$-notation represents the upper bound of the runtime. Algorithms can run faster than the runtime in $O$-notation predicts. This is why the linear topdown parser performs better than the topdown parser, even though both are in $O(n^3)$.
 
 To confirm the calculated runtimes from Section \ref{systemdesign}, the results of the experiments are calculated, considering the $O$-notation runtime. For the input length ($n$) the actual results and $O$-notation results as upper bound are compared.
 
-\newpage
+
 \textbf{Naive approach ($O(2^n)$):} \\
 Well-Balanced-Parantheses: 
 
