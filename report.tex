@@ -1256,7 +1256,7 @@ The runtimes of the methods are calculated in section \ref{systemdesign}. The re
 \hline
 Method & Runtime \\
 \hline
-\texttt{parseNaive} & $O(n!)$\\
+\texttt{parseNaive} & $O(2^n)$\\
 \texttt{ParseTD} & $O(n!)$ \\
 \texttt{ParseBU} & $O(n^3)$\\
 \texttt{ParseLinearTD} & $O(n^2)$\\
@@ -1275,12 +1275,12 @@ It is to consider that the $O$-notation represents the upper bound of the runtim
 To confirm the calculated runtimes from Section \ref{systemdesign}, the results of the experiments are calculated, considering the $O$-notation runtime. For the input length ($n$) the actual results and $O$-notation results as upper bound are compared.
 
 \newpage
-\textbf{Naive approach ($O(n!)$):} \\
+\textbf{Naive approach ($O(2^n)$):} \\
 Well-Balanced-Parantheses: 
 
 \begin{tabular}{|c|c|c|}
 \hline
-$n$ & $n!$ & counter \\
+$n$ & $2^n$ & counter \\
 \hline
 2& 2 & 6\\
 4& 24 & 33\\
@@ -1296,7 +1296,7 @@ Abc-grammar:
 
 \begin{tabular}{|c|c|c|}
 \hline
-$n$ & $n!$ & counter \\
+$n$ & $2^n$ & counter \\
 \hline
 3& 6 & 6\\
 4& 24 & 51\\
@@ -1305,7 +1305,7 @@ $n$ & $n!$ & counter \\
 \hline
 \end{tabular}
 
-The results of the experiments confirm the runtime calculation of $O(n!)$ in Section \ref{naiveruntime}. Small deviations for smaller input numbers can happen, because the constants are not considered.
+The results of the experiments confirm the runtime calculation of $O(2^n)$ in Section \ref{naiveruntime}. Small deviations for smaller input numbers can happen, because the constants are not considered.
 
 
 
@@ -1410,7 +1410,7 @@ The results of the experiments do not confirm the runtime calculation of $O(n^2)
 \label{results}
 
 \begin{minipage}{0.5\textwidth}
-The $O$-notation results from Section \ref{systemdesign} show, that the naive and the topdown approach have the same upper bound runtime of $O(n!)$ and the bottomup parser has an upper bound runtime in $O(n^3)$.
+The $O$-notation results from Section \ref{systemdesign} show, that the naive approach has a runtime of $O(2^n)$ and the topdown approach has a upper bound runtime of $O(n!)$ and the bottomup parser has an upper bound runtime in $O(n^3)$.
 The experiments on the other hand show, that the topdown approach is a lot 
 \end{minipage}
 \begin{minipage}{0.1\textwidth} \ \end{minipage}
@@ -1419,7 +1419,7 @@ The experiments on the other hand show, that the topdown approach is a lot
 \hline
 Method & Runtime \\
 \hline
-\texttt{parseNaive} & $O(n!)$\\
+\texttt{parseNaive} & $O(2^n)$\\
 \texttt{ParseTD} & $O(n!)$ \\
 \texttt{ParseBU} & $O(n^3)$\\
 \texttt{ParseLinearTD} & $O(n^2)$\\
