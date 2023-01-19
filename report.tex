@@ -1364,6 +1364,39 @@ $n$ & $n^3$ & counter \\
 \end{tabular}
 \end{center}
 
+The linear version of the topdown seems to perform more efficient than the original parsing method, even though the runtime in $O$-notation is $O(n^3)$ for both algorithms. The difference between the algorithm is shown in the table below. 
+
+\begin{center}
+\begin{tabular}{|c|c||c|c|}
+\hline
+Word & Length & Topdown counter & Linear topdown counter \\
+\hline
+\hline
+a & 1 & 1 & 1 \\
+\hline
+aa & 2 & 2 & 2 \\
+\hline
+aaa & 3 & 6 & 4  \\
+\hline
+aaaa & 4 &  10  & 7  \\
+\hline
+aaaaaaaa & 8 & 36  & 29 \\
+\hline
+aaaaaaaaaaaa & 12 & 78 &  67  \\
+\hline
+aaaaa...aaaaa & 16 & 136 & 121  \\
+\hline
+aaaaa...aaaaa & 20 & 210 &191 \\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+The linear topdown parser is restricted to linear grammars and for the comparison of the linear parsing method to the other parsing methods the linear grammar get translates into CNF. With the restriction to linear grammars, the recursive calls in the linear parser can be reduced from two to one in each call.
+
+It is to consider that the $O$-notation represents the upper bound of the runtime. Algorithms can run faster than the runtime in $O$-notation predicts. This is why the linear topdown parser performs better than the topdown parser, even though both are in $O(n^3)$.
+
     
  
 
