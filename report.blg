@@ -1,17 +1,17 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'report.blg'
 [97] biber-MSWIN64:340> INFO - === 
-[130] Biber.pm:418> INFO - Reading 'report.bcf'
-[235] Biber.pm:978> INFO - Found 11 citekeys in bib section 0
-[248] Biber.pm:4401> INFO - Processing section 0
-[259] Biber.pm:4592> INFO - Looking for bibtex file 'references.bib' for section 0
-[308] bibtex.pm:1713> INFO - LaTeX decoding ...
-[321] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
-[382] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[382] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[382] Biber.pm:4221> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[382] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
-[394] bbl.pm:654> INFO - Writing 'report.bbl' with encoding 'UTF-8'
-[398] bbl.pm:757> INFO - Output to report.bbl
-[398] Biber.pm:130> WARN - legacy month field 'May' in entry 'cyk_online_alg' is not an integer - this will probably not sort properly.
-[398] Biber.pm:132> INFO - WARNINGS: 1
+[128] Biber.pm:418> INFO - Reading 'report.bcf'
+[233] Biber.pm:978> INFO - Found 11 citekeys in bib section 0
+[247] Biber.pm:4401> INFO - Processing section 0
+[258] Biber.pm:4592> INFO - Looking for bibtex file 'references.bib' for section 0
+[306] bibtex.pm:1713> INFO - LaTeX decoding ...
+[319] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[380] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[380] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[380] Biber.pm:4221> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[380] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
+[392] bbl.pm:654> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[395] bbl.pm:757> INFO - Output to report.bbl
+[395] Biber.pm:130> WARN - legacy month field 'May' in entry 'cyk_online_alg' is not an integer - this will probably not sort properly.
+[396] Biber.pm:132> INFO - WARNINGS: 1

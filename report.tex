@@ -1316,8 +1316,6 @@ The results of the experiments confirm the runtime calculation of $O(n^3)$ in Se
 
 \textbf{Bottomup approach ($O(n^3)$):} \\
 
-
-
 Well-Balanced-Parantheses: \\
 
 \begin{center}
@@ -1345,6 +1343,27 @@ The results of the experiments confirm the runtime calculation of $O(n^3)$ in Se
 
 
 \textbf{Linear topdown approach ($O(n^3)$):} 
+
+For the linearapproach, a linear grammar (aaa-grammar)is evaluated with the input word \texttt{a$^*$}.
+
+\begin{center}
+
+\begin{tabular}{|c|c|c|}
+\hline
+$n$ & $n^3$ & counter \\
+\hline
+1& 1 & 1\\
+2& 8 & 2\\
+3& 27 & 4\\
+4& 64 & 7\\
+8& 512 & 29 \\
+12& 1.728 & 67 \\
+16& 4.096 & 121 \\
+20& 8.000 & 191 \\
+\hline
+\end{tabular}
+\end{center}
+
     
  
 
