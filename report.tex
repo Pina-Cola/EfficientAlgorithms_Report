@@ -574,14 +574,15 @@ The naive algorithm is a recursive divide-and-conquer algorithm. The problem get
 
 The start values get assigned in the recursion call which can be seen in the following pseudo code:
  
-\begin{algorithm}[H]
+\begin{center}
+\captionof{algorithm}{Recursion call: Boolean parseNaive()}\label{alg:cap}
 \label{alg_naive_rec_call}
-\caption{Recursion call: Boolean parseNaive()}\label{alg:cap}
 \begin{algorithmic}[1]
 \State $counter \gets 0$
 \State \Return parseNaive(0, 0, inputWord.length)
 \end{algorithmic}
-\end{algorithm}
+\hrulefill
+\end{center}
 
 The naive approach does not use dynamic programming. Instead it checks for each call \texttt{parseNaive(indexNT, i, j)} first if $i = j-1$ and checks if the nonterminal symbol head of \texttt{indexNT} leads to a body of a rule with \texttt{s[i]}. This is the base case of the recursion which then returns true or false depending if the rule \texttt{indexNT $\rightarrow$  s[i]} exists. This base case can be seen in line 2-7 in the pseudo code below.
 \\ 
@@ -592,9 +593,8 @@ If $i$ is not equal to $j-1$ it loops for the integer $k$ from $i+1$ to $j-1$ an
 
 
 
-\begin{algorithm}[H]
-\label{alg_naive}
-\caption{Boolean parseNaive(int indexNT, int i, int j)}\label{alg:cap}
+\begin{center}
+\captionof{algorithm}{Boolean parseNaive(int indexNT, int i, int j)}\label{alg:cap}
 \begin{algorithmic}[1]
 \State $counter \gets counter+1$
 \If{$i == (j-1)$}
@@ -619,7 +619,8 @@ If $i$ is not equal to $j-1$ it loops for the integer $k$ from $i+1$ to $j-1$ an
 \EndIf
 \State \Return false
 \end{algorithmic}
-\end{algorithm}
+\hrulefill
+\end{center}
 
 \subsubsection{Naive runtime}
 \label{naiveruntime}
@@ -671,8 +672,8 @@ The runtime of the naive method is in $O(n!)$.
 
 The top-down method is an improved version of the naive method (Section \ref{naivedescription}). This algorithm works recursive and with the concept of divide and conquer, too. In this algorithm another global array is used, which contains the values \texttt{true}, \texttt{false} and \texttt{null}. The array gets initialized with \texttt{null} in each field. That happens in the recursion call method below.
 
-\begin{algorithm}[H]
-\caption{Recursion call: Boolean parseTD()}\label{alg:cap}
+\begin{center}
+\captionof{algorithm}{Recursion call: Boolean parseTD()}\label{alg:cap}
 \begin{algorithmic}[1]
 \State $counter \gets 0$
 \For{$i \gets 0$ \textbf{to} $table.length$ }
@@ -684,23 +685,25 @@ The top-down method is an improved version of the naive method (Section \ref{nai
 \EndFor
 \State \Return parseTD(0, 0, inputWord.length)
 \end{algorithmic}
-\end{algorithm}
+\hrulefill
+\end{center}
 
 Additional to the naive algorithm, the recursion in the topdown approach starts with another condition: If one of the values in the global table is not \texttt{null}, the next recursive call is not executed and this value gets returned. This if-condition can be seen in the following part of the pseudo code. The rest of the topdown approach is a similar approach to the naive method that was already described in Section \ref{naivedescription}.
 
-\begin{algorithm}[H]
-\caption{Additional condition in Boolean parseTD(int indexNT, int i, int j)}\label{alg:cap}
+\begin{center}
+\captionof{algorithm}{Additional condition in Boolean parseTD(int indexNT, int i, int j)}\label{alg:cap}
 \begin{algorithmic}[1]
 \If{table[indexNT][i][j] \ != null}
 \State \Return table[indexNT][i][j]
 \EndIf
 \end{algorithmic}
-\end{algorithm}
+\hrulefill
+\end{center}
 
 The complete topdown algorithm is shown as pseudo code below. In the inner for-loop (line 18) the boolean value of the next method calls get assigned into the global table. If there is assigned a true (line 19) the value true gets returns (lime 20). The general topdown approach is the same approach as the naive method that is described in Section \ref{naivedescription}.
 
-\begin{algorithm}[H]
-\caption{Boolean parseTD(int indexNT, int i, int j)}\label{alg:cap}
+\begin{center}
+\captionof{algorithm}{Boolean parseTD(int indexNT, int i, int j)}\label{alg:cap}
 \begin{algorithmic}[1]
 \State $counter \gets counter+1$
 \State $rulesetLength \gets ruleset[0].length$
@@ -730,7 +733,8 @@ The complete topdown algorithm is shown as pseudo code below. In the inner for-l
 \EndIf
 \State \Return false
 \end{algorithmic}
-\end{algorithm}
+\hrulefill
+\end{center}
 
 \subsubsection{Top-Down runtime}
 \label{topdownruntime}
@@ -841,8 +845,8 @@ In the first step the integers that represent the nonterminal symbols that are h
 The approach of dynamic programming calculates the smallest substrings first and saves them for the efficient processing of the next bigger substrings.  The smallest substrings are the single characters.
 
 
-\begin{algorithm}[H]
-\caption{Boolean parseBU()}\label{alg:cap}
+\begin{center}
+\captionof{algorithm}{Boolean parseBU()}\label{alg:cap}
 \begin{algorithmic}[1]
 \State $wordlength \gets word.length$ 
 \State $Integer[][][] DP \gets new Integer[wordLength][wordLength][wordlength]$
@@ -877,7 +881,8 @@ The approach of dynamic programming calculates the smallest substrings first and
 \EndIf
 \State \Return false
 \end{algorithmic}
-\end{algorithm}
+\hrulefill
+\end{center}
 \footnotetext{$c$ is the first empty position in $DP[i][j]$}
 
 In line 13 to 32 the \textit{CYK}-algorithm gets executed. It is described in section \ref{cyk}. For each field the two fields \textit{leading} to it get compared, to then fill in the head of a rule that concludes into the both compared nonterminal symbols.

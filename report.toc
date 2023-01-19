@@ -15,11 +15,11 @@
 \contentsline {subsubsection}{\numberline {3.3.1}Naive description}{11}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Naive runtime}{13}{subsubsection.3.3.2}%
 \contentsline {subsubsection}{\numberline {3.3.3}Top-Down description}{13}{subsubsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.4}Top-Down runtime}{14}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.4}Top-Down runtime}{15}{subsubsection.3.3.4}%
 \contentsline {subsubsection}{\numberline {3.3.5}Top-Down modified for linear grammars}{15}{subsubsection.3.3.5}%
 \contentsline {subsubsection}{\numberline {3.3.6}Top-Down modified for linear grammars runtime}{16}{subsubsection.3.3.6}%
-\contentsline {subsubsection}{\numberline {3.3.7}Bottom-Up description}{16}{subsubsection.3.3.7}%
-\contentsline {subsubsection}{\numberline {3.3.8}Bottom-Up runtime}{17}{subsubsection.3.3.8}%
+\contentsline {subsubsection}{\numberline {3.3.7}Bottom-Up description}{17}{subsubsection.3.3.7}%
+\contentsline {subsubsection}{\numberline {3.3.8}Bottom-Up runtime}{18}{subsubsection.3.3.8}%
 \contentsline {section}{\numberline {4}Evaluation}{19}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Experiments}{19}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}$O$-notation and runtime comparison}{23}{subsection.4.2}%
