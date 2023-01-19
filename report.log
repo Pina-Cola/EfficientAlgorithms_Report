@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.17)  19 JAN 2023 19:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.17)  19 JAN 2023 19:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1687,13 +1687,8 @@ Overfull \hbox (4.84053pt too wide) detected at line 939
  []
 
 
-Overfull \hbox (4.84052pt too wide) in paragraph at lines 897--944
-[][][]$[][][]$$[][][]$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 897--944
-
+Overfull \hbox (4.84052pt too wide) in paragraph at lines 897--942
+[][][]$[][][]$$[][][]$ 
  []
 
 
@@ -2182,7 +2177,7 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 Here is how much of TeX's memory you used:
  43341 strings out of 476406
  975443 string characters out of 2789567
- 1906292 words of memory out of 3000000
+ 1905292 words of memory out of 3000000
  62888 multiletter control sequences out of 15000+600000
  534647 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2223,7 +2218,7 @@ ic/amsfonts/cm/cmti12.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmti9.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/pinak/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (38 pages, 1290090 bytes).
+Output written on report.pdf (38 pages, 1290075 bytes).
 PDF statistics:
  688 PDF objects out of 1000 (max. 8388607)
  112 named destinations out of 1000 (max. 500000)
