@@ -643,24 +643,29 @@ Line & Runtime & Type \\
 11 & $1 \cdot$ $k$ & Assignment \\
 12 & $1 \cdot$ $k$ & Assignment\\
 13 & $n \cdot$ $k$ & Loop \\
-14 & $n!$ & Recursive call \\
+14 & $2^n \cdot n$ & Recursive call \\
 15 & $1$ $\cdot$ $n$ $\cdot$ $k$ & Return statement\\
 21 & $1$ & Return statement \\
 \hline
 \end{tabular}
+
 
 \end{minipage}\begin{minipage}{0.5\textwidth}
 Calculating the runtime:
 \vspace*{-1em}
 \begin{align*}
 & 1 + 1+ k + k +k + k + k + k + k \\
-& + n \cdot k + n^n + n \cdot k \\
-& =  2 + 7k + 2(n \cdot k) + n! \\
-& = 2 + 7k + 2n \cdot 2k + n! \\
-& \in O(n!)
+& + n \cdot k + n \cdot 2^n + n \cdot k \\
+& =  2 + 7k + 2(n \cdot k) + n \cdot 2^n \\
+& = 2 + 7k + 2n \cdot 2k + n \cdot 2^n \\
+& \in O(2^n)
 \end{align*}
-The runtime of the naive method is in $O(n!)$.
+
 \end{minipage}
+
+The runtime of the naive method is in $O(2^n)$ in worst case scenario.
+The parser has a recursive call with a for loop with $n \cdot k$ iterations. At each recursive call of the parsing method the for loop is halved and the recursive call is doubled. 
+ This results in a total of $2^n$ recursive calls and each recursive call takes $O(n)$ time so the total runtime will be $O(n*2^n)$ which is in $O(2^n)$.
 
 %---------------------------------------------------------------------%
 
