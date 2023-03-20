@@ -49,6 +49,30 @@
       \field{title}{Big o notation}
       \field{year}{2010}
     \endentry
+    \entry{delahaye1987formal}{book}{}
+      \name{author}{1}{}{%
+        {{hash=a99c9d4f3a6514ae0f369f467f1b8ea0}{%
+           family={Delahaye},
+           familyi={D\bibinitperiod},
+           given={Jean-Paul},
+           giveni={J\bibinithyphendelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Halsted Press}%
+      }
+      \strng{namehash}{a99c9d4f3a6514ae0f369f467f1b8ea0}
+      \strng{fullhash}{a99c9d4f3a6514ae0f369f467f1b8ea0}
+      \strng{bibnamehash}{a99c9d4f3a6514ae0f369f467f1b8ea0}
+      \strng{authorbibnamehash}{a99c9d4f3a6514ae0f369f467f1b8ea0}
+      \strng{authornamehash}{a99c9d4f3a6514ae0f369f467f1b8ea0}
+      \strng{authorfullhash}{a99c9d4f3a6514ae0f369f467f1b8ea0}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Formal methods in artificial intelligence}
+      \field{year}{1987}
+    \endentry
     \entry{DP}{misc}{}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}

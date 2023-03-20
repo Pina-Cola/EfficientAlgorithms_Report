@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.12)  20 MAR 2023 18:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.12)  20 MAR 2023 18:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1455,22 +1455,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 394--397
 
  []
 
-<images/7.png, id=272, 348.92859pt x 139.64671pt>
+<images/7.png, id=274, 348.92859pt x 139.64671pt>
 File: images/7.png Graphic file (type png)
 <use images/7.png>
 Package pdftex.def Info: images/7.png  used on input line 399.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
-<images/6.png, id=274, 348.92859pt x 139.64671pt>
+<images/6.png, id=276, 348.92859pt x 139.64671pt>
 File: images/6.png Graphic file (type png)
 <use images/6.png>
 Package pdftex.def Info: images/6.png  used on input line 400.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
-<images/5.png, id=275, 348.92859pt x 139.64671pt>
+<images/5.png, id=277, 348.92859pt x 139.64671pt>
 File: images/5.png Graphic file (type png)
 <use images/5.png>
 Package pdftex.def Info: images/5.png  used on input line 401.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
-<images/4.png, id=276, 348.92859pt x 139.64671pt>
+<images/4.png, id=278, 348.92859pt x 139.64671pt>
 File: images/4.png Graphic file (type png)
 <use images/4.png>
 Package pdftex.def Info: images/4.png  used on input line 402.
@@ -1484,17 +1484,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [7 <./images/7.png> <./images/6.png> <./images/5.png>]
-<images/3.png, id=285, 348.92859pt x 139.64671pt>
+<images/3.png, id=287, 348.92859pt x 139.64671pt>
 File: images/3.png Graphic file (type png)
 <use images/3.png>
 Package pdftex.def Info: images/3.png  used on input line 403.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
-<images/2.png, id=286, 348.92859pt x 139.64671pt>
+<images/2.png, id=288, 348.92859pt x 139.64671pt>
 File: images/2.png Graphic file (type png)
 <use images/2.png>
 Package pdftex.def Info: images/2.png  used on input line 404.
 (pdftex.def)             Requested size: 314.03282pt x 125.68086pt.
-<images/1.png, id=287, 348.92859pt x 139.64671pt>
+<images/1.png, id=289, 348.92859pt x 139.64671pt>
 File: images/1.png Graphic file (type png)
 <use images/1.png>
 Package pdftex.def Info: images/1.png  used on input line 405.
@@ -1509,27 +1509,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [8 <./images/4.png> <./images/3.png> <./images/2.png> <./images/1.png>]
-<images/merge1.png, id=299, 1082.0425pt x 215.80624pt>
+<images/merge1.png, id=301, 1082.0425pt x 215.80624pt>
 File: images/merge1.png Graphic file (type png)
 <use images/merge1.png>
 Package pdftex.def Info: images/merge1.png  used on input line 456.
 (pdftex.def)             Requested size: 135.25497pt x 26.97571pt.
-<images/merge2.png, id=300, 1142.2675pt x 215.80624pt>
+<images/merge2.png, id=302, 1142.2675pt x 215.80624pt>
 File: images/merge2.png Graphic file (type png)
 <use images/merge2.png>
 Package pdftex.def Info: images/merge2.png  used on input line 461.
 (pdftex.def)             Requested size: 142.78308pt x 26.97571pt.
-<images/merge3.png, id=301, 1364.09625pt x 215.80624pt>
+<images/merge3.png, id=303, 1364.09625pt x 215.80624pt>
 File: images/merge3.png Graphic file (type png)
 <use images/merge3.png>
 Package pdftex.def Info: images/merge3.png  used on input line 466.
 (pdftex.def)             Requested size: 170.51161pt x 26.97571pt.
-<images/merge4.png, id=302, 1727.45375pt x 215.80624pt>
+<images/merge4.png, id=304, 1727.45375pt x 215.80624pt>
 File: images/merge4.png Graphic file (type png)
 <use images/merge4.png>
 Package pdftex.def Info: images/merge4.png  used on input line 471.
 (pdftex.def)             Requested size: 215.93118pt x 26.97571pt.
-<images/merge5.png, id=303, 1502.61375pt x 215.80624pt>
+<images/merge5.png, id=305, 1502.61375pt x 215.80624pt>
 File: images/merge5.png Graphic file (type png)
 <use images/merge5.png>
 Package pdftex.def Info: images/merge5.png  used on input line 476.
@@ -1545,12 +1545,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [9 <./images/merge1.png> <./images/merge2.png> <./images/merge3.png> <./images/
 merge4.png> <./images/merge5.png>]
-<images/merge6.png, id=313, 1222.5675pt x 215.80624pt>
+<images/merge6.png, id=315, 1222.5675pt x 215.80624pt>
 File: images/merge6.png Graphic file (type png)
 <use images/merge6.png>
 Package pdftex.def Info: images/merge6.png  used on input line 482.
 (pdftex.def)             Requested size: 152.82056pt x 26.97571pt.
-<images/merge7.png, id=314, 1069.9975pt x 215.80624pt>
+<images/merge7.png, id=316, 1069.9975pt x 215.80624pt>
 File: images/merge7.png Graphic file (type png)
 <use images/merge7.png>
 Package pdftex.def Info: images/merge7.png  used on input line 487.
@@ -1609,7 +1609,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 628--668
 
  []
 
-<images/rt.png, id=342, 328.97906pt x 197.23688pt>
+<images/rt.png, id=344, 328.97906pt x 197.23688pt>
 File: images/rt.png Graphic file (type png)
 <use images/rt.png>
 Package pdftex.def Info: images/rt.png  used on input line 673.
@@ -1725,7 +1725,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 993--1016
 
  []
 
-<diagrams/WBP_1.png, id=397, 770.88pt x 422.32782pt>
+<diagrams/WBP_1.png, id=399, 770.88pt x 422.32782pt>
 File: diagrams/WBP_1.png Graphic file (type png)
 <use diagrams/WBP_1.png>
 Package pdftex.def Info: diagrams/WBP_1.png  used on input line 1021.
@@ -1744,7 +1744,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [20]
-<diagrams/WBP_2.png, id=403, 818.30719pt x 444.91219pt>
+<diagrams/WBP_2.png, id=405, 818.30719pt x 444.91219pt>
 File: diagrams/WBP_2.png Graphic file (type png)
 <use diagrams/WBP_2.png>
 Package pdftex.def Info: diagrams/WBP_2.png  used on input line 1028.
@@ -1754,7 +1754,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1036--1057
 
  []
 
-<diagrams/BP_1.png, id=404, 768.62157pt x 422.32782pt>
+<diagrams/BP_1.png, id=406, 768.62157pt x 422.32782pt>
 File: diagrams/BP_1.png Graphic file (type png)
 <use diagrams/BP_1.png>
 Package pdftex.def Info: diagrams/BP_1.png  used on input line 1065.
@@ -1775,7 +1775,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1066--1066
 1/cmtt/m/n/10.95 (())(()) \OT1/cmr/m/n/10.95 and
  []
 
-<diagrams/BP_2.png, id=405, 768.62157pt x 418.56375pt>
+<diagrams/BP_2.png, id=407, 768.62157pt x 418.56375pt>
 File: diagrams/BP_2.png Graphic file (type png)
 <use diagrams/BP_2.png>
 Package pdftex.def Info: diagrams/BP_2.png  used on input line 1077.
@@ -1790,7 +1790,7 @@ Underfull \hbox (badness 5954) in paragraph at lines 1078--1078
 [][][]\OT1/cmr/m/n/10.95 Figure 5: |Well-Balanced-Parantheses
  []
 
-<diagrams/BP_C.png, id=406, 770.12718pt x 426.09187pt>
+<diagrams/BP_C.png, id=408, 770.12718pt x 426.09187pt>
 File: diagrams/BP_C.png Graphic file (type png)
 <use diagrams/BP_C.png>
 Package pdftex.def Info: diagrams/BP_C.png  used on input line 1088.
@@ -1817,7 +1817,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [22 <./diagrams/BP_1.png> <./diagrams/BP_2.png> <./diagrams/BP_C.png>]
-<diagrams/SG_1.png, id=425, 768.62157pt x 417.05812pt>
+<diagrams/SG_1.png, id=427, 768.62157pt x 417.05812pt>
 File: diagrams/SG_1.png Graphic file (type png)
 <use diagrams/SG_1.png>
 Package pdftex.def Info: diagrams/SG_1.png  used on input line 1128.
@@ -1827,7 +1827,7 @@ Overfull \hbox (16.75595pt too wide) in paragraph at lines 1128--1129
  [] 
  []
 
-<diagrams/SG_2.png, id=426, 768.62157pt x 420.06938pt>
+<diagrams/SG_2.png, id=428, 768.62157pt x 420.06938pt>
 File: diagrams/SG_2.png Graphic file (type png)
 <use diagrams/SG_2.png>
 Package pdftex.def Info: diagrams/SG_2.png  used on input line 1139.
@@ -1837,7 +1837,7 @@ Overfull \hbox (16.75595pt too wide) in paragraph at lines 1139--1140
  [] 
  []
 
-<diagrams/SG_C.png, id=427, 770.88pt x 420.82219pt>
+<diagrams/SG_C.png, id=429, 770.88pt x 420.82219pt>
 File: diagrams/SG_C.png Graphic file (type png)
 <use diagrams/SG_C.png>
 Package pdftex.def Info: diagrams/SG_C.png  used on input line 1149.
@@ -1851,7 +1851,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [23 <./diagrams/SG_1.png> <./diagrams/SG_2.png> <./diagrams/SG_C.png>]
-<diagrams/LGBTQ.png, id=438, 642.14906pt x 353.06906pt>
+<diagrams/LGBTQ.png, id=440, 642.14906pt x 353.06906pt>
 File: diagrams/LGBTQ.png Graphic file (type png)
 <use diagrams/LGBTQ.png>
 Package pdftex.def Info: diagrams/LGBTQ.png  used on input line 1212.
@@ -2042,7 +2042,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1749--1750
 
  []
 
-<images/terminal_1.png, id=535, 233.37187pt x 448.67625pt>
+<images/terminal_1.png, id=537, 233.37187pt x 448.67625pt>
 File: images/terminal_1.png Graphic file (type png)
 <use images/terminal_1.png>
 Package pdftex.def Info: images/terminal_1.png  used on input line 1756.
@@ -2067,7 +2067,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1725--1758
 
  []
 
-<images/terminal_2.png, id=536, 441.14813pt x 190.46156pt>
+<images/terminal_2.png, id=538, 441.14813pt x 190.46156pt>
 File: images/terminal_2.png Graphic file (type png)
 <use images/terminal_2.png>
 Package pdftex.def Info: images/terminal_2.png  used on input line 1760.
@@ -2081,7 +2081,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [35 <./images/terminal_1.png>]
-<images/terminal_3.png, id=542, 353.82187pt x 164.11313pt>
+<images/terminal_3.png, id=544, 353.82187pt x 164.11313pt>
 File: images/terminal_3.png Graphic file (type png)
 <use images/terminal_3.png>
 Package pdftex.def Info: images/terminal_3.png  used on input line 1775.
@@ -2106,12 +2106,12 @@ Underfull \hbox (badness 2181) in paragraph at lines 1782--1783
 \OT1/cmr/m/n/10.95 ex-change (one sym-bol is ex-
  []
 
-<images/terminal_4.png, id=543, 243.91125pt x 150.5625pt>
+<images/terminal_4.png, id=545, 243.91125pt x 150.5625pt>
 File: images/terminal_4.png Graphic file (type png)
 <use images/terminal_4.png>
 Package pdftex.def Info: images/terminal_4.png  used on input line 1787.
 (pdftex.def)             Requested size: 170.7367pt x 105.39302pt.
-<images/terminal_5.png, id=544, 434.37282pt x 170.13562pt>
+<images/terminal_5.png, id=546, 434.37282pt x 170.13562pt>
 File: images/terminal_5.png Graphic file (type png)
 <use images/terminal_5.png>
 Package pdftex.def Info: images/terminal_5.png  used on input line 1791.
@@ -2150,10 +2150,10 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43346 strings out of 475385
- 975652 string characters out of 2776907
- 1893782 words of memory out of 3000000
- 63913 multiletter control sequences out of 15000+600000
+ 43350 strings out of 475385
+ 975828 string characters out of 2776907
+ 1894847 words of memory out of 3000000
+ 63916 multiletter control sequences out of 15000+600000
  491619 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,33n,103p,1235b,1944s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -2193,9 +2193,9 @@ ic/amsfonts/cm/cmti12.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmti9.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/pinak/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (38 pages, 1291610 bytes).
+Output written on report.pdf (38 pages, 1292042 bytes).
 PDF statistics:
- 694 PDF objects out of 1000 (max. 8388607)
- 113 named destinations out of 1000 (max. 500000)
+ 696 PDF objects out of 1000 (max. 8388607)
+ 114 named destinations out of 1000 (max. 500000)
  438 words of extra memory for PDF output out of 10000 (max. 10000000)
 
