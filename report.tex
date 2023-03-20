@@ -506,6 +506,11 @@ It solves to the following upper bounds of the runtime:
 	a > b^k \ \in & \  O(n^{\log_b a})
 \end{align} 
 
+For the previous sorting example in Section \ref{divide_and_conquer}, the problem is divided into $2$ subproblems ($a=2$) of size $\frac{n}{2}$ each ($b=2$). The recombining consists out of comparisons which can be expressed as $k=1$. This leads to the following formular:
+\begin{align*}
+	T(n)=2 \cdot T(\frac{n}{2}) + n^1
+\end{align*} 
+Because $a$ equals $b^1$, it can be resolved to the second case: The algorithm is in $O(n \log n)$.
 
 
 
