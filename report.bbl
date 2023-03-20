@@ -254,6 +254,27 @@
       \field{title}{Formal theories of knowledge in AI and robotics}
       \field{year}{1985}
     \endentry
+    \entry{MT}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ab0f5ce0ca3cf6479811e0f54265fc6c}{%
+           family={Su},
+           familyi={S\bibinitperiod},
+           given={Jessica},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab0f5ce0ca3cf6479811e0f54265fc6c}
+      \strng{fullhash}{ab0f5ce0ca3cf6479811e0f54265fc6c}
+      \strng{bibnamehash}{ab0f5ce0ca3cf6479811e0f54265fc6c}
+      \strng{authorbibnamehash}{ab0f5ce0ca3cf6479811e0f54265fc6c}
+      \strng{authornamehash}{ab0f5ce0ca3cf6479811e0f54265fc6c}
+      \strng{authorfullhash}{ab0f5ce0ca3cf6479811e0f54265fc6c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://web.stanford.edu/class/archive/cs/cs161/cs161.1168/lecture3.pdf}, opened on 20.03.2023}
+      \field{title}{Solving recurrences}
+    \endentry
     \entry{LS_Ulm}{misc}{}
       \name{author}{1}{}{%
         {{hash=cb256318dc0e57d7fd8ad3f1dfb2e2e3}{%
