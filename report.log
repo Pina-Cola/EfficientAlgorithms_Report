@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.12)  20 MAR 2023 20:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.12)  20 MAR 2023 20:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1208,18 +1208,6 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 LaTeX Warning: Label `alg:cap' multiply defined.
 
-
-LaTeX Warning: Label `alg:cap' multiply defined.
-
-
-LaTeX Warning: Label `alg:cap' multiply defined.
-
-
-LaTeX Warning: Label `alg:cap' multiply defined.
-
-
-LaTeX Warning: Label `alg:cap' multiply defined.
-
 )
 \openout1 = `report.aux'.
 
@@ -2151,7 +2139,7 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 Here is how much of TeX's memory you used:
  43360 strings out of 475385
  976022 string characters out of 2776907
- 1894925 words of memory out of 3000000
+ 1893917 words of memory out of 3000000
  63921 multiletter control sequences out of 15000+600000
  491619 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2193,7 +2181,7 @@ pe1/public/amsfonts/cm/cmti12.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/pinak/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/pinak/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (38 pages, 1305211 bytes).
+Output written on report.pdf (38 pages, 1305173 bytes).
 PDF statistics:
  715 PDF objects out of 1000 (max. 8388607)
  119 named destinations out of 1000 (max. 500000)

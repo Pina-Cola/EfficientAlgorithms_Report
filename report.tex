@@ -599,7 +599,7 @@ The naive algorithm is a recursive divide-and-conquer algorithm. The problem get
 The start values get assigned in the recursion call which can be seen in the following pseudo code:
  
 \begin{center}
-\captionof{algorithm}{Recursion call: Boolean parseNaive()}\label{alg:cap}
+\captionof{algorithm}{Recursion call: parseNaive()}
 \label{alg_naive_rec_call}
 \begin{algorithmic}[1]
 \State $counter \gets 0$
@@ -618,7 +618,7 @@ If $i$ is not equal to $j-1$ it loops for the integer $k$ from $i+1$ to $j-1$ an
 
 
 \begin{center}
-\captionof{algorithm}{Boolean parseNaive(int indexNT, int i, int j)}\label{alg:cap}
+\captionof{algorithm}{parseNaive(int indexNT, int i, int j)}
 \begin{algorithmic}[1]
 \State $counter \gets counter+1$
 \If{$i == (j-1)$}
@@ -717,7 +717,7 @@ This results in a total of $2^n$ recursive calls and each recursive call takes $
 The topdown method is an improved version of the naive method (Section \ref{naivedescription}). This algorithm works recursive and with the concept of divide and conquer, too. In this algorithm another global array is used, which contains the values \texttt{true}, \texttt{false} and \texttt{null}. The array gets initialized with \texttt{null} in each field. That happens in the recursion call method below.
 
 \begin{center}
-\captionof{algorithm}{Recursion call: Boolean parseTD()}\label{alg:cap}
+\captionof{algorithm}{Recursion call: parseTD()}
 \begin{algorithmic}[1]
 \State $counter \gets 0$
 \For{$i \gets 0$ \textbf{to} $table.length$ }
@@ -735,7 +735,7 @@ The topdown method is an improved version of the naive method (Section \ref{naiv
 Additional to the naive algorithm, the recursion in the topdown approach starts with another condition: If one of the values in the global table is not \texttt{null}, the next recursive call is not executed and this value gets returned. This if-condition can be seen in the following part of the pseudo code. The rest of the topdown approach is a similar approach to the naive method that was already described in Section \ref{naivedescription}.
 
 \begin{center}
-\captionof{algorithm}{Additional condition in Boolean parseTD(int indexNT, int i, int j)}\label{alg:cap}
+\captionof{algorithm}{Additional condition in parseTD(int indexNT, int i, int j)}
 \begin{algorithmic}[1]
 \If{table[indexNT][i][j] \ != null}
 \State \Return table[indexNT][i][j]
@@ -747,7 +747,7 @@ Additional to the naive algorithm, the recursion in the topdown approach starts 
 The complete topdown algorithm is shown as pseudo code below. In the inner for-loop (line 18) the boolean value of the next method calls get assigned into the global table. If there is assigned a true (line 19) the value true gets returns (lime 20). The general topdown approach is the same approach as the naive method that is described in Section \ref{naivedescription}.
 
 \begin{center}
-\captionof{algorithm}{Boolean parseTD(int indexNT, int i, int j)}\label{alg:cap}
+\captionof{algorithm}{parseTD(int indexNT, int i, int j)}
 \begin{algorithmic}[1]
 \State $counter \gets counter+1$
 \State $rulesetLength \gets ruleset[0].length$
@@ -801,7 +801,7 @@ For each rule it is checked if the first or the second element of the body is  a
 
 
 \begin{center}
-\captionof{algorithm}{boolean parseLinearTD(int indexNT, int i, int j)}
+\captionof{algorithm}{parseLinearTD(int indexNT, int i, int j)}
 \begin{algorithmic}[1]
 \State $counter \gets counter+1$
 \State $rulesetLength \gets ruleset[0].length$
@@ -865,7 +865,7 @@ The approach of dynamic programming calculates the smallest substrings first and
 
 
 \begin{center}
-\captionof{algorithm}{Boolean parseBU()}\label{alg:cap}
+\captionof{algorithm}{parseBU()}\label{alg:cap}
 \begin{algorithmic}[1]
 \State $wordlength \gets word.length$ 
 \State $Integer[][][] DP \gets new Integer[wordLength][wordLength][wordlength]$
@@ -1006,7 +1006,7 @@ The concept on how to find the entry in the array that is further on the top rig
 
 
 \begin{center}
-	\captionof{algorithm}{int[] findBestIndeces(int $i_a$, int $j_a$, int $i_b$, int $j_b$)}\label{alg:fbi}
+	\captionof{algorithm}{findBestIndeces(int $i_a$, int $j_a$, int $i_b$, int $j_b$)}\label{alg:fbi}
 	\begin{algorithmic}[1]
 		\State $int[] \ betterIndeces \gets new \ int[2]$
 		\State $int \  indicator_i \gets i_a - i_b$
@@ -1043,7 +1043,7 @@ It can happen that no accepted word is found with deletion, if no subword conclu
 The distance of the entry in the CYK-table that contains the start symbol and the top right corner can also be returned as the amount of symbols that need to be deleted to receive an accepted word. This error counter works only for the deletion method.
 
 \begin{center}
-	\captionof{algorithm}{Integer[] solveErrorWithDeletion(Integer[][][] CYK, int amountOfErrors)}\label{alg:deletion}
+	\captionof{algorithm}{solveErrorWithDeletion(Integer[][][] CYK, int amountOfErrors)}\label{alg:deletion}
 	\begin{algorithmic}[1]
 		\State $int \ i \gets -1$
 		\State $int \ j \gets -1$
