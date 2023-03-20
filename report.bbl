@@ -204,6 +204,32 @@
       \field{title}{An Introduction to Formal Language Theory}
       \field{year}{1988}
     \endentry
+    \entry{rosenschein1985formal}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=acd5dcbea6b7cfe2f86b40db982bd46d}{%
+           family={Rosenschein},
+           familyi={R\bibinitperiod},
+           given={Stanley\bibnamedelima J},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SRI International. Artificial Intelligence Center}%
+      }
+      \strng{namehash}{5996482cbf2b003ba88cdebcb0c77bea}
+      \strng{fullhash}{5996482cbf2b003ba88cdebcb0c77bea}
+      \strng{bibnamehash}{5996482cbf2b003ba88cdebcb0c77bea}
+      \strng{authorbibnamehash}{5996482cbf2b003ba88cdebcb0c77bea}
+      \strng{authornamehash}{5996482cbf2b003ba88cdebcb0c77bea}
+      \strng{authorfullhash}{5996482cbf2b003ba88cdebcb0c77bea}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Formal theories of knowledge in AI and robotics}
+      \field{year}{1985}
+    \endentry
     \entry{LS_Ulm}{misc}{}
       \name{author}{1}{}{%
         {{hash=cb256318dc0e57d7fd8ad3f1dfb2e2e3}{%
