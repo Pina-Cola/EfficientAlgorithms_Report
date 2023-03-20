@@ -2368,7 +2368,9 @@
     <bcf:citekey order="13" intorder="1">picrt</bcf:citekey>
     <bcf:citekey order="14" intorder="1">bigO</bcf:citekey>
     <bcf:citekey order="15" intorder="1">bigO</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">FG</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">delahaye1987formal</bcf:citekey>
+    <bcf:citekey order="16" intorder="2">rosenschein1985formal</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">FG</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
