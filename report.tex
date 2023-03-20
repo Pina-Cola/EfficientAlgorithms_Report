@@ -678,7 +678,7 @@ The parser has a recursive call with a for loop with $n \cdot k$ iterations. At 
 
 The root node of the tree represents the initial call of the parser with the entire input string of length $n$. Each level of the tree represents a recursive call, where the number of children is $2$, because that is the number of recursive calls. Because of this, the number of nodes in the tree is $2^n$.
 
-This results in a total of $2^n$ recursive calls and each recursive call takes $O(n)$ time so the total runtime will be $O(n*2^n)$ which is in $O(2^n)$.
+This results in a total of $2^n$ recursive calls and each recursive call takes $O(n)$ time so the total runtime will be in $O(2^n)$.
 
 
 
@@ -1665,7 +1665,7 @@ In algorithm \ref{alg:buns} the adapted version of the bottomUp parser can be se
 Regarding the experiments from section \ref{evaluation}, the topdown method seems to be the most efficient, followed by the bottomup method. The least efficient method is in these cases the naive approach. The $O$-notation showed different results considering the upper bounds of the methods. This shows, that the $O$-notation bound is an upper bound and an algorithm can perform faster in experiments, depending on the input stream.
 
 
-These algorithms show differences in efficiency but also limits for the examination of words with the \textit{CYK}-algorithm. The amount of calls raised especially with the Well-Balanced-Parantheses language exponentially. This can also be seen in the graphs in section \ref{experiments}.
+These algorithms show differences in efficiency but also limits for the examination of words with the \textit{CYK}-algorithm. The amount of calls raised especially with the Well-Balanced-Parantheses language exponentially. This can also be seen in the graphs in Section \ref{experiments}.
 
 The linear parsing method on the other hand worked with a different restriction on the input stream, which can lead into even higher performances.
 
