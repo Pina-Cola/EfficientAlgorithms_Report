@@ -494,11 +494,17 @@ The array is complete and sorted:
 \subsection{Master Theorem}
 \label{Master_Theorem}
 
-The master theorem provides an analysis for the runtime of divide and conquer algorithms in $O$-notation. A problem of size $n$ is divided into $a$ subproblems of size $\frac{n}{b}$ each and $O(n^k)$ further computations are neccesary to combine the solutions. \cite{MT}
-
+The master theorem provides an analysis for the runtime of divide and conquer algorithms in $O$-notation. A problem of size $n$ is divided into $a$ subproblems of size $\frac{n}{b}$ each and $O(n^k)$ further computations are done to combine the solutions of the subproblems. \cite{MT}
 \begin{align*}
 	T(n)=a \cdot T(\frac{n}{b}) + O(n^k)
 \end{align*} 
+
+It solves to the following upper bounds of the runtime:
+\begin{align}
+	a < b^k \ \in & \  O(n^k) \\
+	a = b^k \ \in & \  O(n^k \log n) \\
+	a > b^k \ \in & \  O(n^{\log_b a})
+\end{align} 
 
 
 
