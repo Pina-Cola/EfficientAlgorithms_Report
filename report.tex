@@ -949,6 +949,189 @@ The runtime of the \texttt{parseBU} method is in $O(n^3)$, because it contains t
 \pagebreak
 
 
+%---------------------------------------------------------------------%
+
+
+
+
+
+
+
+
+\section{Error correction}
+\label{errorcorrection}
+
+Apart from checking if an input word is part of a language, the amount of errors and the correction of those can be interesting.
+Two options for the error correction are considered in this section: A symbol can be exchanged or symbols can be deleted. The output for some examples of the error correction can be seen in Appendix \ref{howtousethecode}.
+
+For the error correction the bottomup parser modified, because the CYK-table shows, which substrings lead to which nonterminal symbols, for example the start symbol.
+
+
+
+
+
+%---------------------------------------------------------------------%
+\subsection{Deletion}
+\label{deletion}
+
+For the deletion the table of the CYK-algorithm is used. This is described in Section \ref{cyk} and the parsing method for it is explained in Section \ref{bottomupdescription}.
+The CYK-table has to contain the start symbol in the entry on the right top corner to conclude that the word is part of the language. To find an accepted word with deletion, the entry with the start symbol which is closest to the right top is searched. 
+
+The concept on how to find the entry in the array that is further on the top right is described here and shown in the pseudo code of the function \texttt{findBestIndeces} in algorithm \ref{alg:fbi}. The function takes two array positions as $(i,j)$ as input and returns the better position in an int array of the length 2.
+
+
+
+\begin{center}
+	\captionof{algorithm}{int[] findBestIndeces(int $i_a$, int $j_a$, int $i_b$, int $j_b$)}\label{alg:fbi}
+	\begin{algorithmic}[1]
+		\State $int[] \ betterIndeces \gets new \ int[2]$
+		\State $int \  indicator_i \gets i_a - i_b$
+		\State $int \ indicator_j \gets j_b - j_a$
+		\If{$indicator_i + indicator_j) == 0$}
+		\State \Comment{both are equal far away}
+		\State $betterIndeces[0] \gets i_a$
+		\State $betterIndeces[1] \gets j_a$
+		\EndIf
+		\If{$indicator_i + indicator_j) > 0$}
+		\State \Comment{b is closer}
+		\State $betterIndeces[0] \gets i_b$
+		\State $betterIndeces[1] \gets j_b$
+		\Else
+		\State \Comment{a is closer}
+		\State $betterIndeces[0] \gets i_a$
+		\State $betterIndeces[1] \gets j_a$
+		\EndIf
+		\State \Return $betterIndeces$
+	\end{algorithmic}
+	\hrulefill
+\end{center}
+
+
+The parameters for the functions are the $i$ and $j$ values for the two positions $A$ and $B$ in the array as $A_i$, $A_j$, $B_i$, $B_j$. The searched position in the array is a small $i$ with a large $j$.
+
+Two values are stored for later comparisons: $x = A_i - B_i$ and $y = B_j-A_j$. If $x$ and $y$ are equal, the positions are equally far away from the top right array entry. If $x+y$ is positive, $B$ is the preferred position, else it is $A$.
+
+
+With those indices the part of the word that is accepted and the part that needs to be deleted can be calculated. This is done in the method \texttt{solveErrorWithDeletion} which is shown as pseudo code in algorithm \ref{alg:deletion}. This concludes in the longest accepted word with deletion, which is then returned.
+
+It can happen that no accepted word is found with deletion, if no subword concluded into the start symbol in the CYK-table.
+
+The distance of the entry in the CYK-table that contains the start symbol and the top right corner can also be returned as the amount of symbols that need to be deleted to receive an accepted word. This error counter works only for the deletion method.
+
+\begin{center}
+	\captionof{algorithm}{Integer[] solveErrorWithDeletion(Integer[][][] CYK, int amountOfErrors)}\label{alg:deletion}
+	\begin{algorithmic}[1]
+		\State $int \ i \gets -1$
+		\State $int \ j \gets -1$
+		\State $int[] \ betterIndeces \gets new \ int[2]$
+		\For{$index \gets 0$ \textbf{to} $CYK.length$} 
+		\For{$entries \gets 0$ \textbf{to} $CYK[amountOfErrors][index].length$} 
+		\If{ $CYK[amountOfErrors][index][entries] == 0$}
+		\State $betterIndeces \gets findBestIndeces(i, j, amountOfErrors, index)$
+		\State $i \gets betterIndeces[0]$
+		\State $j \gets betterIndeces[1]$
+		\EndIf
+		\State $temp \gets CYK.length - 1 - amountOfErrors$
+		\If{$CYK[index][temp][entries] == 0}$
+		\State $betterIndeces \gets findBestIndeces(i, j, index, temp)$
+		\State $i \gets betterIndeces[0]$
+		\State $j \gets betterIndeces[1]$
+		\EndIf
+		\EndFor          
+		\EndFor
+		\If{$i == -1$}
+		\State $Integer[] \ noAcceptedWord \gets new \ Integer[1]$
+		\State $noAcceptedWord[0] \gets -1$
+		\State \Return $noAcceptedWord$
+		\EndIf
+		
+		\State $int \ from \gets Math.min(i, j)$
+		\State $int \ to \gets Math.max(i, j)$
+		\State $Integer[] acceptedWord \gets new \ Integer[to - from + 1]$
+		\If{$from == to$}
+		\For{$k \gets 1 \textbf{ to } inputAsInt.length$}
+		\If{$inputAsInt[k] != null \textbf{ and } inputAsInt[k] == 0$}
+		\State $acceptedWord[k] \gets inputAsInt[k]$
+		\State $break$
+		\EndIf
+		\EndFor
+		\State \Return $acceptedWord$
+		\EndIf
+		
+		\For{$k \gets 1 \textbf{ to } to - from$}
+		\If{$inputAsInt[k + from] != null$}
+		\State $acceptedWord[k] \gets inputAsInt[k + from]$
+		\EndIf
+		\EndFor
+		\State \Return $acceptedWord$
+	\end{algorithmic}
+	\hrulefill
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+%---------------------------------------------------------------------%
+\subsection{Exchange}
+\label{exchange}
+
+The exchange method works iterative and iterates over every symbol of the input word and tries ever terminal symbol on each index. The method can only exchange one symbol. First, the symbol and each entry in the CYK-table that concluded from this symbol in the input word are deleted. For this, the corresponding entries are replaced with $-1$. Then the fields that are assigned with $-1$ in the CYK-table get calculated with a new input symbol, which replaces the original one. 
+If a success is found, the accepted word is returned. 
+
+In algorithm \ref{alg:buns} the adapted version of the bottomUp parser can be seen as pseudo code. In this methos, a symbol from the input word got replaced by a new symbol (which is the parameter \texttt{newSymbol}). All the entries, that relied on this symbol were replaced by $-1$ before and this version of the bottomUp parser examines the new entries of these field to produce a full CYK-table for the new input word without calculating the already known parts again.
+
+
+\begin{center}
+	\captionof{algorithm}{parseBUnewSymbol(Integer[][][] DP, int newSymbol)}\label{alg:buns}
+	\begin{algorithmic}[1]
+		\State $wordlength \gets word.length$ 
+		\For{$i \gets 0$ \textbf{to} $wordlength$}
+		\If{$DP[i][i][0] != null \textbf{ and } DP[i][i][0] == -1$}
+		\State $DP[i][i][0] \gets newSymbol$
+		\EndIf
+		\EndFor
+		
+		\For{$l \gets 0$ \textbf{to} $wordlength$}
+		\For{$i \gets 0$ \textbf{to} $wordlength - l$}
+		\State $j \gets i + l$
+		\If{$DP[i][j][0] != null \textbf{ and } DP[i][j][0] == -1$}
+		\For{$k \gets 0$ \textbf{to} $j$}
+		
+		\For{$head \gets 0$ \textbf{to} $ruleset.length$}
+		\For{$body \gets 0$ \textbf{to} $ruleset[head].length$}
+		\State $conter \gets counter + 1$
+		\If{$ruleset[indexNT][bodyIndex][0] \  != null$ \newline \hspace*{5em} \textbf{and} $ruleset[indexNT][bodyIndex][1] \  != null$}
+		\State $first \gets ruleset[head][body].charAt[0]$
+		\State $second \gets ruleset[head][body][1]$
+		\If{$DP[i][k] \ contains \ first$ \textbf{and} $DP[k+1][j] \ contains \ second$}
+		\State assign head to $DP[i][j][c]$
+		\EndIf
+		\EndIf
+		\EndFor
+		\EndFor
+		\EndFor
+		\EndIf
+		\EndFor
+		\EndFor
+		\If{$DP[0][wordlength-1] \  contains \ 0$}
+		\State \Return true
+		\EndIf
+		\State \Return false
+	\end{algorithmic}
+	\hrulefill
+\end{center}
+
+
+
+
 
 
 
@@ -1458,186 +1641,6 @@ It is to consider that the $O$-notation represents the upper bound of the runtim
 
 \pagebreak
 
-
-%---------------------------------------------------------------------%
-
-
-
-
-
-
-
-
-\section{Error correction}
-\label{errorcorrection}
-
-Apart from checking if an input word is part of a language, the amount of errors and the correction of those can be interesting.
-Two options for the error correction are considered in this section: A symbol can be exchanged or symbols can be deleted. The output for some examples of the error correction can be seen in Appendix \ref{howtousethecode}.
-
-For the error correction the bottomup parser modified, because the CYK-table shows, which substrings lead to which nonterminal symbols, for example the start symbol.
-
-
-
-
-
-%---------------------------------------------------------------------%
-\subsection{Deletion}
-\label{deletion}
-
-For the deletion the table of the CYK-algorithm is used. This is described in Section \ref{cyk} and the parsing method for it is explained in Section \ref{bottomupdescription}.
-The CYK-table has to contain the start symbol in the entry on the right top corner to conclude that the word is part of the language. To find an accepted word with deletion, the entry with the start symbol which is closest to the right top is searched. 
-
-The concept on how to find the entry in the array that is further on the top right is described here and shown in the pseudo code of the function \texttt{findBestIndeces} in algorithm \ref{alg:fbi}. The function takes two array positions as $(i,j)$ as input and returns the better position in an int array of the length 2.
-
-
-
-\begin{center}
-\captionof{algorithm}{int[] findBestIndeces(int $i_a$, int $j_a$, int $i_b$, int $j_b$)}\label{alg:fbi}
-\begin{algorithmic}[1]
-\State $int[] \ betterIndeces \gets new \ int[2]$
-\State $int \  indicator_i \gets i_a - i_b$
-\State $int \ indicator_j \gets j_b - j_a$
-\If{$indicator_i + indicator_j) == 0$}
-\State \Comment{both are equal far away}
-\State $betterIndeces[0] \gets i_a$
-\State $betterIndeces[1] \gets j_a$
-\EndIf
-\If{$indicator_i + indicator_j) > 0$}
-\State \Comment{b is closer}
-\State $betterIndeces[0] \gets i_b$
-\State $betterIndeces[1] \gets j_b$
-\Else
-\State \Comment{a is closer}
-\State $betterIndeces[0] \gets i_a$
-\State $betterIndeces[1] \gets j_a$
-\EndIf
-\State \Return $betterIndeces$
-\end{algorithmic}
-\hrulefill
-\end{center}
-
-
-The parameters for the functions are the $i$ and $j$ values for the two positions $A$ and $B$ in the array as $A_i$, $A_j$, $B_i$, $B_j$. The searched position in the array is a small $i$ with a large $j$.
-
-Two values are stored for later comparisons: $x = A_i - B_i$ and $y = B_j-A_j$. If $x$ and $y$ are equal, the positions are equally far away from the top right array entry. If $x+y$ is positive, $B$ is the preferred position, else it is $A$.
-
-
-With those indices the part of the word that is accepted and the part that needs to be deleted can be calculated. This is done in the method \texttt{solveErrorWithDeletion} which is shown as pseudo code in algorithm \ref{alg:deletion}. This concludes in the longest accepted word with deletion, which is then returned.
-
-It can happen that no accepted word is found with deletion, if no subword concluded into the start symbol in the CYK-table.
-
-The distance of the entry in the CYK-table that contains the start symbol and the top right corner can also be returned as the amount of symbols that need to be deleted to receive an accepted word. This error counter works only for the deletion method.
-
-\begin{center}
-\captionof{algorithm}{Integer[] solveErrorWithDeletion(Integer[][][] CYK, int amountOfErrors)}\label{alg:deletion}
-\begin{algorithmic}[1]
-\State $int \ i \gets -1$
-\State $int \ j \gets -1$
-\State $int[] \ betterIndeces \gets new \ int[2]$
-\For{$index \gets 0$ \textbf{to} $CYK.length$} 
-\For{$entries \gets 0$ \textbf{to} $CYK[amountOfErrors][index].length$} 
-\If{ $CYK[amountOfErrors][index][entries] == 0$}
-\State $betterIndeces \gets findBestIndeces(i, j, amountOfErrors, index)$
-\State $i \gets betterIndeces[0]$
-\State $j \gets betterIndeces[1]$
-\EndIf
-\State $temp \gets CYK.length - 1 - amountOfErrors$
-\If{$CYK[index][temp][entries] == 0}$
-\State $betterIndeces \gets findBestIndeces(i, j, index, temp)$
-\State $i \gets betterIndeces[0]$
-\State $j \gets betterIndeces[1]$
-\EndIf
-\EndFor          
-\EndFor
-\If{$i == -1$}
-\State $Integer[] \ noAcceptedWord \gets new \ Integer[1]$
-\State $noAcceptedWord[0] \gets -1$
-\State \Return $noAcceptedWord$
-\EndIf
-
-\State $int \ from \gets Math.min(i, j)$
-\State $int \ to \gets Math.max(i, j)$
-\State $Integer[] acceptedWord \gets new \ Integer[to - from + 1]$
-\If{$from == to$}
-\For{$k \gets 1 \textbf{ to } inputAsInt.length$}
-\If{$inputAsInt[k] != null \textbf{ and } inputAsInt[k] == 0$}
-\State $acceptedWord[k] \gets inputAsInt[k]$
-\State $break$
-\EndIf
-\EndFor
-\State \Return $acceptedWord$
-\EndIf
-
-\For{$k \gets 1 \textbf{ to } to - from$}
-\If{$inputAsInt[k + from] != null$}
-\State $acceptedWord[k] \gets inputAsInt[k + from]$
-\EndIf
-\EndFor
-\State \Return $acceptedWord$
-\end{algorithmic}
-\hrulefill
-\end{center}
-
-
-
-
-
-
-
-
-
-
-
-
-%---------------------------------------------------------------------%
-\subsection{Exchange}
-\label{exchange}
-
-The exchange method works iterative and iterates over every symbol of the input word and tries ever terminal symbol on each index. The method can only exchange one symbol. First, the symbol and each entry in the CYK-table that concluded from this symbol in the input word are deleted. For this, the corresponding entries are replaced with $-1$. Then the fields that are assigned with $-1$ in the CYK-table get calculated with a new input symbol, which replaces the original one. 
-If a success is found, the accepted word is returned. 
-
-In algorithm \ref{alg:buns} the adapted version of the bottomUp parser can be seen as pseudo code. In this methos, a symbol from the input word got replaced by a new symbol (which is the parameter \texttt{newSymbol}). All the entries, that relied on this symbol were replaced by $-1$ before and this version of the bottomUp parser examines the new entries of these field to produce a full CYK-table for the new input word without calculating the already known parts again.
-
-
-\begin{center}
-\captionof{algorithm}{parseBUnewSymbol(Integer[][][] DP, int newSymbol)}\label{alg:buns}
-\begin{algorithmic}[1]
-\State $wordlength \gets word.length$ 
-\For{$i \gets 0$ \textbf{to} $wordlength$}
-\If{$DP[i][i][0] != null \textbf{ and } DP[i][i][0] == -1$}
-\State $DP[i][i][0] \gets newSymbol$
-\EndIf
-\EndFor
-
-\For{$l \gets 0$ \textbf{to} $wordlength$}
-\For{$i \gets 0$ \textbf{to} $wordlength - l$}
-\State $j \gets i + l$
-\If{$DP[i][j][0] != null \textbf{ and } DP[i][j][0] == -1$}
-\For{$k \gets 0$ \textbf{to} $j$}
-
-\For{$head \gets 0$ \textbf{to} $ruleset.length$}
-\For{$body \gets 0$ \textbf{to} $ruleset[head].length$}
-\State $conter \gets counter + 1$
-\If{$ruleset[indexNT][bodyIndex][0] \  != null$ \newline \hspace*{5em} \textbf{and} $ruleset[indexNT][bodyIndex][1] \  != null$}
-\State $first \gets ruleset[head][body].charAt[0]$
-\State $second \gets ruleset[head][body][1]$
-\If{$DP[i][k] \ contains \ first$ \textbf{and} $DP[k+1][j] \ contains \ second$}
-\State assign head to $DP[i][j][c]$
-\EndIf
-\EndIf
-\EndFor
-\EndFor
-\EndFor
-\EndIf
-\EndFor
-\EndFor
-\If{$DP[0][wordlength-1] \  contains \ 0$}
-\State \Return true
-\EndIf
-\State \Return false
-\end{algorithmic}
-\hrulefill
-\end{center}
 
 
 
