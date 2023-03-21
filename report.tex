@@ -1461,35 +1461,29 @@ It is to consider that the $O$-notation represents the upper bound of the runtim
 To confirm the calculated runtimes from Section \ref{systemdesign}, the results of the experiments are calculated, considering the $O$-notation runtime. For the input length ($n$) the actual results and $O$-notation results as upper bound are compared.
 
 
-\textbf{Naive approach ($O(2^n)$):} \\
+\textbf{Naive approach ($\Omega(2^n)$):}
+
+$\Omega$-notation is defined as the lower bound of an algorithm. That is the least amount of time required. \cite{GFG}
+
 Well-Balanced-Parantheses: 
-
-There can be several several reasons why the actual runtime of a function may be larger than the $O$-notation.
-Constant factors are ignored: $O$-notation only gives an upper bound on the time complexity of a function and the runtime of a function depends on the input data. 
-$O$-notation is a tool to approximate the time complexity of a function, but it is not always accurate in predicting the actual runtime.
-
-The initial estimate in section \ref{naiveruntime} of the naive parser was $O(2^n \cdot n)$, which is in $O(2^n)$. 
-
-In the following table, variations of the input word \texttt{($^*$)$^*$} were evaluated and compared with the runtime in $O$-notation.
-
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
 \hline
-$n$ & $2^n$ & $2^n \cdot n$ & counter \\
+$2^n$ & counter \\
 \hline
-2& 4 & 8 & 6\\
-4& 16 & 64 & 33\\
-6& 64 & 384 & 212\\
-8& 256 & 2048 & 1295\\
-10& 1.024 & 10240 & 7666 \\
-20& 1.048.576 & 20.971.520 & 51.863.993\\
-30& 1.073.741.824 & 32.212.254.720 & 348.838.486.712\\
+4 &  6\\
+16 &  33\\
+64 &  212\\
+256 &  1295\\
+1.024 &  7666 \\
+1.048.576 &  51.863.993\\
+1.073.741.824 &  348.838.486.712\\
 \hline
 \end{tabular}
 \end{center}
 
 
-The results of the experiments confirm the runtime calculation of $O(2^n)$ in Section \ref{naiveruntime}. 
+The results of the experiments confirm the runtime calculation of $\Omega(2^n)$ in Section \ref{naiveruntime}. 
 
 
 

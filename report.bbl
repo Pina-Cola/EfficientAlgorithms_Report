@@ -109,6 +109,25 @@
       \verb https://www.xarg.org/tools/cyk-algorithm/
       \endverb
     \endentry
+    \entry{GFG}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e39b9c178b2c9be4e99b141d956c6ff6}{%
+           family={GeeksForGeeks},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{e39b9c178b2c9be4e99b141d956c6ff6}
+      \strng{fullhash}{e39b9c178b2c9be4e99b141d956c6ff6}
+      \strng{bibnamehash}{e39b9c178b2c9be4e99b141d956c6ff6}
+      \strng{authorbibnamehash}{e39b9c178b2c9be4e99b141d956c6ff6}
+      \strng{authornamehash}{e39b9c178b2c9be4e99b141d956c6ff6}
+      \strng{authorfullhash}{e39b9c178b2c9be4e99b141d956c6ff6}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://www.geeksforgeeks.org/difference-between-big-oh-big-omega-and-big-theta/}, opened on 21.03.2023}
+      \field{title}{Difference between Big Oh, Big Omega and Big Theta}
+    \endentry
     \entry{recursion}{incollection}{}
       \name{author}{1}{}{%
         {{hash=97e5cf400c5b6b453326f15b57a8df9c}{%
