@@ -667,7 +667,7 @@ Line & Runtime & Type \\
 11 & $1 \cdot$ $k$ & Assignment \\
 12 & $1 \cdot$ $k$ & Assignment\\
 13 & $n \cdot$ $k$ & Loop \\
-14 & $2^n \cdot n$ & Recursive call \\
+14 & $2^n$ & Recursive call \\
 15 & $1$ $\cdot$ $n$ $\cdot$ $k$ & Return statement\\
 21 & $1$ & Return statement \\
 \hline
@@ -679,13 +679,13 @@ Calculating the runtime:
 \vspace*{-1em}
 \begin{align*}
 & 1 + 1+ k + k +k + k + k + k + k \\
-& + n \cdot k + n \cdot 2^n + n \cdot k \\
-& =  2 + 7k + 2(n \cdot k) + n \cdot 2^n \\
-& = 2 + 7k + 2n \cdot 2k + n \cdot 2^n \\
-& \in O(2^n)
+& + n \cdot k + 2^n + n \cdot k \\
+& =  2 + 7k + 2(n \cdot k) + 2^n \\
+& = 2 + 7k + 2n \cdot 2k +  2^n \\
+& \in \Omega(2^n)
 \end{align*}
 
-The runtime of the naive method is in $O(2^n)$ in worst case scenario.
+The runtime of the naive method is in $\Omega(2^n)$ in worst case scenario.
 
 
 \end{minipage}
