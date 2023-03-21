@@ -1608,7 +1608,7 @@ It is to consider that the $O$-notation represents the upper bound of the runtim
 \label{results}
 
 \begin{minipage}{0.5\textwidth}
-The $O$-notation results from Section \ref{systemdesign} show, that the naive approach has a runtime of $O(2^n)$ and the topdown and bottomup approach have the same upper bound runtime of $O(n^3)$.
+The $O$-notation results from Section \ref{systemdesign} show, that the naive approach has a runtime of $\Omega(2^n)$ and the topdown and bottomup approach have the same upper bound runtime of $O(n^3)$. This shows, that the lower bound runtime of the naive approach is still higher than the worst-case runtime for the other approaches.
 The experiments on the other hand show, that the topdown approach is faster than the naive parser.
 \end{minipage}
 \begin{minipage}{0.1\textwidth} \ \end{minipage}
@@ -1617,7 +1617,7 @@ The experiments on the other hand show, that the topdown approach is faster than
 \hline
 Method & Runtime \\
 \hline
-\texttt{parseNaive} & $O(2^n)$\\
+\texttt{parseNaive} & $\Omega(2^n)$\\
 \texttt{ParseTD} & $O(n^3)$ \\
 \texttt{ParseBU} & $O(n^3)$\\
 \texttt{ParseLinearTD} & $O(n^3)$\\
