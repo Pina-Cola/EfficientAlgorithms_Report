@@ -308,8 +308,7 @@ This is the previous example in CNF. How it was built can be seen in Appendix \r
 \subsection{Dynamic programming}
 \label{dp}
 
-The technique of dynamic programming can be used to solve problems, which can be divided into smaller subproblems. The solutions of the subproblems are saved (for example in a multi-dimensional array) and referenced later. \cite{DP}
-\\
+The technique of dynamic programming can be used to solve problems, which can be divided into smaller subproblems. The solutions of the subproblems are saved (for example in a multi-dimensional array) and referenced later \cite{DP}. 
 \begin{example*}[Knapsack problem]
 
 As an example the table for the knapsack problem is filled out, because it is a really common example for the concept of dynamic programming.
@@ -387,12 +386,12 @@ The first column in the table represent the objects and the last row the weight.
 \label{cyk}
 
 
-\textit{Cocke-Younger-Kasami}-algorithm (short: \textit{CYK}-algorithm) takes a grammar $G = (V, T, P, S)$ in \textit{CNF} and a word $w= w_1, w_2, ..., w_n \in T^*$ as an input. It then examines if the word follows the rules of the grammar. Then for every substring $w_{i, j} = w_i, ..., w_{i+j-1}$ (begins at index $i$ and has the length $j$) of the word $w$  the set of nonterminal symbols that lead to $w_{i, j}$ gets calculated and saved as $V_{i, j}$ to access it in later steps. \cite{CYK1}
+\textit{Cocke-Younger-Kasami}-algorithm (short: \textit{CYK}-algorithm) takes a grammar $G = (V, T, P, S)$ in \textit{CNF} and a word $w= w_1, w_2, ..., w_n \in T^*$ as an input. It then examines if the word follows the rules of the grammar. Then for every substring $w_{i, j} = w_i, ..., w_{i+j-1}$ (begins at index $i$ and has the length $j$) of the word $w$  the set of nonterminal symbols that lead to $w_{i, j}$ gets calculated and saved as $V_{i, j}$ to access it in later steps \cite{CYK1}. 
 
 
 \begin{example*}[Chomsky-Normal-Form]
 The following table shows the CYK-algorithm with the previous grammar example and the input word $aaabbb$. 
-The word is accepted by the grammar rules, because the initiating nonterminal symbol \textit{\texttt{S}} can be filled into the lowest field. The table is filled in step by step and the rules that are used in each step are marked, for a better understanding on how the algorithm works. \cite{cyk_online_alg}
+The word is accepted by the grammar rules, because the initiating nonterminal symbol \textit{\texttt{S}} can be filled into the lowest field. The table is filled in step by step and the rules that are used in each step are marked, for a better understanding on how the algorithm works \cite{cyk_online_alg}. 
 \ \\
 
 \begin{center}
@@ -415,8 +414,8 @@ The word is accepted by the grammar rules, because the initiating nonterminal sy
 \subsection{Recursion}
 \label{recursion}
 
-A function that calls itself is called recursive function. In computer science recursive functions use base cases to terminate the program and stopping it from going on forever. Base cases are problems that can be solved without any more recursive calls.
-\cite{recursion}
+A function that calls itself is called recursive function. In computer science recursive functions use base cases to terminate the program and stopping it from going on forever. Base cases are problems that can be solved without any more recursive calls \cite{recursion}.
+
 
 \begin{example*}[Recursion]
 
@@ -494,7 +493,7 @@ The array is complete and sorted:
 \subsection{Master Theorem}
 \label{Master_Theorem}
 
-The master theorem provides an analysis for the runtime of divide and conquer algorithms in $O$-notation. A problem of size $n$ is divided into $a$ subproblems of size $\frac{n}{b}$ each and $O(n^k)$ further computations are done to combine the solutions of the subproblems. \cite{MT}
+The master theorem provides an analysis for the runtime of divide and conquer algorithms in $O$-notation. A problem of size $n$ is divided into $a$ subproblems of size $\frac{n}{b}$ each and $O(n^k)$ further computations are done to combine the solutions of the subproblems \cite{MT}. 
 \begin{align*}
 	T(n)=a \cdot T(\frac{n}{b}) + O(n^k)
 \end{align*} 
