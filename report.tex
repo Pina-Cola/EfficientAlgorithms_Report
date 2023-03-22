@@ -655,15 +655,13 @@ The parser has a recursive call in a for loop with $n \cdot k$ iterations. At ea
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.5]{images/rt.png}
+\includegraphics[scale=0.55]{images/rt.png}
 \caption{Recursion tree \cite{picrt}}
 \label{rt}
 \end{center}
 \end{figure}
 
-The root node of the tree represents the initial call of the parser with the entire input string of length $n$. Each level of the tree represents a recursive call, where the number of children is $2$, because that is the number of recursive calls. Because of this, the number of nodes in the tree is $2^n$.
-
-This results in a total of $2^n$ recursive calls.
+The root node of the tree represents the initial call of the parser with the entire input string of length $n$. Each level of the tree represents a recursive call, where the number of children is $2$, because that is the number of recursive calls. Because of this, the number of nodes in the tree is $2^n$. This results in a total of $2^n$ recursive calls.
 
 \begin{minipage}{0.5\textwidth}
 	
