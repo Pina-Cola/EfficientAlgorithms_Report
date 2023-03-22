@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.12)  21 MAR 2023 15:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.12)  22 MAR 2023 15:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1589,15 +1589,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 652--692
-
- []
-
-<images/rt.png, id=356, 328.97906pt x 197.23688pt>
+<images/rt.png, id=357, 328.97906pt x 197.23688pt>
 File: images/rt.png Graphic file (type png)
 <use images/rt.png>
-Package pdftex.def Info: images/rt.png  used on input line 697.
-(pdftex.def)             Requested size: 197.38895pt x 118.34302pt.
+Package pdftex.def Info: images/rt.png  used on input line 658.
+(pdftex.def)             Requested size: 164.48912pt x 98.61818pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1759,7 +1756,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1200--1223
 
  []
 
-<diagrams/WBP_1.png, id=437, 770.88pt x 422.32782pt>
+<diagrams/WBP_1.png, id=439, 770.88pt x 422.32782pt>
 File: diagrams/WBP_1.png Graphic file (type png)
 <use diagrams/WBP_1.png>
 Package pdftex.def Info: diagrams/WBP_1.png  used on input line 1228.
@@ -1778,7 +1775,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [24]
-<diagrams/WBP_2.png, id=443, 818.30719pt x 444.91219pt>
+<diagrams/WBP_2.png, id=445, 818.30719pt x 444.91219pt>
 File: diagrams/WBP_2.png Graphic file (type png)
 <use diagrams/WBP_2.png>
 Package pdftex.def Info: diagrams/WBP_2.png  used on input line 1235.
@@ -1788,7 +1785,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1243--1264
 
  []
 
-<diagrams/BP_1.png, id=444, 768.62157pt x 422.32782pt>
+<diagrams/BP_1.png, id=446, 768.62157pt x 422.32782pt>
 File: diagrams/BP_1.png Graphic file (type png)
 <use diagrams/BP_1.png>
 Package pdftex.def Info: diagrams/BP_1.png  used on input line 1272.
@@ -1809,7 +1806,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1273--1273
 1/cmtt/m/n/10.95 (())(()) \OT1/cmr/m/n/10.95 and
  []
 
-<diagrams/BP_2.png, id=445, 768.62157pt x 418.56375pt>
+<diagrams/BP_2.png, id=447, 768.62157pt x 418.56375pt>
 File: diagrams/BP_2.png Graphic file (type png)
 <use diagrams/BP_2.png>
 Package pdftex.def Info: diagrams/BP_2.png  used on input line 1284.
@@ -1824,7 +1821,7 @@ Underfull \hbox (badness 5954) in paragraph at lines 1285--1285
 [][][]\OT1/cmr/m/n/10.95 Figure 5: |Well-Balanced-Parantheses
  []
 
-<diagrams/BP_C.png, id=446, 770.12718pt x 426.09187pt>
+<diagrams/BP_C.png, id=448, 770.12718pt x 426.09187pt>
 File: diagrams/BP_C.png Graphic file (type png)
 <use diagrams/BP_C.png>
 Package pdftex.def Info: diagrams/BP_C.png  used on input line 1295.
@@ -1851,7 +1848,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [26 <./diagrams/BP_1.png> <./diagrams/BP_2.png> <./diagrams/BP_C.png>]
-<diagrams/SG_1.png, id=465, 768.62157pt x 417.05812pt>
+<diagrams/SG_1.png, id=467, 768.62157pt x 417.05812pt>
 File: diagrams/SG_1.png Graphic file (type png)
 <use diagrams/SG_1.png>
 Package pdftex.def Info: diagrams/SG_1.png  used on input line 1335.
@@ -1861,7 +1858,7 @@ Overfull \hbox (16.75595pt too wide) in paragraph at lines 1335--1336
  [] 
  []
 
-<diagrams/SG_2.png, id=466, 768.62157pt x 420.06938pt>
+<diagrams/SG_2.png, id=468, 768.62157pt x 420.06938pt>
 File: diagrams/SG_2.png Graphic file (type png)
 <use diagrams/SG_2.png>
 Package pdftex.def Info: diagrams/SG_2.png  used on input line 1346.
@@ -1871,7 +1868,7 @@ Overfull \hbox (16.75595pt too wide) in paragraph at lines 1346--1347
  [] 
  []
 
-<diagrams/SG_C.png, id=467, 770.88pt x 420.82219pt>
+<diagrams/SG_C.png, id=469, 770.88pt x 420.82219pt>
 File: diagrams/SG_C.png Graphic file (type png)
 <use diagrams/SG_C.png>
 Package pdftex.def Info: diagrams/SG_C.png  used on input line 1356.
@@ -1885,7 +1882,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [27 <./diagrams/SG_1.png> <./diagrams/SG_2.png> <./diagrams/SG_C.png>]
-<diagrams/LGBTQ.png, id=478, 642.14906pt x 353.06906pt>
+<diagrams/LGBTQ.png, id=480, 642.14906pt x 353.06906pt>
 File: diagrams/LGBTQ.png Graphic file (type png)
 <use diagrams/LGBTQ.png>
 Package pdftex.def Info: diagrams/LGBTQ.png  used on input line 1421.
@@ -2025,7 +2022,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1772--1773
 
  []
 
-<images/terminal_1.png, id=556, 233.37187pt x 448.67625pt>
+<images/terminal_1.png, id=558, 233.37187pt x 448.67625pt>
 File: images/terminal_1.png Graphic file (type png)
 <use images/terminal_1.png>
 Package pdftex.def Info: images/terminal_1.png  used on input line 1779.
@@ -2050,7 +2047,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1748--1781
 
  []
 
-<images/terminal_2.png, id=557, 441.14813pt x 190.46156pt>
+<images/terminal_2.png, id=559, 441.14813pt x 190.46156pt>
 File: images/terminal_2.png Graphic file (type png)
 <use images/terminal_2.png>
 Package pdftex.def Info: images/terminal_2.png  used on input line 1783.
@@ -2064,7 +2061,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [35 <./images/terminal_1.png>]
-<images/terminal_3.png, id=563, 353.82187pt x 164.11313pt>
+<images/terminal_3.png, id=565, 353.82187pt x 164.11313pt>
 File: images/terminal_3.png Graphic file (type png)
 <use images/terminal_3.png>
 Package pdftex.def Info: images/terminal_3.png  used on input line 1798.
@@ -2089,12 +2086,12 @@ Underfull \hbox (badness 2181) in paragraph at lines 1805--1806
 \OT1/cmr/m/n/10.95 ex-change (one sym-bol is ex-
  []
 
-<images/terminal_4.png, id=564, 243.91125pt x 150.5625pt>
+<images/terminal_4.png, id=566, 243.91125pt x 150.5625pt>
 File: images/terminal_4.png Graphic file (type png)
 <use images/terminal_4.png>
 Package pdftex.def Info: images/terminal_4.png  used on input line 1810.
 (pdftex.def)             Requested size: 170.7367pt x 105.39302pt.
-<images/terminal_5.png, id=565, 434.37282pt x 170.13562pt>
+<images/terminal_5.png, id=567, 434.37282pt x 170.13562pt>
 File: images/terminal_5.png Graphic file (type png)
 <use images/terminal_5.png>
 Package pdftex.def Info: images/terminal_5.png  used on input line 1814.
@@ -2130,10 +2127,10 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43364 strings out of 475385
- 976138 string characters out of 2776907
- 1894889 words of memory out of 3000000
- 63924 multiletter control sequences out of 15000+600000
+ 43365 strings out of 475385
+ 976153 string characters out of 2776907
+ 1892953 words of memory out of 3000000
+ 63925 multiletter control sequences out of 15000+600000
  491619 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,32n,103p,1235b,1944s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -2156,27 +2153,28 @@ cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/pinak/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/User
 s/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
 <C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-mi8.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmmi9.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmr12.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/pinak/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/pinak/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/pinak/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/pinak/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/User
-s/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+mi7.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmmi8.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmmi9.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/pinak/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/pinak/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/pinak/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/pinak/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users
+/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 <C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-sy8.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmsy9.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmti10.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmti12.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/pinak/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/pinak/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (38 pages, 1306934 bytes).
+sy6.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmsy8.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmsy9.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmti10.pfb><C:/Users/pinak/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/pinak/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/pinak/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/pinak/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on report.pdf (38 pages, 1315131 bytes).
 PDF statistics:
- 720 PDF objects out of 1000 (max. 8388607)
+ 726 PDF objects out of 1000 (max. 8388607)
  120 named destinations out of 1000 (max. 500000)
  446 words of extra memory for PDF output out of 10000 (max. 10000000)
 

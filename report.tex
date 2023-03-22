@@ -618,7 +618,7 @@ If $i$ is not equal to $j-1$ it loops for the integer $k$ from $i+1$ to $j-1$ an
 
 
 \begin{center}
-\captionof{algorithm}{parseNaive(int indexNT, int i, int j)}
+\captionof{algorithm}{parseNaive(int indexNT, int i, int j)} \label{parsenaivealg}
 \begin{algorithmic}[1]
 \State $counter \gets counter+1$
 \If{$i == (j-1)$}
@@ -649,52 +649,13 @@ If $i$ is not equal to $j-1$ it loops for the integer $k$ from $i+1$ to $j-1$ an
 \subsubsection{Naive runtime}
 \label{naiveruntime}
 
-In the following table the upper bound runtime of the second method (algorithm 2) is listed for each line. The variable $n$ represents the length of the input word and $k$ the dimension of the rule array.
-\ \\ \ \\
-\begin{minipage}{0.5\textwidth}
+In the following table the upper bound runtime of the second method (Algorithm \ref{parsenaivealg}) is listed for each line. The variable $n$ represents the length of the input word and $k$ the dimension of the rule array.
 
-\begin{tabular}{|c|c|l|}
-\hline
-Line & Runtime & Type \\
-\hline
-1 &  $1$ & Assignment \\
-2 &  $1$ & Comparison \\
-3 & $k$  & Loop \\
-4 & $1$ $\cdot$ $k$ & Comparison \\
-5 & $1$ $\cdot$ $k$ & Return statement\\
-9 & $k$ & Loop \\
-10 & $1$ $\cdot$ $k$ & comparison \\
-11 & $1 \cdot$ $k$ & Assignment \\
-12 & $1 \cdot$ $k$ & Assignment\\
-13 & $n \cdot$ $k$ & Loop \\
-14 & $2^n$ & Recursive call \\
-15 & $1$ $\cdot$ $n$ $\cdot$ $k$ & Return statement\\
-21 & $1$ & Return statement \\
-\hline
-\end{tabular}
-
-
-\end{minipage}\begin{minipage}{0.5\textwidth}
-Calculating the runtime:
-\vspace*{-1em}
-\begin{align*}
-& 1 + 1+ k + k +k + k + k + k + k \\
-& + n \cdot k + 2^n + n \cdot k \\
-& =  2 + 7k + 2(n \cdot k) + 2^n \\
-& = 2 + 7k + 2n \cdot 2k +  2^n \\
-& \in \Omega(2^n)
-\end{align*}
-
-The runtime of the naive method is in $\Omega(2^n)$ in worst case scenario.
-
-
-\end{minipage}
-
-The parser has a recursive call with a for loop with $n \cdot k$ iterations. At each recursive call of the parsing method the for loop is halved and the recursive call is doubled. This can be visualized as a recursion tree in which each node has two children, which can be seen in the recursion tree in figure \ref{rt}.
+The parser has a recursive call in a for loop with $n \cdot k$ iterations. At each recursive call of the parsing method the for loop is halved and the recursive call is doubled. This can be visualized as a recursion tree in which each node has two children, which can be seen in the recursion tree in figure \ref{rt}.
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.6]{images/rt.png}
+\includegraphics[scale=0.5]{images/rt.png}
 \caption{Recursion tree \cite{picrt}}
 \label{rt}
 \end{center}
@@ -702,7 +663,46 @@ The parser has a recursive call with a for loop with $n \cdot k$ iterations. At 
 
 The root node of the tree represents the initial call of the parser with the entire input string of length $n$. Each level of the tree represents a recursive call, where the number of children is $2$, because that is the number of recursive calls. Because of this, the number of nodes in the tree is $2^n$.
 
-This results in a total of $2^n$ recursive calls so the total runtime will be in $\Omega(2^n)$.
+This results in a total of $2^n$ recursive calls.
+
+\begin{minipage}{0.5\textwidth}
+	
+\small{	\begin{tabular}{|c|c|l|}
+		\hline
+		Line & Runtime & Type \\
+		\hline
+		1 &  $1$ & Assignment \\
+		2 &  $1$ & Comparison \\
+		3 & $k$  & Loop \\
+		4 & $1$ $\cdot$ $k$ & Comparison \\
+		5 & $1$ $\cdot$ $k$ & Return statement\\
+		9 & $k$ & Loop \\
+		10 & $1$ $\cdot$ $k$ & comparison \\
+		11 & $1 \cdot$ $k$ & Assignment \\
+		12 & $1 \cdot$ $k$ & Assignment\\
+		13 & $n \cdot$ $k$ & Loop \\
+		14 & $2^n$ & Recursive call \\
+		15 & $1$ $\cdot$ $n$ $\cdot$ $k$ & Return statement\\
+		21 & $1$ & Return statement \\
+		\hline
+	\end{tabular} }
+	
+	
+\end{minipage}\begin{minipage}{0.5\textwidth}
+	Calculating the runtime:
+	\vspace*{-1em}
+	\begin{align*}
+		& 1 + 1+ k + k +k + k + k + k + k \\
+		& + n \cdot k + 2^n + n \cdot k \\
+		& =  2 + 7k + 2(n \cdot k) + 2^n \\
+		& = 2 + 7k + 2n \cdot 2k +  2^n \\
+		& \in \Omega(2^n)
+	\end{align*}
+	
+	The runtime of the naive method is in $\Omega(2^n)$ in worst case scenario.
+	
+	
+\end{minipage}
 
 
 
