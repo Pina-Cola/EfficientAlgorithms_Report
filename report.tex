@@ -781,10 +781,17 @@ The complete topdown algorithm is shown as pseudo code below. In the inner for-l
 \subsubsection{Top-Down runtime}
 \label{topdownruntime}
 
-In this part the runtime of the topdown method is calculated.
-The variable $n$ represents the length of the input word. 
-The runtime of the topdown parser is in $O(n^3)$, because the function is using a memoization table of the size $n \times n \times n$. The table stores the results of already computed subproblems.
-The parser iterates over all elements of the table. For each entry, it calls itself recursively and looks up the value in the memoization table, which takes constant time $O(1)$. Because the table is of size $n \times n \times n =n^3$, the time complexity of the function is in $O(n^3)$.
+%In this part the runtime of the topdown method is calculated.
+%The variable $n$ represents the length of the input word. 
+%The runtime of the topdown parser is in $O(n^3)$, because the function is using a memoization table of the size $n \times n \times n$. The table stores the results of already computed subproblems.
+%The parser iterates over all elements of the table. For each entry, it calls itself recursively and looks up the value in the memoization table, which takes constant time $O(1)$. Because the table is of size $n \times n \times n =n^3$, t
+
+
+The topdown parser performs two recursive calls in each iteration. In each recursive call, it is checked, whether the result for the current parameters is already stored in the memoization table and if so, the value is returned. If not, the parser computes the result by checking the grammar rules and recursively calling itself for each possible combination of symbols that could lead to the substring between the indices i and j in the input.
+
+The recursive call is made twice in each iteration in the innermost loop. Therefore, the number of recursive calls made by the function is proportional to the number of iterations of the innermost loop, which is $n^3$.
+
+The amount of work of each recursive call depends on the input grammar and the input string. In the worst case, all possible combinations of non-terminal symbols need to be explored. That leads to a time complexity of the function is in $O(n^3)$.
 
 
 
