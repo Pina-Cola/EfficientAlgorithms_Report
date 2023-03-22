@@ -766,7 +766,7 @@ The complete topdown algorithm is shown as pseudo code below. In the inner for-l
 \State $second \gets ruleset[indexNT][bodyIndex][1]$
 \For{$k \gets i+1$ \textbf{to} $j$}
 \State $table[indexNT][i][j] \gets (parseTD(first,i,k)$ \texttt{and} $parseTD(second,k,j))$
-\If{$table[indexNT][i][j] == true$}
+\If{$table[indexNT][i][j]$}
 \State \Return true
 \EndIf
 \EndFor
@@ -1461,7 +1461,7 @@ Seeing those runtimes one could think that the bottomup and the topdown approach
 
 Regarding the experiments that were run on the code, different approaches perform better for different grammars and input words. The topdown method seems to be the most efficient, followed by the bottomup method. The least efficient method is in these cases the naive approach, which has an lower bound of $\Omega(2^n)$.
 
-The linear version of the topdown seems to perform more efficient than the original parsing method, even though the runtime in $O$-notation is $O(n^3)$ for both algorithms. 
+The linear version of the topdown performs more efficient than the original parsing method, even though the upper bound is $O(n^3)$ for both algorithms. 
 It is to consider that the $O$-notation represents the upper bound of the runtime. Algorithms can run faster than the runtime in $O$-notation predicts. This is why the linear topdown parser performs better than the topdown parser, even though both are in $O(n^3)$.
 
 To confirm the calculated runtimes from Section \ref{systemdesign}, the results of the experiments are calculated, considering the $O$-notation runtime. For the input length ($n$) the actual results and $O$-notation results as upper bound are compared.
