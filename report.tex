@@ -222,7 +222,7 @@ In this section background information, definitions and examples on formal langu
 \label{formallanguage}
 
 
-Formal languages are abstract languages, which define the syntax of the words that get accepted by that language. It is a set of words that get accepted by the language and has a set of symbols that is called alphabet, which contains all the possible characters of the words. Those characters are called nonterminal symbols. \cite{CNF, language}
+Formal languages are abstract languages, which define the syntax of the words that get accepted by that language. It is a set of words that get accepted by the language and has a set of symbols that is called alphabet, which contains all the possible characters of the words. Those characters are called nonterminal symbols \cite{CNF, language}. 
 
 \begin{definition*}[Kleene star]
 The Kleene star $\Sigma^*$ of an alphabet $\Sigma$ is the set of all words that can be created through concatenation of the symbols of the alphabet $\Sigma$. The empty word $\epsilon$ is included. 
@@ -257,7 +257,7 @@ L = \{ (a^{n}b^{n})^m \} \text{ with } n, m \in \mathbb{N}
 \label{formalgrammar}
 
 
-A formal grammar describes how to form strings with correct syntax from a language's alphabet. A grammar does not describe the meaning of the strings or any semantics — only their syntax is defined. The grammar is a set of rules, which define which words are accepted by a formal language. Those rules consist of terminal and nonterminal symbols. The terminal symbols are the characters of the alphabet of the language and the nonterminal symbols are used to build the rules of the language -- they get replaced by terminal symbols. \cite{CNF, language} 
+A formal grammar describes how to form strings with correct syntax from a language's alphabet. A grammar does not describe the meaning of the strings or any semantics — only their syntax is defined. The grammar is a set of rules, which define which words are accepted by a formal language. Those rules consist of terminal and nonterminal symbols. The terminal symbols are the characters of the alphabet of the language and the nonterminal symbols are used to build the rules of the language -- they get replaced by terminal symbols \cite{CNF, language} . 
 
 \begin{definition*}[Formal grammar]
 A formal grammar $G$ is defined as a 4-tuple:
@@ -266,8 +266,8 @@ G = (V, T, P, S)
 \end{align*}
 The set $V$ contains the nonterminal symbols of the grammar and the set $T$ the terminal symbols, which is the alphabet of a language. This assumes that $V \cap T = \emptyset$. The set $P$ is the set of production rules, where an element of $V$ points to an element of $V^* \times T^*$. The symbol $S \in V$ represents the start symbol. 
 
-The production rules in the set $P$ have the format \texttt{head $\rightarrow$ body}. The head is always a nonterminal symbol and the body can be a combination of terminal and nonterminal symbols. A nonterminal symbol \texttt{A} in the body of a rule can be replaced by the body of a rule with the form \texttt{A $\rightarrow$ body}.
-\cite{LS_Ulm}
+The production rules in the set $P$ have the format \texttt{head $\rightarrow$ body}. The head is always a nonterminal symbol and the body can be a combination of terminal and nonterminal symbols. A nonterminal symbol \texttt{A} in the body of a rule can be replaced by the body of a rule with the form \texttt{A $\rightarrow$ body} \cite{LS_Ulm}.
+
 
 A formal grammar defines which words over the alphabet $T$/$ \ \Sigma$ are contained in the associated laguage.
 \end{definition*}
@@ -289,8 +289,8 @@ The start symbol \texttt{S} can for example be replaced with its body \texttt{SS
 \subsection{Chomsky-Normal-Form}
 \label{cnf}
 
-The \textit{Chomsky-Normal-Form} (short: \textit{CNF}) is a grammar which is formatted in a specific way. If the head of a rule (nonterminal symbol) is not generating the empty word (\textit{\texttt{S $\rightarrow \epsilon$}}) it either generates two nonterminal symbols or one terminal symbol for the grammar to be in \textit{CNF}.
-\cite{CNF}
+The \textit{Chomsky-Normal-Form} (short: \textit{CNF}) is a grammar which is formatted in a specific way. If the head of a rule (nonterminal symbol) is not generating the empty word (\textit{\texttt{S $\rightarrow \epsilon$}}) it either generates two nonterminal symbols or one terminal symbol for the grammar to be in \textit{CNF} \cite{CNF}.
+
 
 \begin{example*}[Chomsky-Normal-Form]
 This is the previous example in CNF. How it was built can be seen in Appendix \ref{createcnf}.
