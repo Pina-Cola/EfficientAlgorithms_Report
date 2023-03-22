@@ -742,7 +742,7 @@ Additional to the naive algorithm, the recursion in the topdown approach starts 
 \hrulefill
 \end{center}
 
-The complete topdown algorithm is shown as pseudo code below. In the inner for-loop (line 18) the boolean value of the next method calls get assigned into the global table. If there is assigned a true (line 19) the value true gets returns (lime 20). The general topdown approach is the same approach as the naive method that is described in Section \ref{naivedescription}.
+The complete topdown algorithm is shown as pseudo code below. In the inner for-loop (line 18) the boolean value of the next method calls get assigned into the global table. If there is assigned a true (line 19) the value true gets returns (line 20). The general topdown approach is the same approach as the naive method that is described in Section \ref{naivedescription}.
 
 \begin{center}
 \captionof{algorithm}{parseTD(int indexNT, int i, int j)}
@@ -1461,7 +1461,7 @@ To confirm the calculated runtimes from Section \ref{systemdesign}, the results 
 
 \textbf{Naive approach ($\Omega(2^n)$):}
 
-$\Omega$-notation is defined as the lower bound of an algorithm. That is the least amount of time required. \cite{GFG}
+$\Omega$-notation is defined as the lower bound of an algorithm -- that is the least amount of time required \cite{GFG}. 
 
 Well-Balanced-Parantheses: 
 \begin{center}
@@ -1631,7 +1631,7 @@ The reason for the faster results of the topdown parser is the global boolean ta
 
 In the experiments, the topdown performed better than the bottomup approach, even though the bottomup and the topdown parser are in $O(n^3)$. Because the bottomup fills in the CYK-table iteratively, the upper bound runtime is similar to the actual runtime.
 
-For these results it needs to be considered, that the $O$-notation states the bound from above. An algorithm can run better than the according $O$-notation runtime. It usually grows at most as much as the $O$-notation function. \cite{bigO}
+For these results it needs to be considered, that the $O$-notation states the bound from above. An algorithm can run better than the according $O$-notation runtime. It usually grows at most as much as the $O$-notation function \cite{bigO}. 
 
 %---------------------------------------------------------------------%
 \subsection{Results for linear grammars}
@@ -1693,7 +1693,7 @@ The linear parsing method on the other hand worked with a different restriction 
 
 \subsection{Future work}
 
-Formal languages and grammars can be used in different use cases, for example for AI learning methods. \cite{delahaye1987formal, rosenschein1985formal} Real languages like English can not entirely be defined as a formal languages, because they evolve naturally but some rules and order can be represented and designed as formal language. It is important to consider that formal languages only define the syntax and not the semantics. \cite{FG}
+Formal languages and grammars can be used in different use cases, for example for AI learning methods \cite{delahaye1987formal, rosenschein1985formal}. Real languages like English can not entirely be defined as a formal languages, because they evolve naturally but some rules and order can be represented and designed as formal language. It is important to consider that formal languages only define the syntax and not the semantics \cite{FG}. 
 
 The future work for this code is to optimize the error correction. The combination of deletion and exchange is not implemented yet. It would be interesting to find a more efficient way to calculate the exchange of symbols, which would enable the exchange of more than one symbol.
 In addition to this an accurate error counter for the symbols that need to be exchanged could be implemented.
