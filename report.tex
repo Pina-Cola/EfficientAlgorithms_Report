@@ -849,8 +849,9 @@ For each rule it is checked if the first or the second element of the body is  a
 \end{center}
 
 
-\subsubsection{Top-Down modified for linear grammars runtime}
+% \subsubsection{Top-Down modified for linear grammars runtime}
 \label{lineartopdown_runtime}
+\textbf{Runtime:}
 
 The runtime of the modified version is in $O(n^3)$, where $n$ is the length of the input string. This is analog to the runtime analysis of the topdown parser in section \ref{topdownruntime}.
 The parser iterates over the memoization table and for each entry, it makes a recursive call. The overall time complexity of the function is $O(n^3)$.
