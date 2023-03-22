@@ -663,8 +663,9 @@ The parser has a recursive call in a for loop with $n \cdot k$ iterations. At ea
 
 The root node of the tree represents the initial call of the parser with the entire input string of length $n$. Each level of the tree represents a recursive call, where the number of children is $2$, because that is the number of recursive calls. Because of this, the number of nodes in the tree is $2^n$. This results in a total of $2^n$ recursive calls.
 
+
 \begin{minipage}{0.5\textwidth}
-	
+
 \small{	\begin{tabular}{|c|c|l|}
 		\hline
 		Line & Runtime & Type \\
@@ -697,7 +698,7 @@ The root node of the tree represents the initial call of the parser with the ent
 		& \in \Omega(2^n)
 	\end{align*}
 	
-	The runtime of the naive method is in $\Omega(2^n)$ in worst case scenario.
+	The runtime of the naive method is in $\Omega(2^n)$.
 	
 	
 \end{minipage}
