@@ -1629,7 +1629,7 @@ It can be seen, that the linear parser performs better than the not modified ver
 
 \begin{minipage}{0.5\textwidth}
 The $O$-notation results from Section \ref{systemdesign} show, that the naive approach has a runtime of $\Omega(2^n)$ and the topdown and bottomup approach have the same upper bound runtime of $O(n^3)$. This shows, that the lower bound runtime of the naive approach is still higher than the worst-case runtime for the other approaches.
-The experiments on the other hand show, that the topdown approach is faster than the naive parser.
+The experiments on the other hand show, that the topdown approach seems to perform better than the bottom up parser.
 \end{minipage}
 \begin{minipage}{0.1\textwidth} \ \end{minipage}
 \begin{minipage}{0.3\textwidth}
@@ -1640,7 +1640,7 @@ Method & Runtime \\
 \texttt{parseNaive} & $\Omega(2^n)$\\
 \texttt{ParseTD} & $O(n^3)$ \\
 \texttt{ParseBU} & $O(n^3)$\\
-\texttt{ParseLinearTD} & $O(n^3)$\\
+\texttt{ParseLinearTD} & $O(n^2)$\\
 \hline
 \end{tabular}
 \end{minipage}
@@ -1659,13 +1659,11 @@ For these results it needs to be considered, that the $O$-notation states the bo
 \subsection{Results for linear grammars}
 \label{results_linear}
 
-The upper bound runtime of the modified topdown parser for linear grammars is the same as the runtime in $O$-notation of the parser for grammars in CNF: $O(n^3)$. In the linear approach are one instead of two recursive call per execution made, because the linear grammars have at most one nonterminal symbol in the body of each rule. The recursive call needs only to be made for the nonterminal symbols. 
+The upper bound runtime of the modified topdown parser for linear grammars is in $O(n^2)$ while the topdown parser for grammars in \textit{CNF} is in $O(n^3)$. In the linear approach are one instead of two recursive call per execution made, because the linear grammars have at most one nonterminal symbol in the body of each rule. The recursive call needs only to be made for the nonterminal symbols. 
 
-The experiments in section \ref{experiments} show, that the linear topdown approach seems to perform faster than the not modified approach. This was also shown and compared in section \ref{runtime}.
+The experiments in section \ref{experiments} show, that the linear topdown approach performs faster than the not modified approach. This was also shown and compared in section \ref{runtime}.
 
-For this comparison, both parsers took a linear grammar as input. For the topdown parser, the grammar was translated into CNF while the linear topdown parser is restricted to linear grammars as input. With the restriction to linear grammars, the recursive calls in the linear parser can be reduced from two to one in each call.
-
-It is to consider that the $O$-notation represents the upper bound of the runtime. Algorithms can run faster than the runtime in $O$-notation predicts. This is why the linear topdown parser performs better than the topdown parser, even though both are in $O(n^3)$.
+For this comparison, both parsers took a linear grammar as input. For the topdown parser, the grammar was translated into CNF while the linear topdown parser is restricted to linear grammars as input. With the restriction to linear grammars, the recursive calls in the linear parser can be reduced from two to one in each call. This is why the performance difference can be seen in the upper bound as well as in the experiments.
 
 
 %---------------------------------------------------------------------%
