@@ -1505,6 +1505,31 @@ $2^n$ & counter \\
 
 The results of the experiments confirm the runtime calculation of $\Omega(2^n)$ in Section \ref{naiveruntime}. 
 
+\textbf{Bottomup approach ($O(n^3)$):} \\
+
+Well-Balanced-Parantheses: \\
+
+\begin{center}
+	
+	\begin{tabular}{|c|c|c|}
+		\hline
+		$n$ & $n^3$ & counter \\
+		\hline
+		2& 8 & 6\\
+		4& 64 & 28\\
+		6& 216 & 84\\
+		8& 512 & 190 \\
+		10& 1.000 & 362 \\
+		20& 8.000 & 2.772 \\
+		30& 27.000 & 21.743\\
+		\hline
+	\end{tabular}
+\end{center}
+
+
+
+
+The results of the experiments confirm the runtime calculation of $O(n^3)$ in Section \ref{bottomupruntime}.
 
 
 
@@ -1536,57 +1561,32 @@ The results of the experiments confirm the runtime calculation of $O(n^3)$ in Se
 
 
 
-\textbf{Bottomup approach ($O(n^3)$):} \\
-
-Well-Balanced-Parantheses: \\
-
-\begin{center}
-
-\begin{tabular}{|c|c|c|}
-\hline
-$n$ & $n^3$ & counter \\
-\hline
-2& 8 & 6\\
-4& 64 & 28\\
-6& 216 & 84\\
-8& 512 & 190 \\
-10& 1.000 & 362 \\
-20& 8.000 & 2.772 \\
-30& 27.000 & 21.743\\
-\hline
-\end{tabular}
-\end{center}
-
-    
-
-
-The results of the experiments confirm the runtime calculation of $O(n^3)$ in Section \ref{bottomupruntime}.
 
 
 
-\textbf{Linear topdown approach ($O(n^3)$):} 
+\textbf{Linear topdown approach ($O(n^2)$):} 
 
-For the linearapproach, a linear grammar (aaa-grammar)is evaluated with the input word \texttt{a$^*$}.
+For the linearapproach, a linear grammar (aaa-grammar) is evaluated with the input word \texttt{a$^*$}.
 
 \begin{center}
 
 \begin{tabular}{|c|c|c|}
 \hline
-$n$ & $n^3$ & counter \\
+$n$ & $n^2$ & counter \\
 \hline
 1& 1 & 1\\
-2& 8 & 2\\
-3& 27 & 4\\
-4& 64 & 7\\
-8& 512 & 29 \\
-12& 1.728 & 67 \\
-16& 4.096 & 121 \\
-20& 8.000 & 191 \\
+2& 4 & 2\\
+3& 9 & 4\\
+4& 16 & 7\\
+8& 64 & 29 \\
+12& 144 & 67 \\
+16& 256 & 121 \\
+20& 400 & 191 \\
 \hline
 \end{tabular}
 \end{center}
 
-The linear version of the topdown seems to perform more efficient than the original parsing method, even though the runtime in $O$-notation is $O(n^3)$ for both algorithms. The difference between the algorithm is shown in the table below. 
+The results of the linear parser confirm the runtime of $O(n^2)$. The difference between the performance of the topdown approach and the linear topdown approach is shown in the table below for the aaa-grammar.
 
 \begin{center}
 \begin{tabular}{|c|c||c|c|}
@@ -1614,9 +1614,9 @@ aaaaa...aaaaa & 20 & 210 &191 \\
 \end{center}
 
 
-The linear topdown parser is restricted to linear grammars and for the comparison of the linear parsing method to the other parsing methods the linear grammar get translates into CNF. With the restriction to linear grammars, the recursive calls in the linear parser can be reduced from two to one in each call.
+The linear topdown parser is restricted to linear grammars and for the comparison of the linear parsing method to the other parsing methods the linear grammar get translates into \textit{CNF}. With the restriction to linear grammars, the recursive calls in the linear parser can be reduced from two to one in each call.
 
-It is to consider that the $O$-notation represents the upper bound of the runtime. Algorithms can run faster than the runtime in $O$-notation predicts. This is why the linear topdown parser performs better than the topdown parser, even though both are in $O(n^3)$.
+It can be seen, that the linear parser performs better than the not modified version of the topdown parser.
 
     
  
