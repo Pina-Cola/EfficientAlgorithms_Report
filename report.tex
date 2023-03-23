@@ -855,14 +855,14 @@ For each rule it is checked if the first or the second element of the body is  a
 
 The runtime of the modified version is in $O(n^2)$, where $n$ is the length of the input string.
 
-The parser takes three input parameters: $indexNT$, $i$, and $j$, which represent the non-terminal, the starting index, and the ending index of a substring of the input string. The length of this substring is $j - i$, which is at most n.
+The parser takes three input parameters: $indexNT$, $i$, and $j$, which represent the non-terminal, the starting index, and the ending index of a substring of the input string. The length of this substring is $j - i$, which is at most $n$.
 
 The parser checks if the result for this substring has already been computed and stored in the memoization table. If so, it returns the stored result, which takes constant time.
 
 If the result has not been computed, one of two operations is done: If the substring is a single terminal symbol, the parser iterates over the rules for the non-terminal and checks if there is a rule that generates this terminal symbol. This loop takes $O(k)$ time, with $k$ as the number of rules for the non-terminal.
 If the substring is more than one terminal symbol, the parser iterates over the rules and checks if there is a rule which can generate the non-terminal symbol and the substring by recursively calling itself on its two subparts. This loop also takes $O(k)$ time.
 
-The recursive calls are made on substrings that are one symbol shorter than the original substring. Therefore, the maximum number of recursive calls is proportional to the square of the length of the input string, which is $O(n^2)$.
+The recursive calls are made on substrings that are one symbol shorter than the original substring. Therefore, the maximum number of recursive calls is proportional to the length of the input string, which is $n$.
 
 The overall time complexity of the linear topdown parser is $O(n^2)$.
 
