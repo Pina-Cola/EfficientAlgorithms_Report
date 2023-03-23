@@ -853,9 +853,21 @@ For each rule it is checked if the first or the second element of the body is  a
 \label{lineartopdown_runtime}
 \textbf{Runtime:}
 
-The runtime of the modified version is in $O(n^3)$, where $n$ is the length of the input string. This is analog to the runtime analysis of the topdown parser in section \ref{topdownruntime}.
-The parser iterates over the memoization table and for each entry, it makes a recursive call. The overall time complexity of the function is $O(n^3)$.
-The actual runtime of the function is expected to be significantly lower, depending on the input grammar and the input string. 
+The runtime of the modified version is in $O(n^2)$, where $n$ is the length of the input string.
+
+The parser takes three input parameters: $indexNT$, $i$, and $j$, which represent the non-terminal, the starting index, and the ending index of a substring of the input string, respectively. The length of the substring is j - i, which is at most n.
+
+The function first checks if the result for this substring has already been computed and stored in the tableLinear table. If so, it returns the stored result, which takes constant time.
+
+If the result has not been computed, the function performs one of two operations, depending on whether the substring is a single terminal symbol or not. If the substring is a single terminal symbol, the function iterates over the rules for the non-terminal and checks if there is a rule that generates this terminal symbol. This loop takes O(m) time, where m is the number of rules for the non-terminal.
+
+If the substring is not a single terminal symbol, the function iterates over the rules for the non-terminal and checks if there is a rule whose right-hand side can generate the substring by recursively invoking parseLinearTD on its two subparts. This loop also takes O(m) time.
+
+The recursive calls to parseLinearTD are made on substrings that are either one symbol shorter than the original substring or split into two substrings whose lengths sum up to the length of the original substring. Therefore, the maximum number of recursive calls is proportional to the square of the length of the input string, which is O(n^2).
+
+The total time complexity of the parseLinearTD function is the product of the time complexity of each of the loops times the number of iterations, which is O(m*n^2). Since the value of m is constant for a given grammar, the overall time complexity of the function is O(n^2).
+
+ 
 
 
 %---------------------------------------------------------------------%
