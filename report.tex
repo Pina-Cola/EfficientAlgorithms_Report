@@ -186,9 +186,9 @@ Three different parsing methods are implemented and described of which one execu
 For the implementation three different classes are implemented: \texttt{main.java, grammar.java} and \texttt{parser.java}. The \texttt{main}-class calls the methods and the \texttt{grammar}-class parses the input grammar as string into a format that then can be processed in the \texttt{parser}-class. This \texttt{parser}-class has three different parsing methods, which are tested and compared against each other.
 The function and implementation is former described in Section \ref{systemdesign}. Also in Section \ref{systemdesign} the runtimes in $O$-notation are calculated for each approach and modifications for the parsing of linear grammars are described.
 
-In Section \ref{evaluation} the runtimes and experiments of the different algorithms are compared and differences in efficiency are shown. The results from the experiments are compared to the calculated runtimes in $O$-notation from Section \ref{systemdesign} and those differences are explained.
-
 Concepts, ideas and first steps for the error correction of input words with deletion and exchange are presented in Section \ref{errorcorrection}.
+
+In Section \ref{evaluation} the runtimes and experiments of the different algorithms are compared and differences in efficiency are shown. The results from the experiments are compared to the calculated runtimes in $O$-notation from Section \ref{systemdesign} and those differences are explained.
 
 
 In the final part (Section \ref{conclusion}) the results and future possibilities are discussed.
@@ -1407,7 +1407,7 @@ The corresponding graphs to the data in the table are shown below. In the experi
 
 This grammar accepts only the input word \texttt{aaa}. Every other input gets rejected.
 
-In the graphs below it can be seen, that the linear topdown parser uses less recursive calls than the topdown parser. For the (not linear) topdown approach, the grammar has been translated into CNF before the function is applied.
+In the graphs below it can be seen, that the linear topdown parser uses less recursive calls than the topdown parser. For the (not linear) topdown approach, the grammar has been translated into \textit{CNF} before the function is applied.
 
 The abbreviations starting with N stand for the naive parser, the B represents the bottomup parser, the T for topdown and L for the linear topdown approach. The second letter of the abbreviations represents the counter of calls/iterations with the letter C and the measured runtime is represented with the letter T.
 
@@ -1663,7 +1663,7 @@ The upper bound runtime of the modified topdown parser for linear grammars is in
 
 The experiments in section \ref{experiments} show, that the linear topdown approach performs faster than the not modified approach. This was also shown and compared in section \ref{runtime}.
 
-For this comparison, both parsers took a linear grammar as input. For the topdown parser, the grammar was translated into CNF while the linear topdown parser is restricted to linear grammars as input. With the restriction to linear grammars, the recursive calls in the linear parser can be reduced from two to one in each call. This is why the performance difference can be seen in the upper bound as well as in the experiments.
+For this comparison, both parsers took a linear grammar as input. For the topdown parser, the grammar was translated into \textit{CNF} while the linear topdown parser is restricted to linear grammars as input. With the restriction to linear grammars, the recursive calls in the linear parser can be reduced from two to one in each call. This is why the performance difference can be seen in the upper bound as well as in the experiments.
 
 
 %---------------------------------------------------------------------%
@@ -1870,7 +1870,7 @@ If the input grammar is a linear grammar, the program checks if it is in \textit
 
 
 \newpage
-\section{CNF Algorithm on an example}
+\section{\textit{CNF} Algorithm on an example}
 
 % \subsection{CNF Algorithm on an example}
 \label{createcnf}
@@ -1910,7 +1910,7 @@ In this part, the following ruleset of a grammar is translated into \textit{CNF}
 
 \end{enumerate}
 
-This is the grammar in CNF:
+This is the grammar in \textit{CNF}:
 \begin{align*}
 \texttt{S} & \rightarrow \texttt{SS} \mid  \texttt{LA} \mid \texttt{LR}  \\
 \texttt{A} & \rightarrow \texttt{SR} \\
