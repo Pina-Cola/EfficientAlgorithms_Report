@@ -576,7 +576,7 @@ For faster and easier access, three arrays are built: One array that only contai
 \subsection{Parser}
 \label{parser}
 
-The \texttt{parser}-class contains three different parsing methods: \texttt{parseNaive} (described in Section \ref{naivedescription}), \texttt{parseTopDown} (described in Section \ref{topdowndescription}) and \texttt{parseBottomUp} (described in Section \ref{bottomupdescription}). Also there exists a modified method of the \texttt{parseTopDown}, which takes linear grammars (which are translated into \textit{CNF}) and parses them faster (described in Section \ref{lineartopdown}).
+The \texttt{parser}-class contains three different parsing methods: \texttt{parseNaive} (described in Section \ref{naivedescription}), \texttt{parseTopDown} (described in Section \ref{topdowndescription}) and \texttt{parseBottomUp} (described in Section \ref{bottomupdescription}). Also there exists a modified method of the \texttt{parseTopDown}, which takes linear grammars and parses them faster (described in Section \ref{lineartopdown}).
 
 Each method has a counter as \texttt{long} which counts the number of iterations and a timer as \texttt{long} in $ms$ which measures the runtime of the method. In the following sections the algorithms are described, presented as pseudo code and the runtime is analysed.
 
