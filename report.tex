@@ -860,8 +860,7 @@ The parser takes three input parameters: $indexNT$, $i$, and $j$, which represen
 The parser checks if the result for this substring has already been computed and stored in the memoization table. If so, it returns the stored result, which takes constant time.
 
 If the result has not been computed, one of two operations is done: If the substring is a single terminal symbol, the parser iterates over the rules for the non-terminal and checks if there is a rule that generates this terminal symbol. This loop takes $O(k)$ time, with $k$ as the number of rules for the non-terminal.
-
-If the substring is not a single terminal symbol, the function iterates over the rules for the non-terminal and checks if there is a rule whose right-hand side can generate the substring by recursively invoking parseLinearTD on its two subparts. This loop also takes O(m) time.
+If the substring is more than one terminal symbol, the parser iterates over the rules and checks if there is a rule which can generate the non-terminal symbol and the substring by recursively calling itself on its two subparts. This loop also takes O(m) time.
 
 The recursive calls to parseLinearTD are made on substrings that are either one symbol shorter than the original substring or split into two substrings whose lengths sum up to the length of the original substring. Therefore, the maximum number of recursive calls is proportional to the square of the length of the input string, which is O(n^2).
 
