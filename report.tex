@@ -1632,7 +1632,6 @@ It can be seen, that the linear parser performs better than the not modified ver
 
 \begin{minipage}{0.5\textwidth}
 The $O$-notation results from Section \ref{systemdesign} show, that the naive approach has a runtime of $\Omega(2^n)$ and the topdown and bottomup approach have the same upper bound runtime of $O(n^3)$. This shows, that the lower bound runtime of the naive approach is still higher than the worst-case runtime for the other approaches.
-The experiments on the other hand show, that the topdown approach seems to perform better than the bottom up parser.
 \end{minipage}
 \begin{minipage}{0.1\textwidth} \ \end{minipage}
 \begin{minipage}{0.3\textwidth}
@@ -1652,9 +1651,9 @@ Method & Runtime \\
 Considering the experiments, the topdown parser seems to be the most efficient, followed by the bottomup approach and the naive is the slowest. Regarding the experiments from section \ref{exchange}, different approaches perform better for different grammars and input words. 
 The parser for linear grammars has different restrictions for the input and its results are discussed in Section \ref{results_linear}. 
 
-The reason for the faster results of the topdown parser is the global boolean table, which saves results from previous function calls and can cause less recursive calls of the function to compare the values while the naive approach calls the recursion for every single possibility. The actual runtime of the naive approach is often a lot closer to the upper bound than the actual runtime of the topdown approach, which seems to perform more efficient in the experiments.
+The reason for the faster results of the topdown parser is the global boolean table, which saves results from previous function calls and can cause less recursive calls of the function to compare the values while the naive approach calls the recursion for every single possibility. The runtime of the naive approach has a lower bound of $\Omega(2^n)$ , which can be seen in the experiments, too. 
 
-In the experiments, the topdown performed better than the bottomup approach, even though the bottomup and the topdown parser are in $O(n^3)$. Because the bottomup fills in the \textit{CYK}-table iteratively, the upper bound runtime is similar to the actual runtime.
+In the experiments, the topdown performed better than the bottomup approach, even though the bottomup and the topdown parser are in $O(n^3)$. Because the bottomup fills in the \textit{CYK}-table iteratively, the upper bound runtime is similar to the actual runtime, while the topdown approach checks, if a subproblem was already solved, before solving it.
 
 For these results it needs to be considered, that the $O$-notation states the bound from above. An algorithm can run better than the according $O$-notation runtime. It usually grows at most as much as the $O$-notation function \cite{bigO}. 
 
