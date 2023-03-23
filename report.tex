@@ -1323,6 +1323,8 @@ The stupid grammar accepts no input word, because the nonterminal symbol \texttt
 
 The input word with a length of $32$ did not terminate for the naive approach. The corresponding graphs to the data in the table are shown below.
 
+\begin{small}
+
 \begin{tabular}{|c|c||c|c|c||c|c|c||c|c|c|}
 \hline
 Word & Length & N & NC & NT & B & BC & BT & T & TC & TT \\
@@ -1341,6 +1343,7 @@ aaaaaaaaaaaaaaaa & 16 & F & 3.524.577 & 89ms & F & 2.660 & 15ms & F & 1.481 & 1m
 aaaaaaa...aaaaaaaaa & 32 &  & & & F & 41.664 & 25ms & F & 11.409 & 4ms \\
 \hline
 \end{tabular}
+\end{small}
 
 The corresponding graphs to the data in the table are shown below. In the experiments with input words of a length of $4$ or smaller, the graphs show that the naive parser seems to perform the best. Considering longer input words, it can be observed, that the naive parser clearly has the most growth. This first observation of the naive parser performing the best can be disregarded, because the amounts of calls for input words with a length smaller than $4$ do not have a big difference to each other. For the longer words, the results are showing more clearly.
 
