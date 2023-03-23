@@ -96,7 +96,7 @@
 	\vspace{1cm}
 	{\scshape\Large Report\par }
 	\vspace{1.5cm}
-	{\huge\bfseries  Runtime analysis of the Java implementation of the CYK-algorithm \par}
+	{\huge\bfseries  Runtime analysis of the Java implementation of the \textit{CYK}-algorithm \par}
 	\vspace{2cm}
 	{\Large\itshape Pina Kolling\par}
 	\vfill
@@ -118,8 +118,8 @@
 
 \section*{Abstract}
 
-Formal languages and grammars can be used in different fields, for example for AI learning methods \cite{delahaye1987formal, rosenschein1985formal}. The CYK-algorithm is a method to examine if an input word is part of a formal language. 
-In this report, the implementation of different parsing methods for the CYK-algorithm is described. The runtimes of those methods are analysed and compared. For each method experiments with different inputs are documented and evaluated. The results of the experiments and the theoretical runtime analysis in $O$-notation are compared to show the differences and similarities. The results are also shown in graphs.
+Formal languages and grammars can be used in different fields, for example for AI learning methods \cite{delahaye1987formal, rosenschein1985formal}. The \textit{CYK}-algorithm is a method to examine if an input word is part of a formal language. 
+In this report, the implementation of different parsing methods for the \textit{CYK}-algorithm is described. The runtimes of those methods are analysed and compared. For each method experiments with different inputs are documented and evaluated. The results of the experiments and the theoretical runtime analysis in $O$-notation are compared to show the differences and similarities. The results are also shown in graphs.
 In addition to this, one method is modified to work with linear grammars and concepts of error correction are described and presented. 
 
 
@@ -214,7 +214,7 @@ In the final part (Section \ref{conclusion}) the results and future possibilitie
 
 \section{Background}
 
-In this section background information, definitions and examples on formal languages, alphabets and Kleene star (Section \ref{formallanguage}), formal grammars (Section \ref{formalgrammar}), Chomsky-Normal-Form (Section \ref{cnf}), CYK-algorithm (Section \ref{cyk}), dynmaic programming (Section \ref{dp}), recursion (Section \ref{recursion}) and divide and conquer (Section \ref{divide_and_conquer}) are presented. 
+In this section background information, definitions and examples on formal languages, alphabets and Kleene star (Section \ref{formallanguage}), formal grammars (Section \ref{formalgrammar}), Chomsky-Normal-Form (Section \ref{cnf}), \textit{CYK}-algorithm (Section \ref{cyk}), dynmaic programming (Section \ref{dp}), recursion (Section \ref{recursion}) and divide and conquer (Section \ref{divide_and_conquer}) are presented. 
 
 %---------------------------------------------------------------------%
 
@@ -382,7 +382,7 @@ The first column in the table represent the objects and the last row the weight.
 
 %---------------------------------------------------------------------%
 
-\subsection{CYK-algorithm}
+\subsection{\textit{CYK}-algorithm}
 \label{cyk}
 
 
@@ -1005,7 +1005,7 @@ The runtime of the \texttt{parseBU} method is in $O(n^3)$, because it contains t
 Apart from checking if an input word is part of a language, the amount of errors and the correction of those can be interesting.
 Two options for the error correction are considered in this section: A symbol can be exchanged or symbols can be deleted. The output for some examples of the error correction can be seen in Appendix \ref{howtousethecode}.
 
-For the error correction the bottomup parser modified, because the CYK-table shows, which substrings lead to which nonterminal symbols, for example the start symbol.
+For the error correction the bottomup parser modified, because the \textit{CYK}-table shows, which substrings lead to which nonterminal symbols, for example the start symbol.
 
 
 
@@ -1015,8 +1015,8 @@ For the error correction the bottomup parser modified, because the CYK-table sho
 \subsection{Deletion}
 \label{deletion}
 
-For the deletion the table of the CYK-algorithm is used. This is described in Section \ref{cyk} and the parsing method for it is explained in Section \ref{bottomupdescription}.
-The CYK-table has to contain the start symbol in the entry on the right top corner to conclude that the word is part of the language. To find an accepted word with deletion, the entry with the start symbol which is closest to the right top is searched. 
+For the deletion the table of the \textit{CYK}-algorithm is used. This is described in Section \ref{cyk} and the parsing method for it is explained in Section \ref{bottomupdescription}.
+The \textit{CYK}-table has to contain the start symbol in the entry on the right top corner to conclude that the word is part of the language. To find an accepted word with deletion, the entry with the start symbol which is closest to the right top is searched. 
 
 The concept on how to find the entry in the array that is further on the top right is described here and shown in the pseudo code of the function \texttt{findBestIndeces} in algorithm \ref{alg:fbi}. The function takes two array positions as $(i,j)$ as input and returns the better position in an int array of the length 2.
 
@@ -1055,9 +1055,9 @@ Two values are stored for later comparisons: $x = A_i - B_i$ and $y = B_j-A_j$. 
 
 With those indices the part of the word that is accepted and the part that needs to be deleted can be calculated. This is done in the method \texttt{solveErrorWithDeletion} which is shown as pseudo code in algorithm \ref{alg:deletion}. This concludes in the longest accepted word with deletion, which is then returned.
 
-It can happen that no accepted word is found with deletion, if no subword concluded into the start symbol in the CYK-table.
+It can happen that no accepted word is found with deletion, if no subword concluded into the start symbol in the \textit{CYK}-table.
 
-The distance of the entry in the CYK-table that contains the start symbol and the top right corner can also be returned as the amount of symbols that need to be deleted to receive an accepted word. This error counter works only for the deletion method.
+The distance of the entry in the \textit{CYK}-table that contains the start symbol and the top right corner can also be returned as the amount of symbols that need to be deleted to receive an accepted word. This error counter works only for the deletion method.
 
 \begin{center}
 	\captionof{algorithm}{solveErrorWithDeletion(Integer[][][] CYK, int amountOfErrors)}\label{alg:deletion}
@@ -1124,10 +1124,10 @@ The distance of the entry in the CYK-table that contains the start symbol and th
 \subsection{Exchange}
 \label{exchange}
 
-The exchange method works iterative and iterates over every symbol of the input word and tries ever terminal symbol on each index. The method can only exchange one symbol. First, the symbol and each entry in the CYK-table that concluded from this symbol in the input word are deleted. For this, the corresponding entries are replaced with $-1$. Then the fields that are assigned with $-1$ in the CYK-table get calculated with a new input symbol, which replaces the original one. 
+The exchange method works iterative and iterates over every symbol of the input word and tries ever terminal symbol on each index. The method can only exchange one symbol. First, the symbol and each entry in the \textit{CYK}-table that concluded from this symbol in the input word are deleted. For this, the corresponding entries are replaced with $-1$. Then the fields that are assigned with $-1$ in the \textit{CYK}-table get calculated with a new input symbol, which replaces the original one. 
 If a success is found, the accepted word is returned. 
 
-In algorithm \ref{alg:buns} the adapted version of the bottomUp parser can be seen as pseudo code. In this methos, a symbol from the input word got replaced by a new symbol (which is the parameter \texttt{newSymbol}). All the entries, that relied on this symbol were replaced by $-1$ before and this version of the bottomUp parser examines the new entries of these field to produce a full CYK-table for the new input word without calculating the already known parts again.
+In algorithm \ref{alg:buns} the adapted version of the bottomUp parser can be seen as pseudo code. In this methos, a symbol from the input word got replaced by a new symbol (which is the parameter \texttt{newSymbol}). All the entries, that relied on this symbol were replaced by $-1$ before and this version of the bottomUp parser examines the new entries of these field to produce a full \textit{CYK}-table for the new input word without calculating the already known parts again.
 
 
 \begin{center}
@@ -1651,7 +1651,7 @@ The parser for linear grammars has different restrictions for the input and its 
 
 The reason for the faster results of the topdown parser is the global boolean table, which saves results from previous function calls and can cause less recursive calls of the function to compare the values while the naive approach calls the recursion for every single possibility. The actual runtime of the naive approach is often a lot closer to the upper bound than the actual runtime of the topdown approach, which seems to perform more efficient in the experiments.
 
-In the experiments, the topdown performed better than the bottomup approach, even though the bottomup and the topdown parser are in $O(n^3)$. Because the bottomup fills in the CYK-table iteratively, the upper bound runtime is similar to the actual runtime.
+In the experiments, the topdown performed better than the bottomup approach, even though the bottomup and the topdown parser are in $O(n^3)$. Because the bottomup fills in the \textit{CYK}-table iteratively, the upper bound runtime is similar to the actual runtime.
 
 For these results it needs to be considered, that the $O$-notation states the bound from above. An algorithm can run better than the according $O$-notation runtime. It usually grows at most as much as the $O$-notation function \cite{bigO}. 
 
@@ -1803,7 +1803,7 @@ Then the input word is shown with the symbols replaced by their integers.
 \ 
 \end{minipage}\begin{minipage}{0.3\textwidth}
 Then the results, counter and runtime in $ms$ is shown for each parsing method. \\
-For the \texttt{BottomUp} method is the CYK algorithm table printed.
+For the \texttt{BottomUp} method is the \textit{CYK} algorithm table printed.
 The error counter is printed, too.
 \end{minipage}
 
