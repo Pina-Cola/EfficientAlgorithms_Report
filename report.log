@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.12)  23 MAR 2023 17:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.12)  23 MAR 2023 17:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1730,10 +1730,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 1201--1206
-
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1743,6 +1739,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [23]
+Underfull \hbox (badness 10000) in paragraph at lines 1201--1206
+
+ []
+
+
 Overfull \hbox (9.78885pt too wide) in paragraph at lines 1217--1240
 [][][][]
  []
@@ -1752,7 +1753,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1217--1240
 
  []
 
-<diagrams/WBP_1.png, id=433, 770.88pt x 422.32782pt>
+<diagrams/WBP_1.png, id=432, 770.88pt x 422.32782pt>
 File: diagrams/WBP_1.png Graphic file (type png)
 <use diagrams/WBP_1.png>
 Package pdftex.def Info: diagrams/WBP_1.png  used on input line 1245.
@@ -1781,7 +1782,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 1260--1281
 
  []
 
-<diagrams/BP_1.png, id=440, 768.62157pt x 422.32782pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[25 <./diagrams/WBP_1.png> <./diagrams/WBP_2.png>]
+<diagrams/BP_1.png, id=448, 768.62157pt x 422.32782pt>
 File: diagrams/BP_1.png Graphic file (type png)
 <use diagrams/BP_1.png>
 Package pdftex.def Info: diagrams/BP_1.png  used on input line 1289.
@@ -1802,7 +1812,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1290--1290
 1/cmtt/m/n/10.95 (())(()) \OT1/cmr/m/n/10.95 and
  []
 
-<diagrams/BP_2.png, id=441, 768.62157pt x 418.56375pt>
+<diagrams/BP_2.png, id=449, 768.62157pt x 418.56375pt>
 File: diagrams/BP_2.png Graphic file (type png)
 <use diagrams/BP_2.png>
 Package pdftex.def Info: diagrams/BP_2.png  used on input line 1301.
@@ -1817,20 +1827,12 @@ Underfull \hbox (badness 5954) in paragraph at lines 1302--1302
 [][][]\OT1/cmr/m/n/10.95 Figure 5: |Well-Balanced-Parantheses
  []
 
-<diagrams/BP_C.png, id=442, 770.12718pt x 426.09187pt>
+<diagrams/BP_C.png, id=450, 770.12718pt x 426.09187pt>
 File: diagrams/BP_C.png Graphic file (type png)
 <use diagrams/BP_C.png>
 Package pdftex.def Info: diagrams/BP_C.png  used on input line 1312.
 (pdftex.def)             Requested size: 308.04541pt x 170.43372pt.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[25 <./diagrams/WBP_1.png> <./diagrams/WBP_2.png>]
 Overfull \hbox (24.14452pt too wide) in paragraph at lines 1326--1344
 [][][][] 
  []
@@ -1906,15 +1908,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [28 <./diagrams/LGBTQ.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1536--1537
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1538--1539
-
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1924,6 +1917,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [29]
+Underfull \hbox (badness 10000) in paragraph at lines 1536--1537
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1538--1539
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2129,7 +2131,7 @@ Here is how much of TeX's memory you used:
  63924 multiletter control sequences out of 15000+600000
  491619 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,32n,103p,1235b,1944s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 99i,33n,103p,1235b,1944s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 , replaced by a fixed one
@@ -2168,7 +2170,7 @@ fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/pinak/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/pinak/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/pinak/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (38 pages, 1315399 bytes).
+Output written on report.pdf (38 pages, 1315289 bytes).
 PDF statistics:
  720 PDF objects out of 1000 (max. 8388607)
  119 named destinations out of 1000 (max. 500000)
