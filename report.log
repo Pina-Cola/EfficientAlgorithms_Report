@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.12)  23 MAR 2023 21:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.12)  24 MAR 2023 14:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1611,11 +1611,6 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 748.
-See the caption package documentation for explanation.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.59999pt}.
@@ -1624,6 +1619,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [14]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 748.
+See the caption package documentation for explanation.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1648,6 +1648,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [16]
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[17]
+
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 885.
 See the caption package documentation for explanation.
@@ -1660,7 +1669,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[17]
+[18]
 Overfull \hbox (4.84053pt too wide) detected at line 980
 [][][]
  []
@@ -1670,15 +1679,6 @@ Overfull \hbox (4.84052pt too wide) in paragraph at lines 938--983
 [][][]$[][][]$$[][][]$ 
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[18]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2162,7 +2162,7 @@ cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/pinak/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users
 /pinak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10
 .pfb>
-Output written on report.pdf (38 pages, 1325385 bytes).
+Output written on report.pdf (38 pages, 1325849 bytes).
 PDF statistics:
  727 PDF objects out of 1000 (max. 8388607)
  119 named destinations out of 1000 (max. 500000)
